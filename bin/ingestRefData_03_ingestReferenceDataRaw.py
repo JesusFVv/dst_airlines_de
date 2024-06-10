@@ -1,13 +1,18 @@
 import os
+import getpass
 import json
+import shutil
 import psycopg2
 from py7zr import SevenZipFile
+
+db_user = 'dst_designer'
+password = getpass.getpass(f"Enter the password for the PostgreSQL user {db_user}: ")
 
 # Configuration de la connexion à la base de données
 db_config = {
     'dbname': 'dst_airlines_db',
-    'user': 'dst_designer',
-    'password': input("Enter the password for the PostgreSQL user dst_designer: "),
+    'user': db_user,
+    'password': password,
     'host': 'localhost',
     'port': 6432
 }
