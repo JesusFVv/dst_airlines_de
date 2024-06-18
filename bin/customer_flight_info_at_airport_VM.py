@@ -179,8 +179,7 @@ def save_data(
     query_date = date_time.split("T")[0]
     output_filepath = Path(
         home,
-        "workspace",
-        "lufthansa",
+        "app",
         "output",
         query_date,
         f"{iata_code}_{endpoint_name}_{date_time}.json",
@@ -194,8 +193,9 @@ def save_data(
 
 if __name__ == "__main__":
     # Get airports array
+    print("HERE")
     home = Path.home()
-    airport_filepath = Path(home, "workspace", "lufthansa", "input", "airports.csv")
+    airport_filepath = Path("/app", "input", "airports.csv")
     airports = get_airports(airport_filepath)  # Numpy array
     logger.debug(airports)
 
@@ -207,16 +207,17 @@ if __name__ == "__main__":
         "%Y-%m-%d %H:%M:%S"
     )
     today = dt.date.today().strftime("%Y-%m-%d")
-    datetime_array = generate_datetime_array(yesterday_two_am, today)
+    # datetime_array = generate_datetime_array(yesterday_two_am, today)
+    datetime_array = generate_datetime_array("2024-06-08 02:00:00", today)
     logger.debug(datetime_array)
-
+    """
     # Define retry strategy for https requests
     session = (
         requests.Session()
     )  # a Session object allows to persist some parameters across requests
     retries = Retry(
         # total=3,
-        total=4,
+        total=7,
         backoff_factor=1,
         # allowed_methods=["GET", "POST"],
         allowed_methods=["GET"],
@@ -250,8 +251,8 @@ if __name__ == "__main__":
             print("\n")
             if res is None:
                 unfound_airports[iata_code] += 1
-            else:
-                save_data(res, endpoint_name, home, date_time, iata_code)
+            # else:
+                # save_data(res, endpoint_name, home, date_time, iata_code)
 
             # endpoint_name = "arrival"
             # res = customer_flight_information_airport(
@@ -271,3 +272,4 @@ if __name__ == "__main__":
             logger.error(unfound_airports)
             with open("missing_airports.txt", "a") as f_airports:
                 f_airports.write(iata_code + "\n")
+    """
