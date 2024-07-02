@@ -79,11 +79,12 @@ def generate_datetime_array(
     return df["date_time"].values
 
 
-def get_token() -> str:
+def get_token() -> tuple[str, int]:
     """Get API token
 
     Returns:
         access_token (str): API access token
+        expires_in (int): the number of seconds until this token expires
     """
 
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
@@ -165,22 +166,20 @@ def customer_flight_information_airport(
 
 
 def save_data(
-    data: dict, endpoint_name: str, home: PosixPath, date_time: str, iata_code: str
+    data: dict, endpoint_name: str, working_dir: PosixPath, date_time: str, iata_code: str
 ) -> None:
     """Save data in JSON format in a output folder
 
     Args:
         data (dict): data to be saved (endpoint results)
         endpoint_name (str): a keyword to differentiate the different endpoints
-        home (PosixPath): home path
+        working_dir (PosixPath): working directory path
         date_time (str): datetime string YYYY-mm-ddTHH:MM
         iata_code (str): airport iata code
     """
     query_date = date_time.split("T")[0]
     output_filepath = Path(
-        home,
-        "workspace",
-        "lufthansa",
+        working_dir,
         "output",
         query_date,
         f"{iata_code}_{endpoint_name}_{date_time}.json",
@@ -194,8 +193,8 @@ def save_data(
 
 if __name__ == "__main__":
     # Get airports array
-    home = Path.home()
-    airport_filepath = Path(home, "workspace", "lufthansa", "input", "airports.csv")
+    working_dir = Path.cwd()
+    airport_filepath = Path(working_dir, "input", "airports.csv")
     airports = get_airports(airport_filepath)  # Numpy array
     logger.debug(airports)
 
@@ -207,18 +206,18 @@ if __name__ == "__main__":
         "%Y-%m-%d %H:%M:%S"
     )
     today = dt.date.today().strftime("%Y-%m-%d")
-    datetime_array = generate_datetime_array(yesterday_two_am, today)
+    # datetime_array = generate_datetime_array(yesterday_two_am, today)
+    datetime_array = generate_datetime_array("2024-06-26 02:00:00", today)
     logger.debug(datetime_array)
-
+    
     # Define retry strategy for https requests
     session = (
         requests.Session()
     )  # a Session object allows to persist some parameters across requests
     retries = Retry(
-        # total=3,
-        total=4,
+        # total=2,
+        total=7,
         backoff_factor=1,
-        # allowed_methods=["GET", "POST"],
         allowed_methods=["GET"],
         status_forcelist=[404, 429, 500, 502, 503, 504],
         raise_on_status=True,
@@ -233,10 +232,10 @@ if __name__ == "__main__":
     # Loop over airports
     unfound_airports = {}
     for iata_code in airports:
-        # for iata_code in ["CDG"]:
+    # for iata_code in ["CDG"]:
         unfound_airports[iata_code] = 0
         # Loop over datetime for a given airport
-        # datetime_array = ["2024-05-29T01:00", "2024-05-29T02:00"]
+        # datetime_array = ["2024-06-29T01:00", "2024-06-29T02:00"]
         for date_time in datetime_array:
             endpoint_name = "departure"
             res = customer_flight_information_airport(
@@ -251,7 +250,8 @@ if __name__ == "__main__":
             if res is None:
                 unfound_airports[iata_code] += 1
             else:
-                save_data(res, endpoint_name, home, date_time, iata_code)
+                break
+                # save_data(res, endpoint_name, working_dir, date_time, iata_code)
 
             # endpoint_name = "arrival"
             # res = customer_flight_information_airport(
@@ -265,9 +265,12 @@ if __name__ == "__main__":
             # if res is None:
             #     unfound_airports[iata_code] += 1
             # else:
-            #     save_data(res, endpoint_name, home, date_time, iata_code)
+            #     save_data(res, endpoint_name, working_dir, date_time, iata_code)
 
         if unfound_airports[iata_code] == len(datetime_array):
             logger.error(unfound_airports)
-            with open("missing_airports.txt", "a") as f_airports:
+            missing_airport_filepath = Path(working_dir, "output", "missing_airports.txt")
+            with open(missing_airport_filepath, "a") as f_airports:
                 f_airports.write(iata_code + "\n")
+
+    print("COLLECT COMPLETED !")
