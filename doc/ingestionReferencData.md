@@ -264,6 +264,39 @@ FROM (
 WHERE json_data->'Names'->'Name'->'@LanguageCode' IS NULL;
 ```
 
+### Cooked Languages
+
+```sql
+SELECT * FROM refdata_languages_coo;
+```
+
+### Cooked count all
+
+```sql
+SELECT * FROM 
+(
+	SELECT 'refdata_languages_coo' as table, count(*) AS cnt FROM refdata_languages_coo
+	UNION
+	SELECT 'refdata_countries_coo' as table, count(*) AS cnt  FROM refdata_countries_coo
+	UNION
+	SELECT 'refdata_cities_coo' as table, count(*) AS cnt  FROM refdata_cities_coo
+	UNION
+	SELECT 'refdata_airports_coo' as table, count(*) AS cnt  FROM refdata_airports_coo
+	UNION
+	SELECT 'refdata_airlines_coo' as table, count(*) AS cnt  FROM refdata_airlines_coo
+	UNION
+	SELECT 'refdata_airport_names_coo' as table, count(*) AS cnt  FROM refdata_airport_names_coo
+	UNION
+	SELECT 'refdata_city_names_coo' as table, count(*) AS cnt  FROM refdata_city_names_coo
+	UNION
+	SELECT 'refdata_country_names_coo' as table, count(*) AS cnt  FROM refdata_country_names_coo
+	UNION
+	SELECT 'refdata_airline_names_coo' as table, count(*) AS cnt  FROM refdata_airline_names_coo
+	UNION
+	SELECT 'refdata_aircraft_names_coo' as table, count(*) AS cnt  FROM refdata_aircraft_names_coo
+) ORDER BY cnt DESC;
+
+```
 
 # Initialisation docker
 

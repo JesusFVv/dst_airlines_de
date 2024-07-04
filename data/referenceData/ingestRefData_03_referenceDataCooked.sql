@@ -2,11 +2,11 @@
 -- COOKED TABLES --
 -- ------------- --
 -- DELETE ALL COOKED TABLES IF THEY ALREADY EXIST
-DROP TABLE IF EXISTS refdata_cities_coo;
-DROP TABLE IF EXISTS refdata_airports_coo;
-DROP TABLE IF EXISTS refdata_country_names_coo;
-DROP TABLE IF EXISTS refdata_city_names_coo;
 DROP TABLE IF EXISTS refdata_airport_names_coo;
+DROP TABLE IF EXISTS refdata_airports_coo;
+DROP TABLE IF EXISTS refdata_city_names_coo;
+DROP TABLE IF EXISTS refdata_cities_coo;
+DROP TABLE IF EXISTS refdata_country_names_coo;
 DROP TABLE IF EXISTS refdata_airline_names_coo;
 DROP TABLE IF EXISTS refdata_aircraft_names_coo;
 DROP TABLE IF EXISTS refdata_languages_coo;
@@ -88,23 +88,6 @@ CREATE TABLE refdata_aircraft_names_coo (
 -- --------------------------------- --
 -- INSERT INTO refdata_languages_coo --
 -- --------------------------------- --
--- Languages from airports
-INSERT INTO refdata_languages_coo (Code)
-SELECT DISTINCT 
-    TRIM(BOTH '"' FROM json_data->'Names'->'Name'->'@LanguageCode') AS lang
-FROM (
-    SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
-    FROM refdata_airports_raw
-    WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
-
-    UNION ALL
-
-    SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
-    FROM refdata_airports_raw
-    WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
-) AS airport_data
-WHERE json_data->'Names'->'Name'->'@LanguageCode' IS NOT NULL
-ON CONFLICT (Code) DO NOTHING;
 
 -- Languages from airports
 INSERT INTO refdata_languages_coo (Code)
