@@ -3,6 +3,7 @@ import getpass
 import json
 import shutil
 import psycopg2
+import re
 from py7zr import SevenZipFile
 
 db_user = 'dst_designer'
@@ -45,7 +46,7 @@ def ingest_data():
     folders = [f for f in os.listdir() if f.endswith('Raw')]
 
     for folder in folders:
-        nature = folder.replace('out[A-Z]*_', '').replace('Raw', '')
+        nature = re.sub(r'out[A-Z]*_', '', folder).replace('Raw', '')
         table_name = f"refdata_{nature.lower()}_raw"
 
         json_files = get_json_files(folder)

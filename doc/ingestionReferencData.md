@@ -31,7 +31,7 @@ sudo ./bin/ingestRefData_00_initConfigure.sh
 cd /home/ubuntu/projet/dst_airlines_de/data/referenceData
 python3 ../../bin/ingestRefData_02_initReferenceDataRaw.py ingestRefData_01_referenceDataRaw.sql
 python3 ../../bin/ingestRefData_03_ingestReferenceDataRaw.py
-rm -r outAircraftRaw outAirlinesRaw outAirportsRaw outCitiesRaw outCountriesRaw
+rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_CountriesRaw outFR_AirportsRaw outFR_CitiesRaw outFR_CountriesRaw
 ```
 
 ## Verifications SQL
@@ -55,9 +55,11 @@ psql -U dst_designer dst_airlines_db
 --------+-----------------------+-------+--------------+-------------+---------------+---------+-------------
  public | refdata_aircraft_raw  | table | dst_designer | permanent   | heap          | 64 kB   |
  public | refdata_airlines_raw  | table | dst_designer | permanent   | heap          | 96 kB   |
- public | refdata_airports_raw  | table | dst_designer | permanent   | heap          | 1352 kB |
- public | refdata_cities_raw    | table | dst_designer | permanent   | heap          | 768 kB  |
- public | refdata_countries_raw | table | dst_designer | permanent   | heap          | 32 kB   |
+ public | refdata_airports_raw  | table | dst_designer | permanent   | heap          | 2664 kB |
+ public | refdata_cities_raw    | table | dst_designer | permanent   | heap          | 1472 kB |
+ public | refdata_countries_raw | table | dst_designer | permanent   | heap          | 64 kB   |
+ public | test_table            | table | dst_designer | permanent   | heap          | 0 bytes |
+(6 rows)
 ```
 
 ### Aircraft
@@ -129,7 +131,9 @@ FROM (
 #### count
 
 ```sql
-SELECT count(json_data->>'AirportCode') AS airport_count
+SELECT 
+    COUNT(json_data->>'AirportCode') AS airport_count,
+    json_data->'Names'->'Name'->'@LanguageCode' AS lang
 FROM (
     SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
     FROM refdata_airports_raw
@@ -140,20 +144,53 @@ FROM (
     SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
     FROM refdata_airports_raw
     WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
-) AS airport_data;
+) AS airport_data
+GROUP BY json_data->'Names'->'Name'->'@LanguageCode';
+```
+
+ - Si on veut ignorer les doublons :
+
+```sql
+SELECT 
+    COUNT(*) AS airport_count,
+    lang
+FROM (
+    SELECT DISTINCT json_data->>'AirportCode' AS airport_code, json_data->'Names'->'Name'->'@LanguageCode' AS lang
+    FROM (
+        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
+        FROM refdata_airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
+
+        UNION ALL
+
+        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        FROM refdata_airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
+    ) AS airport_data
+) AS airport_codes_langs
+GROUP BY lang;
 ```
 
 ```sql
- airport_count
----------------
-         11791
-(1 row)
+ airport_count | lang
+---------------+------
+             3 |
+         11782 | "EN"
+          8142 | "FR"
+(3 rows)
 ```
 
 #### Liste
 
 ```sql
-SELECT json_data->>'AirportCode' AS airport_code
+SELECT 
+    DISTINCT ON (json_data->>'AirportCode', json_data->'Names'->'Name'->'@LanguageCode')
+    json_data->>'AirportCode' AS airport_code, 
+	json_data->'Position'->'Coordinate'->'Latitude' AS Latitude, 
+	json_data->'Position'->'Coordinate'->'Longitude' AS Longitude, 
+	json_data->'CountryCode' AS country_code, 
+	json_data->'Names'->'Name'->'@LanguageCode' AS lang, 
+	json_data->'Names'->'Name'->'$' AS label
 FROM (
     SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
     FROM refdata_airports_raw
@@ -164,22 +201,26 @@ FROM (
     SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
     FROM refdata_airports_raw
     WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
-) AS airport_data ORDER BY airport_code LIMIT 10 ;
+) AS airport_data 
+-- WHERE json_data->'Names'->'Name'->'$' IS NULL
+ORDER BY json_data->>'AirportCode', json_data->'Names'->'Name'->'@LanguageCode', json_data->'Names'->'Name'->'$'
+LIMIT 10 ;
 ```
 
+
 ```sql
- airport_code
---------------
- AAA
- AAB
- AAC
- AAD
- AAE
- AAF
- AAG
- AAH
- AAI
- AAJ
+ airport_code | latitude | longitude | country_code | lang |          label
+--------------+----------+-----------+--------------+------+--------------------------
+ AAA          | -17.3525 | -145.51   | "PF"         | "EN" | "Anaa"
+ AAA          | -17.3525 | -145.51   | "PF"         | "FR" | "Anaa"
+ AAB          | -26.6911 | 141.0472  | "AU"         | "EN" | "Arrabury Airport"
+ AAC          | 31.0733  | 33.8358   | "EG"         | "EN" | "El Arish International"
+ AAC          | 31.0733  | 33.8358   | "EG"         | "FR" | "Al Arish"
+ AAD          | 6.0961   | 46.6375   | "SO"         | "EN" | "Adado Airport"
+ AAE          | 36.8222  | 7.8092    | "DZ"         | "EN" | "Annaba Rabah Bitat"
+ AAE          | 36.8222  | 7.8092    | "DZ"         | "FR" | "Annaba"
+ AAF          | 29.7333  | -85.0333  | "US"         | "EN" | "Apalachicola"
+ AAF          | 29.7333  | -85.0333  | "US"         | "FR" | "Apalachicola"
 (10 rows)
 ```
 
