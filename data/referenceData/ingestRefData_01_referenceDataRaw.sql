@@ -1,4 +1,7 @@
--- Suppression des tables si elles existent déjà
+-- ---------- --
+-- RAW TABLES --
+-- ---------- --
+-- DELETE ALL RAW TABLES IF THEY ALREADY EXIST
 DROP TABLE IF EXISTS refdata_aircraft_raw;
 DROP TABLE IF EXISTS refdata_airlines_raw;
 DROP TABLE IF EXISTS refdata_airports_raw;

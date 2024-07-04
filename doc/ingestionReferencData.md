@@ -19,7 +19,7 @@ cd /home/ubuntu/projet/dst_airlines_de
 
 ```shell
 chmod 755 ./bin/ingestRefData_00_initConfigure.sh
-chmod 755 ./bin/ingestRefData_02_initReferenceDataRaw.py
+chmod 755 ./bin/ingestRefData_runSqlScript.py
 chmod 755 ./bin/ingestRefData_03_ingestReferenceDataRaw.py
 # init
 sudo ./bin/ingestRefData_00_initConfigure.sh
@@ -29,9 +29,10 @@ sudo ./bin/ingestRefData_00_initConfigure.sh
 
 ```shell
 cd /home/ubuntu/projet/dst_airlines_de/data/referenceData
-python3 ../../bin/ingestRefData_02_initReferenceDataRaw.py ingestRefData_01_referenceDataRaw.sql
-python3 ../../bin/ingestRefData_03_ingestReferenceDataRaw.py
+python3 ../../bin/ingestRefData_runSqlScript.py ingestRefData_01_referenceDataRaw.sql
+python3 ../../bin/ingestRefData_02_ingestReferenceDataRaw.py
 rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_CountriesRaw outFR_AirportsRaw outFR_CitiesRaw outFR_CountriesRaw
+python3 ../../bin/ingestRefData_runSqlScript.py ingestRefData_03_referenceDataCooked.sql
 ```
 
 ## Verifications SQL
@@ -222,6 +223,45 @@ LIMIT 10 ;
  AAF          | 29.7333  | -85.0333  | "US"         | "EN" | "Apalachicola"
  AAF          | 29.7333  | -85.0333  | "US"         | "FR" | "Apalachicola"
 (10 rows)
+```
+
+#### Count airlines
+
+```sql
+SELECT 
+    COUNT(*) AS airline_count,
+    lang
+FROM (
+    SELECT json_data->'AirlineID' AS AirlineID, json_data->'Names'->'Name'->'@LanguageCode' AS lang
+    FROM (
+        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+        FROM refdata_airlines_raw
+        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'array'
+
+        UNION ALL
+
+        SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
+        FROM refdata_airlines_raw
+        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
+    ) AS Airline_data
+) AS airlines_codes_langs
+GROUP BY lang;
+```
+
+```sql
+SELECT json_data->'AirlineID' AS AirlineID, json_data->'Names'->'Name'->'@LanguageCode' AS lang
+FROM (
+	SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+	FROM refdata_airlines_raw
+	WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'array'
+
+	UNION ALL
+
+	SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
+	FROM refdata_airlines_raw
+	WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
+) AS Airline_data
+WHERE json_data->'Names'->'Name'->'@LanguageCode' IS NULL;
 ```
 
 
