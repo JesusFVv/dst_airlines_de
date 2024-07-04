@@ -19,7 +19,7 @@ db_config = {
 
 # Décompression des fichiers .7z
 def decompress_files():
-    files = ['outAircraft.7z', 'outAirlines.7z', 'outAirports.7z', 'outCities.7z', 'outCountries.7z']
+    files = ['outAircraft.7z', 'outAirlines.7z', 'outFR_Airports.7z', 'outFR_Cities.7z', 'outFR_Countries.7z', 'outEN_Airports.7z', 'outEN_Cities.7z', 'outEN_Countries.7z']
     for file in files:
         folder_name = file.replace('.7z', 'Raw')
         # Supprimer le dossier destination s'il existe déjà
