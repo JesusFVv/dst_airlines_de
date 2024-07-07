@@ -122,7 +122,7 @@ def customer_flight_information_airport(
         token (str): API access token
 
     Returns:
-        data (dict|None): endpoint results or None if endpoint is not available
+        data (dict | None): endpoint results or None if endpoint is not available
     """
 
     headers = {
@@ -133,7 +133,7 @@ def customer_flight_information_airport(
 
     # Request parameters
     params = {
-        "limit": None,  # integer, number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+        "limit": 100,  # integer, number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
         "offset": None,  # integer, number of records skipped. Defaults to 0
     }
 
@@ -152,7 +152,6 @@ def customer_flight_information_airport(
                 data = None
         return data
     except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout):
-        # logger.exception(f"Endpoint {endpoint} is not reachable")
         logger.warning(f"Endpoint {endpoint} is not reachable")
         return
     except (
@@ -160,13 +159,16 @@ def customer_flight_information_airport(
         requests.exceptions.RetryError,
         requests.exceptions.ConnectionError,
     ):
-        # logger.exception(f"Max retries has been reached for endpoint {endpoint}")
         logger.warning(f"Max retries has been reached for endpoint {endpoint}")
         return
 
 
 def save_data(
-    data: dict, endpoint_name: str, working_dir: PosixPath, date_time: str, iata_code: str
+    data: dict,
+    endpoint_name: str,
+    working_dir: PosixPath,
+    date_time: str,
+    iata_code: str,
 ) -> None:
     """Save data in JSON format in a output folder
 
@@ -177,12 +179,13 @@ def save_data(
         date_time (str): datetime string YYYY-mm-ddTHH:MM
         iata_code (str): airport iata code
     """
-    query_date = date_time.split("T")[0]
+    query_datetime = date_time.split("T")
+    query_date, query_time = query_datetime[0], query_datetime[1].replace(":", "")
     output_filepath = Path(
         working_dir,
         "output",
         query_date,
-        f"{iata_code}_{endpoint_name}_{date_time}.json",
+        f"{iata_code}_{endpoint_name}_{query_time}.json",
     )
     output_filepath.parent.mkdir(
         exist_ok=True, parents=True
@@ -206,17 +209,16 @@ if __name__ == "__main__":
         "%Y-%m-%d %H:%M:%S"
     )
     today = dt.date.today().strftime("%Y-%m-%d")
-    # datetime_array = generate_datetime_array(yesterday_two_am, today)
-    datetime_array = generate_datetime_array("2024-06-26 02:00:00", today)
+    datetime_array = generate_datetime_array(yesterday_two_am, today)
+    # datetime_array = generate_datetime_array("2024-07-03 02:00:00", today)
     logger.debug(datetime_array)
-    
+
     # Define retry strategy for https requests
     session = (
         requests.Session()
     )  # a Session object allows to persist some parameters across requests
     retries = Retry(
-        # total=2,
-        total=7,
+        total=6,
         backoff_factor=1,
         allowed_methods=["GET"],
         status_forcelist=[404, 429, 500, 502, 503, 504],
@@ -232,11 +234,10 @@ if __name__ == "__main__":
     # Loop over airports
     unfound_airports = {}
     for iata_code in airports:
-    # for iata_code in ["CDG"]:
-        unfound_airports[iata_code] = 0
+        # unfound_airports[iata_code] = 0
         # Loop over datetime for a given airport
-        # datetime_array = ["2024-06-29T01:00", "2024-06-29T02:00"]
         for date_time in datetime_array:
+            # Get data for customer flight information at departure airport endpoint
             endpoint_name = "departure"
             res = customer_flight_information_airport(
                 session,
@@ -247,30 +248,33 @@ if __name__ == "__main__":
             )
             time.sleep(1)  # Free API is limited to 5 requests per second
             print("\n")
-            if res is None:
-                unfound_airports[iata_code] += 1
-            else:
-                break
-                # save_data(res, endpoint_name, working_dir, date_time, iata_code)
-
-            # endpoint_name = "arrival"
-            # res = customer_flight_information_airport(
-            #     session,
-            #     CUSTOMER_FLIGHT_INFO_ARRIVAL_AIRPORT_ENDPOINT.format(
-            #         iata_code, date_time
-            #     ),
-            #     token,
-            # )
-            # time.sleep(1)  # Free API is limited to 5 requests per second
             # if res is None:
             #     unfound_airports[iata_code] += 1
             # else:
-            #     save_data(res, endpoint_name, working_dir, date_time, iata_code)
+            #     break
+            if res:
+                save_data(res, endpoint_name, working_dir, date_time, iata_code)
 
-        if unfound_airports[iata_code] == len(datetime_array):
-            logger.error(unfound_airports)
-            missing_airport_filepath = Path(working_dir, "output", "missing_airports.txt")
-            with open(missing_airport_filepath, "a") as f_airports:
-                f_airports.write(iata_code + "\n")
+            # Get data for customer flight information at arrival airport endpoint
+            endpoint_name = "arrival"
+            res = customer_flight_information_airport(
+                session,
+                CUSTOMER_FLIGHT_INFO_ARRIVAL_AIRPORT_ENDPOINT.format(
+                    iata_code, date_time
+                ),
+                token,
+            )
+            time.sleep(1)  # Free API is limited to 5 requests per second
+            print("\n")
+            if res:
+                save_data(res, endpoint_name, working_dir, date_time, iata_code)
 
-    print("COLLECT COMPLETED !")
+        # if unfound_airports[iata_code] == len(datetime_array):
+        #     logger.error(unfound_airports)
+        #     missing_airport_filepath = Path(
+        #         working_dir, "output", "missing_airports.txt"
+        #     )
+        #     with open(missing_airport_filepath, "a") as f_airports:
+        #         f_airports.write(iata_code + "\n")
+
+    logger.info("COLLECT COMPLETED !")
