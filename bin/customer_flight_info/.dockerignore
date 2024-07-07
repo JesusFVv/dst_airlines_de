@@ -3,10 +3,8 @@
 .gitignore
 .gitattributes
 
-
 # Byte-compiled / optimized / DLL files
 **/__pycache__/
-
 
 # Unit test / coverage reports
 htmlcov/
@@ -16,7 +14,6 @@ htmlcov/
 nosetests.xml
 coverage.xml
 
-
 # Virtual environment
 .env
 .venv/
@@ -25,6 +22,8 @@ venv/
 # PyCharm
 .idea
 
-
 # VS Code
 .vscode/
+
+# Ruff
+.ruff_cache/
