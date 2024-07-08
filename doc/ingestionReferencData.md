@@ -127,6 +127,31 @@ FROM (
 (10 rows)
 ```
 
+#### aicraft Cooked
+
+```sql
+SELECT 
+    count(*)
+	-- aircraftCode, AirlineEquipCode
+FROM (
+    SELECT DISTINCT json_data->>'AircraftCode' AS aircraftCode, json_data->>'AirlineEquipCode' AS AirlineEquipCode
+    FROM (
+        SELECT jsonb_array_elements(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') AS json_data
+        FROM refdata_aircraft_raw
+        WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'array'
+
+        UNION ALL
+
+        SELECT jsonb_array_elements(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') AS json_data
+        FROM refdata_aircraft_raw
+        WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'object'
+    ) AS airport_data
+) AS aircraft_cooked
+WHERE aircraftCode IS NOT NULL
+-- LIMIT 10
+;
+```
+
 ### Airports
 
 #### count
@@ -262,6 +287,31 @@ FROM (
 	WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
 ) AS Airline_data
 WHERE json_data->'Names'->'Name'->'@LanguageCode' IS NULL;
+```
+
+#### airlines Cooked
+
+```sql
+SELECT 
+    count(*)
+	-- AirlineID, AirlineID_ICAO
+FROM (
+    SELECT DISTINCT json_data->>'AirlineID' AS AirlineID, json_data->>'AirlineID_ICAO' AS AirlineID_ICAO
+    FROM (
+        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+        FROM refdata_airlines_raw
+        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'array'
+
+        UNION ALL
+
+        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+        FROM refdata_airlines_raw
+        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
+    ) AS airline_data
+) AS airline_cooked
+WHERE AirlineID IS NOT NULL
+-- LIMIT 10
+;
 ```
 
 ### Cooked Languages

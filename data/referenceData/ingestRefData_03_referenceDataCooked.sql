@@ -40,12 +40,12 @@ CREATE TABLE refdata_airports_coo (
 );
 
 CREATE TABLE refdata_airlines_coo (
-    AirlineID CHAR(2) PRIMARY KEY,
+    AirlineID CHAR(3) PRIMARY KEY,
     AirlineID_ICAO CHAR(3)
 );
 
 CREATE TABLE refdata_aircraft_coo (
-    refdata_aircraft_cooCode CHAR(3) PRIMARY KEY,
+    aircraftCode CHAR(3) PRIMARY KEY,
     AirlineEquipCode VARCHAR(10)
 );
 
@@ -84,6 +84,54 @@ CREATE TABLE refdata_aircraft_names_coo (
     Name VARCHAR(100) NOT NULL,
     PRIMARY KEY (refdata_aircraft_coo, Lang)
 );
+
+-- -------------------------------- --
+-- INSERT INTO refdata_aircraft_coo --
+-- -------------------------------- --
+
+INSERT INTO refdata_aircraft_coo (aircraftCode, AirlineEquipCode)
+SELECT 
+    aircraftCode, AirlineEquipCode
+FROM (
+    SELECT DISTINCT json_data->>'AircraftCode' AS aircraftCode, json_data->>'AirlineEquipCode' AS AirlineEquipCode
+    FROM (
+        SELECT jsonb_array_elements(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') AS json_data
+        FROM refdata_aircraft_raw
+        WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'array'
+
+        UNION ALL
+
+        SELECT jsonb_array_elements(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') AS json_data
+        FROM refdata_aircraft_raw
+        WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'object'
+    ) AS aircraft_data
+) AS aircraft_cooked
+WHERE aircraftCode IS NOT NULL
+ON CONFLICT (aircraftCode) DO NOTHING;
+
+-- -------------------------------- --
+-- INSERT INTO refdata_airlines_coo --
+-- -------------------------------- --
+
+INSERT INTO refdata_airlines_coo (AirlineID, AirlineID_ICAO)
+SELECT 
+    AirlineID, AirlineID_ICAO
+FROM (
+    SELECT DISTINCT json_data->>'AirlineID' AS AirlineID, json_data->>'AirlineID_ICAO' AS AirlineID_ICAO
+    FROM (
+        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+        FROM refdata_airlines_raw
+        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'array'
+
+        UNION ALL
+
+        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+        FROM refdata_airlines_raw
+        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
+    ) AS airline_data
+) AS airline_cooked
+WHERE AirlineID IS NOT NULL
+ON CONFLICT (AirlineID) DO NOTHING;
 
 -- --------------------------------- --
 -- INSERT INTO refdata_languages_coo --
