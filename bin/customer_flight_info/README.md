@@ -14,7 +14,7 @@ To run the container, there are two mandatory steps to follow:
 ### Build image
 Make sure to be in the directory where the Dockerfile stands.
 ```sh
-cd /home/ubuntu/DST_airlines/dst_airlines_de/bin/customer_flight_info
+cd /home/ubuntu/dst_airlines_de/bin/customer_flight_info  #Folder where the Dockerfile stands
 docker build -t python_customer_flight_info .
 ```
 
