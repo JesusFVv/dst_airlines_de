@@ -4,5 +4,5 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY input ./input
-COPY customer_flight_info_at_airport.py .
-CMD [ "python3", "customer_flight_info_at_airport.py" ]
+COPY extract_customer_flight_info.py .
+CMD [ "python3", "extract_customer_flight_info.py" ]
