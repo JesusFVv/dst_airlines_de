@@ -8,28 +8,8 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
-def read_db_config(filepath: PosixPath) -> tuple[PosixPath, ...]:
-    """Read content of a config file
-
-    Args:
-        filepath (PosixPath): absolute path where the config file is stored
-
-    Returns:
-        (db_user_path, db_pwd_path, db_docker_path) (tuple[PosixPath, ...]): a tuple containing database config values
-    """
-    config = configparser.ConfigParser()  # Create a ConfigParser object
-    config.read(filepath)  # Read the configuration file
- 
-    # Access values from the configuration file
-    db_user_path = Path(config.get('Database', 'user_absolute_path'))
-    db_pwd_path = Path(config.get('Database', 'pwd_absolute_path'))
-    db_docker_path = Path(config.get('Database', 'docker_absolute_path'))
- 
-    return (db_user_path, db_pwd_path, db_docker_path)
- 
-
 def get_filenames(data_path: PosixPath, file_extension: str = "") -> list[PosixPath]:
-    """Get a list of filenames recursively
+    """Get a list of filenames. It is done recursively
 
     Args:
         data_path (PosixPath): absolute root path where the data are stored
@@ -38,8 +18,10 @@ def get_filenames(data_path: PosixPath, file_extension: str = "") -> list[PosixP
     Returns:
         files_list (list[PosixPath]): a list containing path of files
     """
+    file_extension = file_extension.strip()
     if file_extension:
-        file_extension = "." + file_extension
+        if not file_extension.startswith("."):
+            file_extension = "." + file_extension
 
     files_list = [
         f for f in data_path.rglob("*" + file_extension) if f.is_file()
@@ -53,18 +35,40 @@ def get_filenames(data_path: PosixPath, file_extension: str = "") -> list[PosixP
         )
 
 
+def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath, str]:
+    """Read content of a config file
+
+    Args:
+        filepath (PosixPath): absolute path to the db config file
+
+    Returns:
+        (db_user_path, db_pwd_path, db_docker_path, db_host) (tuple[PosixPath, PosixPath, PosixPath, str]): a tuple containing database config values
+    """
+    config = configparser.ConfigParser()  # Create a ConfigParser object
+    config.read(filepath)  # Read the configuration file
+
+    # Access values from the configuration file
+    db_user_path = Path(config.get("postgresql", "user_absolute_path"))
+    db_pwd_path = Path(config.get("postgresql", "pwd_absolute_path"))
+    db_docker_path = Path(config.get("postgresql", "docker_absolute_path"))
+    db_host = config.get("postgresql", "host")
+
+    return (db_user_path, db_pwd_path, db_docker_path, db_host)
+
+
 def _get_db_cred(
-    user_path: PosixPath, pwd_path: PosixPath, docker_path: PosixPath
-) -> tuple[str, str, str, int]:
+    user_path: PosixPath, pwd_path: PosixPath, docker_path: PosixPath, host: str
+) -> dict[str, str | int]:
     """Get some database credentials
 
     Args:
         user_path (PosixPath): a path pointing to the file with the database user
         pwd_path (PosixPath): a path pointing to the file with the database user
         docker_path (PosixPath): a path pointing to the docker-compose file that implements the database
+        host (str): database server address (e.g. localhost or an IP address)
 
     Returns:
-        (user, pwd, db_name, port) (tuple[str, str, str, int]): a tuple with user, pwd, database name and port information
+        config (dict[str, str|int]): a dictionary with database config values (i.e. user, pwd, database name and port)
     """
     with open(user_path, "r") as f:
         user = f.read()
@@ -80,30 +84,62 @@ def _get_db_cred(
         ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
         port = int(ports[0].split(":")[0])
 
-    return (user, pwd, db_name, port)
+    # Store database credentials in a dictionary
+    config = {}
+    config["user"] = user
+    config["password"] = pwd
+    config["database"] = db_name
+    config["port"] = port
+    config["host"] = host
+
+    return config
 
 
-def connect_db(db_config_file: PosixPath) -> psycopg2.connection:
+def connect_db(
+    db_config_filepath: PosixPath,
+) -> tuple[psycopg2.connection, psycopg2.cursor]:
     """Connect to a Postgres database
 
     Args:
-        user_path (PosixPath): absolute path where the file containing database user is stored
-        pwd_path (PosixPath): absolute path where the file containing database password is stored
-        docker_path (PosixPath): absolute path where the docker compose file is stored
+        db_config_filepath (PosixPath): absolute path to the db config file
 
     Returns:
-        conn (psycopg2.connection): a connector to the Postgres database
+        (conn, cur) (tuple[psycopg2.connection, psycopg2.cursor]): a tuple containing a connector to the Postgres database and a cursor object
     """
-    user_path, pwd_path, docker_path = read_db_config(db_config_file)
-    user, pwd, db_name, port = _get_db_cred(user_path, pwd_path, docker_path)
+    user_path, pwd_path, docker_path, host = read_db_config(db_config_filepath)
+    db_config = _get_db_cred(user_path, pwd_path, docker_path, host)
 
     try:
-        conn = psycopg2.connect(
-            dbname=db_name, user=user, password=pwd, host="localhost", port=port
-        )
-    except Exception as e:
+        conn = psycopg2.connect(**db_config)
+        cur = conn.cursor()
+    except (psycopg2.DatabaseError, Exception) as e:
         logger.error("Not able to connect to the database")
         logger.exception(e)
-        return
+        raise ValueError
+    else:
+        logger.info("Connected to the database")
+        return (conn, cur)
 
-    return conn
+
+def insert_data_into_db(cur: psycopg2.cursor, db_table_name: str, data: dict) -> None:
+    """Insert data into Postgres database
+
+    Args:
+        cur (psycopg2.cursor): a cursor object to execute Postgres command
+        db_table_name (str): database table name where data are stored
+        data (dict): data to be stored in the database
+    """
+    if not isinstance(data, dict):
+        raise TypeError("""Data parameter has to be a dictionary.
+                        Its keys have to be the table columns name""")
+
+    table_col_names = ", ".join(
+        data.keys()
+    )  # Has to be in line with the SQL CREATE TABLE code
+    table_values = ", ".join(map(lambda x: f"%({x})s", data.keys()))
+
+    # Create SQL query
+    query = f"""INSERT INTO {db_table_name} ({table_col_names})
+                VALUES ({table_values})"""
+    # Execute query
+    cur.execute(query, data)
