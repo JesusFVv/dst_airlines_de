@@ -3,9 +3,9 @@
 -- ---------- --
 
 -- DELETE RAW TABLE IF IT ALREADY EXISTS
-DROP TABLE IF EXISTS operations_customer_flight_info;
+DROP TABLE IF EXISTS operations_customer_flight_info_raw;
 
-CREATE TABLE IF NOT EXISTS operations_customer_flight_info (
+CREATE TABLE IF NOT EXISTS operations_customer_flight_info_raw (
     id SERIAL PRIMARY KEY,
     data JSONB
 );
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS operations_customer_flight_info (
 -- ------------- --
 
 -- DELETE COOKED TABLE IF IT ALREADY EXISTS
-DROP TABLE IF EXISTS operations_customer_flight_info;
+DROP TABLE IF EXISTS operations_customer_flight_info_coo;
 
 -- CREATE ENUM TYPE FOR FLIGHT CODES
 CREATE TYPE departure_flight_code AS ENUM ('FE',
@@ -45,7 +45,7 @@ CREATE TYPE overall_flight_code AS ENUM ('CD',
                                          'NA');
 
 
-CREATE TABLE IF NOT EXISTS operations_customer_flight_info (
+CREATE TABLE IF NOT EXISTS operations_customer_flight_info_coo (
     departure_airport_code char(3),
     departure_scheduled_datetime timestamp,
     departure_estimated_datetime timestamp,
