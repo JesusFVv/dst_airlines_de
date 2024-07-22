@@ -3,6 +3,7 @@ import logging
 import psycopg2
 import yaml
 from pathlib import Path, PosixPath
+from psycopg2.extensions import connection, cursor
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)

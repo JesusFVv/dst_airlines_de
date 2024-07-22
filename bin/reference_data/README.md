@@ -35,6 +35,13 @@ python3 ./reference_data/ingestRefData_02_ingestReferenceDataRaw.py /home/ubuntu
 python3 ../common/runSqlScript.py ingestRefData_03_referenceDataCooked.sql /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini
 ```
 
+### Ingestion version docker
+
+```shell
+cd /home/ubuntu/projet/dst_airlines_de/bin/reference_data/pythonDocker
+docker build -t python_reference_data .
+```
+
 ### Nettoyage
 
 ```shell
