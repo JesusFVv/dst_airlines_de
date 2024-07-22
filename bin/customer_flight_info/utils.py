@@ -8,30 +8,26 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
-def get_filenames(data_path: PosixPath, file_extension: str = "") -> list[PosixPath]:
+def get_filenames(files_path: PosixPath, suffix: str = "") -> list[PosixPath]:
     """Get a list of filenames. It is done recursively
 
     Args:
-        data_path (PosixPath): absolute root path where the data are stored
-        file_extension (str): filter by the given file_extension
+        files_path (PosixPath): absolute root path where the files are stored
+        suffix (str): filter by the given suffix - it could be file extension or sth else
 
     Returns:
         files_list (list[PosixPath]): a list containing path of files
     """
-    file_extension = file_extension.strip()
-    if file_extension:
-        if not file_extension.startswith("."):
-            file_extension = "." + file_extension
-
+    suffix = suffix.strip()
     files_list = [
-        f for f in data_path.rglob("*" + file_extension) if f.is_file()
+        f for f in files_path.rglob("*" + suffix) if f.is_file()
     ]  # List files recursively
 
     if files_list:
         return files_list
     else:
         raise ValueError(
-            f"The path {data_path} doesn't contain any {file_extension} file"
+            f"The path {files_path} doesn't contain any file with this suffix: {suffix}"
         )
 
 
