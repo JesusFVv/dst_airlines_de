@@ -18,21 +18,28 @@ cd /home/ubuntu/projet/dst_airlines_de
 ### Prérequis
 
 ```shell
-chmod 755 ./bin/ingestRefData_00_initConfigure.sh
-chmod 755 ./bin/ingestRefData_runSqlScript.py
-chmod 755 ./bin/ingestRefData_03_ingestReferenceDataRaw.py
+chmod 755 ./bin/common/runSqlScript.py
+chmod 755 ./bin/common/utils.py
+chmod 755 ./bin/reference_data/ingestRefData_00_initConfigure.sh
+chmod 755 ./bin/reference_data/ingestRefData_02_ingestReferenceDataRaw.py
 # init
-sudo ./bin/ingestRefData_00_initConfigure.sh
+sudo ./bin/reference_data/ingestRefData_00_initConfigure.sh
 ```
 
 ### Ingestion
 
 ```shell
+cd /home/ubuntu/projet/dst_airlines_de/bin/reference_data/
+python3 ../common/runSqlScript.py ingestRefData_01_referenceDataRaw.sql /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini
+python3 ./reference_data/ingestRefData_02_ingestReferenceDataRaw.py /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini /home/ubuntu/projet/dst_airlines_de/data/referenceData
+python3 ../common/runSqlScript.py ingestRefData_03_referenceDataCooked.sql /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini
+```
+
+### Nettoyage
+
+```shell
 cd /home/ubuntu/projet/dst_airlines_de/data/referenceData
-python3 ../../bin/ingestRefData_runSqlScript.py ingestRefData_01_referenceDataRaw.sql
-python3 ../../bin/ingestRefData_02_ingestReferenceDataRaw.py
 rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_CountriesRaw outFR_AirportsRaw outFR_CitiesRaw outFR_CountriesRaw
-python3 ../../bin/ingestRefData_runSqlScript.py ingestRefData_03_referenceDataCooked.sql
 ```
 
 ## Verifications SQL
@@ -314,6 +321,31 @@ WHERE AirlineID IS NOT NULL
 ;
 ```
 
+#### countries Cooked
+
+```sql
+SELECT 
+    count(*)
+	-- CountryCode
+FROM (
+    SELECT DISTINCT json_data->>'CountryCode' AS CountryCode
+    FROM (
+        SELECT jsonb_array_elements(data->'CountryResource'->'Countries'->'Country') AS json_data
+        FROM refdata_countries_raw
+        WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'array'
+
+        UNION ALL
+
+        SELECT jsonb_array_elements(data->'CountryResource'->'Countries'->'Country') AS json_data
+        FROM refdata_countries_raw
+        WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'object'
+    ) AS countrie_data
+) AS countrie_cooked
+WHERE CountryCode IS NOT NULL
+-- LIMIT 10
+;
+```
+
 ### Cooked Languages
 
 ```sql
@@ -344,6 +376,8 @@ SELECT * FROM
 	SELECT 'refdata_airline_names_coo' as table, count(*) AS cnt  FROM refdata_airline_names_coo
 	UNION
 	SELECT 'refdata_aircraft_names_coo' as table, count(*) AS cnt  FROM refdata_aircraft_names_coo
+	UNION
+	SELECT 'refdata_aircraft_coo' as table, count(*) AS cnt  FROM refdata_aircraft_coo
 ) ORDER BY cnt DESC;
 
 ```

@@ -1,33 +1,23 @@
 import os
-import getpass
+import sys
 import json
 import shutil
-import psycopg2
 import re
 from py7zr import SevenZipFile
-
-db_user = 'dst_designer'
-password = getpass.getpass(f"Enter the password for the PostgreSQL user {db_user}: ")
-
-# Configuration de la connexion à la base de données
-db_config = {
-    'dbname': 'dst_airlines_db',
-    'user': db_user,
-    'password': password,
-    'host': 'localhost',
-    'port': 6432
-}
+from pathlib import Path
+from ../common/utils import connect_db
 
 # Décompression des fichiers .7z
-def decompress_files():
+def decompress_files(data_folder):
     files = ['out_Aircraft.7z', 'out_Airlines.7z', 'outFR_Airports.7z', 'outFR_Cities.7z', 'outFR_Countries.7z', 'outEN_Airports.7z', 'outEN_Cities.7z', 'outEN_Countries.7z']
     for file in files:
-        folder_name = file.replace('.7z', 'Raw')
+        file_path = os.path.join(data_folder, file)
+        folder_name = os.path.join(data_folder, file.replace('.7z', 'Raw'))
         # Supprimer le dossier destination s'il existe déjà
         if os.path.exists(folder_name):
             shutil.rmtree(folder_name)
         os.makedirs(folder_name, exist_ok=True)
-        with SevenZipFile(file, 'r') as archive:
+        with SevenZipFile(file_path, 'r') as archive:
             archive.extractall(path=folder_name)
 
 def get_json_files(directory):
@@ -39,17 +29,17 @@ def get_json_files(directory):
     return json_files
 
 # Insertion des données JSON dans la base de données
-def ingest_data():
-    conn = psycopg2.connect(**db_config)
-    cursor = conn.cursor()
+def ingest_data(data_folder, db_config_path):
+    conn, cursor = connect_db(db_config_path)
 
-    folders = [f for f in os.listdir() if f.endswith('Raw')]
+    folders = [f for f in os.listdir(data_folder) if f.endswith('Raw')]
 
     for folder in folders:
         nature = re.sub(r'out[A-Z]*_', '', folder).replace('Raw', '')
         table_name = f"refdata_{nature.lower()}_raw"
-
-        json_files = get_json_files(folder)
+        folder_path = os.path.join(data_folder, folder)
+        
+        json_files = get_json_files(folder_path)
         for json_file in json_files:
             filename = os.path.basename(json_file)
             if filename.endswith('.json') and filename.startswith(f'{nature}_200_'):
@@ -62,5 +52,12 @@ def ingest_data():
     conn.close()
 
 if __name__ == "__main__":
-    decompress_files()
-    ingest_data()
+    if len(sys.argv) < 2 or len(sys.argv) > 3:
+        print(f"Usage: {sys.argv[0]} <DB_CONFIG_PATH> [DATA_FOLDER]")
+        sys.exit(1)
+
+    db_config_path = Path(sys.argv[1])
+    data_folder = sys.argv[2] if len(sys.argv) == 3 else "./"
+
+    decompress_files(data_folder)
+    ingest_data(data_folder, db_config_path)
