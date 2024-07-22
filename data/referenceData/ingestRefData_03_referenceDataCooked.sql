@@ -79,7 +79,7 @@ CREATE TABLE refdata_airline_names_coo (
 );
 
 CREATE TABLE refdata_aircraft_names_coo (
-    refdata_aircraft_coo CHAR(3) NOT NULL REFERENCES refdata_aircraft_coo(refdata_aircraft_cooCode),
+    refdata_aircraft_coo CHAR(3) NOT NULL REFERENCES refdata_aircraft_coo(aircraftCode),
     Lang CHAR(2) NOT NULL REFERENCES refdata_languages_coo(Code),
     Name VARCHAR(100) NOT NULL,
     PRIMARY KEY (refdata_aircraft_coo, Lang)
