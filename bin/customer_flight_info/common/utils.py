@@ -31,14 +31,14 @@ def get_filenames(files_path: PosixPath, suffix: str = "") -> list[PosixPath]:
         )
 
 
-def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath, str]:
+def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath]:
     """Read content of a config file
 
     Args:
         filepath (PosixPath): absolute path to the db config file
 
     Returns:
-        (db_user_path, db_pwd_path, db_docker_path, db_host) (tuple[PosixPath, PosixPath, PosixPath, str]): a tuple containing database config values
+        (db_user_path, db_pwd_path, db_docker_path) (tuple[PosixPath, PosixPath, PosixPath]): a tuple containing database config values
     """
     config = configparser.ConfigParser()  # Create a ConfigParser object
     config.read(filepath)  # Read the configuration file
@@ -47,13 +47,12 @@ def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath
     db_user_path = Path(config.get("postgresql", "user_absolute_path"))
     db_pwd_path = Path(config.get("postgresql", "pwd_absolute_path"))
     db_docker_path = Path(config.get("postgresql", "docker_absolute_path"))
-    db_host = config.get("postgresql", "host")
 
-    return (db_user_path, db_pwd_path, db_docker_path, db_host)
+    return (db_user_path, db_pwd_path, db_docker_path)
 
 
 def _get_db_cred(
-    user_path: PosixPath, pwd_path: PosixPath, docker_path: PosixPath, host: str
+    user_path: PosixPath, pwd_path: PosixPath, docker_path: PosixPath
 ) -> dict[str, str | int]:
     """Get some database credentials
 
@@ -61,7 +60,6 @@ def _get_db_cred(
         user_path (PosixPath): a path pointing to the file with the database user
         pwd_path (PosixPath): a path pointing to the file with the database user
         docker_path (PosixPath): a path pointing to the docker-compose file that implements the database
-        host (str): database server address (e.g. localhost or an IP address)
 
     Returns:
         config (dict[str, str|int]): a dictionary with database config values (i.e. user, pwd, database name and port)
@@ -74,54 +72,56 @@ def _get_db_cred(
 
     with open(docker_path, "r") as f:
         docker_compose = yaml.safe_load(f)
-        db_name = docker_compose["services"]["postgres_db"]["environment"][
-            "POSTGRES_DB"
-        ]
-        ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
-        port = int(ports[0].split(":")[0])
+    services = docker_compose["services"].keys()
+    host = [x for x in services if "postgres" in x][0]
+    db_name = docker_compose["services"]["postgres_db"]["environment"][
+        "POSTGRES_DB"
+    ]
+    ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
+    port = int(ports[0].split(":")[0])
 
     # Store database credentials in a dictionary
     config = {}
     config["user"] = user
     config["password"] = pwd
+    config["host"] = host
     config["database"] = db_name
     config["port"] = port
-    config["host"] = host
 
     return config
 
 
 def connect_db(
     db_config_filepath: PosixPath,
-) -> tuple[psycopg2.connection, psycopg2.cursor]:
+) -> tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]:
     """Connect to a Postgres database
 
     Args:
         db_config_filepath (PosixPath): absolute path to the db config file
 
     Returns:
-        (conn, cur) (tuple[psycopg2.connection, psycopg2.cursor]): a tuple containing a connector to the Postgres database and a cursor object
+        (conn, cur) (tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]): a tuple containing a connector to the Postgres database and a cursor object
     """
-    user_path, pwd_path, docker_path, host = read_db_config(db_config_filepath)
-    db_config = _get_db_cred(user_path, pwd_path, docker_path, host)
+    user_path, pwd_path, docker_path = read_db_config(db_config_filepath)
+    db_config = _get_db_cred(user_path, pwd_path, docker_path)
 
     try:
         conn = psycopg2.connect(**db_config)
         cur = conn.cursor()
-    except (psycopg2.DatabaseError, Exception) as e:
+    except (Exception, psycopg2.DatabaseError) as e:
         logger.error("Not able to connect to the database")
         logger.exception(e)
-        raise ValueError
+        raise
     else:
         logger.info("Connected to the database")
         return (conn, cur)
 
 
-def insert_data_into_db(cur: psycopg2.cursor, db_table_name: str, data: dict) -> None:
+def insert_data_into_db(cur: psycopg2.extensions.cursor, db_table_name: str, data: dict) -> None:
     """Insert data into Postgres database
 
     Args:
-        cur (psycopg2.cursor): a cursor object to execute Postgres command
+        cur (psycopg2.extensions.cursor): a cursor object to execute Postgres command
         db_table_name (str): database table name where data are stored
         data (dict): data to be stored in the database
     """
@@ -134,8 +134,40 @@ def insert_data_into_db(cur: psycopg2.cursor, db_table_name: str, data: dict) ->
     )  # Has to be in line with the SQL CREATE TABLE code
     table_values = ", ".join(map(lambda x: f"%({x})s", data.keys()))
 
-    # Create SQL query
+    # SQL query
     query = f"""INSERT INTO {db_table_name} ({table_col_names})
                 VALUES ({table_values})"""
+
     # Execute query
     cur.execute(query, data)
+
+
+def read_data_from_db(db_config_filepath: PosixPath, sql_query: str) -> list[tuple]:
+    """Read data from a database table
+
+    Args:
+        db_config_filepath (PosixPath): absolute path to the db config file
+        sql_query (str): SQL query to run on database table
+
+    Returns:
+        res (list[tuple]): a list containing database table values in tuples
+    """
+    # Database connection
+    conn, cur = connect_db(db_config_filepath)
+
+    try:
+        # Execute query
+        cur.execute(sql_query)
+        # Fetch results
+        res = cur.fetchall()  # Returns a list of tuples
+    except (Exception, psycopg2.Error) as e:
+        logger.exception(e)
+        raise
+    finally:
+        # Close database connection
+        if conn:
+            cur.close()
+        conn.close()
+        logger.info("Connection closed to the database")
+
+    return res

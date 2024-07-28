@@ -6,7 +6,9 @@ import pandas as pd
 import requests
 import time
 import urllib3
+from common import utils
 from pathlib import Path, PosixPath
+from py7zr import SevenZipFile
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
@@ -166,24 +168,23 @@ def customer_flight_information_airport(
 def save_data(
     data: dict,
     endpoint_name: str,
-    working_dir: PosixPath,
+    data_path: PosixPath,
     date_time: str,
     iata_code: str,
 ) -> None:
-    """Save data in JSON format in a output folder
+    """Save data in JSON format in an output folder
 
     Args:
         data (dict): data to be saved (endpoint results)
         endpoint_name (str): a keyword to differentiate the different endpoints
-        working_dir (PosixPath): working directory path
+        data_path (PosixPath): absolute path to the root folder where data are stored
         date_time (str): datetime string YYYY-mm-ddTHH:MM
         iata_code (str): airport iata code
     """
     query_datetime = date_time.split("T")
     query_date, query_time = query_datetime[0], query_datetime[1].replace(":", "")
     output_filepath = Path(
-        working_dir,
-        "output",
+        data_path,
         query_date,
         f"{iata_code}_{endpoint_name}_{query_time}.json",
     )
@@ -194,7 +195,31 @@ def save_data(
         json.dump(data, f, ensure_ascii=True, indent=4)
 
 
+def zip_files(data_path: PosixPath, date_time: str) -> None:
+    """Zip data folder in 7z format
+
+    Args:
+        data_path (PosixPath): absolute path to the root folder having data in JSON format
+        date_time (str): datetime string YYYY-mm-ddTHH:MM
+    """
+    query_date = date_time.split("T")[0]
+    data_folder = Path(data_path, query_date)
+    archive_folder = data_folder.with_suffix(".7z")
+    # List JSON files to zip
+    json_files = utils.get_filenames(data_folder, "json")
+    # Make 7-zip archive
+    with SevenZipFile(archive_folder, "w") as archive:
+        for f in json_files:
+            archive.write(f, arcname=f.name)
+
+
 if __name__ == "__main__":
+    ########################
+    ### Input parameter ###
+    ########################
+    data_path = Path("/home/ubuntu/dst_airlines_de/data/customerFlightInfo")
+
+    ########################
     # Get airports array
     working_dir = Path.cwd()
     airport_filepath = Path(working_dir, "input", "airports.csv")
@@ -234,7 +259,6 @@ if __name__ == "__main__":
     # Loop over airports
     unfound_airports = {}
     for iata_code in airports:
-        # unfound_airports[iata_code] = 0
         # Loop over datetime for a given airport
         for date_time in datetime_array:
             # Get data for customer flight information at departure airport endpoint
@@ -248,12 +272,8 @@ if __name__ == "__main__":
             )
             time.sleep(1)  # Free API is limited to 5 requests per second
             print("\n")
-            # if res is None:
-            #     unfound_airports[iata_code] += 1
-            # else:
-            #     break
             if res:
-                save_data(res, endpoint_name, working_dir, date_time, iata_code)
+                save_data(res, endpoint_name, data_path, date_time, iata_code)
 
             # Get data for customer flight information at arrival airport endpoint
             endpoint_name = "arrival"
@@ -267,14 +287,8 @@ if __name__ == "__main__":
             time.sleep(1)  # Free API is limited to 5 requests per second
             print("\n")
             if res:
-                save_data(res, endpoint_name, working_dir, date_time, iata_code)
+                save_data(res, endpoint_name, data_path, date_time, iata_code)
 
-        # if unfound_airports[iata_code] == len(datetime_array):
-        #     logger.error(unfound_airports)
-        #     missing_airport_filepath = Path(
-        #         working_dir, "output", "missing_airports.txt"
-        #     )
-        #     with open(missing_airport_filepath, "a") as f_airports:
-        #         f_airports.write(iata_code + "\n")
-
+    zip_files(data_path, datetime_array[0])
     logger.info("COLLECT COMPLETED !")
+
