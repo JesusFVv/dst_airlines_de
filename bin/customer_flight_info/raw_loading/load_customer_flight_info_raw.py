@@ -37,7 +37,7 @@ def get_data(data_path: PosixPath) -> Generator[dict, None, None]:
         data_path (PosixPath): absolute path to the root folder having data in JSON format
 
     Returns:
-        (Generator[dict, None, None]): a generator returning data for each file as a dictionary
+        (Generator[dict, None, None]): a generator returning data as a dictionary for each file
     """
     folders = [
         x for x in data_path.iterdir() if x.is_dir() and x.match("*Raw")
@@ -69,7 +69,7 @@ def ingest_data(
     Args:
         db_config_filepath (PosixPath): absolute path to the db config file
         sql_table_name_raw (str): SQL table name where raw data are stored
-        gen (Generator[dict, None, None]): a generator returning data for each file as a dictionary
+        gen (Generator[dict, None, None]): a generator returning data as a dictionary
     """
     # Database connection
     conn, cur = utils.connect_db(db_config_filepath)
