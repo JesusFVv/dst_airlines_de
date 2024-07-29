@@ -78,7 +78,7 @@ def _get_db_cred(
         "POSTGRES_DB"
     ]
     ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
-    port = int(ports[0].split(":")[0])
+    port = int(ports[0].split(":")[1])
 
     # Store database credentials in a dictionary
     config = {}
