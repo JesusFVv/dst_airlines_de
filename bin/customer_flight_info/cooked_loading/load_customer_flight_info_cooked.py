@@ -1,27 +1,11 @@
-import json
 import logging
-import utils
 from collections import defaultdict
+from common import utils
 from pathlib import Path, PosixPath
 from typing import Generator
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
-
-
-def get_data(files_list: list[PosixPath]) -> Generator[dict, None, None]:
-    """Return data of each file one by one
-
-    Args:
-        files_list (list[PosixPath]): a list containing paths of JSON files
-
-    Returns:
-        data (Generator[dict, None, None]): a generator returning data for each file as a dictionary
-    """
-    for f in files_list:
-        with open(f, "r") as data_file:
-            data = json.load(data_file)
-            yield data
 
 
 def _build_flat_data(data: dict) -> dict[str, str]:
@@ -47,52 +31,50 @@ def _build_flat_data(data: dict) -> dict[str, str]:
     return formatted_dict
 
 
-def build_flat_data(data: dict) -> dict[str, str]:
-    data_flight = data["FlightInformation"]["Flights"]["Flight"]
-    if isinstance(data_flight, dict):
-        formatted_dict = _build_flat_data(data_flight)
-    elif isinstance(data_flight, list):
-        for elem in data_flight:
-            formatted_dict = _build_flat_data(elem)
-    else:
-        logging.error("The format has to be a dictionary or a list")
-        raise TypeError("The format has to be a dictionary or a list")
+def build_flat_data(db_config_filepath: PosixPath, sql_query: str) -> Generator[dict, None, None]:
+    """Format data coming from database raw table to make them suitable for the cooked table
 
-    return formatted_dict
+    Args:
+        db_config_filepath (PosixPath): absolute path to the db config file
+        sql_query (str): SQL query to run on database table
+
+    Returns:
+        formatted_dict (Generator[dict, None, None]): a generator returning formatted data as a dictionary for each database table row
+    """
+    # Read data from the database raw table
+    all_data = utils.read_data_from_db(db_config_filepath, sql_query)  # Returns a list of tuples. The tuple is made of 2 elements: id (int) and data (dict)
+    for _, data in all_data:
+        formatted_dict = _build_flat_data(data)
+        yield formatted_dict
 
 
-# def write_data_to_db(data: dict, conn: psycopg2.connection) -> None:
-#     # Create a cursor
-#     with conn.cursor() as cur:
-#         query = f"""
-#                 INSERT INTO operations_customer_flight_info ({", ".join(data.keys())})
-#                 VALUES ({", ".join(map(lambda x: f"%({x})s", data.keys()))})
-#                 """
-#         try:
-#             cur.execute(query, data)
-#         except (Exception, psycopg2.DatabaseError) as e:
-#             print(e)
+def ingest_data(
+    db_config_filepath: PosixPath,
+    sql_table_name_cooked: str,
+    gen: Generator[dict, None, None],
+) -> None:
+    """Ingest data into Postgres database
+
+    Args:
+        db_config_filepath (PosixPath): absolute path to the db config file
+        sql_table_name_cooked (str): SQL table name where cooked data are stored
+        gen (Generator[dict, None, None]): a generator returning formatted data as a dictionary
+    """
+    # Database connection
+    conn, cur = utils.connect_db(db_config_filepath)
+
+
 
 
 if __name__ == "__main__":
-    # Absolute root path where the data are stored
-    # data_absolute_path = Path("/home/ubuntu/DST_airlines/dst_airlines_de/data/customerFlightInfo")
-    data_absolute_path = Path("/config/workspace/lufthansa/data/2024-07-03")
-    db_user_absolute_path = Path(
-        "/home/ubuntu/DST_airlines/dst_airlines_de/src/project_deployment_postgres/postgres_user.txt"
+    ########################
+    ### Input parameters ###
+    ########################
+    db_config_filepath = Path(
+        "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/cooked_loading/common/database.ini"
     )
-    db_pwd_absolute_path = Path(
-        "/home/ubuntu/DST_airlines/dst_airlines_de/src/project_deployment_postgres/postgres_password.txt"
-    )
-    # db_docker_absolute_path = Path("/home/ubuntu/DST_airlines/dst_airlines_de/src/project_deployment_postgres/docker-compose.yml")
-    db_docker_absolute_path = Path("/config/workspace/lufthansa/docker-compose.yml")
-    files_list = utils.get_filenames(data_absolute_path, "json")
-    print(files_list)
-    gen = get_data(files_list)  # Generator object
-    # conn = utils.connect_db(user_path, pwd_path, docker_path)  # Connect to the db
-    for d in gen:
-        print(f"{d=}")
-        data_to_write = build_flat_data(d)
-        print(f"{data_to_write=}")
-        # write_data_to_db(data_to_write, conn)
-    # conn.close()
+    sql_query = "SELECT * FROM operations_customer_flight_info_raw"
+
+    ########################
+    build_flat_data(db_config_filepath, sql_query)
+
