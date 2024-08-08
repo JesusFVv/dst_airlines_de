@@ -4,6 +4,7 @@ import logging
 import numpy as np
 import pandas as pd
 import requests
+import shutil
 import time
 import urllib3
 from common import utils
@@ -211,6 +212,8 @@ def zip_files(data_path: PosixPath, date_time: str) -> None:
     with SevenZipFile(archive_folder, "w") as archive:
         for f in json_files:
             archive.write(f, arcname=f.name)
+    # Remove data folder after is has been archived
+    shutil.rmtree(data_folder)
 
 
 if __name__ == "__main__":
@@ -235,7 +238,7 @@ if __name__ == "__main__":
     )
     today = dt.date.today().strftime("%Y-%m-%d")
     # datetime_array = generate_datetime_array(yesterday_two_am, today)
-    datetime_array = generate_datetime_array("2024-07-11 02:00:00", "2024-07-12")
+    datetime_array = generate_datetime_array("2024-08-06 02:00:00", "2024-08-07")
     logger.debug(datetime_array)
 
     # Define retry strategy for https requests
