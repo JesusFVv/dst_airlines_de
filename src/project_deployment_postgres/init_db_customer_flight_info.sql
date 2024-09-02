@@ -3,11 +3,11 @@
 -- ---------- --
 
 -- DELETE RAW TABLE IF IT ALREADY EXISTS
-DROP TABLE IF EXISTS public.operations_customer_flight_info_raw;
+DROP TABLE IF EXISTS operations_customer_flight_info_raw;
 
-CREATE TABLE IF NOT EXISTS public.operations_customer_flight_info_raw (
+CREATE TABLE IF NOT EXISTS operations_customer_flight_info_raw (
     id SERIAL PRIMARY KEY,
-    data JSONB
+    data JSONB NOT NULL
 );
 
 
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS public.operations_customer_flight_info_raw (
 -- ------------- --
 
 -- DELETE COOKED TABLE IF IT ALREADY EXISTS
-DROP TABLE IF EXISTS public.operations_customer_flight_info_coo;
+DROP TABLE IF EXISTS operations_customer_flight_info_coo;
 
 -- CREATE ENUM TYPE FOR FLIGHT CODES
 CREATE TYPE departure_flight_code AS ENUM ('FE',
@@ -45,28 +45,37 @@ CREATE TYPE overall_flight_code AS ENUM ('CD',
                                          'NA');
 
 
-CREATE TABLE IF NOT EXISTS public.operations_customer_flight_info_coo (
-    departure_airport_code char(3),
-    departure_scheduled_datetime timestamp,
-    departure_estimated_datetime timestamp,
-    departure_actual_datetime timestamp,
-    departure_terminal_name text,
-    departure_terminal_gate text,
+CREATE TABLE IF NOT EXISTS operations_customer_flight_info_coo (
+    departure_airport_code CHAR(3) NOT NULL,
+    departure_scheduled_datetime TIMESTAMP,
+    departure_estimated_datetime TIMESTAMP,
+    departure_actual_datetime TIMESTAMP,
+    departure_terminal_name TEXT,
+    departure_terminal_gate TEXT,
     departure_status_code departure_flight_code,
-    departure_status_description text,
-    arrival_airport_code char(3),
-    arrival_scheduled_datetime timestamp,
-    arrival_estimated_datetime timestamp,
-    arrival_actual_datetime timestamp,
-    arrival_terminal_name text,
-    arrival_terminal_gate text,
+    departure_status_description TEXT,
+    arrival_airport_code CHAR(3) NOT NULL,
+    arrival_scheduled_datetime TIMESTAMP,
+    arrival_estimated_datetime TIMESTAMP,
+    arrival_actual_datetime TIMESTAMP,
+    arrival_terminal_name TEXT,
+    arrival_terminal_gate TEXT,
     arrival_status_code arrival_flight_code,
-    arrival_status_description text,
-    operating_airline_id char(2),
-    operating_flight_nb integer,
-    equipment_aircraft_code char(3),
+    arrival_status_description TEXT,
+    operating_airline_id CHAR(2),
+    operating_flight_nb INTEGER,
+    equipment_aircraft_code CHAR(3),
     overall_status_code overall_flight_code,
-    overall_status_description text,
-    collect_date date,
-    CONSTRAINT customer_flight_info_pkey PRIMARY KEY(operating_airline_id, operating_flight_nb)
+    overall_status_description TEXT,
+    CONSTRAINT customer_flight_info_pk
+       PRIMARY KEY(operating_airline_id, operating_flight_nb),
+    CONSTRAINT refdata_airports_coo_fk_departure
+       FOREIGN KEY(departure_airport_code)
+       REFERENCES refdata_airports_coo(airport) ON DELETE CASCADE,
+    CONSTRAINT refdata_airports_coo_fk_arrival
+       FOREIGN KEY(arrival_airport_code)
+       REFERENCES refdata_airports_coo(airport) ON DELETE CASCADE,
+    CONSTRAINT refdata_airlines_coo_fk
+       FOREIGN KEY(operating_airline_id)
+       REFERENCES refdata_airlines_coo(airlineid) ON DELETE CASCADE
 );
