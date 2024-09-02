@@ -24,7 +24,7 @@ cd /home/ubuntu/dst_airlines_de/bin/customer_flight_info/extraction
 As a summary, it includes a series of tasks:
 1. Clean Docker container and images
 2. Build [Docker image](#dockerfile-data-extraction)
-3. Run Docker 
+3. Run Docker
 
 :exclamation: A volume is bound through the `docker run` command to store collected data on host machine
 
@@ -41,7 +41,7 @@ The Python script `extract_customer_flight_info.py`  is in charge of collecting 
 6. Zip files
 
 ## Load raw data
-The second stage consists in loading data that have been extracted from [stage 1](#extract-data). These data are slightly trimmed to only store useful information.
+The second stage consists in loading data that have been extracted from [stage 1](#extract-data) in a "raw" table. These data are slightly trimmed to only store useful information.
 
 ### How to load raw data?
 :warning: Before loading raw data, the Postgres database has to be up and running.
@@ -73,5 +73,32 @@ The Python script `load_customer_flight_info_raw.py` is in charge of inserting r
 3. Ingest data into the database table
 
 ## Load cooked data
-To be written\
-`load_customer_flight_info_cooked.py`
+The third and last stage consists in loading data that have been stored from [stage 2](#load-raw-data) in a "cooked" table with a proper flattened format.
+
+### How to load cooked data?
+:warning: Before loading cooked data, the Postgres database has to be up and running with the stage 2 already completed.
+```sh
+cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
+docker-compose up -d
+```
+Then the script `run_docker.sh` is the core of this stage.
+```sh
+cd /home/ubuntu/dst_airlines_de/bin/customer_flight_info/cooked_loading
+./run_docker.sh
+```
+As a summary, it includes a series of tasks:
+1. Create a temporary folder to serve as a build context for Docker
+2. Clean Docker container and images
+3. Build [Docker image](#dockerfile-cooked-loading)
+4. Run Docker
+
+:exclamation: A network is given through the `docker run` to be able to connect to the containerized database
+
+#### Dockerfile cooked loading
+The Dockerfile uses Python3.11 as base image and runs a [Python script](#python-script-cooked-loading).
+
+#### Python script cooked loading
+The Python script `load_customer_flight_info_cooked.py` is in charge of inserting cooked data into the postgres table named `operations_customer_flight_info_coo`. This is done through 3 steps:
+1. Read data from database raw table
+2. Transform data from JSON format to a convenient flattened format
+3. Ingest data into the database table
