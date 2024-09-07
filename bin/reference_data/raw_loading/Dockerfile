@@ -9,7 +9,7 @@ ARG postgres_folder=/home/ubuntu/dst_airlines_de/src/project_deployment_postgres
 WORKDIR $code_folder
 
 # Add packages that are needed to install py7zr Python library
-RUN apk add gcc python3-dev musl-dev linux-headers
+RUN apk add gcc python3-dev musl-dev linux-headers bash
 
 # Copy files
 COPY postgres_user.txt postgres_password.txt docker-compose.yml $postgres_folder
@@ -21,7 +21,13 @@ RUN pip install -r requirements.txt
 
 # Copy folder and files
 COPY common ./common
-COPY reference_data ./reference_data
+COPY reference_data/*.sh ./
+COPY reference_data/*.py ./
+COPY reference_data/*.sql ./
+COPY reference_data/*.md ./
+
+# Define default shell
+SHELL ["/bin/bash", "-c"]
 
 # Run command
-CMD [ "bash", "./ingestRefData_raw.sh" ]
+CMD [ "/bin/bash", "./ingestRefData_raw.sh" ]

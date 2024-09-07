@@ -14,7 +14,7 @@ if [ "$INIT_CONFIG" = "true" ]; then
 fi
 
 # B - CLEAR AND INIT RAW TABLES
-python3 ./common/runSqlScript.py ./reference_data/ingestRefData_01_referenceDataRaw.sql ./common/database.ini
+python3 ./common/runSqlScript.py ./ingestRefData_01_referenceDataRaw.sql ./common/database.ini
 
 # C - INGEST RAW
-python3 ./reference_data/ingestRefData_02_ingestReferenceDataRaw.py ./common/database.ini /home/ubuntu/dst_airlines_de/data/referenceData
+python3 ./ingestRefData_02_ingestReferenceDataRaw.py ./common/database.ini /home/ubuntu/dst_airlines_de/data/referenceData

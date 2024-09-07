@@ -5,7 +5,7 @@ import shutil
 import re
 from py7zr import SevenZipFile
 from pathlib import Path
-from ../common/utils import connect_db
+from common import utils
 
 # Décompression des fichiers .7z
 def decompress_files(data_folder):
