@@ -33,4 +33,4 @@ docker build -t ${image_name_app} ${tmp_build_context}
 # Remove temporary folder that served as a build context for Docker
 rm -rf ${tmp_build_context}
 # Run Docker
-docker run --volume /home/ubuntu/dst_airlines_de/data/customerFlightInfo:/home/ubuntu/dst_airlines_de/data/customerFlightInfo --network ${network_name} --name ${container_name} ${image_name_app}
+docker run --volume /home/ubuntu/dst_airlines_de/data/referenceData:/home/ubuntu/dst_airlines_de/data/referenceData --network ${network_name} --name ${container_name} ${image_name_app}

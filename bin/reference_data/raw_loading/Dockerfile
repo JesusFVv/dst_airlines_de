@@ -24,4 +24,4 @@ COPY common ./common
 COPY reference_data ./reference_data
 
 # Run command
-CMD [ "python3", "./common/runSqlScript.py", "./reference_data/ingestRefData_01_referenceDataRaw.sql", "./common/database.ini" ]
+CMD [ "bash", "./ingestRefData_raw.sh" ]

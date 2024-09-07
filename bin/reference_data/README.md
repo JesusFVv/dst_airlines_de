@@ -38,9 +38,9 @@ python3 ../common/runSqlScript.py ingestRefData_03_referenceDataCooked.sql /home
 ### Ingestion version docker
 
 ```shell
-cd /home/ubuntu/dst_airlines_de/bin/reference_data/pythonDocker
-chmod 755 buildDocker.sh printLogDocker.sh runDocker.sh
-docker build -t python_docker_reference_data .
+cd /home/ubuntu/dst_airlines_de/bin/reference_data/raw_loading/
+chmod 755 printLogDocker.sh run_docker.sh
+./run_docker.sh
 ```
 
 ### Nettoyage
