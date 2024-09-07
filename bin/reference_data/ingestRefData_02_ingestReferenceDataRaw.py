@@ -30,7 +30,7 @@ def get_json_files(directory):
 
 # Insertion des données JSON dans la base de données
 def ingest_data(data_folder, db_config_path):
-    conn, cursor = connect_db(db_config_path)
+    conn, cursor = utils.connect_db(db_config_path)
 
     folders = [f for f in os.listdir(data_folder) if f.endswith('Raw')]
 
