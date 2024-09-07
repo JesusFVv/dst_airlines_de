@@ -2,5 +2,4 @@
 
 # print log
 
-docker logs python_app_reference_data
-
+docker logs python_docker_reference_data
