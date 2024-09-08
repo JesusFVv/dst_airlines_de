@@ -265,7 +265,7 @@ FROM (
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
- AND LocationType IS IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')
+ AND LocationType IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')
 ON CONFLICT (Airport) DO NOTHING;
 
 -- Correct locationType 'Rail Station' to 'RailwayStation' (899)
