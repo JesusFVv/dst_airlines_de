@@ -1,9 +1,9 @@
 import logging
 import psycopg2
+from collections.abc import Generator
 from common import utils
 from datetime import datetime, timedelta
 from pathlib import Path, PosixPath
-from typing import Generator
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -264,9 +264,11 @@ def ingest_data(
     conn, cur = utils.connect_db(db_config_filepath)
 
     try:
-        for cooked_data in gen:
+        for idx, cooked_data in enumerate(gen, start=1):
             utils.insert_data_into_db(cur, sql_table_name_cooked, cooked_data)
             conn.commit()
+            if idx%1000==0:
+                logger.info(f"{idx} rows have been loaded into the database cooked table")
     except (Exception, psycopg2.Error) as e:
         logger.exception(e)
         conn.rollback()
@@ -275,6 +277,7 @@ def ingest_data(
         if conn:
             cur.close()
         conn.close()
+        logger.info(f"{idx} rows have been loaded into the database cooked table")
         logger.info("Connection closed to the database")
 
 
