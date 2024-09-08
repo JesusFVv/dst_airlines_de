@@ -34,9 +34,12 @@ CREATE TABLE refdata_airports_coo (
     Country CHAR(2) NOT NULL REFERENCES refdata_countries_coo(Code),
     Latitude DECIMAL NOT NULL,
     Longitude DECIMAL NOT NULL,
-    locationType VARCHAR(20) CHECK (locationType IN ('Airport', 'RailwayStation', 'BusStation')),
+	-- 'Off-Line Point' added (XNS)
+	-- 'Harbour' added (HKC : HONG KONG)
+	-- 'Miscellaneous' added (OIL : Libya, Ras Lanuf Oil)
+    locationType VARCHAR(20) CHECK (locationType IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')),
     UTC_offset INT NOT NULL,
-    TimeZoneId VARCHAR(50) NOT NULL
+    TimeZoneId VARCHAR(50) DEFAULT '?'  -- Should be NOT NULL but some airports with TimeZoneId null are returned by the API
 );
 
 CREATE TABLE refdata_airlines_coo (
@@ -101,7 +104,7 @@ FROM (
 
         UNION ALL
 
-        SELECT jsonb_array_elements(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') AS json_data
+        SELECT data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary' AS json_data
         FROM refdata_aircraft_raw
         WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'object'
     ) AS aircraft_data
@@ -125,7 +128,7 @@ FROM (
 
         UNION ALL
 
-        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
+        SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
         FROM refdata_airlines_raw
         WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
     ) AS airline_data
@@ -174,3 +177,169 @@ FROM (
 WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
 ON CONFLICT (Code) DO NOTHING;
 
+-- TODO : from aircraft, cities, countries
+
+-- -------------------------------- --
+-- INSERT INTO refdata_countries_coo --
+-- -------------------------------- --
+
+INSERT INTO refdata_countries_coo (Code)
+SELECT 
+    CountryCode
+FROM (
+    SELECT DISTINCT json_data->>'CountryCode' AS CountryCode
+    FROM (
+        SELECT jsonb_array_elements(data->'CountryResource'->'Countries'->'Country') AS json_data
+        FROM refdata_countries_raw
+        WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'array'
+
+        UNION ALL
+
+        SELECT data->'CountryResource'->'Countries'->'Country' AS json_data
+        FROM refdata_countries_raw
+        WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'object'
+    ) AS countrie_data
+) AS country_cooked
+WHERE CountryCode IS NOT NULL
+ON CONFLICT (Code) DO NOTHING;
+
+-- ------------------------------ --
+-- INSERT INTO refdata_cities_coo --
+-- ------------------------------ --
+
+INSERT INTO refdata_cities_coo (City, Country)
+SELECT 
+    CityCode, CountryCode
+FROM (
+    SELECT DISTINCT json_data->>'CityCode' AS CityCode, json_data->>'CountryCode' AS CountryCode
+    FROM (
+        SELECT jsonb_array_elements(data->'CityResource'->'Cities'->'City') AS json_data
+        FROM refdata_cities_raw
+        WHERE jsonb_typeof(data->'CityResource'->'Cities'->'City') = 'array'
+
+        UNION ALL
+
+        SELECT data->'CityResource'->'Cities'->'City' AS json_data
+        FROM refdata_cities_raw
+        WHERE jsonb_typeof(data->'CityResource'->'Cities'->'City') = 'object'
+    ) AS countrie_data
+) AS city_cooked
+WHERE CityCode IS NOT NULL
+ON CONFLICT (City) DO NOTHING;
+
+
+-- -------------------------------- --
+-- INSERT INTO refdata_airports_coo --
+-- -------------------------------- --
+INSERT INTO refdata_Airports_coo (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
+SELECT 
+    AirportCode, CityCode, CountryCode, Latitude, Longitude, LocationType, utcOffsetInt, TimeZoneId
+FROM (
+    SELECT DISTINCT 
+	    json_data->>'AirportCode' AS AirportCode, 
+		json_data->>'CityCode' AS CityCode, 
+		json_data->>'CountryCode' AS CountryCode,
+        (json_data->'Position'->'Coordinate'->>'Latitude')::float AS Latitude,
+        (json_data->'Position'->'Coordinate'->>'Longitude')::float AS Longitude, 
+		json_data->>'LocationType' AS LocationType, 
+		json_data->>'UtcOffset' AS UtcOffset,
+        -- Convertir le résultat de la comparaison en un type numérique
+        CASE 
+            WHEN SUBSTR(json_data->>'UtcOffset', 1, 1) = '+' THEN 1
+            WHEN SUBSTR(json_data->>'UtcOffset', 1, 1) = '-' THEN -1
+            ELSE 0
+        END * (
+            (SUBSTR(json_data->>'UtcOffset', 2, 2)::int + SUBSTR(json_data->>'UtcOffset', 5, 2)::int / 60.0)
+        ) AS utcOffsetInt,
+		json_data->>'TimeZoneId' AS TimeZoneId
+    FROM (
+        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
+        FROM refdata_Airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
+
+        UNION ALL
+
+        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        FROM refdata_Airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
+    ) AS Airport_data
+) AS Airport_cooked
+WHERE AirportCode IS NOT NULL
+ AND LocationType IS IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')
+ON CONFLICT (Airport) DO NOTHING;
+
+-- Correct locationType 'Rail Station' to 'RailwayStation' (899)
+INSERT INTO refdata_Airports_coo (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
+SELECT 
+    AirportCode, CityCode, CountryCode, Latitude, Longitude, 'RailwayStation', utcOffsetInt, TimeZoneId
+FROM (
+    SELECT DISTINCT 
+	    json_data->>'AirportCode' AS AirportCode, 
+		json_data->>'CityCode' AS CityCode, 
+		json_data->>'CountryCode' AS CountryCode,
+        (json_data->'Position'->'Coordinate'->>'Latitude')::float AS Latitude,
+        (json_data->'Position'->'Coordinate'->>'Longitude')::float AS Longitude, 
+		json_data->>'LocationType' AS LocationType, 
+		json_data->>'UtcOffset' AS UtcOffset,
+        -- Convertir le résultat de la comparaison en un type numérique
+        CASE 
+            WHEN SUBSTR(json_data->>'UtcOffset', 1, 1) = '+' THEN 1
+            WHEN SUBSTR(json_data->>'UtcOffset', 1, 1) = '-' THEN -1
+            ELSE 0
+        END * (
+            (SUBSTR(json_data->>'UtcOffset', 2, 2)::int + SUBSTR(json_data->>'UtcOffset', 5, 2)::int / 60.0)
+        ) AS utcOffsetInt,
+		json_data->>'TimeZoneId' AS TimeZoneId
+    FROM (
+        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
+        FROM refdata_Airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
+
+        UNION ALL
+
+        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        FROM refdata_Airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
+    ) AS Airport_data
+) AS Airport_cooked
+WHERE AirportCode IS NOT NULL
+ AND LocationType = 'Rail Station'
+ON CONFLICT (Airport) DO NOTHING;
+
+-- Correct locationType 'Bus Station' to 'BusStation' (274)
+INSERT INTO refdata_Airports_coo (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
+SELECT 
+    AirportCode, CityCode, CountryCode, Latitude, Longitude, 'BusStation', utcOffsetInt, TimeZoneId
+FROM (
+    SELECT DISTINCT 
+	    json_data->>'AirportCode' AS AirportCode, 
+		json_data->>'CityCode' AS CityCode, 
+		json_data->>'CountryCode' AS CountryCode,
+        (json_data->'Position'->'Coordinate'->>'Latitude')::float AS Latitude,
+        (json_data->'Position'->'Coordinate'->>'Longitude')::float AS Longitude, 
+		json_data->>'LocationType' AS LocationType, 
+		json_data->>'UtcOffset' AS UtcOffset,
+        -- Convertir le résultat de la comparaison en un type numérique
+        CASE 
+            WHEN SUBSTR(json_data->>'UtcOffset', 1, 1) = '+' THEN 1
+            WHEN SUBSTR(json_data->>'UtcOffset', 1, 1) = '-' THEN -1
+            ELSE 0
+        END * (
+            (SUBSTR(json_data->>'UtcOffset', 2, 2)::int + SUBSTR(json_data->>'UtcOffset', 5, 2)::int / 60.0)
+        ) AS utcOffsetInt,
+		json_data->>'TimeZoneId' AS TimeZoneId
+    FROM (
+        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
+        FROM refdata_Airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
+
+        UNION ALL
+
+        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        FROM refdata_Airports_raw
+        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
+    ) AS Airport_data
+) AS Airport_cooked
+WHERE AirportCode IS NOT NULL
+ AND LocationType = 'Bus Station'
+ON CONFLICT (Airport) DO NOTHING;

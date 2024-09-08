@@ -29,3 +29,6 @@ python3 ./common/runSqlScript.py ./ingestRefData_01_referenceDataRaw.sql ./commo
 
 # D - INGEST RAW
 python3 ./ingestRefData_02_ingestReferenceDataRaw.py ./common/database.ini /home/ubuntu/dst_airlines_de/data/referenceData
+
+# E - INGEST COOKED
+python3 ./common/runSqlScript.py ./ingestRefData_03_referenceDataCooked.sql ./common/database.ini
