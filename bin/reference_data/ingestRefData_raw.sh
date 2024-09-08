@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Parse options
-while getopts ":i" option; do
+while getopts ":il" option; do
     case $option in
         i) INIT_CONFIG="true";;
-		l) LINK_COMMON="true";;
+        l) LINK_COMMON="true";;
         \?) echo "Invalid option: -$OPTARG"; exit 1;;
     esac
 done
