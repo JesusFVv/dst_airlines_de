@@ -159,9 +159,11 @@ def read_data_from_db(db_config_filepath: PosixPath, sql_query: str) -> list[tup
     Returns:
         res (list[tuple]): a list containing database table values in tuples
     """
+    import psycopg2
     # Database connection
     conn, cur = connect_db(db_config_filepath)
-
+    # Get table name
+    db_table_name = sql_query.split("FROM")[-1].strip().split(" ")[0]
     try:
         # Execute query
         cur.execute(sql_query)
@@ -175,6 +177,7 @@ def read_data_from_db(db_config_filepath: PosixPath, sql_query: str) -> list[tup
         if conn:
             cur.close()
         conn.close()
+        logger.info(f"Read data from {db_table_name} table")
         logger.info("Connection closed to the database")
 
     return res
