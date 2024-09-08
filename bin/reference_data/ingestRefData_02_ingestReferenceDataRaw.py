@@ -5,20 +5,40 @@ import shutil
 import re
 from py7zr import SevenZipFile
 from pathlib import Path
-from common import utils
+import logging
 
-# Décompression des fichiers .7z dans un dossier intermédiaire
+# Configuration du logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 def decompress_files(data_folder, tmp_folder):
     files = ['out_Aircraft.7z', 'out_Airlines.7z', 'outFR_Airports.7z', 'outFR_Cities.7z', 'outFR_Countries.7z', 'outEN_Airports.7z', 'outEN_Cities.7z', 'outEN_Countries.7z']
     for file in files:
         file_path = os.path.join(data_folder, file)
+        logging.info(f"ReferenceData, RAW DATA, ingestion, processing file : {file_path}")
+        if not os.path.exists(file_path):
+            logging.error(f"ReferenceData, RAW DATA, ingestion, file not found : {file_path}")
+            continue
         folder_name = os.path.join(tmp_folder, file.replace('.7z', 'Raw'))
         # Supprimer le dossier destination s'il existe déjà
         if os.path.exists(folder_name):
-            shutil.rmtree(folder_name)
-        os.makedirs(folder_name, exist_ok=True)
-        with SevenZipFile(file_path, 'r') as archive:
-            archive.extractall(path=folder_name)
+            try:
+                shutil.rmtree(folder_name)
+                logging.info(f"ReferenceData, RAW DATA, ingestion, deleted directory : {folder_name}")
+            except Exception as e:
+                logging.error(f"ReferenceData, RAW DATA, ingestion, error deleting directory : {e}")
+                continue
+        try:
+            os.makedirs(folder_name, exist_ok=True)
+            logging.info(f"ReferenceData, RAW DATA, ingestion, new directory : {folder_name}")
+        except Exception as e:
+            logging.error(f"ReferenceData, RAW DATA, ingestion, error creating directory : {e}")
+            continue
+        try:
+            with SevenZipFile(file_path, 'r') as archive:
+                archive.extractall(path=folder_name)
+                logging.info(f"ReferenceData, RAW DATA, ingestion, file extracted : {file_path} -> {folder_name}")
+        except Exception as e:
+            logging.error(f"ReferenceData, RAW DATA, ingestion, error extracting : {e}")
 
 def get_json_files(directory):
     json_files = []
@@ -28,12 +48,16 @@ def get_json_files(directory):
                 json_files.append(os.path.join(root, file))
     return json_files
 
-# Insertion des données JSON dans la base de données
 def ingest_data(tmp_folder, db_config_path):
-    conn, cursor = utils.connect_db(db_config_path)
+    try:
+        # Connexion à la base de données (remplacez par votre fonction de connexion)
+        conn, cursor = utils.connect_db(db_config_path)
+        logging.info("ReferenceData, RAW DATA, ingestion, connexion to the database OK")
+    except Exception as e:
+        logging.error(f"ReferenceData, RAW DATA, ingestion, error connecting to the database : {e}")
+        return
 
     folders = [f for f in os.listdir(tmp_folder) if f.endswith('Raw')]
-
     for folder in folders:
         nature = re.sub(r'out[A-Z]*_', '', folder).replace('Raw', '')
         table_name = f"refdata_{nature.lower()}_raw"
@@ -43,24 +67,42 @@ def ingest_data(tmp_folder, db_config_path):
         for json_file in json_files:
             filename = os.path.basename(json_file)
             if filename.endswith('.json') and filename.startswith(f'{nature}_200_'):
-                with open(json_file, 'r') as file:
-                    data = json.load(file)
-                    cursor.execute(f"INSERT INTO {table_name} (data) VALUES (%s)", [json.dumps(data)])
-                    conn.commit()
+                try:
+                    with open(json_file, 'r') as file:
+                        data = json.load(file)
+                        cursor.execute(f"INSERT INTO {table_name} (data) VALUES (%s)", [json.dumps(data)])
+                        conn.commit()
+                        # logging.trace(f"ReferenceData, RAW DATA, ingestion, data inserted into {table_name} : {json_file}")
+                except Exception as e:
+                    logging.error(f"ReferenceData, RAW DATA, ingestion, error inserting data : {e}")
 
-    cursor.close()
-    conn.close()
+    try:
+        cursor.close()
+        conn.close()
+        logging.info("ReferenceData, RAW DATA, ingestion, connexion to the database closed")
+    except Exception as e:
+        logging.error(f"ReferenceData, RAW DATA, ingestion, error closing database : {e}")
 
 def clean_tmp_folder(tmp_folder):
     if os.path.exists(tmp_folder):
-        shutil.rmtree(tmp_folder)
+        try:
+            shutil.rmtree(tmp_folder)
+            logging.info(f"ReferenceData, RAW DATA, ingestion, temporary directory deleted : {tmp_folder}")
+        except Exception as e:
+            logging.error(f"ReferenceData, RAW DATA, ingestion, error deleting temporary directory : {e}")
 
+if __name__ == "__main__":
     db_config_path = Path(sys.argv[1])
     data_folder = sys.argv[2] if len(sys.argv) == 3 else "./"
     tmp_folder = os.path.join(data_folder, "tmp_ingest_raw_reference_data")
 
     # Créer le dossier intermédiaire
-    os.makedirs(tmp_folder, exist_ok=True)
+    try:
+        os.makedirs(tmp_folder, exist_ok=True)
+        logging.info(f"ReferenceData, RAW DATA, ingestion, temporary directory created : {tmp_folder}")
+    except Exception as e:
+        logging.error(f"ReferenceData, RAW DATA, ingestion, error creating temporary directory : {e}")
+        sys.exit(1)
 
     decompress_files(data_folder, tmp_folder)
     ingest_data(tmp_folder, db_config_path)
