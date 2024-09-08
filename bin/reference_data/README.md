@@ -5,14 +5,14 @@
  - Remarque cf. [partie initialisation docker](#initialisation-docker) si nécessaire
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de/src/project_deployment_postgres
+cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
 docker-compose up -d
 ```
 
 ## Ingestion
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de
+cd /home/ubuntu/dst_airlines_de
 ```
 
 ### Prérequis
@@ -29,23 +29,25 @@ sudo ./bin/reference_data/ingestRefData_00_initConfigure.sh
 ### Ingestion
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de/bin/reference_data/
+cd /home/ubuntu/dst_airlines_de/bin/reference_data/
+# TODO : creer un lien symbolique vers common pour que "common" soit accessible depuis "reference_data"
 python3 ../common/runSqlScript.py ingestRefData_01_referenceDataRaw.sql /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini
-python3 ./reference_data/ingestRefData_02_ingestReferenceDataRaw.py /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini /home/ubuntu/projet/dst_airlines_de/data/referenceData
+python3 ./ingestRefData_02_ingestReferenceDataRaw.py /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini /home/ubuntu/dst_airlines_de/data/referenceData
 python3 ../common/runSqlScript.py ingestRefData_03_referenceDataCooked.sql /home/ubuntu/dst_airlines_de/bin/customer_flight_info/database.ini
 ```
 
 ### Ingestion version docker
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de/bin/reference_data/pythonDocker
-docker build -t python_reference_data .
+cd /home/ubuntu/dst_airlines_de/bin/reference_data/raw_loading/
+chmod 755 printLogDocker.sh run_docker.sh
+./run_docker.sh
 ```
 
 ### Nettoyage
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de/data/referenceData
+cd /home/ubuntu/dst_airlines_de/data/referenceData
 rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_CountriesRaw outFR_AirportsRaw outFR_CitiesRaw outFR_CountriesRaw
 ```
 
@@ -54,7 +56,7 @@ rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_Co
 ### Docker
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de/src/project_deployment_postgres
+cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
 docker exec -it postgres bash
 psql -U dst_designer dst_airlines_db
 ```
@@ -392,7 +394,7 @@ SELECT * FROM
 # Initialisation docker
 
 ```shell
-cd /home/ubuntu/projet/dst_airlines_de/src/project_deployment_postgres
+cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
 ```
 
 ## Edition docker-compose

@@ -1,8 +1,12 @@
-import configparser
+from __future__ import annotations
+
 import logging
-import psycopg2
-import yaml
 from pathlib import Path, PosixPath
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    import psycopg2
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -40,6 +44,7 @@ def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath
     Returns:
         (db_user_path, db_pwd_path, db_docker_path) (tuple[PosixPath, PosixPath, PosixPath]): a tuple containing database config values
     """
+    import configparser
     config = configparser.ConfigParser()  # Create a ConfigParser object
     config.read(filepath)  # Read the configuration file
 
@@ -64,6 +69,7 @@ def _get_db_cred(
     Returns:
         config (dict[str, str|int]): a dictionary with database config values (i.e. user, pwd, database name and port)
     """
+    import yaml
     with open(user_path, "r") as f:
         user = f.read()
 
@@ -102,6 +108,7 @@ def connect_db(
     Returns:
         (conn, cur) (tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]): a tuple containing a connector to the Postgres database and a cursor object
     """
+    import psycopg2
     user_path, pwd_path, docker_path = read_db_config(db_config_filepath)
     db_config = _get_db_cred(user_path, pwd_path, docker_path)
 

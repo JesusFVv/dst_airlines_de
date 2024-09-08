@@ -5,14 +5,14 @@ import shutil
 import re
 from py7zr import SevenZipFile
 from pathlib import Path
-from ../common/utils import connect_db
+from common import utils
 
-# Décompression des fichiers .7z
-def decompress_files(data_folder):
+# Décompression des fichiers .7z dans un dossier intermédiaire
+def decompress_files(data_folder, tmp_folder):
     files = ['out_Aircraft.7z', 'out_Airlines.7z', 'outFR_Airports.7z', 'outFR_Cities.7z', 'outFR_Countries.7z', 'outEN_Airports.7z', 'outEN_Cities.7z', 'outEN_Countries.7z']
     for file in files:
         file_path = os.path.join(data_folder, file)
-        folder_name = os.path.join(data_folder, file.replace('.7z', 'Raw'))
+        folder_name = os.path.join(tmp_folder, file.replace('.7z', 'Raw'))
         # Supprimer le dossier destination s'il existe déjà
         if os.path.exists(folder_name):
             shutil.rmtree(folder_name)
@@ -29,15 +29,15 @@ def get_json_files(directory):
     return json_files
 
 # Insertion des données JSON dans la base de données
-def ingest_data(data_folder, db_config_path):
-    conn, cursor = connect_db(db_config_path)
+def ingest_data(tmp_folder, db_config_path):
+    conn, cursor = utils.connect_db(db_config_path)
 
-    folders = [f for f in os.listdir(data_folder) if f.endswith('Raw')]
+    folders = [f for f in os.listdir(tmp_folder) if f.endswith('Raw')]
 
     for folder in folders:
         nature = re.sub(r'out[A-Z]*_', '', folder).replace('Raw', '')
         table_name = f"refdata_{nature.lower()}_raw"
-        folder_path = os.path.join(data_folder, folder)
+        folder_path = os.path.join(tmp_folder, folder)
         
         json_files = get_json_files(folder_path)
         for json_file in json_files:
@@ -51,13 +51,17 @@ def ingest_data(data_folder, db_config_path):
     cursor.close()
     conn.close()
 
-if __name__ == "__main__":
-    if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print(f"Usage: {sys.argv[0]} <DB_CONFIG_PATH> [DATA_FOLDER]")
-        sys.exit(1)
+def clean_tmp_folder(tmp_folder):
+    if os.path.exists(tmp_folder):
+        shutil.rmtree(tmp_folder)
 
     db_config_path = Path(sys.argv[1])
     data_folder = sys.argv[2] if len(sys.argv) == 3 else "./"
+    tmp_folder = os.path.join(data_folder, "tmp_ingest_raw_reference_data")
 
-    decompress_files(data_folder)
-    ingest_data(data_folder, db_config_path)
+    # Créer le dossier intermédiaire
+    os.makedirs(tmp_folder, exist_ok=True)
+
+    decompress_files(data_folder, tmp_folder)
+    ingest_data(tmp_folder, db_config_path)
+    clean_tmp_folder(tmp_folder)
