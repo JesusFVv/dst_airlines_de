@@ -62,6 +62,49 @@ docker exec -it postgres bash
 psql -U dst_designer dst_airlines_db
 ```
 
+### Export de tables
+
+```shell
+pg_dump -U dst_designer -t refdata_languages_coo dst_airlines_db > /tmp/refdata_languages_coo.sql
+pg_dump -U dst_designer -t refdata_countries_coo dst_airlines_db > /tmp/refdata_countries_coo.sql
+pg_dump -U dst_designer -t refdata_cities_coo dst_airlines_db > /tmp/refdata_cities_coo.sql
+pg_dump -U dst_designer -t refdata_airports_coo dst_airlines_db > /tmp/refdata_airports_coo.sql
+pg_dump -U dst_designer -t refdata_airlines_coo dst_airlines_db > /tmp/refdata_airlines_coo.sql
+pg_dump -U dst_designer -t refdata_aircraft_coo dst_airlines_db > /tmp/refdata_aircraft_coo.sql
+```
+
+### Rappatriement des fichiers en local
+
+```shell
+cd /home/ubuntu/dst_airlines_de/data/referenceData
+docker cp postgres:/tmp/refdata_languages_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_languages_coo.sql
+docker cp postgres:/tmp/refdata_countries_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_countries_coo.sql
+docker cp postgres:/tmp/refdata_cities_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_cities_coo.sql
+docker cp postgres:/tmp/refdata_airports_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_airports_coo.sql
+docker cp postgres:/tmp/refdata_airlines_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_airlines_coo.sql
+docker cp postgres:/tmp/refdata_aircraft_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_aircraft_coo.sql
+
+```
+
+## Récupération sous WSL Ubuntu
+
+```shell
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_languages_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_countries_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_cities_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airports_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airlines_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_aircraft_coo.sql .
+
+```
+
+
+### Connexion à la base
+
+```shell
+psql -U dst_designer dst_airlines_db
+```
+
 ### show tables
 
 ```sql
