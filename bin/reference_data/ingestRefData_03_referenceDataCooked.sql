@@ -34,15 +34,16 @@ CREATE TABLE refdata_airports_coo (
     Country CHAR(2) NOT NULL REFERENCES refdata_countries_coo(Code),
     Latitude DECIMAL NOT NULL,
     Longitude DECIMAL NOT NULL,
-	-- 'Off-Line Point' added (XNS)
-	-- 'Harbour' added (HKC : HONG KONG)
-	-- 'Miscellaneous' added (OIL : Libya, Ras Lanuf Oil)
+	-- 'Off-Line Point' added (ex.: XNS)
+	-- 'Harbour' added (ex.: HKC : HONG KONG)
+	-- 'Miscellaneous' added (ex.: OIL : Libya, Ras Lanuf Oil)
     locationType VARCHAR(20) CHECK (locationType IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')),
     UTC_offset INT NOT NULL,
     TimeZoneId VARCHAR(50) DEFAULT '?'  -- Should be NOT NULL but some airports with TimeZoneId null are returned by the API
 );
 
 CREATE TABLE refdata_airlines_coo (
+    -- Should beCHAR(2) but 41 airports are returned with 3 char by the API
     AirlineID CHAR(3) PRIMARY KEY,
     AirlineID_ICAO CHAR(3)
 );
