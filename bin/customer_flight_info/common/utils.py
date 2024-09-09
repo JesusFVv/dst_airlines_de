@@ -163,7 +163,7 @@ def read_data_from_db(db_config_filepath: PosixPath, sql_query: str) -> list[tup
     # Database connection
     conn, cur = connect_db(db_config_filepath)
     # Get table name
-    db_table_name = sql_query.split("FROM")[-1].strip().split(" ")[0]
+    db_table_name = sql_query.upper().split("FROM")[-1].strip().split(" ")[0]
     try:
         # Execute query
         cur.execute(sql_query)
