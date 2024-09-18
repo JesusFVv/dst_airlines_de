@@ -40,6 +40,8 @@ The Python script `extract_customer_flight_info.py`  is in charge of collecting 
 5. Save data in JSON format
 6. Zip files
 
+:warning: As of now, this pipeline is triggered manually. Therefore, the datetimes given as input in the Python script have to be updated in order to retrieve data for each day (line 241).
+
 ## Load raw data
 The second stage consists in loading data that have been extracted from [stage 1](#extract-data) in a "raw" table. These data are slightly trimmed to only store useful information.
 
