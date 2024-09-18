@@ -56,7 +56,7 @@ def generate_datetime_info(
         )
         # Transform local time to UTC time of the airport
         utc_offset_airport = utils.read_data_from_db(
-            db_config_filepath, utc_offset_airport_query.format(airport_code)
+            db_config_filepath, utc_offset_airport_query.format(airport_code.upper())
         )
         if utc_offset_airport:
             utc_offset = int(utc_offset_airport[0][0])
@@ -226,21 +226,22 @@ def _build_flat_data(
 
 
 def build_flat_data(
-    all_data: list[tuple[int, dict]],
+    all_data: list[tuple[dict]],
     db_config_filepath: PosixPath,
     utc_offset_airport_query: str,
 ) -> Generator[dict, None, None]:
     """Format data coming from database raw table to make them suitable for the cooked table
 
     Args:
-        all_data (list[tuple[int, dict]]): all raw data where the tuple is made of 2 elements: id (int) and data (dict)
+        all_data (list[tuple[dict]]): all raw data where the tuple is made of 1 element: data (dict)
         db_config_filepath (PosixPath): absolute path to the db config file
         sql_query (str): SQL query to run on database table
 
     Returns:
         formatted_dict (Generator[dict, None, None]): a generator returning formatted data as a dictionary for each cooked table row
     """
-    for _, data in all_data:
+    for tuple_data in all_data:
+        data = tuple_data[0]
         formatted_dict = _build_flat_data(
             data, db_config_filepath, utc_offset_airport_query
         )
@@ -289,11 +290,11 @@ if __name__ == "__main__":
         "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/cooked_loading/common/database.ini"
     )
     raw_table_name = "operations_customer_flight_info_raw"
-    raw_data_query = f"SELECT * FROM {raw_table_name}"
+    raw_data_query = f"SELECT DISTINCT data FROM {raw_table_name}"  # Use DISTINCT to get rid of duplicates
 
     cooked_airports_table_name = "refdata_airports_coo"
     utc_offset_airport_query = f"SELECT utc_offset FROM {cooked_airports_table_name}"
-    utc_offset_airport_query += " WHERE airport={}"  # The WHERE clause will be filled later with airport code
+    utc_offset_airport_query += " WHERE airport=\'{}\'"  # The WHERE clause will be filled later with airport code
 
     sql_table_name_cooked = "operations_customer_flight_info_coo"
 
@@ -301,7 +302,7 @@ if __name__ == "__main__":
     # Read data from database raw table
     all_data = utils.read_data_from_db(
         db_config_filepath, raw_data_query
-    )  # Returns a list of tuples. The tuple is made of 2 elements: id (int) and data (dict)
+    )  # Returns a list of tuples. The tuple is made of 1 element: data (dict)
     # Build data structure for cooked table
     gen = build_flat_data(
         all_data, db_config_filepath, utc_offset_airport_query
