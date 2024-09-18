@@ -177,7 +177,7 @@ def read_data_from_db(db_config_filepath: PosixPath, sql_query: str) -> list[tup
         if conn:
             cur.close()
         conn.close()
-        logger.info(f"Read data from {db_table_name} table")
+        logger.info(f"Read data from {db_table_name.lower()} table")
         logger.info("Connection closed to the database")
 
     return res
