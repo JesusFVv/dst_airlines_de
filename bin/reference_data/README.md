@@ -89,12 +89,12 @@ docker cp postgres:/tmp/refdata_aircraft_coo.sql /home/ubuntu/dst_airlines_de/da
 ## Récupération sous WSL Ubuntu
 
 ```shell
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_languages_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_countries_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_cities_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airports_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airlines_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@52.19.0.212:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_aircraft_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_languages_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_countries_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_cities_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airports_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airlines_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_aircraft_coo.sql .
 
 ```
 
@@ -415,6 +415,23 @@ SELECT * FROM
 	SELECT 'refdata_aircraft_coo' as table, count(*) AS cnt  FROM refdata_aircraft_coo
 ) ORDER BY cnt DESC;
 
+```
+
+```log
+           table            |  cnt
+----------------------------+-------
+ refdata_airports_coo       | 11782
+ refdata_cities_coo         | 10666
+ refdata_airlines_coo       |  1127
+ refdata_aircraft_coo       |   381
+ refdata_countries_coo      |   238
+ refdata_languages_coo      |     2
+ refdata_city_names_coo     |     0
+ refdata_aircraft_names_coo |     0
+ refdata_airport_names_coo  |     0
+ refdata_airline_names_coo  |     0
+ refdata_country_names_coo  |     0
+(11 rows)
 ```
 
 # Initialisation docker

@@ -105,9 +105,9 @@ def ingest_data(tmp_folder, db_config_path):
 
                         # Insérer chaque élément séparément
                         for item in items:
-                            cursor.execute(f"INSERT INTO {table_name} (data) VALUES (%s)", [json.dumps(item)])
+                            # cursor.execute(f"INSERT INTO {table_name} (data) VALUES (%s)", [json.dumps(item)])
                             conn.commit()
-                            logging.info(f"Inserted {nature} data from {json_file} into {table_name}")
+                            # logging.info(f"Inserted {nature} data from {json_file} into {table_name}")
 
                 except Exception as e:
                     logging.error(f"ReferenceData, RAW DATA, ingestion, error inserting data from {json_file} : {e}")
