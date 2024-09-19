@@ -99,9 +99,8 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'AircraftCode' AS aircraftCode, json_data->>'AirlineEquipCode' AS AirlineEquipCode
     FROM (
-        SELECT data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary' AS json_data
+        SELECT data AS json_data
         FROM refdata_aircraft_raw
-        WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'object'
     ) AS aircraft_data
 ) AS aircraft_cooked
 WHERE aircraftCode IS NOT NULL
@@ -117,9 +116,8 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'AirlineID' AS AirlineID, json_data->>'AirlineID_ICAO' AS AirlineID_ICAO
     FROM (
-        SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
+        SELECT data AS json_data
         FROM refdata_airlines_raw
-        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
     ) AS airline_data
 ) AS airline_cooked
 WHERE AirlineID IS NOT NULL
@@ -134,9 +132,8 @@ INSERT INTO refdata_languages_coo (Code)
 SELECT DISTINCT 
     (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
 FROM (
-    SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+    SELECT data AS json_data
     FROM refdata_airports_raw
-    WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
 ) AS airport_data
 WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
 ON CONFLICT (Code) DO NOTHING;
@@ -147,9 +144,8 @@ INSERT INTO refdata_languages_coo (Code)
 SELECT DISTINCT 
     (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
 FROM (
-	SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
+	SELECT data AS json_data
 	FROM refdata_airlines_raw
-	WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
 ) AS Airline_data
 WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
 ON CONFLICT (Code) DO NOTHING;
@@ -166,9 +162,8 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'CountryCode' AS CountryCode
     FROM (
-        SELECT data->'CountryResource'->'Countries'->'Country' AS json_data
+        SELECT data AS json_data
         FROM refdata_countries_raw
-        WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'object'
     ) AS countrie_data
 ) AS country_cooked
 WHERE CountryCode IS NOT NULL
@@ -184,9 +179,8 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'CityCode' AS CityCode, json_data->>'CountryCode' AS CountryCode
     FROM (
-        SELECT data->'CityResource'->'Cities'->'City' AS json_data
+        SELECT data AS json_data
         FROM refdata_cities_raw
-        WHERE jsonb_typeof(data->'CityResource'->'Cities'->'City') = 'object'
     ) AS countrie_data
 ) AS city_cooked
 WHERE CityCode IS NOT NULL
@@ -218,9 +212,8 @@ FROM (
         ) AS utcOffsetInt,
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
-        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        SELECT data AS json_data
         FROM refdata_Airports_raw
-        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
@@ -250,9 +243,8 @@ FROM (
         ) AS utcOffsetInt,
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
-        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        SELECT data AS json_data
         FROM refdata_Airports_raw
-        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
@@ -282,9 +274,8 @@ FROM (
         ) AS utcOffsetInt,
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
-        SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
+        SELECT data AS json_data
         FROM refdata_Airports_raw
-        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
