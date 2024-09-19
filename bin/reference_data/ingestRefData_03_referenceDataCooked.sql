@@ -76,17 +76,18 @@ CREATE TABLE refdata_airport_names_coo (
 );
 
 CREATE TABLE refdata_airline_names_coo (
-    Airline CHAR(2) NOT NULL REFERENCES refdata_airlines_coo(AirlineID),
+    -- Should beCHAR(2) but 41 airports are returned with 3 char by the API
+    Airline CHAR(3) NOT NULL REFERENCES refdata_airlines_coo(AirlineID),
     Lang CHAR(2) NOT NULL REFERENCES refdata_languages_coo(Code),
     Name VARCHAR(100) NOT NULL,
     PRIMARY KEY (Airline, Lang)
 );
 
 CREATE TABLE refdata_aircraft_names_coo (
-    refdata_aircraft_coo CHAR(3) NOT NULL REFERENCES refdata_aircraft_coo(aircraftCode),
+    Aircraft CHAR(3) NOT NULL REFERENCES refdata_aircraft_coo(aircraftCode),
     Lang CHAR(2) NOT NULL REFERENCES refdata_languages_coo(Code),
     Name VARCHAR(100) NOT NULL,
-    PRIMARY KEY (refdata_aircraft_coo, Lang)
+    PRIMARY KEY (Aircraft, Lang)
 );
 
 -- -------------------------------- --
@@ -150,7 +151,38 @@ FROM (
 WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
 ON CONFLICT (Code) DO NOTHING;
 
--- TODO : from aircraft, cities, countries
+-- Languages from aircraft
+INSERT INTO refdata_languages_coo (Code)
+SELECT DISTINCT 
+    (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
+FROM (
+	SELECT data AS json_data
+	FROM refdata_aircraft_raw
+) AS Aircraft_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Code) DO NOTHING;
+
+-- Languages from cities
+INSERT INTO refdata_languages_coo (Code)
+SELECT DISTINCT 
+    (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
+FROM (
+	SELECT data AS json_data
+	FROM refdata_cities_raw
+) AS City_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Code) DO NOTHING;
+
+-- Languages from countries
+INSERT INTO refdata_languages_coo (Code)
+SELECT DISTINCT 
+    (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
+FROM (
+	SELECT data AS json_data
+	FROM refdata_countries_raw
+) AS Country_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Code) DO NOTHING;
 
 -- -------------------------------- --
 -- INSERT INTO refdata_countries_coo --
@@ -181,10 +213,12 @@ FROM (
     FROM (
         SELECT data AS json_data
         FROM refdata_cities_raw
-    ) AS countrie_data
+    ) AS city_data
 ) AS city_cooked
 WHERE CityCode IS NOT NULL
 ON CONFLICT (City) DO NOTHING;
+
+
 
 
 -- -------------------------------- --
@@ -281,3 +315,83 @@ FROM (
 WHERE AirportCode IS NOT NULL
  AND LocationType = 'Bus Station'
 ON CONFLICT (Airport) DO NOTHING;
+
+-- ------------------------------------- --
+-- INSERT INTO refdata_country_names_coo --
+-- ------------------------------------- --
+
+INSERT INTO refdata_country_names_coo (Country, Lang, Name)
+SELECT DISTINCT 
+    (json_data->>'CountryCode') AS Country,
+	(json_data->'Names'->'Name'->>'@LanguageCode') AS Lang,
+	(json_data->'Names'->'Name'->>'$') AS Name
+FROM (
+	SELECT data AS json_data
+	FROM refdata_countries_raw
+) AS Country_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Country, Lang) DO NOTHING;
+
+-- ---------------------------------- --
+-- INSERT INTO refdata_city_names_coo --
+-- ---------------------------------- --
+
+INSERT INTO refdata_city_names_coo (City, Lang, Name)
+SELECT DISTINCT 
+    (json_data->>'CityCode') AS City,
+	(json_data->'Names'->'Name'->>'@LanguageCode') AS Lang,
+	(json_data->'Names'->'Name'->>'$') AS Name
+FROM (
+	SELECT data AS json_data
+	FROM refdata_cities_raw
+) AS City_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (City, Lang) DO NOTHING;
+
+-- ------------------------------------- --
+-- INSERT INTO refdata_airport_names_coo --
+-- ------------------------------------- --
+
+INSERT INTO refdata_airport_names_coo (Airport, Lang, Name)
+SELECT DISTINCT 
+    (json_data->>'AirportCode') AS Airport,
+	(json_data->'Names'->'Name'->>'@LanguageCode') AS Lang,
+	(json_data->'Names'->'Name'->>'$') AS Name
+FROM (
+	SELECT data AS json_data
+	FROM refdata_airports_raw
+) AS Airport_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Airport, Lang) DO NOTHING;
+
+-- ------------------------------------- --
+-- INSERT INTO refdata_airline_names_coo --
+-- ------------------------------------- --
+
+INSERT INTO refdata_airline_names_coo (Airline, Lang, Name)
+SELECT DISTINCT 
+    (json_data->>'AirlineID') AS Airline,
+	(json_data->'Names'->'Name'->>'@LanguageCode') AS Lang,
+	(json_data->'Names'->'Name'->>'$') AS Name
+FROM (
+	SELECT data AS json_data
+	FROM refdata_airlines_raw
+) AS Airline_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Airline, Lang) DO NOTHING;
+
+-- -------------------------------------- --
+-- INSERT INTO refdata_aircraft_names_coo --
+-- -------------------------------------- --
+
+INSERT INTO refdata_aircraft_names_coo (Aircraft, Lang, Name)
+SELECT DISTINCT 
+    (json_data->>'AircraftCode') AS Aircraft,
+	(json_data->'Names'->'Name'->>'@LanguageCode') AS Lang,
+	(json_data->'Names'->'Name'->>'$') AS Name
+FROM (
+	SELECT data AS json_data
+	FROM refdata_aircraft_raw
+) AS Aircraft_data
+WHERE json_data->'Names'->'Name'->>'@LanguageCode' IS NOT NULL
+ON CONFLICT (Aircraft, Lang) DO NOTHING;

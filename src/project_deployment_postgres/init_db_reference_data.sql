@@ -69,12 +69,16 @@ CREATE TABLE refdata_airports_coo (
     Country CHAR(2) NOT NULL REFERENCES refdata_countries_coo(Code),
     Latitude DECIMAL NOT NULL,
     Longitude DECIMAL NOT NULL,
-    locationType VARCHAR(20) CHECK (locationType IN ('Airport', 'RailwayStation', 'BusStation')),
+    -- 'Off-Line Point' added (ex.: XNS)
+	-- 'Harbour' added (ex.: HKC : HONG KONG)
+	-- 'Miscellaneous' added (ex.: OIL : Libya, Ras Lanuf Oil)
+    locationType VARCHAR(20) CHECK (locationType IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')),
     UTC_offset INT NOT NULL,
     TimeZoneId VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE refdata_airlines_coo (
+    -- Should beCHAR(2) but 41 airports are returned with 3 char by the API
     AirlineID CHAR(3) PRIMARY KEY,
     AirlineID_ICAO CHAR(3)
 );
@@ -107,15 +111,16 @@ CREATE TABLE refdata_airport_names_coo (
 );
 
 CREATE TABLE refdata_airline_names_coo (
-    Airline CHAR(2) NOT NULL REFERENCES refdata_airlines_coo(AirlineID),
+    -- Should beCHAR(2) but 41 airports are returned with 3 char by the API
+    Airline CHAR(3) NOT NULL REFERENCES refdata_airlines_coo(AirlineID),
     Lang CHAR(2) NOT NULL REFERENCES refdata_languages_coo(Code),
     Name VARCHAR(100) NOT NULL,
     PRIMARY KEY (Airline, Lang)
 );
 
 CREATE TABLE refdata_aircraft_names_coo (
-    refdata_aircraft_coo CHAR(3) NOT NULL REFERENCES refdata_aircraft_coo(aircraftCode),
+    Aircraft CHAR(3) NOT NULL REFERENCES refdata_aircraft_coo(aircraftCode),
     Lang CHAR(2) NOT NULL REFERENCES refdata_languages_coo(Code),
     Name VARCHAR(100) NOT NULL,
-    PRIMARY KEY (refdata_aircraft_coo, Lang)
+    PRIMARY KEY (Aircraft, Lang)
 );
