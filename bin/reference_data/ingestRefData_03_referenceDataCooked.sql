@@ -99,12 +99,6 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'AircraftCode' AS aircraftCode, json_data->>'AirlineEquipCode' AS AirlineEquipCode
     FROM (
-        SELECT jsonb_array_elements(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') AS json_data
-        FROM refdata_aircraft_raw
-        WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'array'
-
-        UNION ALL
-
         SELECT data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary' AS json_data
         FROM refdata_aircraft_raw
         WHERE jsonb_typeof(data->'AircraftResource'->'AircraftSummaries'->'AircraftSummary') = 'object'
@@ -123,12 +117,6 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'AirlineID' AS AirlineID, json_data->>'AirlineID_ICAO' AS AirlineID_ICAO
     FROM (
-        SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
-        FROM refdata_airlines_raw
-        WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'array'
-
-        UNION ALL
-
         SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
         FROM refdata_airlines_raw
         WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
@@ -146,12 +134,6 @@ INSERT INTO refdata_languages_coo (Code)
 SELECT DISTINCT 
     (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
 FROM (
-    SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
-    FROM refdata_airports_raw
-    WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
-
-    UNION ALL
-
     SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
     FROM refdata_airports_raw
     WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
@@ -165,12 +147,6 @@ INSERT INTO refdata_languages_coo (Code)
 SELECT DISTINCT 
     (json_data->'Names'->'Name'->>'@LanguageCode') AS lang
 FROM (
-	SELECT jsonb_array_elements(data->'AirlineResource'->'Airlines'->'Airline') AS json_data
-	FROM refdata_airlines_raw
-	WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'array'
-
-	UNION ALL
-
 	SELECT data->'AirlineResource'->'Airlines'->'Airline' AS json_data
 	FROM refdata_airlines_raw
 	WHERE jsonb_typeof(data->'AirlineResource'->'Airlines'->'Airline') = 'object'
@@ -190,12 +166,6 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'CountryCode' AS CountryCode
     FROM (
-        SELECT jsonb_array_elements(data->'CountryResource'->'Countries'->'Country') AS json_data
-        FROM refdata_countries_raw
-        WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'array'
-
-        UNION ALL
-
         SELECT data->'CountryResource'->'Countries'->'Country' AS json_data
         FROM refdata_countries_raw
         WHERE jsonb_typeof(data->'CountryResource'->'Countries'->'Country') = 'object'
@@ -214,12 +184,6 @@ SELECT
 FROM (
     SELECT DISTINCT json_data->>'CityCode' AS CityCode, json_data->>'CountryCode' AS CountryCode
     FROM (
-        SELECT jsonb_array_elements(data->'CityResource'->'Cities'->'City') AS json_data
-        FROM refdata_cities_raw
-        WHERE jsonb_typeof(data->'CityResource'->'Cities'->'City') = 'array'
-
-        UNION ALL
-
         SELECT data->'CityResource'->'Cities'->'City' AS json_data
         FROM refdata_cities_raw
         WHERE jsonb_typeof(data->'CityResource'->'Cities'->'City') = 'object'
@@ -254,12 +218,6 @@ FROM (
         ) AS utcOffsetInt,
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
-        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
-        FROM refdata_Airports_raw
-        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
-
-        UNION ALL
-
         SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
         FROM refdata_Airports_raw
         WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
@@ -292,12 +250,6 @@ FROM (
         ) AS utcOffsetInt,
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
-        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
-        FROM refdata_Airports_raw
-        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
-
-        UNION ALL
-
         SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
         FROM refdata_Airports_raw
         WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'
@@ -330,12 +282,6 @@ FROM (
         ) AS utcOffsetInt,
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
-        SELECT jsonb_array_elements(data->'AirportResource'->'Airports'->'Airport') AS json_data
-        FROM refdata_Airports_raw
-        WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'array'
-
-        UNION ALL
-
         SELECT data->'AirportResource'->'Airports'->'Airport' AS json_data
         FROM refdata_Airports_raw
         WHERE jsonb_typeof(data->'AirportResource'->'Airports'->'Airport') = 'object'

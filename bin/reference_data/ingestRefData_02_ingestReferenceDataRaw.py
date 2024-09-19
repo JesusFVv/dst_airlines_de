@@ -11,6 +11,15 @@ import logging
 # Configuration du logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Dictionnaire pour pouvoir traiter les differentes structures de fichiers JSON en fonction de la nature des donnees
+NATURE_PATHS = {
+    "airports": ["AirportResource", "Airports", "Airport"],
+    "countries": ["CountryResource", "Countries", "Country"],
+    "cities": ["CityResource", "Cities", "City"],
+    "airlines": ["AirlineResource", "Airlines", "Airline"],
+    "aircraft": ["AircraftResource", "AircraftSummaries", "AircraftSummary"]
+}
+
 def decompress_files(data_folder, tmp_folder):
     files = ['out_Aircraft.7z', 'out_Airlines.7z', 'outFR_Airports.7z', 'outFR_Cities.7z', 'outFR_Countries.7z', 'outEN_Airports.7z', 'outEN_Cities.7z', 'outEN_Countries.7z']
     for file in files:
@@ -49,9 +58,29 @@ def get_json_files(directory):
                 json_files.append(os.path.join(root, file))
     return json_files
 
+def get_data_by_nature(data, nature):
+    """ Récupère les données en fonction de la 'nature' à partir de la structure JSON. """
+    path = NATURE_PATHS.get(nature.lower())
+    if not path:
+        logging.error(f"Unknown nature: {nature}")
+        return []
+
+    # Suivre le chemin dans le JSON pour récupérer la liste des éléments
+    extracted_data = data
+    try:
+        for key in path:
+            extracted_data = extracted_data.get(key, {})
+        # On s'assure d'avoir toujours une liste, même si c'est un unique élément
+        if isinstance(extracted_data, dict):
+            extracted_data = [extracted_data]
+        return extracted_data
+    except Exception as e:
+        logging.error(f"Error extracting data for nature {nature}: {e}")
+        return []
+
 def ingest_data(tmp_folder, db_config_path):
     try:
-        # Connexion à la base de données (remplacez par votre fonction de connexion)
+        # Connexion à la base de données
         conn, cursor = utils.connect_db(db_config_path)
         logging.info("ReferenceData, RAW DATA, ingestion, connexion to the database OK")
     except Exception as e:
@@ -71,11 +100,17 @@ def ingest_data(tmp_folder, db_config_path):
                 try:
                     with open(json_file, 'r') as file:
                         data = json.load(file)
-                        cursor.execute(f"INSERT INTO {table_name} (data) VALUES (%s)", [json.dumps(data)])
-                        conn.commit()
-                        # logging.trace(f"ReferenceData, RAW DATA, ingestion, data inserted into {table_name} : {json_file}")
+                        # Utilisation de la fonction pour récupérer les données selon la 'nature'
+                        items = get_data_by_nature(data, nature)
+
+                        # Insérer chaque élément séparément
+                        for item in items:
+                            cursor.execute(f"INSERT INTO {table_name} (data) VALUES (%s)", [json.dumps(item)])
+                            conn.commit()
+                            logging.info(f"Inserted {nature} data from {json_file} into {table_name}")
+
                 except Exception as e:
-                    logging.error(f"ReferenceData, RAW DATA, ingestion, error inserting data : {e}")
+                    logging.error(f"ReferenceData, RAW DATA, ingestion, error inserting data from {json_file} : {e}")
 
     try:
         cursor.close()
