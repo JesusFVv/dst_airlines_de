@@ -59,7 +59,6 @@ rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_Co
 ```shell
 cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
 docker exec -it postgres bash
-psql -U dst_designer dst_airlines_db
 ```
 
 ### Export de tables

@@ -138,25 +138,26 @@ FROM
 CREATE VIEW view_cities AS
 SELECT 
     ci.City AS "CityCode",
-    cn_fr.Name AS "CityNameFR",
-    cn_en.Name AS "CityNameEN",
-    coun.CountryNameFR,
-    coun.CountryNameEN
+    ci_fr.Name AS "CityNameFR",
+    ci_en.Name AS "CityNameEN",
+    cn_fr.Name AS "CountryNameFR",
+    cn_en.Name AS "CountryNameEN"
 FROM 
     refdata_cities_coo ci
-    LEFT JOIN refdata_city_names_coo cn_fr ON ci.City = cn_fr.City AND cn_fr.Lang = 'FR'
-    LEFT JOIN refdata_city_names_coo cn_en ON ci.City = cn_en.City AND cn_en.Lang = 'EN'
-    LEFT JOIN view_countries coun ON ci.Country = coun.CountryCode;
+    LEFT JOIN refdata_city_names_coo ci_fr ON ci.City = ci_fr.City AND ci_fr.Lang = 'FR'
+    LEFT JOIN refdata_city_names_coo ci_en ON ci.City = ci_en.City AND ci_en.Lang = 'EN'
+    LEFT JOIN refdata_country_names_coo cn_fr ON ci.Country = cn_fr.Country AND cn_fr.Lang = 'FR'
+    LEFT JOIN refdata_country_names_coo cn_en ON ci.Country = cn_en.Country AND cn_en.Lang = 'EN';
 
 CREATE VIEW view_airports AS
 SELECT 
     a.Airport AS "AirportCode",
     an_fr.Name AS "AirportNameFR",
     an_en.Name AS "AirportNameEN",
-    ci.CityNameFR,
-    ci.CityNameEN,
-    co.CountryNameFR,
-    co.CountryNameEN,
+    ci_fr.Name AS "CityNameFR",
+    ci_en.Name AS "CityNameEN",
+    cn_fr.Name AS "CountryNameFR",
+    cn_en.Name AS "CountryNameEN",
     a.Latitude AS "AirportLatitude",
     a.Longitude AS "AirportLongitude",
     a.locationType AS "AirportLocationType",
@@ -166,14 +167,33 @@ FROM
     refdata_airports_coo a
     LEFT JOIN refdata_airport_names_coo an_fr ON a.Airport = an_fr.Airport AND an_fr.Lang = 'FR'
     LEFT JOIN refdata_airport_names_coo an_en ON a.Airport = an_en.Airport AND an_en.Lang = 'EN'
-    LEFT JOIN view_cities ci ON a.City = ci.CityCode
-	LEFT JOIN view_countries co ON a.Country = co.CountryCode;
+    LEFT JOIN refdata_city_names_coo ci_fr ON a.City = ci_fr.City AND ci_fr.Lang = 'FR'
+    LEFT JOIN refdata_city_names_coo ci_en ON a.City = ci_en.City AND ci_en.Lang = 'EN'
+    LEFT JOIN refdata_country_names_coo cn_fr ON a.Country = cn_fr.Country AND cn_fr.Lang = 'FR'
+    LEFT JOIN refdata_country_names_coo cn_en ON a.Country = cn_en.Country AND cn_en.Lang = 'EN';
 
 CREATE VIEW view_airports_sample AS
 SELECT 
-    *
+    a.Airport AS "AirportCode",
+    an_fr.Name AS "AirportNameFR",
+    an_en.Name AS "AirportNameEN",
+    ci_fr.Name AS "CityNameFR",
+    ci_en.Name AS "CityNameEN",
+    cn_fr.Name AS "CountryNameFR",
+    cn_en.Name AS "CountryNameEN",
+    a.Latitude AS "AirportLatitude",
+    a.Longitude AS "AirportLongitude",
+    a.locationType AS "AirportLocationType",
+    a.UTC_offset AS "AirportUTC_offset",
+    a.TimeZoneId AS "AirportTimeZoneId"
 FROM 
-    view_airports a
+    refdata_airports_coo a
+    LEFT JOIN refdata_airport_names_coo an_fr ON a.Airport = an_fr.Airport AND an_fr.Lang = 'FR'
+    LEFT JOIN refdata_airport_names_coo an_en ON a.Airport = an_en.Airport AND an_en.Lang = 'EN'
+    LEFT JOIN refdata_city_names_coo ci_fr ON a.City = ci_fr.City AND ci_fr.Lang = 'FR'
+    LEFT JOIN refdata_city_names_coo ci_en ON a.City = ci_en.City AND ci_en.Lang = 'EN'
+    LEFT JOIN refdata_country_names_coo cn_fr ON a.Country = cn_fr.Country AND cn_fr.Lang = 'FR'
+    LEFT JOIN refdata_country_names_coo cn_en ON a.Country = cn_en.Country AND cn_en.Lang = 'EN'
 WHERE a.Airport IN  (
   'IATA','DMM','DXB','PVG','BKK','IST','HND','PEK','DEL','CAI',
   'CMN','CPT','LOS','ALG','NBO','SSH','MRU','ATL','DFW','DEN',
