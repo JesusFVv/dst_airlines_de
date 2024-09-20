@@ -13,7 +13,7 @@ fi
 mkdir ${tmp_build_context}
 cp * ${tmp_build_context} &>/dev/null
 cp -r input/ ${tmp_build_context}
-cp -r /home/ubuntu/dst_airlines_de/bin/customer_flight_info/common/ ${tmp_build_context}
+cp -r /home/ubuntu/dst_airlines_de/bin/common/ ${tmp_build_context}
 rm ${tmp_build_context}/common/database.ini
 mv ${tmp_build_context}/common/.dockerignore ${tmp_build_context}
 

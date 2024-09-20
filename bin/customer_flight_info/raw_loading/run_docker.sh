@@ -13,7 +13,7 @@ if [ -d ${tmp_build_context} ]; then
 fi
 mkdir ${tmp_build_context}
 cp * ${tmp_build_context} &>/dev/null
-cp -r /home/ubuntu/dst_airlines_de/bin/customer_flight_info/common/ ${tmp_build_context}
+cp -r /home/ubuntu/dst_airlines_de/bin/common/ ${tmp_build_context}
 mv ${tmp_build_context}/common/.dockerignore ${tmp_build_context}
 cp -r /home/ubuntu/dst_airlines_de/src/project_deployment_postgres/*.txt ${tmp_build_context}
 cp -r /home/ubuntu/dst_airlines_de/src/project_deployment_postgres/*.yml ${tmp_build_context}
