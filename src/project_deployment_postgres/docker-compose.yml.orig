@@ -16,6 +16,12 @@ services:
       - db-data:/var/lib/postgresql/data
       - "./init-user-db.sh:/docker-entrypoint-initdb.d/1.sh"
       - "./init_db.sql:/docker-entrypoint-initdb.d/2.sql"
+<<<<<<< HEAD
+      
+      - "./init_db_reference_data.sql:/docker-entrypoint-initdb.d/4.sql"
+=======
+      - "./init_db_customer_flight_info.sql:/docker-entrypoint-initdb.d/3.sql"
+>>>>>>> origin/feat-customer-flight-info
     secrets:
       - db_password
       - db_user
