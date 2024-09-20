@@ -90,6 +90,87 @@ CREATE TABLE refdata_aircraft_names_coo (
     PRIMARY KEY (Aircraft, Lang)
 );
 
+CREATE VIEW view_countries AS
+SELECT 
+    c.Code AS "CountryCode",
+    cn_fr.Name AS "CountryNameFR",
+    cn_en.Name AS "CountryNameEN"
+FROM 
+    refdata_countries_coo c
+    LEFT JOIN refdata_country_names_coo cn_fr ON c.Code = cn_fr.Country AND cn_fr.Lang = 'FR'
+    LEFT JOIN refdata_country_names_coo cn_en ON c.Code = cn_en.Country AND cn_en.Lang = 'EN';
+
+CREATE VIEW view_cities AS
+SELECT 
+    ci.City AS "CityCode",
+    cn_fr.Name AS "CityNameFR",
+    cn_en.Name AS "CityNameEN",
+    coun.CountryNameFR,
+    coun.CountryNameEN
+FROM 
+    refdata_cities_coo ci
+    LEFT JOIN refdata_city_names_coo cn_fr ON ci.City = cn_fr.City AND cn_fr.Lang = 'FR'
+    LEFT JOIN refdata_city_names_coo cn_en ON ci.City = cn_en.City AND cn_en.Lang = 'EN'
+    LEFT JOIN view_countries coun ON ci.Country = coun.CountryCode;
+
+CREATE VIEW view_airports AS
+SELECT 
+    a.Airport AS "AirportCode",
+    an_fr.Name AS "AirportNameFR",
+    an_en.Name AS "AirportNameEN",
+    ci.CityNameFR,
+    ci.CityNameEN,
+    co.CountryNameFR,
+    co.CountryNameEN,
+    a.Latitude AS "AirportLatitude",
+    a.Longitude AS "AirportLongitude",
+    a.locationType AS "AirportLocationType",
+    a.UTC_offset AS "AirportUTC_offset",
+    a.TimeZoneId AS "AirportTimeZoneId"
+FROM 
+    refdata_airports_coo a
+    LEFT JOIN refdata_airport_names_coo an_fr ON a.Airport = an_fr.Airport AND an_fr.Lang = 'FR'
+    LEFT JOIN refdata_airport_names_coo an_en ON a.Airport = an_en.Airport AND an_en.Lang = 'EN'
+    LEFT JOIN view_cities ci ON a.City = ci.CityCode
+	LEFT JOIN view_countries co ON a.Country = co.CountryCode;
+
+CREATE VIEW view_airports_sample AS
+SELECT 
+    *
+FROM 
+    view_airports a
+WHERE a.Airport IN  (
+  'IATA','DMM','DXB','PVG','BKK','IST','HND','PEK','DEL','CAI',
+  'CMN','CPT','LOS','ALG','NBO','SSH','MRU','ATL','DFW','DEN',
+  'ORD','LAX','JFK','LAS','MIA','MCO','CLT','MEX','SEA','EWR',
+  'SFO','BOG','GRU','FRA','MUC','BER','AMS','LHR','MAN','OSL',
+  'ARN','MAD','LIS','FCO','ATH','WAW','VIE','ZRH','DUB','NCE',
+  'CDG')
+;
+
+CREATE VIEW view_airlines AS
+SELECT 
+    al.AirlineID,
+    al.AirlineID_ICAO AS "AirlineICAO",
+    an_fr.Name AS "AirlineNameFR",
+    an_en.Name AS "AirlineNameEN"
+FROM 
+    refdata_airlines_coo al
+    LEFT JOIN refdata_airline_names_coo an_fr ON al.AirlineID = an_fr.Airline AND an_fr.Lang = 'FR'
+    LEFT JOIN refdata_airline_names_coo an_en ON al.AirlineID = an_en.Airline AND an_en.Lang = 'EN';
+
+CREATE VIEW view_aircrafts AS
+SELECT 
+    ac.aircraftCode AS "AircraftCode",
+    an_fr.Name AS "AircraftNameFR",
+    an_en.Name AS "AircraftNameEN",
+    ac.AirlineEquipCode AS "AircraftEquipCode"
+FROM 
+    refdata_aircraft_coo ac
+    LEFT JOIN refdata_aircraft_names_coo an_fr ON ac.aircraftCode = an_fr.Aircraft AND an_fr.Lang = 'FR'
+    LEFT JOIN refdata_aircraft_names_coo an_en ON ac.aircraftCode = an_en.Aircraft AND an_en.Lang = 'EN';
+
+
 -- -------------------------------- --
 -- INSERT INTO refdata_aircraft_coo --
 -- -------------------------------- --
