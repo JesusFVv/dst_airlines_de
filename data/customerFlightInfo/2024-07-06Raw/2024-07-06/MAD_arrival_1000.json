@@ -1,0 +1,74 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "BRU",
+                    "Scheduled": {
+                        "Date": "2024-07-06",
+                        "Time": "09:25"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-06",
+                        "Time": "09:24"
+                    },
+                    "Terminal": {
+                        "Gate": "A44"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "MAD",
+                    "Scheduled": {
+                        "Date": "2024-07-06",
+                        "Time": "11:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-06",
+                        "Time": "11:50"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "SN",
+                    "FlightNumber": "3721"
+                },
+                "Equipment": {
+                    "AircraftCode": "319"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2024-07-06T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2024-07-06T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2024-07-06T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

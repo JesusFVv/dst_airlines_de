@@ -1,0 +1,415 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "16:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "16:46"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K16"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "18:21"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "062"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6022"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9188"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2232"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "17:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "17:18"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A10"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "18:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "18:36"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "061"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1046"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "17:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "17:29"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F34"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "19:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "19:25"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "068"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "417"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "18:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "18:15"
+                        },
+                        "Terminal": {
+                            "Gate": "A74"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "19:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "19:31"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "064"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "644"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "18:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "18:12"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K06"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "19:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "19:49"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "065"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "A3",
+                            "FlightNumber": "1534"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2236"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "HAM",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "18:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "18:37"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C07"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "20:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "20:25"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4X",
+                        "FlightNumber": "7406"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "20:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "20:24"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A17"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "21:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "21:37"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "068"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1452"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6018"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1050"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CDG/2024-07-08T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CDG/2024-07-08T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CDG/2024-07-08T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 7
+        }
+    }
+}
