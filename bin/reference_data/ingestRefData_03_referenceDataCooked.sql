@@ -2,6 +2,13 @@
 -- COOKED TABLES --
 -- ------------- --
 -- DELETE ALL COOKED TABLES IF THEY ALREADY EXIST
+DROP VIEW IF EXISTS view_countries;
+DROP VIEW IF EXISTS view_cities;
+DROP VIEW IF EXISTS view_airports;
+DROP VIEW IF EXISTS view_airports_sample;
+DROP VIEW IF EXISTS view_airlines;
+DROP VIEW IF EXISTS view_aircrafts;
+
 DROP TABLE IF EXISTS refdata_airport_names_coo;
 DROP TABLE IF EXISTS refdata_airports_coo;
 DROP TABLE IF EXISTS refdata_city_names_coo;
