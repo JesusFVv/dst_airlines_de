@@ -355,6 +355,38 @@ WHERE AirlineID IS NOT NULL
 (1 row)
 ```
 
+```sql
+SELECT * FROM view_airlines LIMIT 5;
+```
+
+```log
+ airlineid | AirlineICAO | AirlineNameFR |    AirlineNameEN
+-----------+-------------+---------------+----------------------
+ 0A        | GNT         |               | Amber Air
+ 0B        | BMS         |               | Blue Air
+ 0D        | DWT         |               | Darwin Airline Sa
+ 0J        | PJZ         |               | Premium Jet Ag
+ 0K        | KRT         |               | Aircompany Kokshetau
+(5 rows)
+```
+
+#### cities Cooked
+
+```sql
+SELECT * FROM view_cities LIMIT 5;
+```
+
+```log
+ CityCode | CityNameFR | CityNameEN |  CountryNameFR   |  CountryNameEN
+----------+------------+------------+------------------+------------------
+ AAA      | Anaa       | Anaa       | French Polynesia | French Polynesia
+ AAB      | Arrabury   | Arrabury   | Australie        | Australia
+ AAC      | Al Arish   | El Arish   | Egypte           | Egypt
+ AAD      |            | Adado      | Somalia          | Somalia
+ AAE      | Annaba     | Annaba     | Algérie          | Algeria
+(5 rows)
+```
+
 #### countries Cooked
 
 ```sql
@@ -379,6 +411,57 @@ WHERE CountryCode IS NOT NULL
    238
 (1 row)
 ```
+
+```sql
+SELECT * FROM view_countries LIMIT 5;
+```
+
+```log
+ CountryCode |   CountryNameFR    |            CountryNameEN
+-------------+--------------------+--------------------------------------
+ AD          | Andorra            | Andorra
+ AE          | Emirat Arabes Unis | United Arab Emirates
+ AF          | Afghanistan        | Afghanistan
+ AG          |                    | Antigua And Barbuda, Leeward Islands
+ AI          |                    | Anguilla, Leeward Islands
+(5 rows)
+```
+
+#### aircraft Cooked
+
+```sql
+SELECT * FROM view_aircrafts LIMIT 5;
+```
+
+```log
+ AircraftCode | AircraftNameFR |        AircraftNameEN         | AircraftEquipCode
+--------------+----------------+-------------------------------+-------------------
+ 100          |                | Fokker 100                    | F100
+ 141          |                | BAE Systems 146-100 Passenger | B461
+ 142          |                | BAE Systems 146-200 Passenger | B462
+ 143          |                | BAE Systems 146-300 Passenger | B463
+ 14X          |                | BAE Systems 146-100 Freighter | B461
+(5 rows)
+```
+
+#### airport Cooked
+
+```sql
+SELECT * FROM view_airports_sample LIMIT 5;
+```
+
+```log
+ AirportCode | AirportNameFR | AirportNameEN | CityNameFR | CityNameEN | CountryNameFR |      CountryNameEN       | AirportLatitude | AirportLongitude | AirportLocationType | AirportUTC_offset | AirportTimeZoneId
+-------------+---------------+---------------+------------+------------+---------------+--------------------------+-----------------+------------------+---------------------+-------------------+-------------------
+ ALG         | Alger         | Algiers       | Alger      | Algiers    | Algérie       | Algeria                  |         36.6942 |           3.2147 | Airport             |                 1 | Africa/Algiers
+ AMS         | Amsterdam     | Amsterdam     | Amsterdam  | Amsterdam  | Pays-Bas      | Netherlands              |         52.3081 |           4.7642 | Airport             |                 1 | Europe/Amsterdam
+ ARN         | Stockholm     | Stockholm     | Stockholm  | Stockholm  | Suède         | Sweden                   |         59.6519 |          17.9186 | Airport             |                 1 | Europe/Stockholm
+ ATH         | Athènes       | Athens        | Athènes    | Athens     | Grèce         | Greece                   |         37.9364 |          23.9444 | Airport             |                 2 | Europe/Athens
+ ATL         | Atlanta       | Atlanta       | Atlanta    | Atlanta    |               | United States Of America |         33.6367 |         -84.4281 | Airport             |                -5 | America/New_York
+(5 rows)
+
+```
+
 
 ### Cooked Languages
 
