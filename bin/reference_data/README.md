@@ -502,17 +502,17 @@ SELECT * FROM
 ```log
            table            |  cnt
 ----------------------------+-------
+ refdata_airport_names_coo  | 19924
+ refdata_city_names_coo     | 18770
  refdata_airports_coo       | 11782
  refdata_cities_coo         | 10666
  refdata_airlines_coo       |  1127
+ refdata_airline_names_coo  |  1127
+ refdata_country_names_coo  |   424
  refdata_aircraft_coo       |   381
+ refdata_aircraft_names_coo |   380
  refdata_countries_coo      |   238
  refdata_languages_coo      |     2
- refdata_city_names_coo     |     0
- refdata_aircraft_names_coo |     0
- refdata_airport_names_coo  |     0
- refdata_airline_names_coo  |     0
- refdata_country_names_coo  |     0
 (11 rows)
 ```
 
