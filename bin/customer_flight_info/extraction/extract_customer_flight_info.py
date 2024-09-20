@@ -4,9 +4,12 @@ import logging
 import numpy as np
 import pandas as pd
 import requests
+import shutil
 import time
 import urllib3
+from common import utils
 from pathlib import Path, PosixPath
+from py7zr import SevenZipFile
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
@@ -79,11 +82,12 @@ def generate_datetime_array(
     return df["date_time"].values
 
 
-def get_token() -> str:
+def get_token() -> tuple[str, int]:
     """Get API token
 
     Returns:
         access_token (str): API access token
+        expires_in (int): the number of seconds until this token expires
     """
 
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
@@ -101,7 +105,10 @@ def get_token() -> str:
         raise ValueError(f"Can't reach {TOKEN_ENDPOINT}")
     else:
         if res.status_code == 200:
-            access_token, expires_in = res.json()["access_token"], res.json()["expires_in"]
+            access_token, expires_in = (
+                res.json()["access_token"],
+                res.json()["expires_in"],
+            )
             return access_token, expires_in
         else:
             raise ValueError("Can't get access token")
@@ -118,7 +125,7 @@ def customer_flight_information_airport(
         token (str): API access token
 
     Returns:
-        data (dict|None): endpoint results or None if endpoint is not available
+        data (dict | None): endpoint results or None if endpoint is not available
     """
 
     headers = {
@@ -129,11 +136,11 @@ def customer_flight_information_airport(
 
     # Request parameters
     params = {
-        "limit": None,  # integer, number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+        "limit": 100,  # integer, number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
         "offset": None,  # integer, number of records skipped. Defaults to 0
     }
 
-    logger.info(f"Query {endpoint}")
+    logger.info(f"Querying {endpoint}")
     try:
         res = session.get(endpoint, params=params, headers=headers, timeout=1)
         match res.status_code:
@@ -148,8 +155,6 @@ def customer_flight_information_airport(
                 data = None
         return data
     except (requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout):
-        #     # logger.exception(f"Endpoint {endpoint} is not reachable")
-        #     logger.warning(f"Endpoint {endpoint} is not reachable")
         logger.warning(f"Endpoint {endpoint} is not reachable")
         return
     except (
@@ -157,29 +162,32 @@ def customer_flight_information_airport(
         requests.exceptions.RetryError,
         requests.exceptions.ConnectionError,
     ):
-        # logger.exception(f"Max retries has been reached for endpoint {endpoint}")
-        # logger.warning(f"Max retries has been reached for endpoint {endpoint}")
         logger.warning(f"Max retries has been reached for endpoint {endpoint}")
         return
 
 
-def save_data(data: dict, home: PosixPath, date_time: str, iata_code: str) -> None:
-    """Save data in JSON format in a output folder
+def save_data(
+    data: dict,
+    endpoint_name: str,
+    data_path: PosixPath,
+    date_time: str,
+    iata_code: str,
+) -> None:
+    """Save data in JSON format in an output folder
 
     Args:
         data (dict): data to be saved (endpoint results)
-        home (PosixPath): home path
+        endpoint_name (str): a keyword to differentiate the different endpoints
+        data_path (PosixPath): absolute path to the root folder where data are stored
         date_time (str): datetime string YYYY-mm-ddTHH:MM
         iata_code (str): airport iata code
     """
-    query_date = date_time.split("T")[0]
+    query_datetime = date_time.split("T")
+    query_date, query_time = query_datetime[0], query_datetime[1].replace(":", "")
     output_filepath = Path(
-        home,
-        "workspace",
-        "lufthansa",
-        "output",
+        data_path,
         query_date,
-        f"departure_{iata_code}_{date_time}.json",
+        f"{iata_code}_{endpoint_name}_{query_time}.json",
     )
     output_filepath.parent.mkdir(
         exist_ok=True, parents=True
@@ -188,10 +196,36 @@ def save_data(data: dict, home: PosixPath, date_time: str, iata_code: str) -> No
         json.dump(data, f, ensure_ascii=True, indent=4)
 
 
+def zip_files(data_path: PosixPath, date_time: str) -> None:
+    """Zip data folder in 7z format
+
+    Args:
+        data_path (PosixPath): absolute path to the root folder having data in JSON format
+        date_time (str): datetime string YYYY-mm-ddTHH:MM
+    """
+    query_date = date_time.split("T")[0]
+    data_folder = Path(data_path, query_date)
+    archive_folder = data_folder.with_suffix(".7z")
+    # List JSON files to zip
+    json_files = utils.get_filenames(data_folder, "json")
+    # Make 7-zip archive
+    with SevenZipFile(archive_folder, "w") as archive:
+        for f in json_files:
+            archive.write(f, arcname=f.name)
+    # Remove data folder after is has been archived
+    shutil.rmtree(data_folder)
+
+
 if __name__ == "__main__":
+    ########################
+    ### Input parameter ###
+    ########################
+    data_path = Path("/home/ubuntu/dst_airlines_de/data/customerFlightInfo")
+
+    ########################
     # Get airports array
-    home = Path.home()
-    airport_filepath = Path(home, "workspace", "lufthansa", "input", "airports.csv")
+    working_dir = Path.cwd()
+    airport_filepath = Path(working_dir, "input", "airports.csv")
     airports = get_airports(airport_filepath)  # Numpy array
     logger.debug(airports)
 
@@ -203,18 +237,18 @@ if __name__ == "__main__":
         "%Y-%m-%d %H:%M:%S"
     )
     today = dt.date.today().strftime("%Y-%m-%d")
-    datetime_array = generate_datetime_array(yesterday_two_am, today)
+    # datetime_array = generate_datetime_array(yesterday_two_am, today)
+    datetime_array = generate_datetime_array("2024-09-13 02:00:00", "2024-09-14")
     logger.debug(datetime_array)
 
     # Define retry strategy for https requests
     session = (
         requests.Session()
-    )  # a Session object allows to persist certain parameters across requests
+    )  # a Session object allows to persist some parameters across requests
     retries = Retry(
-        # total=3,
-        total=4,
+        total=6,
         backoff_factor=1,
-        allowed_methods=["GET", "POST"],
+        allowed_methods=["GET"],
         status_forcelist=[404, 429, 500, 502, 503, 504],
         raise_on_status=True,
     )
@@ -223,16 +257,15 @@ if __name__ == "__main__":
     # Get token to be able to use API
     token, expiration_time = get_token()
     logger.info(f"Token granted for {int(expiration_time/3600)} hours!")
+    print("\n")
 
     # Loop over airports
     unfound_airports = {}
-    # for iata_code in airports:
-    for iata_code in ["CDG"]:
-        unfound_airports[iata_code] = 0
+    for iata_code in airports:
         # Loop over datetime for a given airport
-        # for date_time in datetime_array:
-        datetime_array = ["2024-05-29T01:00", "2024-05-29T02:00"]
         for date_time in datetime_array:
+            # Get data for customer flight information at departure airport endpoint
+            endpoint_name = "departure"
             res = customer_flight_information_airport(
                 session,
                 CUSTOMER_FLIGHT_INFO_DEPARTURE_AIRPORT_ENDPOINT.format(
@@ -241,10 +274,24 @@ if __name__ == "__main__":
                 token,
             )
             time.sleep(1)  # Free API is limited to 5 requests per second
-            if res is None:
-                unfound_airports[iata_code] += 1
-            else:
-                save_data(res, home, date_time, iata_code)
+            print("\n")
+            if res:
+                save_data(res, endpoint_name, data_path, date_time, iata_code)
 
-        if unfound_airports[iata_code] == len(datetime_array):
-            logger.error(unfound_airports)
+            # Get data for customer flight information at arrival airport endpoint
+            endpoint_name = "arrival"
+            res = customer_flight_information_airport(
+                session,
+                CUSTOMER_FLIGHT_INFO_ARRIVAL_AIRPORT_ENDPOINT.format(
+                    iata_code, date_time
+                ),
+                token,
+            )
+            time.sleep(1)  # Free API is limited to 5 requests per second
+            print("\n")
+            if res:
+                save_data(res, endpoint_name, data_path, date_time, iata_code)
+
+    zip_files(data_path, datetime_array[0])
+    logger.info("COLLECT COMPLETED !")
+
