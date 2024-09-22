@@ -1,4 +1,5 @@
 import logging
+import pandas as pd
 import psycopg2
 from collections.abc import Generator
 from common import utils
@@ -33,16 +34,14 @@ def flatten_info(
 def generate_datetime_info(
     data_subset: dict[str, str],
     airport_code: str,
-    db_config_filepath: PosixPath,
-    utc_offset_airport_query: str,
+    df_airports_data: pd.DataFrame,
 ) -> str:
     """Generate a datetime in proper format from a raw data subset having date and time information
 
     Args:
         data_subset (dict[str, str]): data coming from 'Scheduled' or 'Estimated' or 'Actual' columns in raw table
         airport_code (str): three characters airport code
-        db_config_filepath (PosixPath): absolute path to the db config file
-        sql_query (str): SQL query to run on database table
+        df_airports_data (pd.DataFrame): a Pandas DataFrame having airport and utc_offset data
 
     Returns:
         date_time (str): a string in datetime format YYYY-mm-ddTHH:MM
@@ -55,11 +54,9 @@ def generate_datetime_info(
             f'{data_subset["Date"]}T{data_subset["Time"]}'  # Local time of the airport
         )
         # Transform local time to UTC time of the airport
-        utc_offset_airport = utils.read_data_from_db(
-            db_config_filepath, utc_offset_airport_query.format(airport_code.upper())
-        )
-        if utc_offset_airport:
-            utc_offset = int(utc_offset_airport[0][0])
+        utc_offset_airport = df_airports_data.loc[df_airports_data["airport"] == airport_code.upper().strip(), "utc_offset"]  # Returns a Pandas Series
+        if not utc_offset_airport.empty:
+            utc_offset = int(utc_offset_airport.values[0])
             date_time = datetime.strptime(date_time, "%Y-%m-%dT%H:%M") + timedelta(
                 hours=utc_offset
             )
@@ -79,16 +76,14 @@ def generate_datetime_info(
 def process_data(
     data_subset: dict[str, str | dict],
     key_name: str,
-    db_config_filepath: PosixPath,
-    utc_offset_airport_query: str,
+    df_airports_data: pd.DataFrame,
 ) -> dict[str, str]:
     """Process a subset of raw data to make them suitable for the cooked table
 
     Args:
         data_subset (dict[str, str | dict]): data coming from 'Departure' or 'Arrival' columns in raw table
         key_name (str): a string used in columns name of cooked table
-        db_config_filepath (PosixPath): absolute path to the db config file
-        sql_query (str): SQL query to run on database table
+        df_airports_data (pd.DataFrame): a Pandas DataFrame having airport and utc_offset data
 
     Returns:
         res (dict[str, str]): a dictionary returning formatted data according to cooked table schema
@@ -103,8 +98,7 @@ def process_data(
         scheduled_date_time = generate_datetime_info(
             data_subset["Scheduled"],
             res[f"{key_name}_airport_code"],
-            db_config_filepath,
-            utc_offset_airport_query,
+            df_airports_data,
         )
         res[f"{key_name}_scheduled_datetime"] = scheduled_date_time
 
@@ -112,8 +106,7 @@ def process_data(
         estimated_date_time = generate_datetime_info(
             data_subset["Estimated"],
             res[f"{key_name}_airport_code"],
-            db_config_filepath,
-            utc_offset_airport_query,
+            df_airports_data,
         )
         res[f"{key_name}_estimated_datetime"] = estimated_date_time
 
@@ -121,8 +114,7 @@ def process_data(
         actual_date_time = generate_datetime_info(
             data_subset["Actual"],
             res[f"{key_name}_airport_code"],
-            db_config_filepath,
-            utc_offset_airport_query,
+            df_airports_data,
         )
         res[f"{key_name}_actual_datetime"] = actual_date_time
 
@@ -155,14 +147,13 @@ def process_data(
 
 
 def _build_flat_data(
-    data: dict, db_config_filepath: PosixPath, utc_offset_airport_query: str
+    data: dict, df_airports_data: pd.DataFrame
 ) -> dict[str, str] | None:
     """Transform each key/value pairs coming from raw table to make them suitable for the cooked table
 
     Args:
         data (dict): data coming from 'data' column in raw table
-        db_config_filepath (PosixPath): absolute path to the db config file
-        sql_query (str): SQL query to run on database table
+        df_airports_data (pd.DataFrame): a Pandas DataFrame having airport and utc_offset data
 
     Returns:
         formatted_dict (dict[str, str]): a dictionary returning formatted data according to cooked table schema
@@ -171,7 +162,7 @@ def _build_flat_data(
     keys = data.keys()
     if "Departure" in keys:
         departure_data = process_data(
-            data["Departure"], "Departure", db_config_filepath, utc_offset_airport_query
+            data["Departure"], "Departure", df_airports_data
         )
         formatted_dict.update(departure_data)
     else:  # If 'Departure' key is not in raw data, exit this function (skip the file)
@@ -179,7 +170,7 @@ def _build_flat_data(
 
     if "Arrival" in keys:
         arrival_data = process_data(
-            data["Arrival"], "Arrival", db_config_filepath, utc_offset_airport_query
+            data["Arrival"], "Arrival", df_airports_data
         )
         formatted_dict.update(arrival_data)
     else:  # If 'Arrival' key is not in raw data, exit this function (skip the file)
@@ -227,15 +218,13 @@ def _build_flat_data(
 
 def build_flat_data(
     all_data: list[tuple[dict]],
-    db_config_filepath: PosixPath,
-    utc_offset_airport_query: str,
+    df_airports_data: pd.DataFrame,
 ) -> Generator[dict, None, None]:
     """Format data coming from database raw table to make them suitable for the cooked table
 
     Args:
         all_data (list[tuple[dict]]): all raw data where the tuple is made of 1 element: data (dict)
-        db_config_filepath (PosixPath): absolute path to the db config file
-        sql_query (str): SQL query to run on database table
+        df_airports_data (pd.DataFrame): a Pandas DataFrame having airport and utc_offset data
 
     Returns:
         formatted_dict (Generator[dict, None, None]): a generator returning formatted data as a dictionary for each cooked table row
@@ -243,7 +232,7 @@ def build_flat_data(
     for tuple_data in all_data:
         data = tuple_data[0]
         formatted_dict = _build_flat_data(
-            data, db_config_filepath, utc_offset_airport_query
+            data, df_airports_data
         )
         if formatted_dict:
             yield formatted_dict
@@ -293,8 +282,7 @@ if __name__ == "__main__":
     raw_data_query = f"SELECT DISTINCT data FROM {raw_table_name}"  # Use DISTINCT to get rid of duplicates
 
     cooked_airports_table_name = "refdata_airports_coo"
-    utc_offset_airport_query = f"SELECT utc_offset FROM {cooked_airports_table_name}"
-    utc_offset_airport_query += " WHERE airport=\'{}\'"  # The WHERE clause will be filled later with airport code
+    cooked_airports_data_query = f"SELECT airport, utc_offset FROM {cooked_airports_table_name}"
 
     sql_table_name_cooked = "operations_customer_flight_info_coo"
 
@@ -303,9 +291,14 @@ if __name__ == "__main__":
     all_data = utils.read_data_from_db(
         db_config_filepath, raw_data_query
     )  # Returns a list of tuples. The tuple is made of 1 element: data (dict)
+    # Read data from database refdata_airports_coo table
+    airports_data = utils.read_data_from_db(
+        db_config_filepath, cooked_airports_data_query
+    )  # Returns a list of tuples. The tuple is made of 2 elements: airport (str) and utc_offset (int)
+    df_airports_data = pd.DataFrame(airports_data, columns=("airport", "utc_offset"))  # Pandas DataFrame
     # Build data structure for cooked table
     gen = build_flat_data(
-        all_data, db_config_filepath, utc_offset_airport_query
+        all_data, df_airports_data
     )  # Generator object
     # Ingest data into cooked table
     ingest_data(db_config_filepath, sql_table_name_cooked, gen)
