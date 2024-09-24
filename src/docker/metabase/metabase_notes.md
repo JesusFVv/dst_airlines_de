@@ -10,7 +10,13 @@ docker pull metabase/metabase:latest
 # Run container
 # docker run -d -p 3000:3000 --network=dst_network --name metabase metabase/metabase
 # With db persisted in file
-docker run -d -v "${PROJECT_DIR}"/var/metabase-data:/metabase-data --name metabase -e MB_DB_FILE=/metabase-data/metabase.db -e MUID=$UID -e MGID=$GID -e "JAVA_TIMEZONE=Europe/Paris" -e "JAVA_OPTS=-Xmx3g" -e MB_JETTY_HOST=0.0.0.0 -e MB_JETTY_PORT=3000 -p 3000:3000 --network dst_network metabase/metabase
+docker run --name metabase \
+-v "${PROJECT_DIR}"/var/metabase/data:/metabase-data \
+-e MB_DB_FILE=/metabase-data/metabase.db -e MUID=$UID -e MGID=$GID \
+-e "JAVA_TIMEZONE=Europe/Paris" -e "JAVA_OPTS=-Xmx3g" \
+-e MB_JETTY_HOST=0.0.0.0 -e MB_JETTY_PORT=3000 \
+-p 3000:3000 --network dst_network --restart no \
+-d metabase/metabase
 
 # See the logs
 docker logs -f metabase

@@ -19,16 +19,18 @@ services:
     secrets:
       - db_password
       - db_user
-    ports:
-      - "6432:5432"  # To use with DBeaver desktop in host only
+    # ports:
+      # - "6432:5432"  # To use with DBeaver desktop in host only
   dbeaver:
     image: dbeaver/cloudbeaver:latest
     container_name: dbeaver
     networks:
       - dst_network
+    environment:
+      CLOUDBEAVER_ROOT_URI: /cloudbeaver
     restart: unless-stopped
-    ports:
-      - 8978:8978
+    # ports:
+    #   - 8978:8978
     volumes:
       - cloudbeaver_workspace:/opt/cloudbeaver/workspace
 volumes:
