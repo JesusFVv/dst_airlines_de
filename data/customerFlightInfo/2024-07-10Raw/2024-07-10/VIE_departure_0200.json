@@ -1,0 +1,95 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "VIE",
+                    "Scheduled": {
+                        "Date": "2024-07-10",
+                        "Time": "06:00"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-10",
+                        "Time": "06:01"
+                    },
+                    "Terminal": {
+                        "Name": "3",
+                        "Gate": "F08"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-10",
+                        "Time": "07:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-10",
+                        "Time": "07:25"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "A21"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "6210"
+                        },
+                        {
+                            "AirlineID": "LH",
+                            "FlightNumber": "6397"
+                        },
+                        {
+                            "AirlineID": "SK",
+                            "FlightNumber": "9473"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "OS",
+                    "FlightNumber": "199"
+                },
+                "Equipment": {
+                    "AircraftCode": "320"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/VIE/2024-07-10T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/VIE/2024-07-09T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/VIE/2024-07-10T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

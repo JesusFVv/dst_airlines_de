@@ -1,0 +1,142 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "11:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "12:19"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H02"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DEN",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "14:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "14:08"
+                        },
+                        "Terminal": {
+                            "Gate": "A45"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9459"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "480"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "35S"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "13:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "13:57"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z66"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DEN",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "15:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "16:01"
+                        },
+                        "Terminal": {
+                            "Gate": "A41"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8878"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "446"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "78S"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DEN/2024-07-16T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DEN/2024-07-16T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DEN/2024-07-16T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

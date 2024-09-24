@@ -1,0 +1,95 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MRU",
+                    "Scheduled": {
+                        "Date": "2024-07-26",
+                        "Time": "07:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-26",
+                        "Time": "09:27"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-26",
+                        "Time": "17:20"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-26",
+                        "Time": "19:09"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "C14A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "LH",
+                            "FlightNumber": "4361"
+                        },
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "9313"
+                        },
+                        {
+                            "AirlineID": "OS",
+                            "FlightNumber": "8464"
+                        },
+                        {
+                            "AirlineID": "SN",
+                            "FlightNumber": "5638"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "4Y",
+                    "FlightNumber": "153"
+                },
+                "Equipment": {
+                    "AircraftCode": "33Y"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-07-26T06:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-07-26T02:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-07-26T10:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

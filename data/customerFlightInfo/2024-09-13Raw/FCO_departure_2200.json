@@ -1,0 +1,79 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FCO",
+                    "Scheduled": {
+                        "Date": "2024-09-13",
+                        "Time": "21:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-13",
+                        "Time": "23:00"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "A76"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "VIE",
+                    "Scheduled": {
+                        "Date": "2024-09-13",
+                        "Time": "23:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-14",
+                        "Time": "00:27"
+                    },
+                    "Terminal": {
+                        "Name": "3",
+                        "Gate": "SBS"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "OS",
+                    "FlightNumber": "506"
+                },
+                "Equipment": {
+                    "AircraftCode": "32N"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/FCO/2024-09-13T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/FCO/2024-09-13T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/FCO/2024-09-14T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

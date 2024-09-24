@@ -1,0 +1,95 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-09-01",
+                        "Time": "10:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-01",
+                        "Time": "11:56"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "Z64"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ATL",
+                    "Scheduled": {
+                        "Date": "2024-09-01",
+                        "Time": "14:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-01",
+                        "Time": "16:04"
+                    },
+                    "Terminal": {
+                        "Name": "I",
+                        "Gate": "F08"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8831"
+                        },
+                        {
+                            "AirlineID": "SN",
+                            "FlightNumber": "7242"
+                        },
+                        {
+                            "AirlineID": "TG",
+                            "FlightNumber": "7704"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "444"
+                },
+                "Equipment": {
+                    "AircraftCode": "343"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ATL/2024-09-01T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ATL/2024-09-01T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ATL/2024-09-01T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

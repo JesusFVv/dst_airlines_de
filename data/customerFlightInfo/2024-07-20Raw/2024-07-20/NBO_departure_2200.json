@@ -1,0 +1,147 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "NBO",
+                        "Scheduled": {
+                            "Date": "2024-07-20",
+                            "Time": "22:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-20",
+                            "Time": "22:42"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "06:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-21",
+                            "Time": "05:53"
+                        },
+                        "Terminal": {
+                            "Gate": "B17"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "482"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "NBO",
+                        "Scheduled": {
+                            "Date": "2024-07-20",
+                            "Time": "23:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-20",
+                            "Time": "23:12"
+                        },
+                        "Terminal": {
+                            "Name": "1C",
+                            "Gate": "005"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "07:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-21",
+                            "Time": "06:55"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B23A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9611"
+                            },
+                            {
+                                "AirlineID": "LX",
+                                "FlightNumber": "4027"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7209"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8730"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "591"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-07-20T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-07-20T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-07-21T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

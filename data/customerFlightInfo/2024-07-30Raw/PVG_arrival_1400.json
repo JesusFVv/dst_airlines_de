@@ -1,0 +1,142 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-29",
+                            "Time": "20:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "21:31"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z23"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "PVG",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "14:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "14:53"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "CA",
+                            "FlightNumber": "6134"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "732"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "744"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-29",
+                            "Time": "22:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "22:42"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L25"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "PVG",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "15:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "15:42"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "CA",
+                            "FlightNumber": "6232"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "726"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "359"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PVG/2024-07-30T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PVG/2024-07-30T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PVG/2024-07-30T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

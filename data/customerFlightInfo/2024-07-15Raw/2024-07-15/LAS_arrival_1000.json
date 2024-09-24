@@ -1,0 +1,162 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "09:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "09:43"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C15"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LAS",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "12:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "12:03"
+                        },
+                        "Terminal": {
+                            "Name": "3"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "4248"
+                            },
+                            {
+                                "AirlineID": "LX",
+                                "FlightNumber": "9316"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "8493"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "5675"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9674"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4Y",
+                        "FlightNumber": "052"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "33Y"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "10:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "10:30"
+                        },
+                        "Terminal": {
+                            "Gate": "E23"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LAS",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "13:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "12:59"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "4500"
+                            },
+                            {
+                                "AirlineID": "LX",
+                                "FlightNumber": "8002"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "WK",
+                        "FlightNumber": "002"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAS/2024-07-15T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAS/2024-07-15T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAS/2024-07-15T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

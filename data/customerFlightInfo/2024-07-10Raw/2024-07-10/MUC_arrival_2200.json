@@ -1,0 +1,916 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "PMO",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "20:27"
+                        },
+                        "Terminal": {
+                            "Gate": "B04"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "19:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:31"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "T02S"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "7423"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EN",
+                        "FlightNumber": "8315"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BHX",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "17:40"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:30"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L23"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2511"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31K"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LUX",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:38"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:45"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G82"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2323"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "CR9"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:02"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A28"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:24"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G34"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AI",
+                                "FlightNumber": "8811"
+                            },
+                            {
+                                "AirlineID": "CA",
+                                "FlightNumber": "6027"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7662"
+                            },
+                            {
+                                "AirlineID": "UK",
+                                "FlightNumber": "3011"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "120"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "GVA",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "20:55"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:05"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G22"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "9429"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EN",
+                        "FlightNumber": "8077"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "PUY",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:58"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:10"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G44"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OU",
+                            "FlightNumber": "5388"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "1723"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31K"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "HAM",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:22"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "C07"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:38"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K07"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2073"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BRE",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:24"
+                        },
+                        "Terminal": {
+                            "Gate": "A01"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:36"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "T02S"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "4061"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "VL",
+                        "FlightNumber": "2197"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "CDG",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:17"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "067"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:33"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G18"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "NH",
+                            "FlightNumber": "6023"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2237"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "22:49"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-11",
+                            "Time": "00:00"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G48"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "SN",
+                            "FlightNumber": "7059"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2291"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31K"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "19:10"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:00"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H34"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2487"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "GWT",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "20:34"
+                        },
+                        "Terminal": {
+                            "Gate": "002"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:55"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K01"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9463"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2185"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:07"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A26"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-11",
+                            "Time": "00:02"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G26"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "122"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "HAM",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:15"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "C15"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:30"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G44"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2071"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "AMS",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:41"
+                        },
+                        "Terminal": {
+                            "Gate": "B35"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:11"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G04"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2309"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "CPH",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "21:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:21"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A25"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "22:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:04"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G08"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "SK",
+                            "FlightNumber": "3121"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2445"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "20:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "21:14"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A18"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "23:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "23:56"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H20"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2481"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MUC/2024-07-10T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MUC/2024-07-10T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MUC/2024-07-11T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 17
+        }
+    }
+}

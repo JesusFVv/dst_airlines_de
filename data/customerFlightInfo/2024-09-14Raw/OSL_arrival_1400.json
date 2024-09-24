@@ -1,0 +1,359 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "11:40"
+                        },
+                        "Terminal": {
+                            "Gate": "A55"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "13:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "14:01"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "6857"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "2L",
+                        "FlightNumber": "1210"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E90"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "11:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:19"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F11"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "14:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "14:48"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "6223"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "335"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "13:22"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G19"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "14:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "15:25"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1571"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9037"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8723"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2424"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "13:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "14:16"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A13"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "15:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "16:17"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1458"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9311"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9582"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "862"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "15:45"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K22"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "17:55"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9110"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9438"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2454"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "16:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "16:11"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A52"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "18:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "18:13"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "858"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-09-14T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-09-14T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-09-14T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 6
+        }
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "16:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "17:10"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A52"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:28"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9280"
+                            },
+                            {
+                                "AirlineID": "LO",
+                                "FlightNumber": "4896"
+                            },
+                            {
+                                "AirlineID": "MS",
+                                "FlightNumber": "9026"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8892"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1350"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "17:47"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F33"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "19:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "19:14"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LO",
+                            "FlightNumber": "5008"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "TF",
+                        "FlightNumber": "631"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "AT7"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "20:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "20:59"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K10"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "21:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "22:20"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1507"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9495"
+                            },
+                            {
+                                "AirlineID": "WY",
+                                "FlightNumber": "5291"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "1616"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-27T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-27T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-27T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

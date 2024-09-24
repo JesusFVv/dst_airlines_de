@@ -1,0 +1,150 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-20",
+                            "Time": "13:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-20",
+                            "Time": "14:10"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z54"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MEX",
+                        "Scheduled": {
+                            "Date": "2024-07-20",
+                            "Time": "17:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-20",
+                            "Time": "18:16"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "G26"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LX",
+                                "FlightNumber": "4018"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7321"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "498"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "74H"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-20",
+                            "Time": "16:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-20",
+                            "Time": "18:27"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H32"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MEX",
+                        "Scheduled": {
+                            "Date": "2024-07-20",
+                            "Time": "21:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-20",
+                            "Time": "22:17"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "G26"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LX",
+                            "FlightNumber": "4054"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "520"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "359"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MEX/2024-07-20T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MEX/2024-07-20T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MEX/2024-07-20T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

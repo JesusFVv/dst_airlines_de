@@ -1,0 +1,156 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "15:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "16:19"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L26"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ORD",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "19:23"
+                        },
+                        "Terminal": {
+                            "Name": "5",
+                            "Gate": "M21"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8855"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9459"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "434"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "35S"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "17:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "19:37"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z66"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ORD",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "22:13"
+                        },
+                        "Terminal": {
+                            "Name": "5",
+                            "Gate": "M21"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8834"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9682"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "432"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-07-09T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-07-09T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-07-09T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

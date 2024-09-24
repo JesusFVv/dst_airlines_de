@@ -1,0 +1,200 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "14:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "14:44"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "301"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "17:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "17:46"
+                        },
+                        "Terminal": {
+                            "Gate": "E64"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LO",
+                            "FlightNumber": "5088"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "403"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "18:15"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "304"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "20:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "21:10"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Area A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7472"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2159"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "981"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "17:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "17:59"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "303"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "21:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "21:07"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H08"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2519"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-07-19T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-07-19T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-07-19T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

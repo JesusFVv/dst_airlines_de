@@ -1,0 +1,192 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MAD",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "18:02"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "20:19"
+                        },
+                        "Terminal": {
+                            "Gate": "A61"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "3728"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MAD",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "18:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "19:10"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "D66"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "20:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "21:30"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K19"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AV",
+                                "FlightNumber": "6506"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7448"
+                            },
+                            {
+                                "AirlineID": "WY",
+                                "FlightNumber": "5273"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1805"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Q"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MAD",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "19:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "19:52"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "22:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "22:01"
+                        },
+                        "Terminal": {
+                            "Gate": "GRA"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "BT",
+                        "FlightNumber": "2033"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-09-09T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-09-09T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-09-09T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

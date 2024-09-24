@@ -1,0 +1,202 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-25",
+                            "Time": "16:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-25",
+                            "Time": "17:17"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B13"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-25",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-25",
+                            "Time": "18:51"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9280"
+                            },
+                            {
+                                "AirlineID": "LO",
+                                "FlightNumber": "4896"
+                            },
+                            {
+                                "AirlineID": "MS",
+                                "FlightNumber": "9026"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8892"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1350"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-25",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-25",
+                            "Time": "17:36"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F25"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-25",
+                            "Time": "18:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-25",
+                            "Time": "18:41"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LO",
+                            "FlightNumber": "5008"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "631"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-25",
+                            "Time": "17:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-25",
+                            "Time": "17:21"
+                        },
+                        "Terminal": {
+                            "Gate": "A72"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-25",
+                            "Time": "19:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-25",
+                            "Time": "18:59"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LO",
+                            "FlightNumber": "5056"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "WK",
+                        "FlightNumber": "1352"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-25T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-25T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-25T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "SEA",
+                    "Scheduled": {
+                        "Date": "2024-09-06",
+                        "Time": "18:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-06",
+                        "Time": "19:11"
+                    },
+                    "Terminal": {
+                        "Gate": "S10"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-09-07",
+                        "Time": "13:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-07",
+                        "Time": "13:54"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "H32"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9643"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9413"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "489"
+                },
+                "Equipment": {
+                    "AircraftCode": "359"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-09-06T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-09-06T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-09-06T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

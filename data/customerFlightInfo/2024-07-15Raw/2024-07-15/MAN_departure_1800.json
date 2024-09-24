@@ -1,0 +1,243 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "17:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "18:38"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "002"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "20:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "21:40"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "T02N"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7222"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2503"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "CR9"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "18:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "19:18"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "031"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "20:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "21:55"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B44"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7374"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "947"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "18:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "20:28"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "023"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "21:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "23:46"
+                        },
+                        "Terminal": {
+                            "Gate": "GRB"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "BT",
+                        "FlightNumber": "381"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "20:51"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "22:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "22:56"
+                        },
+                        "Terminal": {
+                            "Gate": "A79"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9345"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAN/2024-07-15T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAN/2024-07-15T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAN/2024-07-15T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 4
+        }
+    }
+}

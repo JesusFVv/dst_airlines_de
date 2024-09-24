@@ -1,0 +1,362 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "17:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "18:05"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "005"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "07:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "08:00"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L21"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8870"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7235"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "411"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "388"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "18:10"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "07:40"
+                        },
+                        "Terminal": {
+                            "Gate": "B28"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "502"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "19:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "19:14"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "010"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "GVA",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "09:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "08:56"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9719"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "023"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "20:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "20:24"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "008"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "10:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "10:04"
+                        },
+                        "Terminal": {
+                            "Gate": "GRB"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9715"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "015"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "21:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-08",
+                            "Time": "22:55"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "010"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "11:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-09",
+                            "Time": "12:52"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "D22A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9820"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "088"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "789"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-08",
+                            "Time": "21:50"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-09",
+                            "Time": "11:45"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z54"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8842"
+                            },
+                            {
+                                "AirlineID": "ET",
+                                "FlightNumber": "1617"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7233"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7723"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "405"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-07-08T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-07-08T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-07-08T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 6
+        }
+    }
+}

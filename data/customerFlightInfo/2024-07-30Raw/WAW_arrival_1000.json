@@ -1,0 +1,172 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "11:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "12:11"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G11"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "12:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "13:43"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1490"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9145"
+                            },
+                            {
+                                "AirlineID": "LO",
+                                "FlightNumber": "4906"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9093"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "1612"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31K"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "12:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "12:25"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A18"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "13:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "14:01"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1472"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9080"
+                            },
+                            {
+                                "AirlineID": "ET",
+                                "FlightNumber": "1623"
+                            },
+                            {
+                                "AirlineID": "LG",
+                                "FlightNumber": "1489"
+                            },
+                            {
+                                "AirlineID": "LO",
+                                "FlightNumber": "4892"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8890"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1348"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-30T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-30T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-07-30T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

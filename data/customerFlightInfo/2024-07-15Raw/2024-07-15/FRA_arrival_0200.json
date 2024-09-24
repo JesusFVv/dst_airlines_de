@@ -1,0 +1,819 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "WDH",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "18:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "18:53"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:12"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C16A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "4305"
+                            },
+                            {
+                                "AirlineID": "LX",
+                                "FlightNumber": "9349"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "8500"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4Y",
+                        "FlightNumber": "139"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "TUN",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "01:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "01:42"
+                        },
+                        "Terminal": {
+                            "Name": "M",
+                            "Gate": "050"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:09"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Area A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9277"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1327"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JFK",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "15:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "16:16"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "006"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:59"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z50"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8840"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7231"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "401"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "744"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "IAD",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "15:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "15:52"
+                        },
+                        "Terminal": {
+                            "Gate": "B45"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:37"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B26"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8833"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9688"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "417"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "346"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "CPT",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "17:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "17:39"
+                        },
+                        "Terminal": {
+                            "Gate": "A03"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:23"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C13A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8748"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "577"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ABV",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "22:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "22:06"
+                        },
+                        "Terminal": {
+                            "Name": "E",
+                            "Gate": "07A"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:18"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C14A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9018"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9021"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "595"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "IKA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "01:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "01:33"
+                        },
+                        "Terminal": {
+                            "Gate": "013"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:25"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C08A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LX",
+                            "FlightNumber": "4021"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "601"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ALG",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "01:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "01:38"
+                        },
+                        "Terminal": {
+                            "Name": "I",
+                            "Gate": "021"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:08"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B20A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9359"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1319"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "JNB",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "19:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "19:03"
+                        },
+                        "Terminal": {
+                            "Name": "A",
+                            "Gate": "016"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:36"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z52A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9019"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5423"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7316"
+                            },
+                            {
+                                "AirlineID": "SA",
+                                "FlightNumber": "7573"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7207"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9139"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "573"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "74H"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DXB",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "00:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "00:50"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "D02"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:29"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z66A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9081"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8741"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "631"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "CMN",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "01:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "01:41"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A07"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:42"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Area A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9430"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1331"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "KEF",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "00:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "00:30"
+                        },
+                        "Terminal": {
+                            "Gate": "C23"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "05:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:49"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A21"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "869"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Q"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "WDH",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "19:37"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "06:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "05:45"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C15A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "4357"
+                            },
+                            {
+                                "AirlineID": "LX",
+                                "FlightNumber": "9309"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "8460"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4Y",
+                        "FlightNumber": "133"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "33Y"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FRA/2024-07-15T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FRA/2024-07-14T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FRA/2024-07-15T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 13
+        }
+    }
+}

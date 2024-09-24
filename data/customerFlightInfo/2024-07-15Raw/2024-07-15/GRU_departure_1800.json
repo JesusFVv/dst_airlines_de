@@ -1,0 +1,157 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "GRU",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "18:22"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "329"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "10:50"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z69A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AI",
+                                "FlightNumber": "8897"
+                            },
+                            {
+                                "AirlineID": "CA",
+                                "FlightNumber": "6250"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5895"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2197"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "507"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "74H"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "GRU",
+                        "Scheduled": {
+                            "Date": "2024-07-15",
+                            "Time": "18:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-15",
+                            "Time": "18:33"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "331"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "10:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "10:21"
+                        },
+                        "Terminal": {
+                            "Gate": "E43"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "SQ",
+                            "FlightNumber": "2955"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "093"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "77W"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-07-15T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-07-15T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-07-15T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

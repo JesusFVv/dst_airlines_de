@@ -1,0 +1,129 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-09-13",
+                            "Time": "18:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-13",
+                            "Time": "18:07"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-09-13",
+                            "Time": "21:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-13",
+                            "Time": "22:00"
+                        },
+                        "Terminal": {
+                            "Gate": "B93"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9603"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-09-13",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-13",
+                            "Time": "20:42"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-09-13",
+                            "Time": "23:40"
+                        },
+                        "Estimated": {
+                            "Date": "2024-09-14",
+                            "Time": "00:14"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "00:14"
+                        },
+                        "Terminal": {
+                            "Gate": "A40"
+                        },
+                        "Status": {
+                            "Code": "DL",
+                            "Description": "Flight Delayed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "3820"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "DL",
+                        "Description": "Flight Delayed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-09-13T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-09-13T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-09-13T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

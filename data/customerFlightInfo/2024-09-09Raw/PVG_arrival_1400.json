@@ -1,0 +1,84 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-09-08",
+                        "Time": "22:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-08",
+                        "Time": "22:43"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "L15"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "PVG",
+                    "Scheduled": {
+                        "Date": "2024-09-09",
+                        "Time": "15:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-09",
+                        "Time": "15:59"
+                    },
+                    "Terminal": {
+                        "Name": "2"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "CA",
+                        "FlightNumber": "6232"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "726"
+                },
+                "Equipment": {
+                    "AircraftCode": "35Z"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PVG/2024-09-09T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PVG/2024-09-09T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PVG/2024-09-09T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

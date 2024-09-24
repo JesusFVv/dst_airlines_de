@@ -1,0 +1,85 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "JFK",
+                    "Scheduled": {
+                        "Date": "2024-09-05",
+                        "Time": "21:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-05",
+                        "Time": "22:02"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "003"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "VIE",
+                    "Scheduled": {
+                        "Date": "2024-09-06",
+                        "Time": "11:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-06",
+                        "Time": "12:23"
+                    },
+                    "Terminal": {
+                        "Name": "3",
+                        "Gate": "D23A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9820"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "OS",
+                    "FlightNumber": "088"
+                },
+                "Equipment": {
+                    "AircraftCode": "789"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-09-05T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-09-05T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-09-06T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

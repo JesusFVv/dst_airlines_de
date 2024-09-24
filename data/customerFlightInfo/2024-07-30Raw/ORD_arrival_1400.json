@@ -1,0 +1,143 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "10:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "10:58"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "G26"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ORD",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "13:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "14:04"
+                        },
+                        "Terminal": {
+                            "Name": "5",
+                            "Gate": "M15"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9849"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "065"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "789"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "13:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "13:22"
+                        },
+                        "Terminal": {
+                            "Gate": "E22"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ORD",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "15:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "15:41"
+                        },
+                        "Terminal": {
+                            "Name": "5",
+                            "Gate": "M18"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9726"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "008"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "77W"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-07-30T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-07-30T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-07-30T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "Scheduled": {
+                        "Date": "2024-07-23",
+                        "Time": "13:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-23",
+                        "Time": "13:43"
+                    },
+                    "Terminal": {
+                        "Gate": "E22"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "SFO",
+                    "Scheduled": {
+                        "Date": "2024-07-23",
+                        "Time": "16:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-23",
+                        "Time": "16:22"
+                    },
+                    "Terminal": {
+                        "Name": "I",
+                        "Gate": "G13"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9728"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX",
+                    "FlightNumber": "038"
+                },
+                "Equipment": {
+                    "AircraftCode": "77W"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-07-23T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-07-23T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-07-23T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

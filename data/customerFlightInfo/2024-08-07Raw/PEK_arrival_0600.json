@@ -1,0 +1,89 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-08-06",
+                        "Time": "15:25"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-06",
+                        "Time": "15:36"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "Z15"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "PEK",
+                    "Scheduled": {
+                        "Date": "2024-08-07",
+                        "Time": "08:30"
+                    },
+                    "Estimated": {
+                        "Date": "2024-08-07",
+                        "Time": "07:47"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-07",
+                        "Time": "07:47"
+                    },
+                    "Terminal": {
+                        "Name": "3",
+                        "Gate": "E07"
+                    },
+                    "Status": {
+                        "Code": "FE",
+                        "Description": "Flight Early"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "CA",
+                        "FlightNumber": "6222"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "720"
+                },
+                "Equipment": {
+                    "AircraftCode": "343"
+                },
+                "Status": {
+                    "Code": "FE",
+                    "Description": "Flight Early"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PEK/2024-08-07T06:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PEK/2024-08-07T02:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/PEK/2024-08-07T10:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

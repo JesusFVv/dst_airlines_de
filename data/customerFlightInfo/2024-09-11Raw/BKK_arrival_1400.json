@@ -1,0 +1,142 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "22:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "22:25"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L13"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BKK",
+                        "Scheduled": {
+                            "Date": "2024-09-11",
+                            "Time": "14:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-11",
+                            "Time": "14:28"
+                        },
+                        "Terminal": {
+                            "Gate": "S117"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "772"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "359"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "23:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "23:44"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "G11"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BKK",
+                        "Scheduled": {
+                            "Date": "2024-09-11",
+                            "Time": "14:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-11",
+                            "Time": "14:58"
+                        },
+                        "Terminal": {
+                            "Gate": "S119"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "6438"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7203"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "025"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "772"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BKK/2024-09-11T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BKK/2024-09-11T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BKK/2024-09-11T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "JFK",
+                    "Scheduled": {
+                        "Date": "2024-08-02",
+                        "Time": "20:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-02",
+                        "Time": "20:41"
+                    },
+                    "Terminal": {
+                        "Gate": "002"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "JFK",
+                    "Scheduled": {
+                        "Date": "2024-08-02",
+                        "Time": "22:33"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-02",
+                        "Time": "23:26"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX",
+                    "FlightNumber": "015"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "DV",
+                    "Description": "Flight Diverted"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/JFK/2024-08-02T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/JFK/2024-08-02T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/JFK/2024-08-03T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

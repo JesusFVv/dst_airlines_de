@@ -1,0 +1,88 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-12",
+                        "Time": "17:20"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-12",
+                        "Time": "18:08"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B47"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "IST",
+                    "Scheduled": {
+                        "Date": "2024-07-12",
+                        "Time": "21:20"
+                    },
+                    "Estimated": {
+                        "Date": "2024-07-12",
+                        "Time": "21:57"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-12",
+                        "Time": "21:57"
+                    },
+                    "Terminal": {
+                        "Gate": "A06A"
+                    },
+                    "Status": {
+                        "Code": "DL",
+                        "Description": "Flight Delayed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9062"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "1304"
+                },
+                "Equipment": {
+                    "AircraftCode": "32Q"
+                },
+                "Status": {
+                    "Code": "DL",
+                    "Description": "Flight Delayed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-12T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-12T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-12T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

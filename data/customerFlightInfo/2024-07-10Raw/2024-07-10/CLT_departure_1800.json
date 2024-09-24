@@ -1,0 +1,90 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "CLT",
+                    "Scheduled": {
+                        "Date": "2024-07-10",
+                        "Time": "18:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-10",
+                        "Time": "19:18"
+                    },
+                    "Terminal": {
+                        "Gate": "D12"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-07-11",
+                        "Time": "09:10"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-11",
+                        "Time": "09:52"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "L25"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "4037"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9260"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "429"
+                },
+                "Equipment": {
+                    "AircraftCode": "35S"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-07-10T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-07-10T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-07-10T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

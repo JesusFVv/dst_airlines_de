@@ -1,0 +1,85 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "PEK",
+                    "Scheduled": {
+                        "Date": "2024-09-10",
+                        "Time": "13:20"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-10",
+                        "Time": "13:17"
+                    },
+                    "Terminal": {
+                        "Name": "3",
+                        "Gate": "E12"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-09-10",
+                        "Time": "19:10"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-10",
+                        "Time": "19:00"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "M21"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "CA",
+                        "FlightNumber": "6223"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "723"
+                },
+                "Equipment": {
+                    "AircraftCode": "359"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-09-10T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-09-10T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-09-10T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

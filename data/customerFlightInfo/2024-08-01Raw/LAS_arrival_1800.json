@@ -1,0 +1,86 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "Scheduled": {
+                        "Date": "2024-08-01",
+                        "Time": "13:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-01",
+                        "Time": "15:39"
+                    },
+                    "Terminal": {
+                        "Gate": "E35"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "LAS",
+                    "Scheduled": {
+                        "Date": "2024-08-01",
+                        "Time": "16:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-01",
+                        "Time": "18:11"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "LH",
+                            "FlightNumber": "4500"
+                        },
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "8002"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "WK",
+                    "FlightNumber": "002"
+                },
+                "Equipment": {
+                    "AircraftCode": "34A"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAS/2024-08-01T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAS/2024-08-01T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAS/2024-08-01T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}
