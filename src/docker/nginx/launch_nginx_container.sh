@@ -13,6 +13,7 @@ docker run --name $CONTAINER_NAME \
 -v ${PROJECT_ABSOLUT_PATH}/var/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
 -v ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm.crt:/etc/nginx/ssl/dst_vm.crt:ro \
 -v ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm.key:/etc/nginx/ssl/dst_vm.key:ro \
---network dst_network -p 8080:80 -p 8085:443 --restart unless-stopped \
+--network dst_network -p 8000:80 -p 8085:443 \
+--restart unless-stopped \
 -d nginx
 

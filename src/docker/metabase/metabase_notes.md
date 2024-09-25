@@ -30,5 +30,6 @@ In the browser, go to http://{VM-IP}:3000 or to http://localhost:3000 if the por
 
 ## Credentials
 
-Christophe email/pass: cm@sa.com/9W0MWsYpAGh2-8
-Alexandre email/pass: am@sa.com/9YwmmmqLzRMrxC
+Jesus email/pass: jfv@sae.com / D?.boiLW$7/0,0L~Y=
+Christophe email/pass: cm@sae.com / JOkE6m8eqGzVWq
+Alexandre email/pass: am@sae.com / 9-9qTyh8dmirRH

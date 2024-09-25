@@ -53,9 +53,11 @@ sudo openssl req -newkey rsa:4096 \
 ## Check connection to the apps
 
 ```bash
+curl --fail -I http://aifrlow-airflow-webserver-1:8080/
+
 # HTTP version, work in browser and CLI
-curl --fail -I http://63.35.176.208:8080/metabase/
-curl --fail -I http://63.35.176.208:8080/cloudbeaver/
+curl --fail -I http://63.35.176.208:8000/metabase/
+curl --fail -I http://63.35.176.208:8000/cloudbeaver/
 
 # The HTTPS version work in CLI but not in the browser of the SAE PC
 curl --insecure --fail -I https://63.35.176.208:8085/metabase/
@@ -64,5 +66,11 @@ curl --insecure --fail -I https://63.35.176.208:8085/cloudbeaver/
 
 ## Acces to the apps with the browser
 
-CloudBeaver: http://63.35.176.208:8080/cloudbeaver/
-Metabase: http://63.35.176.208:8080/metabase/
+CloudBeaver: http://63.35.176.208:8000/cloudbeaver/
+Metabase: http://63.35.176.208:8000/metabase/
+
+
+## Note for CloudBeaver
+
+The base URL for CloudBeaver have been changed to be able to acces with Nginx.
+In the docker compose we have declared under the dbeaver service the environment variable `CLOUDBEAVER_ROOT_URI: /cloudbeaver`

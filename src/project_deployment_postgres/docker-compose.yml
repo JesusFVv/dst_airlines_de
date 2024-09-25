@@ -2,7 +2,7 @@ version: '3.3'
 services:
   postgres_db:
     image: postgres:16.3-bullseye
-    container_name: postgres
+    container_name: postgres_dst
     restart: always
     shm_size: 128mb
     networks:

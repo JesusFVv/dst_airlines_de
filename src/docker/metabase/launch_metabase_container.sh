@@ -13,7 +13,8 @@ docker run --name ${CONTAINER_NAME} \
 -e MB_DB_FILE=/metabase-data/metabase.db -e MUID=$UID -e MGID=$GID \
 -e "JAVA_TIMEZONE=Europe/Paris" -e "JAVA_OPTS=-Xmx3g" \
 -e MB_JETTY_HOST=0.0.0.0 -e MB_JETTY_PORT=3000 \
---network dst_network --restart no \
+--network dst_network \
+--restart unless-stopped \
 -d metabase/metabase
 
 # -p 3000:3000
