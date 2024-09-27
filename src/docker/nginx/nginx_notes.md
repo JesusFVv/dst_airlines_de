@@ -4,19 +4,7 @@ In order to secure the acces to the different http applications we use a reverse
 
 ## Installation
 
-```bash
-docker run --name nginx \
--v /etc/nginx/conf:/etc/nginx:ro \
---mount type=bind,source=/var/nginx/www,target=/usr/share/nginx/html,readonly \
---network dst_network -p 8080:80 --restart unless-stopped \
--d nginx
-```
-
-```bash
-docker run --name nginx \
---network dst_network -p 8080:80 --restart unless-stopped \
--d nginx
-```
+See the lanching script.
 
 ## Configuration
 
@@ -53,21 +41,23 @@ sudo openssl req -newkey rsa:4096 \
 ## Check connection to the apps
 
 ```bash
-curl --fail -I http://aifrlow-airflow-webserver-1:8080/
-
 # HTTP version, work in browser and CLI
-curl --fail -I http://63.35.176.208:8000/metabase/
-curl --fail -I http://63.35.176.208:8000/cloudbeaver/
+curl --fail -I http://{VM-IP}:8000/metabase/
+curl --fail -I http://{VM-IP}:8000/cloudbeaver/
+curl --fail -I http://{VM-IP}:8000/airflow/
+curl --fail -I http://{VM_IP}:8000/  # Superset
 
 # The HTTPS version work in CLI but not in the browser of the SAE PC
-curl --insecure --fail -I https://63.35.176.208:8085/metabase/
-curl --insecure --fail -I https://63.35.176.208:8085/cloudbeaver/
+curl --insecure --fail -I https://{VM-IP}:8085/metabase/
+curl --insecure --fail -I https://{VM-IP}:8085/cloudbeaver/
+curl --insecure --fail -I http://{VM-IP}:8085/airflow/
 ```
 
 ## Acces to the apps with the browser
 
-CloudBeaver: http://63.35.176.208:8000/cloudbeaver/
-Metabase: http://63.35.176.208:8000/metabase/
+CloudBeaver: http://{VM-IP}:8000/cloudbeaver/
+Metabase: http://{VM-IP}:8000/metabase/
+Airflow: http://{VM-IP}:8000/airflow/
 
 
 ## Note for CloudBeaver

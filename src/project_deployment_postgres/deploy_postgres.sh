@@ -19,6 +19,8 @@ psql -U $POSTGRES_USER
 select pg_reload_conf();
 # The next time you try to connect to psql cli from within the container, it will ask for the password
 
+# psql -d dst_airlines_db -U dst_designer -W
+
 # CONNECTION TO DB using DBeaver:
 # To open a connection with DBeaver Cloud use (host: postgres_db, dbase: dst_airlines_db, & user and pass)
 # Designer role has all privileges and Reader role has read only on tables.

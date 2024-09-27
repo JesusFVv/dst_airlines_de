@@ -73,7 +73,7 @@ x-airflow-common:
     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
     AIRFLOW__WEBSERVER__BASE_URL: 'http://0.0.0.0:8080/airflow'
-    # AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'true'
+    AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'true'
 
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
@@ -308,3 +308,4 @@ volumes:
 networks:
   dst_network:
     name: dst_network
+    external: true

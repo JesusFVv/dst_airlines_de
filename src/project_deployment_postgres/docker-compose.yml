@@ -20,7 +20,7 @@ services:
       - db_password
       - db_user
     # ports:
-      # - "6432:5432"  # To use with DBeaver desktop in host only
+    #   - "6432:5432"  # To use with DBeaver desktop in host only
   dbeaver:
     image: dbeaver/cloudbeaver:latest
     container_name: dbeaver
