@@ -52,9 +52,9 @@ db-aggregates-enabled = "true"  # to enable aggregations
 
 ```bash
 # List all the cities & countries in the DB
-curl "http://localhost:3000/http://localhost:3000/refdata_cities_coo"
+curl "http://localhost:3000/refdata_cities_coo"
 # List the cities for the country France (country=FR)
-curl "http://localhost:3000/http://localhost:3000/refdata_cities_coo?country=eq.FR"
+curl "http://localhost:3000/refdata_cities_coo?country=eq.FR"
 # Count the number of cities for the country France
 curl "http://localhost:3000/refdata_cities_coo?country=eq.FR&select=count()"
 # Count the number of cities by country in the DB
