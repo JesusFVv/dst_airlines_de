@@ -1,0 +1,31 @@
+version: '3'
+services:
+  postgrest:
+    image: postgrest/postgrest:v12.2.3
+    container_name: postgrest_api
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      PGRST_DB_URI: "postgres://postgrest_authenticator:pass_api@postgres_dst:5432/dst_airlines_db"
+      PGRST_DB_SCHEMAS: "public"
+      PGRST_DB_ANON_ROLE: "web_anonimous"
+      PGRST_DB_AGGREGATES_ENABLED: "true"
+    networks:
+      - dst_network
+  swagger:
+    image: swaggerapi/swagger-ui
+    container_name: swagger_ui
+    restart: always
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    environment:
+      API_URL: http://localhost:3000/
+    networks:
+      - dst_network
+networks:
+  dst_network:
+    name: dst_network
+    external: true

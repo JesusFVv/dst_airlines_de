@@ -28,7 +28,7 @@ services:
       - dst_network
     environment:
       CLOUDBEAVER_ROOT_URI: /cloudbeaver
-    restart: unless-stopped
+    restart: always
     # ports:
     #   - 8978:8978
     volumes:

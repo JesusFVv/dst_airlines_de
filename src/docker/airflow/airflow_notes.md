@@ -2,27 +2,34 @@
 
 ## Install from docker compose
 
-First install the new version of [docker compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually).
+You will need the new version of [docker compose](https://docs.docker.com/compose/install/linux/#install-the-plugin-manually).
 
-Then, follow the [instructions](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html) to install from docker compose.
+Then, follow the [instructions](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html) to install Airflow from docker compose.
 
+Execute the following commands to launch Airflow **FOR THE FIRST TIME**. The steps done are:
+
+- Creation of directories (dags, logs, plugins, config)
+- Assigning permissions to directories
+- Initialize airflow
+- Finally, launch the docker compose up
 
 ```bash
-# cd src/docker/airflow
+#!/usr/bin/env bash
+# execute as: src/docker/airflow/launch_airflow_composer.sh
 set -a
-../../../.env
+.env  # AIRFLOW_PROJ_DIR & AIRFLOW_DOCKER_COMPOSE_DIR
 set +a
-AIRFLOW_PROJ_DIR=${PROJECT_ABSOLUT_PATH}/var/airflow
 echo -e "AIRFLOW_UID=$(id -u)" > .env
 echo -e "AIRFLOW_PROJ_DIR=${AIRFLOW_PROJ_DIR}" >> .env
-pushd ${AIRFLOW_PROJ_DIR}
-mkdir -p ./dags ./logs ./plugins ./config
-popd
-# sudo chmod -R 777 logs/
-# sudo chmod -R 777 dags/
-# sudo chmod -R 777 plugins/
+mkdir -p ${AIRFLOW_PROJ_DIR}/{dags,logs,plugins,config}
+sudo chmod -R 777 ${AIRFLOW_PROJ_DIR}/{dags,logs,plugins,config}
+pushd ${AIRFLOW_DOCKER_COMPOSE_DIR}
+# If a docker compose for the Airflow service exists, remove it first
+docker compose ls -a | grep airflow >& /dev/null && docker compose down
+# Now launch the airflow service
 docker compose up airflow-init
 docker compose up -d
+popd
 ```
 
 ## Clean the installation
