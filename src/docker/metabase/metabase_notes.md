@@ -33,3 +33,13 @@ In the browser, go to http://{VM-IP}:3000 or to http://localhost:3000 if the por
 Jesus email/pass: jfv@sae.com / D?.boiLW$7/0,0L~Y=
 Christophe email/pass: cm@sae.com / JOkE6m8eqGzVWq
 Alexandre email/pass: am@sae.com / 9-9qTyh8dmirRH
+
+
+## Ceate a connection to our PostgreSQL DB
+
+host: `postgres_dst`
+port: `5432`
+db name: `dst_airlines_db`
+user: `dst_reader`
+password: 
+

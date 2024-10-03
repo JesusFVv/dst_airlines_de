@@ -14,6 +14,11 @@ docker compose up -d
 find / -name 'pg_hba.conf'  # -> /var/lib/postgresql/data/pg_hba.conf
 nano /var/lib/postgresql/data/pg_hba.conf
 # Change trust -> scram-sha-256 for the lines: 'host all all (blank) trust' and 'host all all 127.0.0.1/32 trust'
+
+# In order to allow connections from outside of the local network dst_network, we need to authorize a range of IPv4 addresses explicitly.
+# Changes made in pg_hba.conf file in order to only allow connections from internal docker IPv4 addresses:
+# `host all all 172.0.0.0/8 scram-sha-256  # Acces to all the IPv4 addresses of the docker containers`
+
 # Then reload postgresql service with the new pg_hba.conf, connect to the psql cli and execute pg_reload_conf()
 psql -U $POSTGRES_USER
 select pg_reload_conf();

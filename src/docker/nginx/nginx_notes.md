@@ -119,3 +119,16 @@ services:
 
 ### In Airflow
 
+
+### In Superset
+
+Only change, is to change in the docker compose file the exposed port for it own nginx, from 80 to 9000.
+
+#### TCP connection to the PostgreSQL DB
+
+We create an Stream block in NGINX to be able to create TCP connections to the PostgreSQL DB from within the
+superset local network. The configuration is in `var/nginx/stream.conf.d`
+
+Changes have been made in pg_hba.conf file in order to only allow connections from internal docker IPv4 addresses: `host all all 172.0.0.0/8 scram-sha-256  # Acces to all the IPv4 addresses of the docker containers`
+
+
