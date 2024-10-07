@@ -29,7 +29,7 @@ grant web_anonimous to postgrest_authenticator;
 If we use the binary, we need to create a config file (ex. `postgrest.conf`), with following content. This will allow us to connect as `postgrest_authenticator` with read-only permissions on all the tables in the `public` schema.
 
 ```conf
-db-uri = "postgres://postgrest_authenticator:pass_api@172.19.0.9:5432/dst_airlines_db"
+db-uri = "postgres://postgrest_authenticator:pass_api@postgres_dst:5432/dst_airlines_db"
 db-schemas = "public"
 db-anon-role = "web_anonimous"
 db-aggregates-enabled = "true"  # to enable aggregations
