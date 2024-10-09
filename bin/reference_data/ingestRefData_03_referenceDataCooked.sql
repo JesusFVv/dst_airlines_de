@@ -2,17 +2,17 @@
 -- COOKED TABLES --
 -- ------------- --
 -- TRUNCATE COOKED TABLES
-TRUNCATE TABLE refdata_airport_names_coo;
-TRUNCATE TABLE refdata_airports_coo;
-TRUNCATE TABLE refdata_city_names_coo;
-TRUNCATE TABLE refdata_cities_coo;
-TRUNCATE TABLE refdata_country_names_coo;
-TRUNCATE TABLE refdata_airline_names_coo;
-TRUNCATE TABLE refdata_aircraft_names_coo;
-TRUNCATE TABLE refdata_languages_coo;
-TRUNCATE TABLE refdata_countries_coo;
-TRUNCATE TABLE refdata_airlines_coo;
-TRUNCATE TABLE refdata_aircraft_coo;
+DELETE FROM refdata_airport_names_coo;
+DELETE FROM refdata_airports_coo;
+DELETE FROM refdata_city_names_coo;
+DELETE FROM refdata_cities_coo;
+DELETE FROM refdata_country_names_coo;
+DELETE FROM refdata_airline_names_coo;
+DELETE FROM refdata_aircraft_names_coo;
+DELETE FROM refdata_languages_coo;
+DELETE FROM refdata_countries_coo;
+DELETE FROM refdata_airlines_coo;
+DELETE FROM refdata_aircraft_coo;
 
 -- -------------------------------- --
 -- INSERT INTO refdata_aircraft_coo --
