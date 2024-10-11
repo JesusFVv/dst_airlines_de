@@ -1,4 +1,3 @@
-version: '3.3'
 services:
   postgres_db:
     image: postgres:16.3-bullseye
@@ -6,7 +5,7 @@ services:
     restart: always
     shm_size: 128mb
     networks:
-      - $PROJECT_NETWORK_1
+      - dst_network
     environment:
       POSTGRES_USER_FILE: /run/secrets/db_user
       POSTGRES_PASSWORD_FILE: /run/secrets/db_password
@@ -14,8 +13,8 @@ services:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
     volumes:
       - db-data:/var/lib/postgresql/data
-      - $POSTGRES_INIT_FILE_1:/docker-entrypoint-initdb.d/1.sh
-      - $POSTGRES_INIT_FILE_2:/docker-entrypoint-initdb.d/2.sql
+      - ${POSTGRES_INIT_FILE_1}:/docker-entrypoint-initdb.d/1.sh
+      - ${POSTGRES_INIT_FILE_2}:/docker-entrypoint-initdb.d/2.sql
     secrets:
       - db_password
       - db_user
@@ -25,7 +24,7 @@ services:
     image: dbeaver/cloudbeaver:latest
     container_name: $DBEAVER_CONTAINER_NAME
     networks:
-      - $PROJECT_NETWORK_1
+      - dst_network
     environment:
       CLOUDBEAVER_ROOT_URI: /cloudbeaver
     restart: always
@@ -37,7 +36,7 @@ services:
     image: metabase/metabase
     container_name: $META_CONTAINER_NAME
     networks:
-      - $PROJECT_NETWORK_1
+      - dst_network
     environment:
       MB_DB_FILE: "/metabase-data/metabase.db"
       MUID: $UID
@@ -53,7 +52,7 @@ services:
     image: postgrest/postgrest:v12.2.3
     container_name: $PGRST_CONTAINER_NAME
     networks:
-      - $PROJECT_NETWORK_1
+      - dst_network
     environment:
       PGRST_DB_URI: $PGRST_DB_URI
       PGRST_DB_SCHEMAS: $PGRST_DB_SCHEMA
@@ -64,7 +63,7 @@ services:
     image: nginx
     container_name: $NGINX_CONTAINER_NAME
     networks:
-      - $PROJECT_NETWORK_1
+      - dst_network
     ports:
       - 8000:80
       - 8085:443
@@ -76,6 +75,10 @@ services:
       - ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm.crt:/etc/nginx/ssl/dst_vm.crt:ro
       - ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm.key:/etc/nginx/ssl/dst_vm.key:ro
     restart: unless-stopped
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 10s
 volumes:
   db-data:
     name: db-data
@@ -87,5 +90,6 @@ secrets:
   db_user:
     file: $POSTGRES_DBUSER_FILE
 networks:
-  project_network_1:
-    name: $PROJECT_NETWORK_1
+  dst_network:
+    name: dst_network
+    driver: bridge
