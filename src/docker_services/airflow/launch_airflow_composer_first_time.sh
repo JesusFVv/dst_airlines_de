@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# execute as: src/docker/airflow/launch_airflow_composer.sh
+# execute as: src/docker/airflow/launch_airflow_composer_first_time.sh
 set -a
 source .env  # AIRFLOW_PROJ_DIR & AIRFLOW_DOCKER_COMPOSE_DIR
 set +a

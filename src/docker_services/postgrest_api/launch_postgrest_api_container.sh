@@ -3,7 +3,7 @@
 
 # Load environmental variables for PostgRest server: with READ-ONLY permissions
 PGRST_DB_URI="postgres://postgrest_authenticator:pass_api@postgres_dst:5432/dst_airlines_db"
-PGRST_DB_SCHEMAS="public"
+PGRST_DB_SCHEMA="public"
 PGRST_DB_ANON_ROLE="web_anonimous"
 PGRST_DB_AGGREGATES_ENABLED="true"
 # Run the server
@@ -12,7 +12,7 @@ docker container stop ${CONTAINER_NAME} >& /dev/null
 docker container rm ${CONTAINER_NAME} >& /dev/null
 docker run --name ${CONTAINER_NAME} \
   -e PGRST_DB_URI=${PGRST_DB_URI} \
-  -e PGRST_DB_SCHEMAS=${PGRST_DB_SCHEMAS} \
+  -e PGRST_DB_SCHEMAS=${PGRST_DB_SCHEMA} \
   -e PGRST_DB_ANON_ROLE=${PGRST_DB_ANON_ROLE} \
   -e PGRST_DB_AGGREGATES_ENABLED=${PGRST_DB_AGGREGATES_ENABLED} \
   --network dst_network \

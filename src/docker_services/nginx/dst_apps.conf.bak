@@ -74,57 +74,57 @@ server {
     }
 }
 
-# HTTPS server
-server {
-    listen       443 ssl;
-    server_name  localhost;
-    ssl_certificate /etc/nginx/ssl/dst_vm.crt;
-    ssl_certificate_key /etc/nginx/ssl/dst_vm.key;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;
-    ssl_ciphers  HIGH:!aNULL:!MD5;
-    ssl_session_cache   shared:SSL:10m;
-    ssl_session_timeout 10m;
+# # HTTPS server
+# server {
+#     listen       443 ssl;
+#     server_name  localhost;
+#     ssl_certificate /etc/nginx/ssl/dst_vm.crt;
+#     ssl_certificate_key /etc/nginx/ssl/dst_vm.key;
+#     ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+#     ssl_prefer_server_ciphers on;
+#     ssl_ciphers  HIGH:!aNULL:!MD5;
+#     ssl_session_cache   shared:SSL:10m;
+#     ssl_session_timeout 10m;
 
 
-    #access_log  /var/log/nginx/host.access.log  main;
+#     #access_log  /var/log/nginx/host.access.log  main;
 
-    location / {
-        root   /usr/share/nginx/html;
-        index  index.html index.htm;
-    }
+#     location / {
+#         root   /usr/share/nginx/html;
+#         index  index.html index.htm;
+#     }
 
-    location /metabase/ {
-        proxy_pass http://metabase:3000/;
-    }
+#     # location /metabase/ {
+#     #     proxy_pass http://metabase:3000/;
+#     # }
 
-    location /cloudbeaver/ {
-        proxy_pass http://dbeaver:8978;
-    }
+#     location /cloudbeaver/ {
+#         proxy_pass http://dbeaver:8978;
+#     }
 
-    location /airflow/ {
-        proxy_pass http://airflow-airflow-webserver-1:8080;
-        proxy_set_header Host $http_host;
-        proxy_redirect off;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";   
-        proxy_set_header   X-Forwarded-Proto    "https";
-    }
+#     location /airflow/ {
+#         proxy_pass http://airflow-airflow-webserver-1:8080;
+#         proxy_set_header Host $http_host;
+#         proxy_redirect off;
+#         proxy_http_version 1.1;
+#         proxy_set_header Upgrade $http_upgrade;
+#         proxy_set_header Connection "upgrade";   
+#         proxy_set_header   X-Forwarded-Proto    "https";
+#     }
 
-    location /postgrest_api/ {
-            default_type  application/json;
-            proxy_hide_header Content-Location;
-            add_header Content-Location  /api/$upstream_http_content_location;
-            proxy_set_header  Connection "";
-            proxy_http_version 1.1;
-            proxy_pass http://postgrest_api:3000/;
-     }
+#     location /postgrest_api/ {
+#             default_type  application/json;
+#             proxy_hide_header Content-Location;
+#             add_header Content-Location  /api/$upstream_http_content_location;
+#             proxy_set_header  Connection "";
+#             proxy_http_version 1.1;
+#             proxy_pass http://postgrest_api:3000/;
+#      }
 
-    # redirect server error pages to the static page /50x.html
-    #
-    error_page   500 502 503 504  /50x.html;
-    location = /50x.html {
-        root   /usr/share/nginx/html;
-    }
-}
+#     # redirect server error pages to the static page /50x.html
+#     #
+#     error_page   500 502 503 504  /50x.html;
+#     location = /50x.html {
+#         root   /usr/share/nginx/html;
+#     }
+# }
