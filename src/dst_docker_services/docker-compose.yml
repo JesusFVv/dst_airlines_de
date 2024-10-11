@@ -1,0 +1,91 @@
+version: '3.3'
+services:
+  postgres_db:
+    image: postgres:16.3-bullseye
+    container_name: $POSTGRES_CONTAINER_NAME
+    restart: always
+    shm_size: 128mb
+    networks:
+      - $PROJECT_NETWORK_1
+    environment:
+      POSTGRES_USER_FILE: /run/secrets/db_user
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+      POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - "./init-user-db.sh:/docker-entrypoint-initdb.d/1.sh"
+      - "./init_db.sql:/docker-entrypoint-initdb.d/2.sql"
+    secrets:
+      - db_password
+      - db_user
+    # ports:
+    #   - "6432:5432"  # To use with DBeaver desktop in host only
+  dbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: dbeaver
+    networks:
+      - $PROJECT_NETWORK_1
+    environment:
+      CLOUDBEAVER_ROOT_URI: /cloudbeaver
+    restart: always
+    # ports:
+    #   - 8978:8978
+    volumes:
+      - cloudbeaver_workspace:/opt/cloudbeaver/workspace
+  metabase:
+    image: metabase/metabase
+    container_name: $META_CONTAINER_NAME
+    networks:
+      - $PROJECT_NETWORK_1
+    environment:
+      MB_DB_FILE: "/metabase-data/metabase.db"
+      MUID: $UID
+      MGID: $GID
+      JAVA_TIMEZONE: Europe/Paris
+      JAVA_OPTS: -Xmx3g
+      MB_JETTY_HOST: 0.0.0.0
+      MB_JETTY_PORT: 3000
+    restart: unless-stopped
+    volumes:
+      - ${PROJECT_ABSOLUT_PATH}/var/metabase/data:/metabase-data
+  postgrest:
+    image: postgrest/postgrest:v12.2.3
+    container_name: $PGRST_CONTAINER_NAME
+    networks:
+      - $PROJECT_NETWORK_1
+    environment:
+      PGRST_DB_URI: $PGRST_DB_URI
+      PGRST_DB_SCHEMAS: $PGRST_DB_SCHEMA
+      PGRST_DB_ANON_ROLE: $PGRST_DB_ANON_ROLE
+      PGRST_DB_AGGREGATES_ENABLED: $PGRST_DB_AGGREGATES_ENABLED
+    restart: unless-stopped
+  nginx:
+    image: nginx
+    container_name: $NGINX_CONTAINER_NAME
+    networks:
+      - $PROJECT_NETWORK_1
+    ports:
+      - 8000:80
+      - 8085:443
+      - 5433:5433
+    volumes:
+      - ${PROJECT_ABSOLUT_PATH}/var/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ${PROJECT_ABSOLUT_PATH}/var/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ${PROJECT_ABSOLUT_PATH}/var/nginx/stream.conf.d:/etc/nginx/stream.conf.d:ro
+      - ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm.crt:/etc/nginx/ssl/dst_vm.crt:ro
+      - ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm.key:/etc/nginx/ssl/dst_vm.key:ro
+    restart: unless-stopped
+volumes:
+  db-data:
+    name: db-data
+  cloudbeaver_workspace:
+    name: cloudbeaver_workspace
+secrets:
+  db_password:
+    file: ./postgres_password.txt
+  db_user:
+    file: ./postgres_user.txt
+networks:
+  project_network_1:
+    name: $PROJECT_NETWORK_1
