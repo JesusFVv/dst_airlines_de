@@ -14,8 +14,8 @@ services:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
     volumes:
       - db-data:/var/lib/postgresql/data
-      - "./init-user-db.sh:/docker-entrypoint-initdb.d/1.sh"
-      - "./init_db.sql:/docker-entrypoint-initdb.d/2.sql"
+      - $POSTGRES_INIT_FILE_1:/docker-entrypoint-initdb.d/1.sh
+      - $POSTGRES_INIT_FILE_2:/docker-entrypoint-initdb.d/2.sql
     secrets:
       - db_password
       - db_user
@@ -23,7 +23,7 @@ services:
     #   - "6432:5432"  # To use with DBeaver desktop in host only
   dbeaver:
     image: dbeaver/cloudbeaver:latest
-    container_name: dbeaver
+    container_name: $DBEAVER_CONTAINER_NAME
     networks:
       - $PROJECT_NETWORK_1
     environment:
@@ -83,9 +83,9 @@ volumes:
     name: cloudbeaver_workspace
 secrets:
   db_password:
-    file: ./postgres_password.txt
+    file: $POSTGRES_DBUSER_PASSWORD_FILE
   db_user:
-    file: ./postgres_user.txt
+    file: $POSTGRES_DBUSER_FILE
 networks:
   project_network_1:
     name: $PROJECT_NETWORK_1
