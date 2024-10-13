@@ -77,7 +77,7 @@ services:
     restart: unless-stopped
     deploy:
       restart_policy:
-        condition: on-failure
+        condition: any
         delay: 10s
 volumes:
   db-data:
