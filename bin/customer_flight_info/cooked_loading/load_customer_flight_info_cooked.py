@@ -278,13 +278,13 @@ if __name__ == "__main__":
     db_config_filepath = Path(
         "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/cooked_loading/common/database.ini"
     )
-    raw_table_name = "operations_customer_flight_info_raw"
+    raw_table_name = "l1.operations_customer_flight_info"
     raw_data_query = f"SELECT DISTINCT data FROM {raw_table_name}"  # Use DISTINCT to get rid of duplicates
 
-    cooked_airports_table_name = "refdata_airports_coo"
+    cooked_airports_table_name = "l2.refdata_airports"
     cooked_airports_data_query = f"SELECT airport, utc_offset FROM {cooked_airports_table_name}"
 
-    sql_table_name_cooked = "operations_customer_flight_info_coo"
+    sql_table_name_cooked = "l2.operations_customer_flight_info"
 
     ########################
     # Read data from database raw table

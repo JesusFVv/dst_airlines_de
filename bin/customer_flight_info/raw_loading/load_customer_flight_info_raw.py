@@ -108,7 +108,7 @@ if __name__ == "__main__":
     db_config_filepath = Path(
         "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/raw_loading/common/database.ini"
     )
-    sql_table_name_raw = "operations_customer_flight_info_raw"
+    sql_table_name_raw = "l1.operations_customer_flight_info"
     truncate_query = f"TRUNCATE TABLE {sql_table_name_raw}"
 
     ########################
