@@ -40,7 +40,7 @@ chmod 755 ingestRefData_raw.sh
 ### Ingestion version docker
 
 ```shell
-cd /home/ubuntu/dst_airlines_de/bin/reference_data/raw_loading/
+cd /home/ubuntu/dst_airlines_de/bin/reference_data/full_ingest/
 chmod 755 printLogDocker.sh run_docker.sh
 ./run_docker.sh
 ```

@@ -2,7 +2,7 @@
 FROM python:3.11-alpine3.20
 
 # Set some variables
-ARG code_folder=/home/ubuntu/dst_airlines_de/bin/reference_data/raw_loading/
+ARG code_folder=/home/ubuntu/dst_airlines_de/bin/reference_data/full_ingest/
 ARG postgres_folder=/home/ubuntu/dst_airlines_de/src/project_deployment_postgres/
 
 # Set working directory
