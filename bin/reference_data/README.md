@@ -58,7 +58,7 @@ rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_Co
 
 ```shell
 cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
-docker exec -it postgres bash
+docker exec -it postgres_dst bash
 ```
 
 ### Export de tables
@@ -109,18 +109,85 @@ psql -U dst_designer dst_airlines_db
 ```sql
 \dt+
 ```
+ - Remarque : ceci ne retourne plus rien depuis qu'on utilise les schémas l1, l2, l3.
 
 ```sql
- Schema |         Name          | Type  |    Owner     | Persistence | Access method |  Size   | Description
---------+-----------------------+-------+--------------+-------------+---------------+---------+-------------
- public | l1.refdata_aircraft  | table | dst_designer | permanent   | heap          | 64 kB   |
- public | l1.refdata_airlines  | table | dst_designer | permanent   | heap          | 96 kB   |
- public | l1.refdata_airports  | table | dst_designer | permanent   | heap          | 2664 kB |
- public | l1.refdata_cities    | table | dst_designer | permanent   | heap          | 1472 kB |
- public | l1.refdata_countries | table | dst_designer | permanent   | heap          | 64 kB   |
- public | test_table            | table | dst_designer | permanent   | heap          | 0 bytes |
+SELECT table_name, table_schema
+FROM information_schema.tables
+WHERE table_schema IN ('l1', 'l2', 'l3')
+ORDER BY table_schema, table_name;
+
+           table_name            | table_schema
+---------------------------------+--------------
+ operations_customer_flight_info | l1
+ refdata_aircraft                | l1
+ refdata_airlines                | l1
+ refdata_airports                | l1
+ refdata_cities                  | l1
+ refdata_countries               | l1
+ operations_customer_flight_info | l2
+ refdata_aircraft                | l2
+ refdata_aircraft_names          | l2
+ refdata_airline_names           | l2
+ refdata_airlines                | l2
+ refdata_airport_names           | l2
+ refdata_airports                | l2
+ refdata_cities                  | l2
+ refdata_city_names              | l2
+ refdata_countries               | l2
+ refdata_country_names           | l2
+ refdata_languages               | l2
+ view_aircrafts                  | l3
+ view_airlines                   | l3
+ view_airports                   | l3
+ view_airports_sample            | l3
+ view_cities                     | l3
+ view_countries                  | l3
+(24 rows)
+```
+
+
+
+```sql
+\dt+ l1.*
+
+                                                    List of relations
+ Schema |              Name               | Type  |    Owner     | Persistence | Access method |    Size    | Description
+--------+---------------------------------+-------+--------------+-------------+---------------+------------+-------------
+ l1     | operations_customer_flight_info | table | dst_designer | permanent   | heap          | 8192 bytes |
+ l1     | refdata_aircraft                | table | dst_designer | permanent   | heap          | 104 kB     |
+ l1     | refdata_airlines                | table | dst_designer | permanent   | heap          | 224 kB     |
+ l1     | refdata_airports                | table | dst_designer | permanent   | heap          | 8808 kB    |
+ l1     | refdata_cities                  | table | dst_designer | permanent   | heap          | 5528 kB    |
+ l1     | refdata_countries               | table | dst_designer | permanent   | heap          | 104 kB     |
 (6 rows)
 ```
+
+```sql
+\dt+ l2.*
+
+                                                    List of relations
+ Schema |              Name               | Type  |    Owner     | Persistence | Access method |    Size    | Description
+--------+---------------------------------+-------+--------------+-------------+---------------+------------+-------------
+ l2     | operations_customer_flight_info | table | dst_designer | permanent   | heap          | 8192 bytes |
+ l2     | refdata_aircraft                | table | dst_designer | permanent   | heap          | 48 kB      |
+ l2     | refdata_aircraft_names          | table | dst_designer | permanent   | heap          | 56 kB      |
+ l2     | refdata_airline_names           | table | dst_designer | permanent   | heap          | 96 kB      |
+ l2     | refdata_airlines                | table | dst_designer | permanent   | heap          | 72 kB      |
+ l2     | refdata_airport_names           | table | dst_designer | permanent   | heap          | 1056 kB    |
+ l2     | refdata_airports                | table | dst_designer | permanent   | heap          | 1056 kB    |
+ l2     | refdata_cities                  | table | dst_designer | permanent   | heap          | 416 kB     |
+ l2     | refdata_city_names              | table | dst_designer | permanent   | heap          | 920 kB     |
+ l2     | refdata_countries               | table | dst_designer | permanent   | heap          | 40 kB      |
+ l2     | refdata_country_names           | table | dst_designer | permanent   | heap          | 48 kB      |
+ l2     | refdata_languages               | table | dst_designer | permanent   | heap          | 8192 bytes |
+(12 rows)
+```
+
+```sql
+\dt+ l3.*
+
+Did not find any relation named "l3.*".```
 
 ### Aircraft
 
@@ -447,7 +514,7 @@ SELECT * FROM l3.view_aircrafts LIMIT 5;
 #### airport Cooked
 
 ```sql
-SELECT * FROM l3.l3.view_airports_sample LIMIT 5;
+SELECT * FROM l3.view_airports_sample LIMIT 5;
 ```
 
 ```log
@@ -500,8 +567,8 @@ SELECT * FROM
 ```
 
 ```log
-           table            |  cnt
-----------------------------+-------
+           table           |  cnt
+---------------------------+-------
  l2.refdata_airport_names  | 19924
  l2.refdata_city_names     | 18770
  l2.refdata_airports       | 11782
