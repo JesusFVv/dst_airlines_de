@@ -148,7 +148,7 @@ ON CONFLICT (City) DO NOTHING;
 -- -------------------------------- --
 -- INSERT INTO l2.refdata_airports --
 -- -------------------------------- --
-INSERT INTO refdata_Airports_coo (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
+INSERT INTO l2.refdata_Airports (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
 SELECT 
     AirportCode, CityCode, CountryCode, Latitude, Longitude, LocationType, utcOffsetInt, TimeZoneId
 FROM (
@@ -179,7 +179,7 @@ WHERE AirportCode IS NOT NULL
 ON CONFLICT (Airport) DO NOTHING;
 
 -- Correct locationType 'Rail Station' to 'RailwayStation' (899)
-INSERT INTO refdata_Airports_coo (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
+INSERT INTO l2.refdata_Airports (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
 SELECT 
     AirportCode, CityCode, CountryCode, Latitude, Longitude, 'RailwayStation', utcOffsetInt, TimeZoneId
 FROM (
@@ -210,7 +210,7 @@ WHERE AirportCode IS NOT NULL
 ON CONFLICT (Airport) DO NOTHING;
 
 -- Correct locationType 'Bus Station' to 'BusStation' (274)
-INSERT INTO refdata_Airports_coo (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
+INSERT INTO l2.refdata_Airports (Airport, City, Country, Latitude, Longitude, locationType, UTC_offset, TimeZoneId)
 SELECT 
     AirportCode, CityCode, CountryCode, Latitude, Longitude, 'BusStation', utcOffsetInt, TimeZoneId
 FROM (

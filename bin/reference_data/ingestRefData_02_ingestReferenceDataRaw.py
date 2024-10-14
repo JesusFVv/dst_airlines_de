@@ -90,7 +90,7 @@ def ingest_data(tmp_folder, db_config_path):
     folders = [f for f in os.listdir(tmp_folder) if f.endswith('Raw')]
     for folder in folders:
         nature = re.sub(r'out[A-Z]*_', '', folder).replace('Raw', '')
-        table_name = f"refdata_{nature.lower()}_raw"
+        table_name = f"l1.refdata_{nature.lower()}"
         folder_path = os.path.join(tmp_folder, folder)
         
         json_files = get_json_files(folder_path)

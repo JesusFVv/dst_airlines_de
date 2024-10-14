@@ -2,7 +2,7 @@
 
 ## Lancement docker postgresql
 
- - Remarque cf. [partie initialisation docker](#initialisation-docker) si nécessaire
+ - Remarque cf. partie[Initialisation docker](#initialisation-docker) si nécessaire
 
 ```shell
 cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
