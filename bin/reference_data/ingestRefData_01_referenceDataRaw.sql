@@ -1,34 +1,10 @@
 -- ---------- --
 -- RAW TABLES --
 -- ---------- --
--- DELETE ALL RAW TABLES IF THEY ALREADY EXIST
-DROP TABLE IF EXISTS refdata_aircraft_raw;
-DROP TABLE IF EXISTS refdata_airlines_raw;
-DROP TABLE IF EXISTS refdata_airports_raw;
-DROP TABLE IF EXISTS refdata_cities_raw;
-DROP TABLE IF EXISTS refdata_countries_raw;
+-- ERASE RAW TABLES
+DELETE FROM l1.refdata_aircraft;
+DELETE FROM l1.refdata_airlines;
+DELETE FROM l1.refdata_airports;
+DELETE FROM l1.refdata_cities;
+DELETE FROM l1.refdata_countries;
 
-CREATE TABLE IF NOT EXISTS refdata_aircraft_raw (
-    id SERIAL PRIMARY KEY,
-    data JSONB
-);
-
-CREATE TABLE IF NOT EXISTS refdata_airlines_raw (
-    id SERIAL PRIMARY KEY,
-    data JSONB
-);
-
-CREATE TABLE IF NOT EXISTS refdata_airports_raw (
-    id SERIAL PRIMARY KEY,
-    data JSONB
-);
-
-CREATE TABLE IF NOT EXISTS refdata_cities_raw (
-    id SERIAL PRIMARY KEY,
-    data JSONB
-);
-
-CREATE TABLE IF NOT EXISTS refdata_countries_raw (
-    id SERIAL PRIMARY KEY,
-    data JSONB
-);

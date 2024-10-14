@@ -278,20 +278,20 @@ if __name__ == "__main__":
     db_config_filepath = Path(
         "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/cooked_loading/common/database.ini"
     )
-    raw_table_name = "operations_customer_flight_info_raw"
+    raw_table_name = "l1.operations_customer_flight_info"
     raw_data_query = f"SELECT DISTINCT data FROM {raw_table_name}"  # Use DISTINCT to get rid of duplicates
 
-    cooked_airports_table_name = "refdata_airports_coo"
+    cooked_airports_table_name = "l2.refdata_airports"
     cooked_airports_data_query = f"SELECT airport, utc_offset FROM {cooked_airports_table_name}"
 
-    sql_table_name_cooked = "operations_customer_flight_info_coo"
+    sql_table_name_cooked = "l2.operations_customer_flight_info"
 
     ########################
     # Read data from database raw table
     all_data = utils.read_data_from_db(
         db_config_filepath, raw_data_query
     )  # Returns a list of tuples. The tuple is made of 1 element: data (dict)
-    # Read data from database refdata_airports_coo table
+    # Read data from database l2.refdata_airports table
     airports_data = utils.read_data_from_db(
         db_config_filepath, cooked_airports_data_query
     )  # Returns a list of tuples. The tuple is made of 2 elements: airport (str) and utc_offset (int)
