@@ -291,7 +291,7 @@ if __name__ == "__main__":
     all_data = utils.read_data_from_db(
         db_config_filepath, raw_data_query
     )  # Returns a list of tuples. The tuple is made of 1 element: data (dict)
-    # Read data from database refdata_airports_coo table
+    # Read data from database l2.refdata_airports table
     airports_data = utils.read_data_from_db(
         db_config_filepath, cooked_airports_data_query
     )  # Returns a list of tuples. The tuple is made of 2 elements: airport (str) and utc_offset (int)

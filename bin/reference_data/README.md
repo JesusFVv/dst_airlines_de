@@ -64,36 +64,36 @@ docker exec -it postgres bash
 ### Export de tables
 
 ```shell
-pg_dump -U dst_designer -t refdata_languages_coo dst_airlines_db > /tmp/refdata_languages_coo.sql
-pg_dump -U dst_designer -t refdata_countries_coo dst_airlines_db > /tmp/refdata_countries_coo.sql
-pg_dump -U dst_designer -t refdata_cities_coo dst_airlines_db > /tmp/refdata_cities_coo.sql
-pg_dump -U dst_designer -t refdata_airports_coo dst_airlines_db > /tmp/refdata_airports_coo.sql
-pg_dump -U dst_designer -t refdata_airlines_coo dst_airlines_db > /tmp/refdata_airlines_coo.sql
-pg_dump -U dst_designer -t refdata_aircraft_coo dst_airlines_db > /tmp/refdata_aircraft_coo.sql
+pg_dump -U dst_designer -t l2.refdata_languages dst_airlines_db > /tmp/l2.refdata_languages.sql
+pg_dump -U dst_designer -t l2.refdata_countries dst_airlines_db > /tmp/l2.refdata_countries.sql
+pg_dump -U dst_designer -t l2.refdata_cities dst_airlines_db > /tmp/l2.refdata_cities.sql
+pg_dump -U dst_designer -t l2.refdata_airports dst_airlines_db > /tmp/l2.refdata_airports.sql
+pg_dump -U dst_designer -t l2.refdata_airlines dst_airlines_db > /tmp/l2.refdata_airlines.sql
+pg_dump -U dst_designer -t l2.refdata_aircraft dst_airlines_db > /tmp/l2.refdata_aircraft.sql
 ```
 
 ### Rappatriement des fichiers en local
 
 ```shell
 cd /home/ubuntu/dst_airlines_de/data/referenceData
-docker cp postgres:/tmp/refdata_languages_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_languages_coo.sql
-docker cp postgres:/tmp/refdata_countries_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_countries_coo.sql
-docker cp postgres:/tmp/refdata_cities_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_cities_coo.sql
-docker cp postgres:/tmp/refdata_airports_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_airports_coo.sql
-docker cp postgres:/tmp/refdata_airlines_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_airlines_coo.sql
-docker cp postgres:/tmp/refdata_aircraft_coo.sql /home/ubuntu/dst_airlines_de/data/referenceData/refdata_aircraft_coo.sql
+docker cp postgres:/tmp/l2.refdata_languages.sql /home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_languages.sql
+docker cp postgres:/tmp/l2.refdata_countries.sql /home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_countries.sql
+docker cp postgres:/tmp/l2.refdata_cities.sql /home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_cities.sql
+docker cp postgres:/tmp/l2.refdata_airports.sql /home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_airports.sql
+docker cp postgres:/tmp/l2.refdata_airlines.sql /home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_airlines.sql
+docker cp postgres:/tmp/l2.refdata_aircraft.sql /home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_aircraft.sql
 
 ```
 
 ## Récupération sous WSL Ubuntu
 
 ```shell
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_languages_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_countries_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_cities_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airports_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_airlines_coo.sql .
-scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/refdata_aircraft_coo.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_languages.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_countries.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_cities.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_airports.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_airlines.sql .
+scp -i "~/cle/data_enginering_machine.pem" ubuntu@3.249.2.75:/home/ubuntu/dst_airlines_de/data/referenceData/l2.refdata_aircraft.sql .
 
 ```
 
@@ -113,11 +113,11 @@ psql -U dst_designer dst_airlines_db
 ```sql
  Schema |         Name          | Type  |    Owner     | Persistence | Access method |  Size   | Description
 --------+-----------------------+-------+--------------+-------------+---------------+---------+-------------
- public | refdata_aircraft_raw  | table | dst_designer | permanent   | heap          | 64 kB   |
- public | refdata_airlines_raw  | table | dst_designer | permanent   | heap          | 96 kB   |
- public | refdata_airports_raw  | table | dst_designer | permanent   | heap          | 2664 kB |
- public | refdata_cities_raw    | table | dst_designer | permanent   | heap          | 1472 kB |
- public | refdata_countries_raw | table | dst_designer | permanent   | heap          | 64 kB   |
+ public | l1.refdata_aircraft  | table | dst_designer | permanent   | heap          | 64 kB   |
+ public | l1.refdata_airlines  | table | dst_designer | permanent   | heap          | 96 kB   |
+ public | l1.refdata_airports  | table | dst_designer | permanent   | heap          | 2664 kB |
+ public | l1.refdata_cities    | table | dst_designer | permanent   | heap          | 1472 kB |
+ public | l1.refdata_countries | table | dst_designer | permanent   | heap          | 64 kB   |
  public | test_table            | table | dst_designer | permanent   | heap          | 0 bytes |
 (6 rows)
 ```
@@ -127,7 +127,7 @@ psql -U dst_designer dst_airlines_db
 #### count
 
 ```sql
-SELECT COUNT(*) FROM refdata_aircraft_raw;
+SELECT COUNT(*) FROM l1.refdata_aircraft;
 ```
 
 ```sql
@@ -141,7 +141,7 @@ SELECT COUNT(*) FROM refdata_aircraft_raw;
 
 ```sql
 SELECT data->'Names'->'Name'->>'$' AS aircraft_name
-FROM refdata_aircraft_raw LIMIT 5;
+FROM l1.refdata_aircraft LIMIT 5;
 ```
 
 ```sql
@@ -160,7 +160,7 @@ FROM refdata_aircraft_raw LIMIT 5;
 ```sql
 SELECT (data->>'AircraftCode') AS aircraft_code,
        (data->'Names'->'Name'->>'$') AS aircraft_name
-FROM refdata_aircraft_raw LIMIT 10;
+FROM l1.refdata_aircraft LIMIT 10;
 ```
 
 ```sql
@@ -189,7 +189,7 @@ FROM (
     SELECT DISTINCT json_data->>'AircraftCode' AS aircraftCode, json_data->>'AirlineEquipCode' AS AirlineEquipCode
     FROM (
         SELECT data AS json_data
-        FROM refdata_aircraft_raw
+        FROM l1.refdata_aircraft
     ) AS airport_data
 ) AS aircraft_cooked
 WHERE aircraftCode IS NOT NULL
@@ -214,7 +214,7 @@ SELECT
     json_data->'Names'->'Name'->'@LanguageCode' AS lang
 FROM (
     SELECT data AS json_data
-    FROM refdata_airports_raw
+    FROM l1.refdata_airports
 ) AS airport_data
 GROUP BY json_data->'Names'->'Name'->'@LanguageCode';
 ```
@@ -238,7 +238,7 @@ FROM (
     SELECT DISTINCT json_data->>'AirportCode' AS airport_code, json_data->'Names'->'Name'->'@LanguageCode' AS lang
     FROM (
         SELECT data AS json_data
-        FROM refdata_airports_raw
+        FROM l1.refdata_airports
     ) AS airport_data
 ) AS airport_codes_langs
 GROUP BY lang;
@@ -266,7 +266,7 @@ SELECT
 	json_data->'Names'->'Name'->'$' AS label
 FROM (
     SELECT data AS json_data
-    FROM refdata_airports_raw
+    FROM l1.refdata_airports
 ) AS airport_data 
 -- WHERE json_data->'Names'->'Name'->'$' IS NULL
 ORDER BY json_data->>'AirportCode', json_data->'Names'->'Name'->'@LanguageCode', json_data->'Names'->'Name'->'$'
@@ -300,7 +300,7 @@ FROM (
     SELECT json_data->'AirlineID' AS AirlineID, json_data->'Names'->'Name'->'@LanguageCode' AS lang
     FROM (
         SELECT data AS json_data
-        FROM refdata_airlines_raw
+        FROM l1.refdata_airlines
     ) AS Airline_data
 ) AS airlines_codes_langs
 GROUP BY lang;
@@ -318,7 +318,7 @@ GROUP BY lang;
 SELECT json_data->'AirlineID' AS AirlineID, json_data->'Names'->'Name'->'@LanguageCode' AS lang
 FROM (
 	SELECT data AS json_data
-	FROM refdata_airlines_raw
+	FROM l1.refdata_airlines
 ) AS Airline_data
 WHERE json_data->'Names'->'Name'->'@LanguageCode' IS NULL;
 ```
@@ -340,7 +340,7 @@ FROM (
     SELECT DISTINCT json_data->>'AirlineID' AS AirlineID, json_data->>'AirlineID_ICAO' AS AirlineID_ICAO
     FROM (
         SELECT data AS json_data
-        FROM refdata_airlines_raw
+        FROM l1.refdata_airlines
     ) AS airline_data
 ) AS airline_cooked
 WHERE AirlineID IS NOT NULL
@@ -356,7 +356,7 @@ WHERE AirlineID IS NOT NULL
 ```
 
 ```sql
-SELECT * FROM view_airlines LIMIT 5;
+SELECT * FROM l3.view_airlines LIMIT 5;
 ```
 
 ```log
@@ -373,7 +373,7 @@ SELECT * FROM view_airlines LIMIT 5;
 #### cities Cooked
 
 ```sql
-SELECT * FROM view_cities LIMIT 5;
+SELECT * FROM l3.view_cities LIMIT 5;
 ```
 
 ```log
@@ -397,7 +397,7 @@ FROM (
     SELECT DISTINCT json_data->>'CountryCode' AS CountryCode
     FROM (
         SELECT data AS json_data
-        FROM refdata_countries_raw
+        FROM l1.refdata_countries
     ) AS countrie_data
 ) AS countrie_cooked
 WHERE CountryCode IS NOT NULL
@@ -413,7 +413,7 @@ WHERE CountryCode IS NOT NULL
 ```
 
 ```sql
-SELECT * FROM view_countries LIMIT 5;
+SELECT * FROM l3.view_countries LIMIT 5;
 ```
 
 ```log
@@ -430,7 +430,7 @@ SELECT * FROM view_countries LIMIT 5;
 #### aircraft Cooked
 
 ```sql
-SELECT * FROM view_aircrafts LIMIT 5;
+SELECT * FROM l3.view_aircrafts LIMIT 5;
 ```
 
 ```log
@@ -447,7 +447,7 @@ SELECT * FROM view_aircrafts LIMIT 5;
 #### airport Cooked
 
 ```sql
-SELECT * FROM view_airports_sample LIMIT 5;
+SELECT * FROM l3.l3.view_airports_sample LIMIT 5;
 ```
 
 ```log
@@ -466,7 +466,7 @@ SELECT * FROM view_airports_sample LIMIT 5;
 ### Cooked Languages
 
 ```sql
-SELECT * FROM refdata_languages_coo;
+SELECT * FROM l2.refdata_languages;
 ```
 
 ### Cooked count all
@@ -474,27 +474,27 @@ SELECT * FROM refdata_languages_coo;
 ```sql
 SELECT * FROM 
 (
-	SELECT 'refdata_languages_coo' as table, count(*) AS cnt FROM refdata_languages_coo
+	SELECT 'l2.refdata_languages' as table, count(*) AS cnt FROM l2.refdata_languages
 	UNION
-	SELECT 'refdata_countries_coo' as table, count(*) AS cnt  FROM refdata_countries_coo
+	SELECT 'l2.refdata_countries' as table, count(*) AS cnt  FROM l2.refdata_countries
 	UNION
-	SELECT 'refdata_cities_coo' as table, count(*) AS cnt  FROM refdata_cities_coo
+	SELECT 'l2.refdata_cities' as table, count(*) AS cnt  FROM l2.refdata_cities
 	UNION
-	SELECT 'refdata_airports_coo' as table, count(*) AS cnt  FROM refdata_airports_coo
+	SELECT 'l2.refdata_airports' as table, count(*) AS cnt  FROM l2.refdata_airports
 	UNION
-	SELECT 'refdata_airlines_coo' as table, count(*) AS cnt  FROM refdata_airlines_coo
+	SELECT 'l2.refdata_airlines' as table, count(*) AS cnt  FROM l2.refdata_airlines
 	UNION
-	SELECT 'refdata_airport_names_coo' as table, count(*) AS cnt  FROM refdata_airport_names_coo
+	SELECT 'l2.refdata_airport_names' as table, count(*) AS cnt  FROM l2.refdata_airport_names
 	UNION
-	SELECT 'refdata_city_names_coo' as table, count(*) AS cnt  FROM refdata_city_names_coo
+	SELECT 'l2.refdata_city_names' as table, count(*) AS cnt  FROM l2.refdata_city_names
 	UNION
-	SELECT 'refdata_country_names_coo' as table, count(*) AS cnt  FROM refdata_country_names_coo
+	SELECT 'l2.refdata_country_names' as table, count(*) AS cnt  FROM l2.refdata_country_names
 	UNION
-	SELECT 'refdata_airline_names_coo' as table, count(*) AS cnt  FROM refdata_airline_names_coo
+	SELECT 'l2.refdata_airline_names' as table, count(*) AS cnt  FROM l2.refdata_airline_names
 	UNION
-	SELECT 'refdata_aircraft_names_coo' as table, count(*) AS cnt  FROM refdata_aircraft_names_coo
+	SELECT 'l2.refdata_aircraft_names' as table, count(*) AS cnt  FROM l2.refdata_aircraft_names
 	UNION
-	SELECT 'refdata_aircraft_coo' as table, count(*) AS cnt  FROM refdata_aircraft_coo
+	SELECT 'l2.refdata_aircraft' as table, count(*) AS cnt  FROM l2.refdata_aircraft
 ) ORDER BY cnt DESC;
 
 ```
@@ -502,17 +502,17 @@ SELECT * FROM
 ```log
            table            |  cnt
 ----------------------------+-------
- refdata_airport_names_coo  | 19924
- refdata_city_names_coo     | 18770
- refdata_airports_coo       | 11782
- refdata_cities_coo         | 10666
- refdata_airlines_coo       |  1127
- refdata_airline_names_coo  |  1127
- refdata_country_names_coo  |   424
- refdata_aircraft_coo       |   381
- refdata_aircraft_names_coo |   380
- refdata_countries_coo      |   238
- refdata_languages_coo      |     2
+ l2.refdata_airport_names  | 19924
+ l2.refdata_city_names     | 18770
+ l2.refdata_airports       | 11782
+ l2.refdata_cities         | 10666
+ l2.refdata_airlines       |  1127
+ l2.refdata_airline_names  |  1127
+ l2.refdata_country_names  |   424
+ l2.refdata_aircraft       |   381
+ l2.refdata_aircraft_names |   380
+ l2.refdata_countries      |   238
+ l2.refdata_languages      |     2
 (11 rows)
 ```
 

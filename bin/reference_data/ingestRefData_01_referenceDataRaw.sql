@@ -1,10 +1,10 @@
 -- ---------- --
 -- RAW TABLES --
 -- ---------- --
--- TRUNCATE RAW TABLES
-TRUNCATE TABLE refdata_aircraft_raw;
-TRUNCATE TABLE refdata_airlines_raw;
-TRUNCATE TABLE refdata_airports_raw;
-TRUNCATE TABLE refdata_cities_raw;
-TRUNCATE TABLE refdata_countries_raw;
+-- ERASE RAW TABLES
+DELETE FROM l1.refdata_aircraft;
+DELETE FROM l1.refdata_airlines;
+DELETE FROM l1.refdata_airports;
+DELETE FROM l1.refdata_cities;
+DELETE FROM l1.refdata_countries;
 
