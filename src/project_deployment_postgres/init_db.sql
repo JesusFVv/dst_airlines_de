@@ -97,12 +97,12 @@ CREATE TABLE l2.refdata_airports (
     Country CHAR(2) NOT NULL REFERENCES l2.refdata_countries(Code),
     Latitude DECIMAL NOT NULL,
     Longitude DECIMAL NOT NULL,
-    -- 'Off-Line Point' added (ex.: XNS)
-        -- 'Harbour' added (ex.: HKC : HONG KONG)
-        -- 'Miscellaneous' added (ex.: OIL : Libya, Ras Lanuf Oil)
+	-- 'Off-Line Point' added (ex.: XNS)
+	-- 'Harbour' added (ex.: HKC : HONG KONG)
+	-- 'Miscellaneous' added (ex.: OIL : Libya, Ras Lanuf Oil)
     locationType VARCHAR(20) CHECK (locationType IN ('Airport', 'RailwayStation', 'BusStation', 'Off-Line Point', 'Harbour', 'Miscellaneous')),
     UTC_offset INT NOT NULL,
-    TimeZoneId VARCHAR(50) NOT NULL
+    TimeZoneId VARCHAR(50) DEFAULT '?'  -- Should be NOT NULL but some airports with TimeZoneId null are returned by the API
 );
 
 CREATE TABLE l2.refdata_airlines (
