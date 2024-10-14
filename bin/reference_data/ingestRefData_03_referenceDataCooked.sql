@@ -171,7 +171,7 @@ FROM (
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
         SELECT data AS json_data
-        FROM refdata_Airports_raw
+        FROM l1.refdata_airports
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
@@ -202,7 +202,7 @@ FROM (
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
         SELECT data AS json_data
-        FROM refdata_Airports_raw
+        FROM l1.refdata_airports
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
@@ -233,7 +233,7 @@ FROM (
 		json_data->>'TimeZoneId' AS TimeZoneId
     FROM (
         SELECT data AS json_data
-        FROM refdata_Airports_raw
+        FROM l1.refdata_airports
     ) AS Airport_data
 ) AS Airport_cooked
 WHERE AirportCode IS NOT NULL
