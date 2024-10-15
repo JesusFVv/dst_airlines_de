@@ -50,6 +50,7 @@ pass: airflow
 
 ## Reverse proxy
 https://airflow.apache.org/docs/apache-airflow/stable/howto/run-behind-proxy.html
+
     environment:
       AIRFLOW__WEBSERVER__BASE_URL: http://localhost:8080/airflow/
 
