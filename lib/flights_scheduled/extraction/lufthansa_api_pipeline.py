@@ -91,10 +91,7 @@ def get_flight_routes() -> Any:
     return itertools.product(airports, airports)
     
 
-if __name__ == "__main__":
-    origin = "FRA"
-    destination = "CDG"
-    # end_date_search = pendulum.today().add(months=3)
+def main() -> None:
     end_date_search = pendulum.today().add(days=3)
     add_days = 0
     while True:
@@ -110,3 +107,6 @@ if __name__ == "__main__":
                     print(f"Origin: {origin} to Destination: {destination}")
                     load_flight_schedules(origin, destination, date_search.to_date_string())
         
+
+if __name__ == "__main__":
+    main()

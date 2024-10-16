@@ -10,7 +10,7 @@ docker container stop ${CONTAINER_NAME} >& /dev/null
 docker container rm ${CONTAINER_NAME} >& /dev/null
 docker run --name ${CONTAINER_NAME} \
 -v ${PROJECT_ABSOLUT_PATH}/var/metabase/data:/metabase-data \
--e MB_DB_FILE=/metabase-data/metabase.db -e MUID=$UID -e MGID=$GID \
+-e MB_DB_FILE=/metabase-data/metabase.db -e MUID=$SERVICES_UID -e MGID=$SERVICES_GID \
 -e "JAVA_TIMEZONE=Europe/Paris" -e "JAVA_OPTS=-Xmx3g" \
 -e MB_JETTY_HOST=0.0.0.0 -e MB_JETTY_PORT=3000 \
 --network dst_network \
