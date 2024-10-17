@@ -39,8 +39,8 @@ services:
       - dst_network
     environment:
       MB_DB_FILE: "/metabase-data/metabase.db"
-      MUID: $UID
-      MGID: $GID
+      MUID: $SERVICES_UID
+      MGID: $SERVICES_GID
       JAVA_TIMEZONE: Europe/Paris
       JAVA_OPTS: -Xmx3g
       MB_JETTY_HOST: 0.0.0.0
@@ -77,8 +77,17 @@ services:
     restart: unless-stopped
     deploy:
       restart_policy:
-        condition: on-failure
+        condition: any
         delay: 10s
+  rabbitmq:
+    image: rabbitmq:3
+    container_name: $RABBITMQ_CONTAINER_NAME
+    hostname: my-rabbit
+    networks:
+      - dst_network
+    volumes:
+      - ${PROJECT_ABSOLUT_PATH}/var/rabbitmq/data:/var/lib/rabbitmq
+    restart: unless-stopped
 volumes:
   db-data:
     name: db-data
