@@ -8,6 +8,7 @@ from dlt.sources.rest_api import (
     rest_api_source,
 )
 from dlt.sources.helpers.rest_client.auth import OAuth2ClientCredentials
+from dlt.pipeline.exceptions import PipelineStepFailed
 import pandas as pd
 
 BASE_URL = dlt.config["sources.lufthansa_api.base_url"]
@@ -61,7 +62,10 @@ def load_flight_schedules(origin: str, destination: str, date_search: str) -> No
                         },
                         "response_actions": [
                             {"status_code": 404, "action": "ignore"},
-                            {"status_code": 403, "action": "ignore"},
+                            # {"status_code": 403, "content": "Rate Limit Exceeded", "action": "ignore"},
+                            # {"status_code": 403, "content": "Account Over Rate Limit", "action": "ignore"},
+                            # {"status_code": 403, "content": "Account Over Queries Per Second Limit", "action": "ignore"},
+                            # {"status_code": 403, "content": "Account Inactive", "action": "ignore"},
                         ],
                     },
                     "selected": True,
@@ -74,8 +78,17 @@ def load_flight_schedules(origin: str, destination: str, date_search: str) -> No
         destination="postgres",  # Postgres conection settings are defined in the secrets.toml
         dataset_name=dlt.secrets["destination.postgres.credentials.schema"], # Schema name in Postgres DB
     )
-    load_info = pipeline.run(flight_schedules_source)
-    print(load_info) 
+    
+    try:
+        load_info = pipeline.run(flight_schedules_source)
+    except PipelineStepFailed as e:
+        print(e)
+        if "403" in e.args[0]:
+            raise ValueError("403 Client Error", 403)
+        else:
+            raise e
+    else:
+        print(load_info) 
 
 
 def get_flight_routes() -> Any:
