@@ -1,0 +1,152 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "IST",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "14:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "15:09"
+                        },
+                        "Terminal": {
+                            "Gate": "B07A"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "16:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "17:37"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B41A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9270"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5884"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9036"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1299"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "IST",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "17:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "18:13"
+                        },
+                        "Terminal": {
+                            "Gate": "A06B"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "20:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "20:02"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B47A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LA",
+                            "FlightNumber": "8704"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1301"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-07-14T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-07-14T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-07-14T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

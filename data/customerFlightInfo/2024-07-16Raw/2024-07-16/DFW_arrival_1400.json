@@ -1,0 +1,83 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-16",
+                        "Time": "10:10"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "Z19"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "DFW",
+                    "Scheduled": {
+                        "Date": "2024-07-16",
+                        "Time": "14:05"
+                    },
+                    "Terminal": {
+                        "Name": "D",
+                        "Gate": "D15"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8864"
+                        },
+                        {
+                            "AirlineID": "TG",
+                            "FlightNumber": "7702"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "438"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "CD",
+                    "Description": "Flight Cancelled"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DFW/2024-07-16T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DFW/2024-07-16T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DFW/2024-07-16T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

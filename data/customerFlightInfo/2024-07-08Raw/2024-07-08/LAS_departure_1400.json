@@ -1,0 +1,71 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "LAS",
+                    "Scheduled": {
+                        "Date": "2024-07-08",
+                        "Time": "13:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-08",
+                        "Time": "14:39"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ORD",
+                    "Scheduled": {
+                        "Date": "2024-07-08",
+                        "Time": "18:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-08",
+                        "Time": "20:22"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "4Y",
+                    "FlightNumber": "053"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-07-08T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-07-08T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-07-08T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

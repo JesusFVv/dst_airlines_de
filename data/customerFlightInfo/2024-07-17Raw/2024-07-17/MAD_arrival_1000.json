@@ -1,0 +1,236 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "08:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "08:51"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K27"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAD",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "11:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "11:14"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9596"
+                            },
+                            {
+                                "AirlineID": "CA",
+                                "FlightNumber": "6195"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6097"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7447"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2104"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1800"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "09:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "09:25"
+                        },
+                        "Terminal": {
+                            "Gate": "A50"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAD",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "11:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "11:46"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "3721"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "09:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "10:17"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A50"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAD",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "12:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "12:39"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9180"
+                            },
+                            {
+                                "AirlineID": "AV",
+                                "FlightNumber": "6513"
+                            },
+                            {
+                                "AirlineID": "CA",
+                                "FlightNumber": "6017"
+                            },
+                            {
+                                "AirlineID": "ET",
+                                "FlightNumber": "1569"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7455"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2062"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9358"
+                            },
+                            {
+                                "AirlineID": "WY",
+                                "FlightNumber": "5270"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1112"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32V"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2024-07-17T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2024-07-17T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAD/2024-07-17T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

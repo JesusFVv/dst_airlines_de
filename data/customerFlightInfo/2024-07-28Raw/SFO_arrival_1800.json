@@ -1,0 +1,99 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-07-28",
+                        "Time": "18:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-28",
+                        "Time": "18:37"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "L25"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "SFO",
+                    "Scheduled": {
+                        "Date": "2024-07-28",
+                        "Time": "21:00"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-28",
+                        "Time": "20:58"
+                    },
+                    "Terminal": {
+                        "Name": "I",
+                        "Gate": "G08"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8883"
+                        },
+                        {
+                            "AirlineID": "NZ",
+                            "FlightNumber": "4222"
+                        },
+                        {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7333"
+                        },
+                        {
+                            "AirlineID": "SN",
+                            "FlightNumber": "7252"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "458"
+                },
+                "Equipment": {
+                    "AircraftCode": "359"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-07-28T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-07-28T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-07-28T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

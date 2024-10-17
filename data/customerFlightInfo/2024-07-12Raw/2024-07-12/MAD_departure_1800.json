@@ -1,0 +1,77 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MAD",
+                    "Scheduled": {
+                        "Date": "2024-07-12",
+                        "Time": "19:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-12",
+                        "Time": "21:11"
+                    },
+                    "Terminal": {
+                        "Name": "2"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ZRH",
+                    "Scheduled": {
+                        "Date": "2024-07-12",
+                        "Time": "22:00"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-12",
+                        "Time": "23:15"
+                    },
+                    "Terminal": {
+                        "Gate": "B39"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "WK",
+                    "FlightNumber": "2033"
+                },
+                "Equipment": {
+                    "AircraftCode": "320"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-07-12T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-07-12T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-07-12T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

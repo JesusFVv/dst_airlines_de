@@ -1,0 +1,139 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "12:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "14:17"
+                        },
+                        "Terminal": {
+                            "Gate": "E52"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DXB",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "21:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "22:25"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9732"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "242"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "14:05"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z52"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DXB",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "22:35"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9088"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8904"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "630"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DXB/2024-07-17T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DXB/2024-07-17T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DXB/2024-07-18T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

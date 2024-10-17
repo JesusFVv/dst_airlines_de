@@ -1,0 +1,384 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "STR",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "10:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "11:53"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "116"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "12:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "14:04"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4X",
+                        "FlightNumber": "2604"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "11:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "12:05"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G01"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "13:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "14:17"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9142"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6081"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7487"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "6720"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8938"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1778"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Q"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "GVA",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "12:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "12:27"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A03"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "13:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "14:14"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "TP",
+                            "FlightNumber": "6758"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "2092"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "12:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "14:40"
+                        },
+                        "Terminal": {
+                            "Gate": "A73"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "14:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "16:34"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "TP",
+                            "FlightNumber": "6762"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "2084"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "13:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "13:34"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A24"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "15:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "15:38"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9364"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7393"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "6702"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8896"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1168"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "13:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "14:52"
+                        },
+                        "Terminal": {
+                            "Gate": "A66"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "16:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "17:00"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9602"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "21N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LIS/2024-08-01T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LIS/2024-08-01T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LIS/2024-08-01T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 6
+        }
+    }
+}

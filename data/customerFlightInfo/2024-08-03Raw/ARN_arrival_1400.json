@@ -1,0 +1,375 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "12:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "12:40"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K22"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "14:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "14:52"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1478"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9293"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3656"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9158"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2416"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "12:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "12:35"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F32"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "14:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "14:45"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6221"
+                            },
+                            {
+                                "AirlineID": "OU",
+                                "FlightNumber": "5560"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "9411"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "313"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "12:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "12:38"
+                        },
+                        "Terminal": {
+                            "Gate": "A85"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "15:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "15:04"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6849"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3514"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9800"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "1250"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "13:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "14:36"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A30"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "15:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "16:33"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1426"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9149"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3100"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "7506"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9352"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "806"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Q"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "14:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "14:42"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K11"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-08-03",
+                            "Time": "16:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-03",
+                            "Time": "16:47"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9332"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3634"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "7758"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9013"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2418"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-08-03T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-08-03T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-08-03T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 5
+        }
+    }
+}

@@ -1,0 +1,94 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-16",
+                        "Time": "13:40"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "C13"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "MCO",
+                    "Scheduled": {
+                        "Date": "2024-07-16",
+                        "Time": "17:55"
+                    },
+                    "Terminal": {
+                        "Name": "C"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "LH",
+                            "FlightNumber": "4270"
+                        },
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "9392"
+                        },
+                        {
+                            "AirlineID": "OS",
+                            "FlightNumber": "8443"
+                        },
+                        {
+                            "AirlineID": "SN",
+                            "FlightNumber": "5663"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9670"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "4Y",
+                    "FlightNumber": "068"
+                },
+                "Equipment": {
+                    "AircraftCode": "33Y"
+                },
+                "Status": {
+                    "Code": "CD",
+                    "Description": "Flight Cancelled"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MCO/2024-07-16T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MCO/2024-07-16T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MCO/2024-07-16T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

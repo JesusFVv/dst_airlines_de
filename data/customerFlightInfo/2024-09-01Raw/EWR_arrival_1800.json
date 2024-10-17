@@ -1,0 +1,148 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "16:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "16:42"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H08"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "EWR",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "18:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "19:42"
+                        },
+                        "Terminal": {
+                            "Name": "B"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9255"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9447"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "412"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "35Z"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "17:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "17:59"
+                        },
+                        "Terminal": {
+                            "Gate": "D43"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "EWR",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "20:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "20:30"
+                        },
+                        "Terminal": {
+                            "Name": "B",
+                            "Gate": "B68"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9748"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "018"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-09-01T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-09-01T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-09-01T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

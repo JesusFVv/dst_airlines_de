@@ -1,0 +1,187 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "18:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "18:22"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "20:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "19:55"
+                        },
+                        "Terminal": {
+                            "Gate": "A56"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "2284"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "18:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "18:55"
+                        },
+                        "Terminal": {
+                            "Gate": "D07"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "21:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "21:03"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K28"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3681"
+                            },
+                            {
+                                "AirlineID": "WY",
+                                "FlightNumber": "5280"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2455"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "20:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "21:50"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-07-19",
+                            "Time": "22:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-19",
+                            "Time": "23:41"
+                        },
+                        "Terminal": {
+                            "Gate": "B91"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9255"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-07-19T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-07-19T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-07-19T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

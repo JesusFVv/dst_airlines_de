@@ -1,0 +1,84 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-09-06",
+                        "Time": "07:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-06",
+                        "Time": "07:20"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B27"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "DUB",
+                    "Scheduled": {
+                        "Date": "2024-09-06",
+                        "Time": "08:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-06",
+                        "Time": "08:26"
+                    },
+                    "Terminal": {
+                        "Name": "1"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "NH",
+                        "FlightNumber": "5454"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "976"
+                },
+                "Equipment": {
+                    "AircraftCode": "321"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-09-06T06:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-09-06T02:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-09-06T10:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

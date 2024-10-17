@@ -1,0 +1,954 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "08:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "08:47"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A13"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "09:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:04"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A03"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9502"
+                            },
+                            {
+                                "AirlineID": "CA",
+                                "FlightNumber": "6003"
+                            },
+                            {
+                                "AirlineID": "CX",
+                                "FlightNumber": "6701"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8721"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "176"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "09:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "09:45"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G14"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:48"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B17"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9508"
+                            },
+                            {
+                                "AirlineID": "OU",
+                                "FlightNumber": "5430"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9189"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1934"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "08:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "08:51"
+                        },
+                        "Terminal": {
+                            "Gate": "A82"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:14"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A07"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "976"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "221"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZAD",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "08:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "08:30"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:11"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A35"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4X",
+                        "FlightNumber": "8965"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "09:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "09:45"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F30"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:52"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B10"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "225"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "09:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "09:24"
+                        },
+                        "Terminal": {
+                            "Gate": "A46"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:42"
+                        },
+                        "Terminal": {
+                            "Gate": "B03"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "2581"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "09:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:12"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A01"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "11:34"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B20"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9119"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "178"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "PMI",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "08:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "09:33"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "11:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:14"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A32"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "E6",
+                        "FlightNumber": "5437"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "TIV",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "09:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "09:13"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "11:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:59"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "X06"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "8919"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "21N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "11:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "11:44"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G30"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:48"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B17"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1586"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9049"
+                            },
+                            {
+                                "AirlineID": "OU",
+                                "FlightNumber": "5360"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "7720"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9185"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1926"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "11:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:01"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F26"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "13:18"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A20"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "227"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "11:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "11:53"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A14"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:55"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B20"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1595"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9245"
+                            },
+                            {
+                                "AirlineID": "OU",
+                                "FlightNumber": "5466"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2078"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "7508"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8974"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "182"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "PMI",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "10:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "10:28"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "13:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "13:20"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A36"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "8593"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "21A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "STR",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:56"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "172"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "13:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "14:00"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A35"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "5395"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4X",
+                        "FlightNumber": "8003"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:57"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A24"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "13:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "13:56"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B17"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9247"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "7702"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8887"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "184"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "12:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "12:47"
+                        },
+                        "Terminal": {
+                            "Gate": "A66"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-14",
+                            "Time": "13:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-14",
+                            "Time": "14:10"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B10"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6766"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2932"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "966"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BER/2024-09-14T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BER/2024-09-14T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BER/2024-09-14T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 16
+        }
+    }
+}

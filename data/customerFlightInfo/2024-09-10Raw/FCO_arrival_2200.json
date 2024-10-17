@@ -1,0 +1,149 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "21:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "21:58"
+                        },
+                        "Terminal": {
+                            "Gate": "A63"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "23:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "23:25"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "1734"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "21:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "21:40"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A58"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "23:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "23:28"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LA",
+                                "FlightNumber": "8662"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6127"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7728"
+                            },
+                            {
+                                "AirlineID": "UK",
+                                "FlightNumber": "3015"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "242"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32V"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FCO/2024-09-10T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FCO/2024-09-10T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FCO/2024-09-11T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

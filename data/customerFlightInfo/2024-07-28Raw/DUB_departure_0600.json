@@ -1,0 +1,186 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "08:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "08:51"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "11:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "11:26"
+                        },
+                        "Terminal": {
+                            "Gate": "A72I"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9397"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "08:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "09:21"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "105"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "11:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "12:39"
+                        },
+                        "Terminal": {
+                            "Gate": "GRB"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "2L",
+                        "FlightNumber": "403"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E90"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "09:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "09:04"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "302"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "12:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "11:57"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B27"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7304"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "977"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32V"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-07-28T06:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-07-28T02:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-07-28T10:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

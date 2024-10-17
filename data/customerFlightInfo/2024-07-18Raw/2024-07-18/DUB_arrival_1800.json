@@ -1,0 +1,77 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "Scheduled": {
+                        "Date": "2024-07-18",
+                        "Time": "16:40"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-18",
+                        "Time": "16:54"
+                    },
+                    "Terminal": {
+                        "Gate": "D34"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "DUB",
+                    "Scheduled": {
+                        "Date": "2024-07-18",
+                        "Time": "18:00"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-18",
+                        "Time": "18:10"
+                    },
+                    "Terminal": {
+                        "Name": "1"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "2L",
+                    "FlightNumber": "404"
+                },
+                "Equipment": {
+                    "AircraftCode": "E90"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-07-18T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-07-18T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-07-18T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-19",
+                        "Time": "11:25"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-19",
+                        "Time": "12:01"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B30"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "LOS",
+                    "Scheduled": {
+                        "Date": "2024-07-19",
+                        "Time": "16:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-19",
+                        "Time": "17:20"
+                    },
+                    "Terminal": {
+                        "Name": "I"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9058"
+                        },
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "4038"
+                        },
+                        {
+                            "AirlineID": "SN",
+                            "FlightNumber": "7260"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9114"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "568"
+                },
+                "Equipment": {
+                    "AircraftCode": "343"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LOS/2024-07-19T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LOS/2024-07-19T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LOS/2024-07-19T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

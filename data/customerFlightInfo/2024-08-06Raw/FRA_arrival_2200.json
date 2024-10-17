@@ -1,0 +1,242 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "20:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "21:10"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F11"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "21:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "22:44"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A21"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7207"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1243"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "21:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "21:21"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G32"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "22:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "22:20"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A50"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "123"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "78S"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "19:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "19:29"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "B37"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "22:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "22:01"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B44"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "919"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "TFS",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "16:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "16:55"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-06",
+                            "Time": "22:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-06",
+                            "Time": "22:22"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A26"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "4381"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4Y",
+                        "FlightNumber": "307"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FRA/2024-08-06T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FRA/2024-08-06T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FRA/2024-08-07T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 4
+        }
+    }
+}

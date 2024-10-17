@@ -1,0 +1,125 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MIA",
+                        "Scheduled": {
+                            "Date": "2024-09-04",
+                            "Time": "19:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-04",
+                            "Time": "19:48"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-05",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-05",
+                            "Time": "10:59"
+                        },
+                        "Terminal": {
+                            "Gate": "E43"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9723"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "065"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "77W"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MIA",
+                        "Scheduled": {
+                            "Date": "2024-09-04",
+                            "Time": "20:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-04",
+                            "Time": "20:41"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "TPA",
+                        "Scheduled": {
+                            "Date": "2024-09-04",
+                            "Time": "21:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-04",
+                            "Time": "21:23"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "WK",
+                        "FlightNumber": "004"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "DV",
+                        "Description": "Flight Diverted"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-09-04T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-09-04T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-09-04T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

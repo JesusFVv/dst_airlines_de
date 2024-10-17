@@ -1,0 +1,81 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-28",
+                        "Time": "17:20"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-28",
+                        "Time": "17:49"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B41"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "IST",
+                    "Scheduled": {
+                        "Date": "2024-07-28",
+                        "Time": "21:20"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-28",
+                        "Time": "21:29"
+                    },
+                    "Status": {
+                        "Code": "OT",
+                        "Description": "Flight On Time"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9062"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "1304"
+                },
+                "Equipment": {
+                    "AircraftCode": "321"
+                },
+                "Status": {
+                    "Code": "OT",
+                    "Description": "Flight On Time"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-28T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-28T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-28T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

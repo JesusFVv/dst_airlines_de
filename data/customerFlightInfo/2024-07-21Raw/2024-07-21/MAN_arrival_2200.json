@@ -1,0 +1,198 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "21:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-21",
+                            "Time": "22:24"
+                        },
+                        "Terminal": {
+                            "Gate": "B19"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "21:35"
+                        },
+                        "Estimated": {
+                            "Date": "2024-07-21",
+                            "Time": "22:29"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-21",
+                            "Time": "22:29"
+                        },
+                        "Status": {
+                            "Code": "DL",
+                            "Description": "Flight Delayed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "2183"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "DL",
+                        "Description": "Flight Delayed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "22:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-21",
+                            "Time": "22:44"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B33"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "22:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-21",
+                            "Time": "23:18"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AI",
+                                "FlightNumber": "8546"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5865"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7375"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2136"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "948"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "21:55"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H02"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-21",
+                            "Time": "23:00"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7363"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2504"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAN/2024-07-21T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAN/2024-07-21T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAN/2024-07-22T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

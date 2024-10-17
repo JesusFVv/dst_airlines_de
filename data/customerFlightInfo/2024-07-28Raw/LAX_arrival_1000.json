@@ -1,0 +1,156 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "10:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "11:21"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z54"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LAX",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "13:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "14:14"
+                        },
+                        "Terminal": {
+                            "Name": "B"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8845"
+                            },
+                            {
+                                "AirlineID": "NZ",
+                                "FlightNumber": "4216"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7319"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7250"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "456"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "74H"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "09:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "10:14"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "D27"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "LAX",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "13:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "13:28"
+                        },
+                        "Terminal": {
+                            "Name": "B"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9881"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "081"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "772"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAX/2024-07-28T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAX/2024-07-28T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/LAX/2024-07-28T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

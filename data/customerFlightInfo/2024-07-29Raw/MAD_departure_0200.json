@@ -1,0 +1,107 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MAD",
+                    "Scheduled": {
+                        "Date": "2024-07-29",
+                        "Time": "05:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-29",
+                        "Time": "06:04"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "E71"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-29",
+                        "Time": "08:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-29",
+                        "Time": "08:19"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "A34"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9179"
+                        },
+                        {
+                            "AirlineID": "AV",
+                            "FlightNumber": "6514"
+                        },
+                        {
+                            "AirlineID": "LO",
+                            "FlightNumber": "4872"
+                        },
+                        {
+                            "AirlineID": "OS",
+                            "FlightNumber": "7456"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8982"
+                        },
+                        {
+                            "AirlineID": "WY",
+                            "FlightNumber": "5274"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "1121"
+                },
+                "Equipment": {
+                    "AircraftCode": "321"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-07-29T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-07-28T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-07-29T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

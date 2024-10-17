@@ -1,0 +1,204 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "KSC",
+                        "Scheduled": {
+                            "Date": "2024-09-15",
+                            "Time": "04:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-15",
+                            "Time": "04:54"
+                        },
+                        "Terminal": {
+                            "Gate": "A01"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-15",
+                            "Time": "06:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-15",
+                            "Time": "05:58"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "SBS"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "6353"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "TF",
+                        "FlightNumber": "744"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "AT7"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "SKP",
+                        "Scheduled": {
+                            "Date": "2024-09-15",
+                            "Time": "04:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-15",
+                            "Time": "04:18"
+                        },
+                        "Terminal": {
+                            "Gate": "203"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-15",
+                            "Time": "06:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-15",
+                            "Time": "05:49"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "SBN"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "6393"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9834"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "778"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "CAI",
+                        "Scheduled": {
+                            "Date": "2024-09-15",
+                            "Time": "03:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-15",
+                            "Time": "03:33"
+                        },
+                        "Terminal": {
+                            "Name": "3"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-15",
+                            "Time": "06:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-15",
+                            "Time": "05:56"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "SBN"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "MS",
+                            "FlightNumber": "9205"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "866"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/VIE/2024-09-15T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/VIE/2024-09-14T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/VIE/2024-09-15T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

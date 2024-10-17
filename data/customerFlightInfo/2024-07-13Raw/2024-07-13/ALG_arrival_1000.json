@@ -1,0 +1,84 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-13",
+                        "Time": "09:30"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-13",
+                        "Time": "09:37"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B23"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ALG",
+                    "Scheduled": {
+                        "Date": "2024-07-13",
+                        "Time": "11:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-13",
+                        "Time": "11:22"
+                    },
+                    "Terminal": {
+                        "Name": "I"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "AC",
+                        "FlightNumber": "9246"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "1316"
+                },
+                "Equipment": {
+                    "AircraftCode": "321"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ALG/2024-07-13T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ALG/2024-07-13T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ALG/2024-07-13T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

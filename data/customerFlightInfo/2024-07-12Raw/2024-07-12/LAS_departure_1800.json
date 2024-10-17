@@ -1,0 +1,102 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "LAS",
+                    "Scheduled": {
+                        "Date": "2024-07-12",
+                        "Time": "18:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-12",
+                        "Time": "19:59"
+                    },
+                    "Terminal": {
+                        "Name": "3"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-13",
+                        "Time": "14:40"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-13",
+                        "Time": "15:52"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "Area B"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "LH",
+                            "FlightNumber": "4353"
+                        },
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "9305"
+                        },
+                        {
+                            "AirlineID": "OS",
+                            "FlightNumber": "8456"
+                        },
+                        {
+                            "AirlineID": "SN",
+                            "FlightNumber": "5620"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9665"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "4Y",
+                    "FlightNumber": "055"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-07-12T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-07-12T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-07-12T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

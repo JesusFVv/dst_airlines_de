@@ -1,0 +1,94 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-08-05",
+                        "Time": "14:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-05",
+                        "Time": "15:23"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "Z52"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "BOG",
+                    "Scheduled": {
+                        "Date": "2024-08-05",
+                        "Time": "18:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-05",
+                        "Time": "19:37"
+                    },
+                    "Terminal": {
+                        "Name": "1"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AV",
+                            "FlightNumber": "6503"
+                        },
+                        {
+                            "AirlineID": "EY",
+                            "FlightNumber": "4162"
+                        },
+                        {
+                            "AirlineID": "LX",
+                            "FlightNumber": "4030"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "542"
+                },
+                "Equipment": {
+                    "AircraftCode": "343"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BOG/2024-08-05T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BOG/2024-08-05T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BOG/2024-08-05T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "EWR",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "17:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "17:43"
+                        },
+                        "Terminal": {
+                            "Name": "B",
+                            "Gate": "B68"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "07:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "07:39"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "D23A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9841"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "090"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "772"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "EWR",
+                        "Scheduled": {
+                            "Date": "2024-07-16",
+                            "Time": "18:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-16",
+                            "Time": "18:28"
+                        },
+                        "Terminal": {
+                            "Name": "B",
+                            "Gate": "B62"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "07:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "08:40"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z58"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8838"
+                            },
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9444"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "403"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "74H"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-07-16T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-07-16T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-07-16T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

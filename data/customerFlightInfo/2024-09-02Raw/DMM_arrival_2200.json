@@ -1,0 +1,66 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "KWI",
+                    "Scheduled": {
+                        "Date": "2024-09-02",
+                        "Time": "21:00"
+                    },
+                    "Terminal": {
+                        "Name": "1"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "DMM",
+                    "Scheduled": {
+                        "Date": "2024-09-02",
+                        "Time": "22:05"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "624"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "CD",
+                    "Description": "Flight Cancelled"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DMM/2024-09-02T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DMM/2024-09-02T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DMM/2024-09-03T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

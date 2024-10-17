@@ -1,0 +1,192 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "08:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "09:10"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H38"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "09:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "10:13"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5426"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7373"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8754"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2500"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "10:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "10:05"
+                        },
+                        "Terminal": {
+                            "Gate": "B04"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "10:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "10:16"
+                        },
+                        "Status": {
+                            "Code": "OT",
+                            "Description": "Flight On Time"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "2173"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "OT",
+                        "Description": "Flight On Time"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "10:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "11:03"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "G04"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MAN",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "12:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "12:32"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "463"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAN/2024-07-27T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAN/2024-07-27T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MAN/2024-07-27T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

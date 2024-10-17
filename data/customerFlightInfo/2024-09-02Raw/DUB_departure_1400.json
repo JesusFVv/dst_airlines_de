@@ -1,0 +1,130 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-09-02",
+                            "Time": "12:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-02",
+                            "Time": "14:36"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-09-02",
+                            "Time": "15:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-02",
+                            "Time": "17:10"
+                        },
+                        "Terminal": {
+                            "Gate": "A90"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "E6",
+                        "FlightNumber": "9395"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-09-02",
+                            "Time": "17:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-02",
+                            "Time": "17:45"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "307A"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-02",
+                            "Time": "21:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-02",
+                            "Time": "20:55"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H48"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2519"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-09-02T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-09-02T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-09-02T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

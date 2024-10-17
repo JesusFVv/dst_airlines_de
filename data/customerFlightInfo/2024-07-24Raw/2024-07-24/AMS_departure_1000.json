@@ -1,0 +1,335 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "AMS",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "09:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "10:01"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "11:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "11:22"
+                        },
+                        "Terminal": {
+                            "Gate": "A67"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6781"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9791"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "725"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "AMS",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "09:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "10:08"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "11:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "11:45"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "SBS"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "ET",
+                            "FlightNumber": "1217"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "372"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "AMS",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "10:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "10:16"
+                        },
+                        "Terminal": {
+                            "Gate": "B31"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "11:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "11:21"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B10"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9074"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5411"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9195"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "987"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32V"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "AMS",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "11:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "11:25"
+                        },
+                        "Terminal": {
+                            "Gate": "B17"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "12:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "12:44"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "T02S"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9482"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7853"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2303"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "AMS",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "11:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "12:08"
+                        },
+                        "Terminal": {
+                            "Gate": "B15"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-24",
+                            "Time": "12:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-24",
+                            "Time": "13:06"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A30"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9072"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7647"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9203"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "989"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/AMS/2024-07-24T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/AMS/2024-07-24T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/AMS/2024-07-24T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 5
+        }
+    }
+}

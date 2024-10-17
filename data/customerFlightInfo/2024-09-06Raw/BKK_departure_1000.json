@@ -1,0 +1,147 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "BKK",
+                        "Scheduled": {
+                            "Date": "2024-09-06",
+                            "Time": "12:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-06",
+                            "Time": "12:47"
+                        },
+                        "Terminal": {
+                            "Gate": "S111"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-06",
+                            "Time": "19:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-06",
+                            "Time": "19:07"
+                        },
+                        "Terminal": {
+                            "Gate": "E34"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "TG",
+                            "FlightNumber": "7102"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "181"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "77W"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BKK",
+                        "Scheduled": {
+                            "Date": "2024-09-06",
+                            "Time": "13:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-06",
+                            "Time": "13:09"
+                        },
+                        "Terminal": {
+                            "Gate": "S113"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-06",
+                            "Time": "19:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-06",
+                            "Time": "18:58"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "G11A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "6369"
+                            },
+                            {
+                                "AirlineID": "TG",
+                                "FlightNumber": "7202"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "016"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "772"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-09-06T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-09-06T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-09-06T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

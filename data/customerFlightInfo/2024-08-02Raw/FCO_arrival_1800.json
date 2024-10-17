@@ -1,0 +1,504 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "16:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "16:51"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A30"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "17:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "18:26"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9700"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8802"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "236"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "16:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "16:56"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G28"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "18:15"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9471"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8874"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1870"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "16:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "17:37"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A19"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "18:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "19:16"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9405"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "238"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32V"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "16:40"
+                        },
+                        "Terminal": {
+                            "Gate": "B35"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "18:40"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A01"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9886"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "17:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "17:48"
+                        },
+                        "Terminal": {
+                            "Gate": "A71"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "19:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "19:01"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "1732"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "18:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "18:31"
+                        },
+                        "Terminal": {
+                            "Gate": "A50"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "20:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "20:33"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "3183"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "19:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "19:50"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F02"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "20:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "21:18"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "505"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "STR",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "19:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "19:20"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "316"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "20:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "21:00"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A74"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "2882"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "19:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "19:45"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G03"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FCO",
+                        "Scheduled": {
+                            "Date": "2024-08-02",
+                            "Time": "21:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-02",
+                            "Time": "21:14"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9563"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1872"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FCO/2024-08-02T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FCO/2024-08-02T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/FCO/2024-08-02T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 9
+        }
+    }
+}

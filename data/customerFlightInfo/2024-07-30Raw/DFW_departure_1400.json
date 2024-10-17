@@ -1,0 +1,91 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "DFW",
+                    "Scheduled": {
+                        "Date": "2024-07-30",
+                        "Time": "15:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-30",
+                        "Time": "16:28"
+                    },
+                    "Terminal": {
+                        "Name": "D",
+                        "Gate": "D14"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-31",
+                        "Time": "08:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-31",
+                        "Time": "09:06"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "Area A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8865"
+                        },
+                        {
+                            "AirlineID": "TG",
+                            "FlightNumber": "7703"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "439"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-07-30T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-07-30T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-07-30T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

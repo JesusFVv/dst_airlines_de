@@ -1,0 +1,81 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-07-10",
+                        "Time": "05:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-10",
+                        "Time": "05:51"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "G41"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "RHO",
+                    "Scheduled": {
+                        "Date": "2024-07-10",
+                        "Time": "09:35"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-10",
+                        "Time": "09:35"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "4320"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "4Y",
+                    "FlightNumber": "1250"
+                },
+                "Equipment": {
+                    "AircraftCode": "32A"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MUC/2024-07-10T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MUC/2024-07-09T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MUC/2024-07-10T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

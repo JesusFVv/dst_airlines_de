@@ -1,0 +1,76 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "NCE",
+                    "Scheduled": {
+                        "Date": "2024-09-05",
+                        "Time": "06:00"
+                    },
+                    "Terminal": {
+                        "Name": "1"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-09-05",
+                        "Time": "07:25"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "G04"
+                    },
+                    "Status": {
+                        "Code": "NO",
+                        "Description": "No Status"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9480"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "2277"
+                },
+                "Equipment": {
+                    "AircraftCode": "321"
+                },
+                "Status": {
+                    "Code": "CD",
+                    "Description": "Flight Cancelled"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-09-05T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-09-04T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-09-05T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

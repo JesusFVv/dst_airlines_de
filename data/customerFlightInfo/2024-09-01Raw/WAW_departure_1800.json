@@ -1,0 +1,255 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "18:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "18:16"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "20:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "20:06"
+                        },
+                        "Terminal": {
+                            "Gate": "A56"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "2556"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "19:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "18:50"
+                        },
+                        "Terminal": {
+                            "Gate": "036"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "20:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "20:26"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "BSO"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "ET",
+                                "FlightNumber": "1612"
+                            },
+                            {
+                                "AirlineID": "LO",
+                                "FlightNumber": "4895"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "1351"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "CR9"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "19:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "19:38"
+                        },
+                        "Terminal": {
+                            "Gate": "044"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "20:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "20:47"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F08A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "ET",
+                                "FlightNumber": "1207"
+                            },
+                            {
+                                "AirlineID": "LO",
+                                "FlightNumber": "5007"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "632"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "WAW",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "19:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "20:45"
+                        },
+                        "Terminal": {
+                            "Gate": "041"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-09-01",
+                            "Time": "21:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-01",
+                            "Time": "22:44"
+                        },
+                        "Terminal": {
+                            "Gate": "GRA"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LO",
+                            "FlightNumber": "5055"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "1353"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/WAW/2024-09-01T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/WAW/2024-09-01T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/WAW/2024-09-01T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 4
+        }
+    }
+}

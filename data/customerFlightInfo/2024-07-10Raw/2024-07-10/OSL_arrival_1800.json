@@ -1,0 +1,152 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "15:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "16:25"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K04"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "17:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "18:29"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9110"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3698"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9438"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2454"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "16:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "16:29"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A38"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-10",
+                            "Time": "18:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-10",
+                            "Time": "18:16"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3620"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9536"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "858"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-07-10T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-07-10T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-07-10T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

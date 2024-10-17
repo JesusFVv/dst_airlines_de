@@ -1,0 +1,98 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-08-31",
+                        "Time": "22:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-01",
+                        "Time": "09:28"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B23"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "GRU",
+                    "Scheduled": {
+                        "Date": "2024-09-01",
+                        "Time": "04:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-01",
+                        "Time": "15:48"
+                    },
+                    "Terminal": {
+                        "Name": "3"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AI",
+                            "FlightNumber": "8898"
+                        },
+                        {
+                            "AirlineID": "CA",
+                            "FlightNumber": "6251"
+                        },
+                        {
+                            "AirlineID": "NH",
+                            "FlightNumber": "5896"
+                        },
+                        {
+                            "AirlineID": "SQ",
+                            "FlightNumber": "2196"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "506"
+                },
+                "Equipment": {
+                    "AircraftCode": "74H"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/GRU/2024-09-01T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/GRU/2024-09-01T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/GRU/2024-09-01T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

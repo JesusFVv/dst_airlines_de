@@ -1,0 +1,367 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "16:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "16:38"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A23"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "18:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "18:34"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9070"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "804"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "16:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "16:51"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G34"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "18:43"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2422"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32A"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "17:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "17:32"
+                        },
+                        "Terminal": {
+                            "Gate": "B56"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "19:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "19:31"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "BT",
+                        "FlightNumber": "9212"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "17:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "18:55"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F06"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "19:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "20:52"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OU",
+                            "FlightNumber": "5564"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "315"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "STR",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "19:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "19:08"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "316"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "21:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "21:11"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "LH",
+                            "FlightNumber": "5347"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "E6",
+                        "FlightNumber": "4607"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "19:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "19:23"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A64"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "21:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "21:20"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1400"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6189"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2106"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9194"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "844"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32M"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-09-09T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-09-09T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-09-09T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 6
+        }
+    }
+}

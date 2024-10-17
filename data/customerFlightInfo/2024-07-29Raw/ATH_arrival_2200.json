@@ -1,0 +1,194 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-29",
+                            "Time": "19:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "20:31"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G48"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ATH",
+                        "Scheduled": {
+                            "Date": "2024-07-29",
+                            "Time": "22:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "23:47"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1808"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "7962"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1756"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Q"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-29",
+                            "Time": "21:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "21:13"
+                        },
+                        "Terminal": {
+                            "Gate": "A63"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ATH",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "00:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "00:39"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1990"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "8184"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "1842"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-29",
+                            "Time": "22:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "22:12"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F07"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ATH",
+                        "Scheduled": {
+                            "Date": "2024-07-30",
+                            "Time": "01:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-30",
+                            "Time": "01:06"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "803"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ATH/2024-07-29T22:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ATH/2024-07-29T18:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ATH/2024-07-30T02:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

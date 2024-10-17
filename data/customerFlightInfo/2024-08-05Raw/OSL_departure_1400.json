@@ -1,0 +1,203 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-08-05",
+                            "Time": "14:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-05",
+                            "Time": "14:30"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-08-05",
+                            "Time": "16:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-05",
+                            "Time": "16:40"
+                        },
+                        "Terminal": {
+                            "Gate": "B36"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "SK",
+                            "FlightNumber": "3517"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "2L",
+                        "FlightNumber": "1211"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "295"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-08-05",
+                            "Time": "15:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-05",
+                            "Time": "15:15"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-08-05",
+                            "Time": "17:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-05",
+                            "Time": "17:11"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "SBS"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "OU",
+                                "FlightNumber": "5553"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "9418"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "336"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "E95"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-08-05",
+                            "Time": "15:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-05",
+                            "Time": "16:13"
+                        },
+                        "Terminal": {
+                            "Gate": "D11"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-05",
+                            "Time": "17:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-05",
+                            "Time": "18:03"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K13"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "A3",
+                                "FlightNumber": "1582"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3212"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2425"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-08-05T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-08-05T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-08-05T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

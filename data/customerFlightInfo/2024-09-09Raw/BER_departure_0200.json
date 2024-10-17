@@ -1,0 +1,162 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-08",
+                            "Time": "20:20"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C06"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "TBS",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "02:15"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4X",
+                        "FlightNumber": "8992"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "05:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "05:31"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A17"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "IBZ",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "08:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "08:14"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "8540"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "21N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "06:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "06:38"
+                        },
+                        "Terminal": {
+                            "Gate": "C15"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "TBS",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "11:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "12:35"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "4X",
+                        "FlightNumber": "8992"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BER/2024-09-09T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BER/2024-09-08T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BER/2024-09-09T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

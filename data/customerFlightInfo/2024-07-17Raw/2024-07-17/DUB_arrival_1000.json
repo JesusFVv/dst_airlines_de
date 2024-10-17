@@ -1,0 +1,194 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "10:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "10:36"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B25"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "11:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "11:39"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7469"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2170"
+                            },
+                            {
+                                "AirlineID": "WY",
+                                "FlightNumber": "5265"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "978"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Q"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "11:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "11:23"
+                        },
+                        "Terminal": {
+                            "Gate": "A80"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "12:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "12:07"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9394"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31B"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "11:05"
+                        },
+                        "Terminal": {
+                            "Gate": "D41"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUB",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "12:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "12:54"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "400"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-07-17T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-07-17T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DUB/2024-07-17T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

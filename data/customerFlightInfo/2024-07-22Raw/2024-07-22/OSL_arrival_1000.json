@@ -1,0 +1,201 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-22",
+                            "Time": "08:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-22",
+                            "Time": "09:13"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "K14"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-22",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-22",
+                            "Time": "11:25"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9641"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "5430"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3678"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "BT",
+                        "FlightNumber": "2452"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "HAM",
+                        "Scheduled": {
+                            "Date": "2024-07-22",
+                            "Time": "11:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-22",
+                            "Time": "11:14"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "C07"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-22",
+                            "Time": "12:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-22",
+                            "Time": "12:37"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "7198"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-22",
+                            "Time": "10:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-22",
+                            "Time": "11:33"
+                        },
+                        "Terminal": {
+                            "Gate": "A62"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "OSL",
+                        "Scheduled": {
+                            "Date": "2024-07-22",
+                            "Time": "13:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-22",
+                            "Time": "13:45"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6857"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3516"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "2L",
+                        "FlightNumber": "1210"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "295"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-07-22T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-07-22T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/OSL/2024-07-22T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

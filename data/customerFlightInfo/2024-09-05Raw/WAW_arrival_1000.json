@@ -1,0 +1,103 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-09-05",
+                        "Time": "12:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-05",
+                        "Time": "12:25"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B10"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "WAW",
+                    "Scheduled": {
+                        "Date": "2024-09-05",
+                        "Time": "13:40"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-05",
+                        "Time": "13:53"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "A3",
+                            "FlightNumber": "1472"
+                        },
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9080"
+                        },
+                        {
+                            "AirlineID": "ET",
+                            "FlightNumber": "1623"
+                        },
+                        {
+                            "AirlineID": "LG",
+                            "FlightNumber": "1489"
+                        },
+                        {
+                            "AirlineID": "LO",
+                            "FlightNumber": "4892"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8890"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "1348"
+                },
+                "Equipment": {
+                    "AircraftCode": "321"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-09-05T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-09-05T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/WAW/2024-09-05T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

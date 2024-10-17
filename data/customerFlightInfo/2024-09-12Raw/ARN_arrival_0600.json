@@ -1,0 +1,247 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "06:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "06:01"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G27"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "08:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "07:55"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2412"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "CR9"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "07:00"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "07:02"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A34"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "09:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "08:59"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6191"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9346"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "800"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "321"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "07:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "07:14"
+                        },
+                        "Terminal": {
+                            "Gate": "B32"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "09:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "09:08"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "6936"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9216"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32Z"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "07:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "07:13"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "F35"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ARN",
+                        "Scheduled": {
+                            "Date": "2024-09-12",
+                            "Time": "09:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-12",
+                            "Time": "09:07"
+                        },
+                        "Terminal": {
+                            "Name": "5"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "311"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-09-12T06:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-09-12T02:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ARN/2024-09-12T10:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 4
+        }
+    }
+}

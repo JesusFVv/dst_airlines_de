@@ -1,0 +1,84 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "ZRH",
+                    "Scheduled": {
+                        "Date": "2024-09-02",
+                        "Time": "13:10"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-02",
+                        "Time": "14:07"
+                    },
+                    "Terminal": {
+                        "Gate": "E35"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ORD",
+                    "Scheduled": {
+                        "Date": "2024-09-02",
+                        "Time": "15:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-02",
+                        "Time": "16:26"
+                    },
+                    "Terminal": {
+                        "Name": "5",
+                        "Gate": "M16"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9726"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX",
+                    "FlightNumber": "008"
+                },
+                "Equipment": {
+                    "AircraftCode": "77W"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-09-02T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-09-02T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-09-02T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MUC",
+                    "Scheduled": {
+                        "Date": "2024-09-11",
+                        "Time": "15:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-11",
+                        "Time": "16:26"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "L21"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ORD",
+                    "Scheduled": {
+                        "Date": "2024-09-11",
+                        "Time": "18:15"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-11",
+                        "Time": "18:36"
+                    },
+                    "Terminal": {
+                        "Name": "5",
+                        "Gate": "M20"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "8855"
+                        },
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9459"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "434"
+                },
+                "Equipment": {
+                    "AircraftCode": "35Z"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-09-11T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-09-11T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/ORD/2024-09-11T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

@@ -1,0 +1,260 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "NCE",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "09:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "12:31"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BER",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "12:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "14:17"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "N01"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "8427"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "21N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "NCE",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "10:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "10:25"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A32"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "11:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "11:54"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Area A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9371"
+                            },
+                            {
+                                "AirlineID": "MS",
+                                "FlightNumber": "9019"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9057"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "1059"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "NCE",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "12:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "13:35"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "14:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "15:12"
+                        },
+                        "Terminal": {
+                            "Gate": "A52"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "3618"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "NCE",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "13:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "13:51"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "A31"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-17",
+                            "Time": "14:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-17",
+                            "Time": "15:07"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "G30"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9399"
+                            },
+                            {
+                                "AirlineID": "MS",
+                                "FlightNumber": "9021"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9484"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2273"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "319"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-07-17T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-07-17T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-07-17T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 4
+        }
+    }
+}

@@ -1,0 +1,213 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "DEL",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "01:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "02:56"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "012"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "06:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "07:41"
+                        },
+                        "Terminal": {
+                            "Gate": "E23"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6825"
+                            },
+                            {
+                                "AirlineID": "AI",
+                                "FlightNumber": "7713"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "147"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "333"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DEL",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "01:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "02:11"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "019"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "06:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-08-01",
+                            "Time": "06:40"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "M28"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9587"
+                            },
+                            {
+                                "AirlineID": "AI",
+                                "FlightNumber": "8763"
+                            },
+                            {
+                                "AirlineID": "SK",
+                                "FlightNumber": "3599"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "763"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "388"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "DEL",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "02:50"
+                        },
+                        "Terminal": {
+                            "Name": "3"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-08-01",
+                            "Time": "08:15"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B25A"
+                        },
+                        "Status": {
+                            "Code": "NO",
+                            "Description": "No Status"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "9353"
+                            },
+                            {
+                                "AirlineID": "AI",
+                                "FlightNumber": "8761"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "761"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "CD",
+                        "Description": "Flight Cancelled"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-08-01T02:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-07-31T22:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-08-01T06:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 3
+        }
+    }
+}

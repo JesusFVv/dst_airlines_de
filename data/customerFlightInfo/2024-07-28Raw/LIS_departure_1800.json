@@ -1,0 +1,148 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "18:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "19:55"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "22:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "23:34"
+                        },
+                        "Terminal": {
+                            "Gate": "A49"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "9603"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "21N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LIS",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-28",
+                            "Time": "20:57"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "BRU",
+                        "Scheduled": {
+                            "Date": "2024-07-28",
+                            "Time": "23:40"
+                        },
+                        "Estimated": {
+                            "Date": "2024-07-29",
+                            "Time": "00:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-29",
+                            "Time": "00:10"
+                        },
+                        "Terminal": {
+                            "Gate": "A46"
+                        },
+                        "Status": {
+                            "Code": "DL",
+                            "Description": "Flight Delayed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "EY",
+                                "FlightNumber": "7196"
+                            },
+                            {
+                                "AirlineID": "SQ",
+                                "FlightNumber": "2810"
+                            },
+                            {
+                                "AirlineID": "TP",
+                                "FlightNumber": "6766"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "SN",
+                        "FlightNumber": "3820"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "DL",
+                        "Description": "Flight Delayed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-07-28T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-07-28T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-07-28T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

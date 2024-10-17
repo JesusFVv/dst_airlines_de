@@ -1,0 +1,741 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "13:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "14:04"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A16"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "16:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "16:51"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H34"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "A3",
+                            "FlightNumber": "1603"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "CL",
+                        "FlightNumber": "2475"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "14:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "15:04"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A18"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "GVA",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "17:38"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9739"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "355"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "221"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "14:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "15:47"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "HAM",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:06"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6970"
+                            },
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "5339"
+                            },
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "9634"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "EW",
+                        "FlightNumber": "7463"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "15:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "15:27"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A16"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "VIE",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "18:20"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:23"
+                        },
+                        "Terminal": {
+                            "Name": "3",
+                            "Gate": "G09A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "AC",
+                            "FlightNumber": "6184"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "OS",
+                        "FlightNumber": "462"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "15:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "15:36"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A17"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "18:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:03"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z18"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "OU",
+                            "FlightNumber": "5485"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "909"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "16:25"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "17:04"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A23"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "19:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "19:33"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "H18"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "A3",
+                            "FlightNumber": "1456"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2477"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "16:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "16:33"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A18"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "19:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "19:06"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B27"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6136"
+                            },
+                            {
+                                "AirlineID": "OU",
+                                "FlightNumber": "5487"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "911"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:10"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "17:24"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A19"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "19:59"
+                        },
+                        "Terminal": {
+                            "Gate": "D39"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6777"
+                            },
+                            {
+                                "AirlineID": "LA",
+                                "FlightNumber": "8786"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "325"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "320"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:55"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "B33"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "GVA",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "21:23"
+                        },
+                        "Terminal": {
+                            "Name": "1"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "349"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "223"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "17:38"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A17"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "20:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "20:02"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z62"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AV",
+                                "FlightNumber": "6520"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6138"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "915"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:35"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:00"
+                        },
+                        "Terminal": {
+                            "Name": "2"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "DUS",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "19:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "20:08"
+                        },
+                        "Terminal": {
+                            "Gate": "A90"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AC",
+                                "FlightNumber": "6932"
+                            },
+                            {
+                                "AirlineID": "LH",
+                                "FlightNumber": "5331"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "E6",
+                        "FlightNumber": "9465"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "31D"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LHR",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "17:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "18:02"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "A23"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-07-27",
+                            "Time": "20:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-27",
+                            "Time": "20:55"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L08"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "AV",
+                                "FlightNumber": "6524"
+                            },
+                            {
+                                "AirlineID": "NH",
+                                "FlightNumber": "6142"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "2479"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "32N"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LHR/2024-07-27T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LHR/2024-07-27T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LHR/2024-07-27T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 12
+        }
+    }
+}

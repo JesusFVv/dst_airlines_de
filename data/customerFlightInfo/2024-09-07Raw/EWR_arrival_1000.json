@@ -1,0 +1,84 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "VIE",
+                    "Scheduled": {
+                        "Date": "2024-09-07",
+                        "Time": "10:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-07",
+                        "Time": "10:58"
+                    },
+                    "Terminal": {
+                        "Name": "3",
+                        "Gate": "G11"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "EWR",
+                    "Scheduled": {
+                        "Date": "2024-09-07",
+                        "Time": "13:55"
+                    },
+                    "Actual": {
+                        "Date": "2024-09-07",
+                        "Time": "13:51"
+                    },
+                    "Terminal": {
+                        "Name": "B"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9842"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "OS",
+                    "FlightNumber": "089"
+                },
+                "Equipment": {
+                    "AircraftCode": "772"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-09-07T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-09-07T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-09-07T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

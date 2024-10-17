@@ -1,0 +1,94 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "FRA",
+                    "Scheduled": {
+                        "Date": "2024-07-08",
+                        "Time": "09:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-08",
+                        "Time": "09:14"
+                    },
+                    "Terminal": {
+                        "Name": "1",
+                        "Gate": "B30"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "IST",
+                    "Scheduled": {
+                        "Date": "2024-07-08",
+                        "Time": "13:05"
+                    },
+                    "Actual": {
+                        "Date": "2024-07-08",
+                        "Time": "13:20"
+                    },
+                    "Terminal": {
+                        "Gate": "B05B"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": [
+                        {
+                            "AirlineID": "AC",
+                            "FlightNumber": "9439"
+                        },
+                        {
+                            "AirlineID": "NH",
+                            "FlightNumber": "5881"
+                        },
+                        {
+                            "AirlineID": "UA",
+                            "FlightNumber": "9034"
+                        }
+                    ]
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "1298"
+                },
+                "Equipment": {
+                    "AircraftCode": "32A"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-08T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-08T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/IST/2024-07-08T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

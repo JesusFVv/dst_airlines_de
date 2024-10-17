@@ -1,0 +1,80 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "MIA",
+                    "Scheduled": {
+                        "Date": "2024-08-07",
+                        "Time": "19:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-07",
+                        "Time": "19:55"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "ZRH",
+                    "Scheduled": {
+                        "Date": "2024-08-08",
+                        "Time": "10:50"
+                    },
+                    "Actual": {
+                        "Date": "2024-08-08",
+                        "Time": "10:35"
+                    },
+                    "Terminal": {
+                        "Gate": "E23"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "MarketingCarrierList": {
+                    "MarketingCarrier": {
+                        "AirlineID": "UA",
+                        "FlightNumber": "9723"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LX",
+                    "FlightNumber": "065"
+                },
+                "Equipment": {
+                    "AircraftCode": "77W"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-08-07T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-08-07T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-08-07T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

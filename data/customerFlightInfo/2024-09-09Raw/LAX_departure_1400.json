@@ -1,0 +1,172 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "LAX",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "14:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "15:03"
+                        },
+                        "Terminal": {
+                            "Name": "B",
+                            "Gate": "148"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "10:45"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "10:53"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "B23"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8844"
+                            },
+                            {
+                                "AirlineID": "NZ",
+                                "FlightNumber": "4217"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7320"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7251"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "457"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "74H"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "LAX",
+                        "Scheduled": {
+                            "Date": "2024-09-09",
+                            "Time": "17:30"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-09",
+                            "Time": "17:25"
+                        },
+                        "Terminal": {
+                            "Name": "B",
+                            "Gate": "148"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "MUC",
+                        "Scheduled": {
+                            "Date": "2024-09-10",
+                            "Time": "13:40"
+                        },
+                        "Actual": {
+                            "Date": "2024-09-10",
+                            "Time": "13:37"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "L30"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": [
+                            {
+                                "AirlineID": "UA",
+                                "FlightNumber": "8861"
+                            },
+                            {
+                                "AirlineID": "NZ",
+                                "FlightNumber": "4215"
+                            },
+                            {
+                                "AirlineID": "OS",
+                                "FlightNumber": "7330"
+                            },
+                            {
+                                "AirlineID": "SN",
+                                "FlightNumber": "7247"
+                            }
+                        ]
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "453"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "388"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-09-09T14:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-09-09T10:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-09-09T18:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}

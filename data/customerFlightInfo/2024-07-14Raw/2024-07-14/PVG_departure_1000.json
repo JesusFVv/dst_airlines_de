@@ -1,0 +1,137 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": [
+                {
+                    "Departure": {
+                        "AirportCode": "PVG",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "10:05"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "09:59"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "D65"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "ZRH",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "18:15"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "17:24"
+                        },
+                        "Terminal": {
+                            "Gate": "E35"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LX",
+                        "FlightNumber": "189"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "343"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                {
+                    "Departure": {
+                        "AirportCode": "PVG",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "10:55"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "11:41"
+                        },
+                        "Terminal": {
+                            "Name": "2",
+                            "Gate": "D71"
+                        },
+                        "Status": {
+                            "Code": "DP",
+                            "Description": "Flight Departed"
+                        }
+                    },
+                    "Arrival": {
+                        "AirportCode": "FRA",
+                        "Scheduled": {
+                            "Date": "2024-07-14",
+                            "Time": "18:50"
+                        },
+                        "Actual": {
+                            "Date": "2024-07-14",
+                            "Time": "19:02"
+                        },
+                        "Terminal": {
+                            "Name": "1",
+                            "Gate": "Z50A"
+                        },
+                        "Status": {
+                            "Code": "LD",
+                            "Description": "Flight Landed"
+                        }
+                    },
+                    "MarketingCarrierList": {
+                        "MarketingCarrier": {
+                            "AirlineID": "CA",
+                            "FlightNumber": "6229"
+                        }
+                    },
+                    "OperatingCarrier": {
+                        "AirlineID": "LH",
+                        "FlightNumber": "729"
+                    },
+                    "Equipment": {
+                        "AircraftCode": "346"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                }
+            ]
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-07-14T10:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-07-14T06:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-07-14T14:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 2
+        }
+    }
+}
