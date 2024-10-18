@@ -22,6 +22,6 @@ source .env
 set +a
 
 set -e
-init_dst_services_without_airflow
-# init_airflow
+# init_dst_services_without_airflow
+init_airflow
 set +e

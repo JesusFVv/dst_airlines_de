@@ -13,6 +13,7 @@ load_dotenv()
 RABBITMQ_HOST = os.environ['RABBITMQ_HOST']
 RABBITMQ_PORT = os.environ['RABBITMQ_PORT']
 FLIGHT_SCHEDULES_CHANNEL=os.environ['FLIGHT_SCHEDULES_CHANNEL']
+AIRPORTS_FILE_PATH = os.environ['AIRPORTS_FILE_PATH']
 
 
 def load_airports_icao() -> List[str]:
@@ -21,7 +22,7 @@ def load_airports_icao() -> List[str]:
     Returns:
         List[str]: _description_
     """
-    airports_file_path = "/home/ubuntu/dst_airlines_de/data/airports/airports.csv"
+    airports_file_path = AIRPORTS_FILE_PATH
     with open(airports_file_path, "r", encoding="utf-8") as file:
         file.readline()
         airports = file.readlines()
@@ -56,6 +57,18 @@ def get_flight_date() -> Iterator[str]:
     for x in range(1, numdays + 1):
         yield (date_base + datetime.timedelta(days=x)).isoformat()
 
+
+def get_flight_dates_for_backlog() -> Iterator[str]:
+    """Return the dates from (today + 1 day) to (today + NumDays) in iso format
+
+    Returns:
+        str: _description_
+    """
+    initial_offset_in_days = 30
+    numdays = 60
+    date_base = datetime.date.today() + datetime.timedelta(days=initial_offset_in_days)
+    for x in range(1, numdays + 1):
+        yield (date_base + datetime.timedelta(days=x)).isoformat()
 
 def create_message(date: str, flight_route: List[str]) -> str:
     """Create the message with the date and the flight route

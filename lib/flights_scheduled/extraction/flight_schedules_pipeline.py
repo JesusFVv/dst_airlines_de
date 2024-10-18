@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any
 import itertools
 
 import dlt
@@ -9,7 +9,7 @@ from dlt.sources.rest_api import (
 )
 from dlt.sources.helpers.rest_client.auth import OAuth2ClientCredentials
 from dlt.pipeline.exceptions import PipelineStepFailed
-import pandas as pd
+
 
 BASE_URL = dlt.config["sources.lufthansa_api.base_url"]
 ACCES_TOKEN_URL = dlt.secrets["source.lufthansaAPI.acces_token_url"]

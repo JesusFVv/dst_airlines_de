@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 import os
 import time
+import datetime
 import json
-import time
 
 from dotenv import load_dotenv
 import pika
 
-from lufthansa_api_pipeline import load_flight_schedules
+from flight_schedules_pipeline import load_flight_schedules
 
 
 load_dotenv()
@@ -48,6 +48,6 @@ def main():
 if __name__ == "__main__":
     while True:
         main()
-        print("")
+        print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: Sleeping for 30 minutes  ZZZZZZZZZZZZZ")
         time.sleep(30*60)  # Sleep during 30 minutes before restarting again
     

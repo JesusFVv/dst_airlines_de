@@ -61,15 +61,17 @@ docker logs -f nginx
 SSL certificate are needed for the HTTPS acces. To create a new certificate, run the following commands. But, those certificates are not issued by any recognize autority, so we still need to say to the browser that we trust the certificate manually.
 
 ```bash
-PROJECT_ABSOLUT_PATH=/home/ubuntu/dst_airlines_de
+# In project root path create the SSL certificates
 sudo openssl req -newkey rsa:4096 \
-    -x509 \
-    -sha256 \
-    -days 3650 \
-    -nodes \
-    -out ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm2.crt \
-    -keyout ${PROJECT_ABSOLUT_PATH}/etc/ssl/certs/dst_vm2.key \
-    -subj "/C=FR/ST=Paris/L=Paris/O=SAE/OU=IT Department/CN=server dst project"
+-x509 \
+-sha256 \
+-days 3650 \
+-nodes \
+-out dst_vm.crt \
+-keyout dst_vm.key \
+-subj "/C=FR/ST=Paris/L=Paris/O=SAE/OU=IT Department/CN=server dst project"
+# Move the ssl certificates to folder
+sudo mv dst_vm.* etc/ssl/certs
 ```
 
 ## Check connection to the apps
@@ -101,6 +103,10 @@ Airflow: http://{VM-IP}:8000/airflow/
 Adaptations of the base URL needed for the following applications, in order to be able to reverse proxy them with Nginx:
 
 ### In Cloudbeaver
+
+[Configuring nginx for cloudbeaver](https://github.com/dbeaver/cloudbeaver/wiki/CloudBeaver-and-Nginx)
+
+[Editing RootURI](https://github.com/dbeaver/cloudbeaver/issues/279)
 
 The base URL for CloudBeaver have been changed to be able to acces it with Nginx. It is done with the environment variable `CLOUDBEAVER_ROOT_URI`. This will tell Cloudbeaver to add its value at the end of every URL.
 
