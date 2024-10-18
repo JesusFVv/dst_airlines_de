@@ -26,3 +26,5 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
     create role postgrest_authenticator noinherit login password 'pass_api';
     grant web_anonimous to postgrest_authenticator;
 EOSQL
+
+echo "host all all 172.0.0.0/8 scram-sha-256" > /var/lib/postgres/data/pg_hba.conf
