@@ -241,6 +241,7 @@ def build_flat_data(
 def ingest_data(
     db_config_filepath: PosixPath,
     sql_table_name_cooked: str,
+    truncate_query: str,
     gen: Generator[dict, None, None],
 ) -> None:
     """Ingest data into Postgres database
@@ -248,27 +249,37 @@ def ingest_data(
     Args:
         db_config_filepath (PosixPath): absolute path to the db config file
         sql_table_name_cooked (str): SQL table name where raw cooked are stored
+        truncate_query (str): SQL query to truncate cooked table
         gen (Generator[dict, None, None]): a generator returning formatted data as a dictionary
     """
     # Database connection
     conn, cur = utils.connect_db(db_config_filepath)
 
-    try:
-        for idx, cooked_data in enumerate(gen, start=1):
+    # Remove all data from cooked table before filling it
+    cur.execute(truncate_query)
+    conn.commit()
+
+    # Insert data into cooked table
+    cnt = 1
+    for cooked_data in gen:
+        try:
             utils.insert_data_into_db(cur, sql_table_name_cooked, cooked_data)
             conn.commit()
-            if idx%1000==0:
-                logger.info(f"{idx} rows have been loaded into the database cooked table")
-    except (Exception, psycopg2.Error) as e:
-        logger.exception(e)
-        conn.rollback()
-    finally:
-        # Close database connection
-        if conn:
-            cur.close()
-        conn.close()
-        logger.info(f"{idx} rows have been loaded into the database cooked table")
-        logger.info("Connection closed to the database")
+            if cnt%1000==0:
+                logger.info(f"{cnt} rows have been loaded into the database cooked table")
+            cnt += 1
+        except (Exception, psycopg2.Error) as e:
+            # logger.exception(e)
+            conn.rollback()
+            continue
+
+    # Close database connection
+    if conn:
+        cur.close()
+    conn.close()
+    logger.info(f"{cnt-1} rows have been loaded into the database cooked table")
+    logger.info("Connection closed to the database")
+
 
 
 if __name__ == "__main__":
@@ -285,9 +296,10 @@ if __name__ == "__main__":
     cooked_airports_data_query = f"SELECT airport, utc_offset FROM {cooked_airports_table_name}"
 
     sql_table_name_cooked = "l2.operations_customer_flight_info"
+    truncate_query = f"TRUNCATE TABLE {sql_table_name_cooked}"
 
     ########################
-    # Read data from database raw table
+    # Read data from database l1.operations_customer_flight_info table
     all_data = utils.read_data_from_db(
         db_config_filepath, raw_data_query
     )  # Returns a list of tuples. The tuple is made of 1 element: data (dict)
@@ -301,6 +313,5 @@ if __name__ == "__main__":
         all_data, df_airports_data
     )  # Generator object
     # Ingest data into cooked table
-    ingest_data(db_config_filepath, sql_table_name_cooked, gen)
+    ingest_data(db_config_filepath, sql_table_name_cooked, truncate_query, gen)
     logger.info("COOKED LOADING COMPLETED !")
-

@@ -314,8 +314,7 @@ CREATE TYPE overall_flight_code AS ENUM ('CD',
 
 CREATE TABLE IF NOT EXISTS l2.operations_customer_flight_info (
     id SERIAL PRIMARY KEY,
-    departure_airport_code CHAR(3) NOT NULL REFERENCES l2.refdata_airports(airport), -- ON DELETE CASCADE,
-    -- departure_airport_code CHAR(3) NOT NULL,
+    departure_airport_code CHAR(3) NOT NULL REFERENCES l2.refdata_airports(airport),
     departure_scheduled_datetime TIMESTAMP,
     departure_estimated_datetime TIMESTAMP,
     departure_actual_datetime TIMESTAMP,
@@ -323,8 +322,7 @@ CREATE TABLE IF NOT EXISTS l2.operations_customer_flight_info (
     departure_terminal_gate TEXT,
     departure_status_code departure_flight_code,
     departure_status_description TEXT,
-    arrival_airport_code CHAR(3) NOT NULL REFERENCES l2.refdata_airports(airport), -- ON DELETE CASCADE,
-    -- arrival_airport_code CHAR(3) NOT NULL,
+    arrival_airport_code CHAR(3) NOT NULL REFERENCES l2.refdata_airports(airport),
     arrival_scheduled_datetime TIMESTAMP,
     arrival_estimated_datetime TIMESTAMP,
     arrival_actual_datetime TIMESTAMP,
@@ -332,12 +330,9 @@ CREATE TABLE IF NOT EXISTS l2.operations_customer_flight_info (
     arrival_terminal_gate TEXT,
     arrival_status_code arrival_flight_code,
     arrival_status_description TEXT,
-    operating_airline_id CHAR(3) NOT NULL REFERENCES l2.refdata_airlines(airlineid), -- ON DELETE CASCADE,
-    -- operating_airline_id CHAR(3) NOT NULL,
+    operating_airline_id CHAR(3) NOT NULL REFERENCES l2.refdata_airlines(airlineid),
     operating_flight_nb INTEGER,
     equipment_aircraft_code CHAR(3),
     overall_status_code overall_flight_code,
     overall_status_description TEXT
-    -- CONSTRAINT customer_flight_info_pk
-       -- PRIMARY KEY(operating_airline_id, operating_flight_nb, departure_scheduled_datetime)
 );
