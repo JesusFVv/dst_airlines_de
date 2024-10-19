@@ -5,5 +5,7 @@ WORKDIR /usr/src/app
 RUN pip install --no-cache-dir python-dotenv pika "dlt[postgres]"
 COPY consumer.py flight_schedules_pipeline.py ./
 COPY .dlt/config.toml .dlt/secrets.toml ./.dlt/
+RUN mkdir log
+VOLUME /usr/src/app/log
 
 CMD [ "python3", "consumer.py" ]

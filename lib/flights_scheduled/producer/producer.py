@@ -4,17 +4,20 @@ from typing import List, Iterator, Any
 import itertools
 import datetime
 import json
+import logging
 
 from dotenv import load_dotenv
 import pika
 import pika.adapters.blocking_connection
+
+logger = logging.getLogger(__name__)
 
 load_dotenv()
 RABBITMQ_HOST = os.environ['RABBITMQ_HOST']
 RABBITMQ_PORT = os.environ['RABBITMQ_PORT']
 FLIGHT_SCHEDULES_CHANNEL=os.environ['FLIGHT_SCHEDULES_CHANNEL']
 AIRPORTS_FILE_PATH = os.environ['AIRPORTS_FILE_PATH']
-
+LOG_FILE_PATH = os.environ['LOG_FILE_PATH']
 
 def load_airports_icao() -> List[str]:
     """Load the list of the considered airports
@@ -100,7 +103,7 @@ def publish_messages(channel: pika.adapters.blocking_connection.BlockingChannel)
                 properties=pika.BasicProperties(
                     delivery_mode=pika.DeliveryMode.Persistent
                 ))
-            print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: [x] Sent {message}")
+            logger.info(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: [x] Sent {message}")
     
 
 def main() -> None:
@@ -112,5 +115,14 @@ def main() -> None:
     connection.close()
 
 if __name__ == "__main__":
+    logFormatter = logging.Formatter("%(asctime)s [%(levelname)-5.5s]  %(message)s")
+    fileHandler = logging.FileHandler(f"{LOG_FILE_PATH}/producer.log")
+    fileHandler.setFormatter(logFormatter)
+    logger.addHandler(fileHandler)
+    consoleHandler = logging.StreamHandler()
+    consoleHandler.setFormatter(logFormatter)
+    logger.addHandler(consoleHandler)
+    logger.setLevel(logging.INFO)
+    
     main()
     

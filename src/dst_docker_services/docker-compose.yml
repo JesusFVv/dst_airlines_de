@@ -93,13 +93,15 @@ services:
     container_name: flight_schedules_producer
     environment:
       - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
-      - RABBITMQ_HOST=$RABBITMQ_HOST
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
       - RABBITMQ_PORT=$RABBITMQ_PORT
       - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
+      - LOG_FILE_PATH=/usr/src/app/log
     networks:
       - dst_network
     volumes:
-      - ${PROJECT_ABSOLUT_PATH}/data/airports/airports.csv:/usr/src/app/data/airports.csv:ro
+      - ${AIRPORTS_FILE_PATH}:/usr/src/app/data/airports.csv:ro
+      - ${PROJECT_ABSOLUT_PATH}/var/flight_schedules/log/producer:/usr/src/app/log
     restart: no
     depends_on:
       rabbitmq:
@@ -108,11 +110,14 @@ services:
   flight_schedules_consumer:
     image: dst_flight_schedules_consumer:latest
     environment:
-      - RABBITMQ_HOST=$RABBITMQ_HOST
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
       - RABBITMQ_PORT=$RABBITMQ_PORT
       - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
+      - LOG_FILE_PATH=/usr/src/app/log
     networks:
       - dst_network
+    volumes:
+      - ${PROJECT_ABSOLUT_PATH}/var/flight_schedules/log/consumer:/usr/src/app/log
     restart: always
     depends_on:
       rabbitmq:
