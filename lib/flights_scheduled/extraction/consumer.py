@@ -26,16 +26,19 @@ def main():
 
     def callback(ch, method, properties, body):
         message = body.decode()
-        print(f" [x] Received {message}")
+        print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: [x] Received {message}")
         message = json.loads(message)
         try:
             load_flight_schedules(message['origin'], message['destination'], message['date'])
         except ValueError as e:
             if e.args[-1] == 403:
+                print("ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...")
                 print(e)
                 ch.basic_reject(delivery_tag=method.delivery_tag)
                 connection.close()
+                return
         except Exception as e:
+            print("ERROR: UNEXPECTED ERROR, producer will not acknowledge and it will hung. Resolve manually.")
             print(e)
         else:
             print(" [x] Done")

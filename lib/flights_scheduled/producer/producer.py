@@ -100,7 +100,7 @@ def publish_messages(channel: pika.adapters.blocking_connection.BlockingChannel)
                 properties=pika.BasicProperties(
                     delivery_mode=pika.DeliveryMode.Persistent
                 ))
-            print(f" [x] Sent {message}")
+            print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: [x] Sent {message}")
     
 
 def main() -> None:
