@@ -80,12 +80,55 @@ In order to be able to reverse proxy from nginx to airflow we need to add the fo
 
 [Follow this guide](https://medium.com/apache-airflow/utilizing-dockeroperator-in-airflow-to-run-containerized-applications-in-data-engineer-projects-f596df26ea83)
 
+DockerOperator allows Airflow (even if Airflow is running inside a Docker container) to use the docker socket to launch new containers, **as if we were launching them from the host**. (ex. volumens mount paths are those for the Host)
 
-But I had to modify permissions of the docker.sock: Not Great because anybody has now access to the docker.sock. 
+Steps:
 
+- In the docker compose I declared an additional volume in the *airflow-common* service:
+```yaml
+volumes:
+  - /var/run/docker.sock:/var/run/docker.sock:rw
+```
+- Also, I had to modify the permissions of the docker.sock (Not Great because anybody has now access to the docker.sock)
 ```bash
 sudo chmod 666 /var/run/docker.sock
 # Original privileges are 660 user:root and group:docker
 ```
+- DockerOperator works now, here an example. The DockerOperator instructions, are the same as we will use for launching the container from the Host terminal.
 
-It would be a better idea to use the SSHOperator??
+```python
+from airflow.decorators import dag
+from airflow.providers.docker.operators.docker import DockerOperator
+from docker.types import Mount
+from pendulum import datetime
+
+
+@dag(start_date=datetime(2024, 10, 19), schedule=None, catchup=False)
+def airflow_docker_operator():
+
+    flight_schedules_producer = DockerOperator(
+        task_id='flight_schedules_producer',
+        image='dst_flight_schedules_producer:latest',
+        container_name='flight_schedules_producer',
+        docker_url='unix://var/run/docker.sock',
+        network_mode='dst_network',
+        mount_tmp_dir=False,
+        auto_remove='success',
+        environment={
+            'AIRPORTS_FILE_PATH': '/usr/src/app/data/airports.csv',
+            'RABBITMQ_HOST': 'rabbitmq',
+            'RABBITMQ_PORT': '5672',
+            'FLIGHT_SCHEDULES_CHANNEL': 'flight_schedules',
+            'LOG_FILE_PATH': '/usr/src/app/log',
+        },
+        mounts=[
+            Mount(source='/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de/data/airports/airports.csv', target='/usr/src/app/data/airports.csv', type="bind"),
+            Mount(source='/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de/var/flight_schedules/log/producer', target='/usr/src/app/log', type="bind"),
+        ]        
+    )
+      
+    flight_schedules_producer
+
+
+airflow_docker_operator()
+```
