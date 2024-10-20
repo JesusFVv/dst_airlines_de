@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Launch script wit command: bash lib/flights_scheduled/producer/launch_producer.sh
 set -a
 source .env
 set +a
