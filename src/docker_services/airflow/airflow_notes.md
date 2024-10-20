@@ -76,3 +76,16 @@ In order to be able to reverse proxy from nginx to airflow we need to add the fo
   }
   ```
   
+## Use DockerOperator
+
+[Follow this guide](https://medium.com/apache-airflow/utilizing-dockeroperator-in-airflow-to-run-containerized-applications-in-data-engineer-projects-f596df26ea83)
+
+
+But I had to modify permissions of the docker.sock: Not Great because anybody has now access to the docker.sock. 
+
+```bash
+sudo chmod 666 /var/run/docker.sock
+# Original privileges are 660 user:root and group:docker
+```
+
+It would be a better idea to use the SSHOperator??

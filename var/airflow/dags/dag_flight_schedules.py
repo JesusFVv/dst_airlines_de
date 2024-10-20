@@ -22,6 +22,7 @@ def airflow_docker_operator():
             'RABBITMQ_PORT': '5672',
             'FLIGHT_SCHEDULES_CHANNEL': 'flight_schedules',
             'LOG_FILE_PATH': '/usr/src/app/log',
+            'PROJECT_ABSOLUT_PATH': '/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de',
         },
         mounts=[
             Mount(source='/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de/data/airports/airports.csv', target='/usr/src/app/data/airports.csv', type="bind"),
