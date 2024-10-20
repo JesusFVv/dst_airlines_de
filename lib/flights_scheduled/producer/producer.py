@@ -103,7 +103,7 @@ def publish_messages(channel: pika.adapters.blocking_connection.BlockingChannel)
                 properties=pika.BasicProperties(
                     delivery_mode=pika.DeliveryMode.Persistent
                 ))
-            logger.info(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: [x] Sent {message}")
+            logger.info(f"[x] Sent {message}")
     
 
 def main() -> None:
