@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+from functools import total_ordering
 import logging
 from pathlib import Path, PosixPath
 from typing import TYPE_CHECKING
+import os
 
 if TYPE_CHECKING:
     import psycopg2
@@ -57,7 +59,7 @@ def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath
 
 
 def _get_db_cred(
-    user_path: PosixPath, pwd_path: PosixPath, docker_path: PosixPath
+    user_path: PosixPath=None, pwd_path: PosixPath=None, docker_path: PosixPath=None
 ) -> dict[str, str | int]:
     """Get some database credentials
 
@@ -69,36 +71,45 @@ def _get_db_cred(
     Returns:
         config (dict[str, str|int]): a dictionary with database config values (i.e. user, pwd, database name and port)
     """
-    import yaml
-    with open(user_path, "r") as f:
-        user = f.read()
+    if user_path is None and pwd_path is None and docker_path is None:
+        # Store database credentials in a dictionary
+        config = {}
+        config["user"] = open(os.getenv["POSTGRES_DBUSER_FILE"], 'r').read()
+        config["password"] = open(os.getenv["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
+        config["host"] = os.getenv["PGRST_HOST"]
+        config["database"] = os.getenv["POSTGRES_DB"]
+        config["port"] = os.getenv["POSTGRES_DB_PORT"]
+    else:  # Original behaivour
+        import yaml
+        with open(user_path, "r") as f:
+            user = f.read()
 
-    with open(pwd_path, "r") as f:
-        pwd = f.read()
+        with open(pwd_path, "r") as f:
+            pwd = f.read()
 
-    with open(docker_path, "r") as f:
-        docker_compose = yaml.safe_load(f)
-    services = docker_compose["services"].keys()
-    host = [x for x in services if "postgres" in x][0]
-    db_name = docker_compose["services"]["postgres_db"]["environment"][
-        "POSTGRES_DB"
-    ]
-    ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
-    port = int(ports[0].split(":")[1])
+        with open(docker_path, "r") as f:
+            docker_compose = yaml.safe_load(f)
+        services = docker_compose["services"].keys()
+        host = [x for x in services if "postgres" in x][0]
+        db_name = docker_compose["services"]["postgres_db"]["environment"][
+            "POSTGRES_DB"
+        ]
+        ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
+        port = int(ports[0].split(":")[1])
 
-    # Store database credentials in a dictionary
-    config = {}
-    config["user"] = user
-    config["password"] = pwd
-    config["host"] = host
-    config["database"] = db_name
-    config["port"] = port
+        # Store database credentials in a dictionary
+        config = {}
+        config["user"] = user
+        config["password"] = pwd
+        config["host"] = host
+        config["database"] = db_name
+        config["port"] = port
 
     return config
 
 
 def connect_db(
-    db_config_filepath: PosixPath,
+    db_config_filepath: PosixPath=None,
 ) -> tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]:
     """Connect to a Postgres database
 
@@ -109,9 +120,12 @@ def connect_db(
         (conn, cur) (tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]): a tuple containing a connector to the Postgres database and a cursor object
     """
     import psycopg2
-    user_path, pwd_path, docker_path = read_db_config(db_config_filepath)
-    db_config = _get_db_cred(user_path, pwd_path, docker_path)
-
+    if db_config_filepath:  # Original behaivour
+        user_path, pwd_path, docker_path = read_db_config(db_config_filepath)
+        db_config = _get_db_cred(user_path, pwd_path, docker_path)
+    else: # Case when DB credentials are extracted from the environment variables
+        db_config = _get_db_cred()
+        
     try:
         conn = psycopg2.connect(**db_config)
         cur = conn.cursor()
