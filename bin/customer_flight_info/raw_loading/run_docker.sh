@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -a
+source .env
+set +a
+
 # Set some variables
 readonly container_name="python_load_raw_data"
 readonly image_name_python="python:3.11-alpine3.20"
@@ -13,10 +17,10 @@ if [ -d ${tmp_build_context} ]; then
 fi
 mkdir ${tmp_build_context}
 cp * ${tmp_build_context} &>/dev/null
-cp -r /home/ubuntu/dst_airlines_de/bin/common/ ${tmp_build_context}
+cp -r ${PROJECT_ABSOLUT_PATH}/bin/common/ ${tmp_build_context}
 mv ${tmp_build_context}/common/.dockerignore ${tmp_build_context}
-cp -r /home/ubuntu/dst_airlines_de/src/project_deployment_postgres/*.txt ${tmp_build_context}
-cp -r /home/ubuntu/dst_airlines_de/src/project_deployment_postgres/*.yml ${tmp_build_context}
+cp -r ${PROJECT_ABSOLUT_PATH}/src/project_deployment_postgres/*.txt ${tmp_build_context}
+cp -r ${PROJECT_ABSOLUT_PATH}/src/project_deployment_postgres/*.yml ${tmp_build_context}
 
 # Remove container - it might be there from a previous run
 docker container inspect ${container_name} &>/dev/null && docker container rm ${container_name}
