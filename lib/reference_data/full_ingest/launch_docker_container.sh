@@ -1,6 +1,6 @@
 #!/bin/bash
 # Command to execute this script:
-#   bash bin/reference_data/full_ingest/launch_docker_container.sh
+#   bash lib/reference_data/full_ingest/launch_docker_container.sh
 
 # Load environment variables
 set -a
