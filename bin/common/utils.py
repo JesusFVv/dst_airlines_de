@@ -72,13 +72,12 @@ def _get_db_cred(
         config (dict[str, str|int]): a dictionary with database config values (i.e. user, pwd, database name and port)
     """
     if user_path is None and pwd_path is None and docker_path is None:
-        # Store database credentials in a dictionary
-        config = {}
-        config["user"] = open(os.environ["POSTGRES_DBUSER_FILE"], 'r').read()
-        config["password"] = open(os.environ["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
-        config["host"] = os.environ["POSTGRES_HOST"]
-        config["database"] = os.environ["POSTGRES_DB"]
-        config["port"] = os.environ["POSTGRES_DB_PORT"]
+        # Get database credentials from environment variables
+        user = open(os.environ["POSTGRES_DBUSER_FILE"], 'r').read()
+        pwd = open(os.environ["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
+        host = os.environ["POSTGRES_HOST"]
+        db_name = os.environ["POSTGRES_DB"]
+        port = os.environ["POSTGRES_DB_PORT"]
     else:  # Original behaivour
         import yaml
         with open(user_path, "r") as f:
@@ -97,13 +96,13 @@ def _get_db_cred(
         ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
         port = int(ports[0].split(":")[1])
 
-        # Store database credentials in a dictionary
-        config = {}
-        config["user"] = user
-        config["password"] = pwd
-        config["host"] = host
-        config["database"] = db_name
-        config["port"] = port
+    # Store database credentials in a dictionary
+    config = {}
+    config["user"] = user
+    config["password"] = pwd
+    config["host"] = host
+    config["database"] = db_name
+    config["port"] = port
 
     return config
 
