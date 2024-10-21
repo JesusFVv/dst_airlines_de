@@ -7,7 +7,7 @@ from docker.types import Mount
 from pendulum import datetime
 
 # Next is the DAG to launch DockerContainers with the DockerOperator, it only works if permissions of /var/run/docker.sock are 666
-@dag(start_date=datetime(2024, 10, 20), schedule=None, catchup=False, tags=["dst_project", "flight_schedules"])
+@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule=None, catchup=False, tags=["dst_project", "flight_schedules"])
 def flight_schedules_docker_operator():
 
     flight_schedules_producer = DockerOperator(
@@ -36,7 +36,7 @@ def flight_schedules_docker_operator():
 flight_schedules_docker_operator()
 
 
-@dag(start_date=datetime(2024, 10, 20), schedule="0 4 * * *", catchup=False, tags=["dst_project", "flight_schedules"])
+@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule="10 2 * * *", catchup=False, tags=["dst_project", "flight_schedules"])
 def flight_schedules_ssh_operator():
     flight_schedules_producer = SSHOperator(
         task_id="flight_schedules_producer",
