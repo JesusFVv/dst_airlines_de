@@ -24,11 +24,14 @@ if [ "$INIT_CONFIG" = "true" ]; then
 	sudo ./ingestRefData_00_initConfigure.sh
 fi
 
+# ABOVE CODE IS NOT NEEDED
+
 # C - CLEAR AND INIT RAW TABLES
 python3 ./common/runSqlScript.py ./ingestRefData_01_referenceDataRaw.sql
 
 # D - INGEST RAW
-python3 ./ingestRefData_02_ingestReferenceDataRaw.py ./common/database.ini /home/ubuntu/dst_airlines_de/data/referenceData
+# python3 ./ingestRefData_02_ingestReferenceDataRaw.py ./common/database.ini /home/ubuntu/dst_airlines_de/data/referenceData
+python3 ./ingestRefData_02_ingestReferenceDataRaw.py
 
 # E - INGEST COOKED
 python3 ./common/runSqlScript.py ./ingestRefData_03_referenceDataCooked.sql

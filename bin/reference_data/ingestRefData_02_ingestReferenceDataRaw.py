@@ -78,7 +78,7 @@ def get_data_by_nature(data, nature):
         logging.error(f"Error extracting data for nature {nature}: {e}")
         return []
 
-def ingest_data(tmp_folder, db_config_path):
+def ingest_data(tmp_folder, db_config_path=None):
     try:
         # Connexion à la base de données
         conn, cursor = utils.connect_db(db_config_path)
@@ -128,8 +128,8 @@ def clean_tmp_folder(tmp_folder):
             logging.error(f"ReferenceData, RAW DATA, ingestion, error deleting temporary directory : {e}")
 
 if __name__ == "__main__":
-    db_config_path = Path(sys.argv[1])
-    data_folder = sys.argv[2] if len(sys.argv) == 3 else "./"
+    db_config_path = None
+    data_folder = os.environ['DATA_FOLDER']
     tmp_folder = os.path.join(data_folder, "tmp_ingest_raw_reference_data")
 
     # Créer le dossier intermédiaire

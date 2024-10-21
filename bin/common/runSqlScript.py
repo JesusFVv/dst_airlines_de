@@ -7,6 +7,7 @@ from utils import connect_db
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 def execute_sql_script(sql_script, db_config_path=None):
     if not os.path.isfile(sql_script):
