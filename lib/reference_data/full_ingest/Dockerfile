@@ -31,6 +31,3 @@ SHELL ["/bin/bash", "-c"]
 # Run command
 CMD [ "/bin/bash", "./ingestRefData_raw.sh" ]
 
-# ENTRYPOINT [ "python3" ]
-# CMD [ "--version" ]
-
