@@ -101,7 +101,7 @@ services:
       - dst_network
     volumes:
       - ${AIRPORTS_FILE_PATH}:/usr/src/app/data/airports.csv:ro
-      - ${PROJECT_ABSOLUT_PATH}/var/flight_schedules/log/producer:/usr/src/app/log
+      - ${FLIGHT_SCHEDULES_PRODUCER_LOG_PATH}:/usr/src/app/log:rw
     restart: no
     depends_on:
       rabbitmq:
@@ -117,7 +117,8 @@ services:
     networks:
       - dst_network
     volumes:
-      - ${PROJECT_ABSOLUT_PATH}/var/flight_schedules/log/consumer:/usr/src/app/log
+      - ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/secrets.toml:/usr/src/app/.dlt/secrets.toml:ro
+      - ${FLIGHT_SCHEDULES_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
     restart: always
     depends_on:
       rabbitmq:
