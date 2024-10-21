@@ -27500,3 +27500,1431 @@ connection to server at "postgres_dst" (172.19.0.6), port 5432 failed: timeout e
 2024-10-21 04:39:13,671 [WARNI]  ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...
 2024-10-21 04:39:13,671 [WARNI]  ('403 Client Error', 403)
 2024-10-21 04:39:13,672 [WARNI]  2024-10-21 04:39:13: Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-21 09:00:01,607 [INFO ]   [*] Waiting for messages. To exit press CTRL+C
+2024-10-21 09:00:01,607 [INFO ]   [*] Waiting for messages. To exit press CTRL+C
+2024-10-21 09:00:01,610 [INFO ]  2024-10-21 09:00:01: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "LIS"}
+2024-10-21 09:00:01,610 [INFO ]  2024-10-21 09:00:01: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "FCO"}
+2024-10-21 09:00:06,748 [INFO ]   [x] Done
+2024-10-21 09:00:06,751 [INFO ]  2024-10-21 09:00:06: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "ATH"}
+2024-10-21 09:00:08,528 [INFO ]   [x] Done
+2024-10-21 09:00:08,529 [INFO ]  2024-10-21 09:00:08: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "WAW"}
+2024-10-21 09:00:10,216 [INFO ]   [x] Done
+2024-10-21 09:00:10,218 [INFO ]  2024-10-21 09:00:10: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "VIE"}
+2024-10-21 09:00:11,782 [INFO ]   [x] Done
+2024-10-21 09:00:11,783 [INFO ]  2024-10-21 09:00:11: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "ZRH"}
+2024-10-21 09:00:14,783 [INFO ]   [x] Done
+2024-10-21 09:00:14,784 [INFO ]  2024-10-21 09:00:14: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "DUB"}
+2024-10-21 09:00:17,311 [INFO ]   [x] Done
+2024-10-21 09:00:17,312 [INFO ]  2024-10-21 09:00:17: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "NCE"}
+2024-10-21 09:00:19,054 [INFO ]   [x] Done
+2024-10-21 09:00:19,056 [INFO ]  2024-10-21 09:00:19: [x] Received {"date": "2024-11-25", "origin": "DXB", "destination": "CDG"}
+2024-10-21 09:00:20,073 [INFO ]   [x] Done
+2024-10-21 09:00:20,074 [INFO ]  2024-10-21 09:00:20: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "DMM"}
+2024-10-21 09:00:20,691 [INFO ]   [x] Done
+2024-10-21 09:00:20,692 [INFO ]  2024-10-21 09:00:20: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "DXB"}
+2024-10-21 09:00:22,340 [INFO ]   [x] Done
+2024-10-21 09:00:22,341 [INFO ]  2024-10-21 09:00:22: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "BKK"}
+2024-10-21 09:00:22,976 [INFO ]   [x] Done
+2024-10-21 09:00:22,978 [INFO ]  2024-10-21 09:00:22: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "IST"}
+2024-10-21 09:00:24,899 [INFO ]   [x] Done
+2024-10-21 09:00:24,901 [INFO ]  2024-10-21 09:00:24: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "HND"}
+2024-10-21 09:00:26,705 [INFO ]   [x] Done
+2024-10-21 09:00:26,707 [INFO ]  2024-10-21 09:00:26: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "PEK"}
+2024-10-21 09:00:29,135 [INFO ]   [x] Done
+2024-10-21 09:00:29,136 [INFO ]  2024-10-21 09:00:29: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "DEL"}
+2024-10-21 09:00:30,416 [INFO ]   [x] Done
+2024-10-21 09:00:30,417 [INFO ]  2024-10-21 09:00:30: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "CAI"}
+2024-10-21 09:00:32,608 [INFO ]   [x] Done
+2024-10-21 09:00:32,609 [INFO ]  2024-10-21 09:00:32: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "CMN"}
+2024-10-21 09:00:34,459 [INFO ]   [x] Done
+2024-10-21 09:00:34,461 [INFO ]  2024-10-21 09:00:34: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "CPT"}
+2024-10-21 09:00:34,707 [INFO ]   [x] Done
+2024-10-21 09:00:34,708 [INFO ]  2024-10-21 09:00:34: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "LOS"}
+2024-10-21 09:00:36,272 [INFO ]   [x] Done
+2024-10-21 09:00:36,274 [INFO ]  2024-10-21 09:00:36: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "ALG"}
+2024-10-21 09:00:36,516 [INFO ]   [x] Done
+2024-10-21 09:00:36,517 [INFO ]  2024-10-21 09:00:36: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "NBO"}
+2024-10-21 09:00:38,341 [INFO ]   [x] Done
+2024-10-21 09:00:38,343 [INFO ]  2024-10-21 09:00:38: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "SSH"}
+2024-10-21 09:00:39,992 [INFO ]   [x] Done
+2024-10-21 09:00:39,994 [INFO ]  2024-10-21 09:00:39: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MRU"}
+2024-10-21 09:00:41,044 [INFO ]   [x] Done
+2024-10-21 09:00:41,045 [INFO ]  2024-10-21 09:00:41: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "ATL"}
+2024-10-21 09:00:41,647 [INFO ]   [x] Done
+2024-10-21 09:00:41,649 [INFO ]  2024-10-21 09:00:41: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "DFW"}
+2024-10-21 09:00:43,322 [INFO ]   [x] Done
+2024-10-21 09:00:43,323 [INFO ]  2024-10-21 09:00:43: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "DEN"}
+2024-10-21 09:00:45,829 [INFO ]   [x] Done
+2024-10-21 09:00:45,831 [INFO ]  2024-10-21 09:00:45: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "ORD"}
+2024-10-21 09:00:46,790 [INFO ]   [x] Done
+2024-10-21 09:00:46,791 [INFO ]  2024-10-21 09:00:46: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "LAX"}
+2024-10-21 09:00:47,890 [INFO ]   [x] Done
+2024-10-21 09:00:47,891 [INFO ]  2024-10-21 09:00:47: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "JFK"}
+2024-10-21 09:00:48,453 [INFO ]   [x] Done
+2024-10-21 09:00:48,455 [INFO ]  2024-10-21 09:00:48: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "LAS"}
+2024-10-21 09:00:49,592 [INFO ]   [x] Done
+2024-10-21 09:00:49,595 [INFO ]  2024-10-21 09:00:49: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MIA"}
+2024-10-21 09:00:50,184 [INFO ]   [x] Done
+2024-10-21 09:00:50,185 [INFO ]  2024-10-21 09:00:50: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MCO"}
+2024-10-21 09:00:51,033 [INFO ]   [x] Done
+2024-10-21 09:00:51,034 [INFO ]  2024-10-21 09:00:51: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "CLT"}
+2024-10-21 09:00:51,751 [INFO ]   [x] Done
+2024-10-21 09:00:51,753 [INFO ]  2024-10-21 09:00:51: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MEX"}
+2024-10-21 09:00:52,772 [INFO ]   [x] Done
+2024-10-21 09:00:52,774 [INFO ]  2024-10-21 09:00:52: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "SEA"}
+2024-10-21 09:00:53,391 [INFO ]   [x] Done
+2024-10-21 09:00:53,392 [INFO ]  2024-10-21 09:00:53: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "EWR"}
+2024-10-21 09:00:54,367 [INFO ]   [x] Done
+2024-10-21 09:00:54,368 [INFO ]  2024-10-21 09:00:54: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "SFO"}
+2024-10-21 09:00:55,079 [INFO ]   [x] Done
+2024-10-21 09:00:55,080 [INFO ]  2024-10-21 09:00:55: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "BOG"}
+2024-10-21 09:00:55,941 [INFO ]   [x] Done
+2024-10-21 09:00:55,943 [INFO ]  2024-10-21 09:00:55: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "GRU"}
+2024-10-21 09:00:57,267 [INFO ]   [x] Done
+2024-10-21 09:00:57,269 [INFO ]  2024-10-21 09:00:57: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "FRA"}
+2024-10-21 09:00:58,663 [INFO ]   [x] Done
+2024-10-21 09:00:58,665 [INFO ]  2024-10-21 09:00:58: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MUC"}
+2024-10-21 09:01:00,562 [INFO ]   [x] Done
+2024-10-21 09:01:00,564 [INFO ]  2024-10-21 09:01:00: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "BER"}
+2024-10-21 09:01:01,784 [INFO ]   [x] Done
+2024-10-21 09:01:01,785 [INFO ]  2024-10-21 09:01:01: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "AMS"}
+2024-10-21 09:01:02,665 [INFO ]   [x] Done
+2024-10-21 09:01:02,667 [INFO ]  2024-10-21 09:01:02: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "LHR"}
+2024-10-21 09:01:05,313 [INFO ]   [x] Done
+2024-10-21 09:01:05,315 [INFO ]  2024-10-21 09:01:05: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MAN"}
+2024-10-21 09:01:05,849 [INFO ]   [x] Done
+2024-10-21 09:01:05,850 [INFO ]  2024-10-21 09:01:05: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "OSL"}
+2024-10-21 09:01:07,065 [INFO ]   [x] Done
+2024-10-21 09:01:07,067 [INFO ]  2024-10-21 09:01:07: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "ARN"}
+2024-10-21 09:01:14,190 [INFO ]   [x] Done
+2024-10-21 09:01:14,192 [INFO ]  2024-10-21 09:01:14: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "MAD"}
+2024-10-21 09:01:15,399 [INFO ]   [x] Done
+2024-10-21 09:01:15,401 [INFO ]  2024-10-21 09:01:15: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "LIS"}
+2024-10-21 09:01:15,930 [INFO ]   [x] Done
+2024-10-21 09:01:15,931 [INFO ]  2024-10-21 09:01:15: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "FCO"}
+2024-10-21 09:01:18,426 [INFO ]   [x] Done
+2024-10-21 09:01:18,428 [INFO ]  2024-10-21 09:01:18: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "ATH"}
+2024-10-21 09:01:20,460 [INFO ]   [x] Done
+2024-10-21 09:01:20,462 [INFO ]  2024-10-21 09:01:20: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "WAW"}
+2024-10-21 09:01:20,972 [INFO ]   [x] Done
+2024-10-21 09:01:20,973 [INFO ]  2024-10-21 09:01:20: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "VIE"}
+2024-10-21 09:01:22,029 [INFO ]   [x] Done
+2024-10-21 09:01:22,030 [INFO ]  2024-10-21 09:01:22: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "ZRH"}
+2024-10-21 09:01:24,095 [INFO ]   [x] Done
+2024-10-21 09:01:24,096 [INFO ]  2024-10-21 09:01:24: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "DUB"}
+2024-10-21 09:01:25,145 [INFO ]   [x] Done
+2024-10-21 09:01:25,146 [INFO ]  2024-10-21 09:01:25: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "NCE"}
+2024-10-21 09:01:25,874 [INFO ]   [x] Done
+2024-10-21 09:01:25,875 [INFO ]  2024-10-21 09:01:25: [x] Received {"date": "2024-11-25", "origin": "PVG", "destination": "CDG"}
+2024-10-21 09:01:27,339 [INFO ]   [x] Done
+2024-10-21 09:01:27,341 [INFO ]  2024-10-21 09:01:27: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "DMM"}
+2024-10-21 09:01:28,024 [INFO ]   [x] Done
+2024-10-21 09:01:28,025 [INFO ]  2024-10-21 09:01:28: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "DXB"}
+2024-10-21 09:01:28,918 [INFO ]   [x] Done
+2024-10-21 09:01:28,920 [INFO ]  2024-10-21 09:01:28: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "PVG"}
+2024-10-21 09:01:31,392 [INFO ]   [x] Done
+2024-10-21 09:01:31,393 [INFO ]  2024-10-21 09:01:31: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "IST"}
+2024-10-21 09:01:33,161 [INFO ]   [x] Done
+2024-10-21 09:01:33,162 [INFO ]  2024-10-21 09:01:33: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "HND"}
+2024-10-21 09:01:33,295 [INFO ]   [x] Done
+2024-10-21 09:01:33,296 [INFO ]  2024-10-21 09:01:33: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "PEK"}
+2024-10-21 09:01:40,201 [INFO ]   [x] Done
+2024-10-21 09:01:40,203 [INFO ]  2024-10-21 09:01:40: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "DEL"}
+2024-10-21 09:01:41,257 [INFO ]   [x] Done
+2024-10-21 09:01:41,258 [INFO ]  2024-10-21 09:01:41: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "CAI"}
+2024-10-21 09:01:43,055 [INFO ]   [x] Done
+2024-10-21 09:01:43,057 [INFO ]  2024-10-21 09:01:43: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "CMN"}
+2024-10-21 09:01:43,849 [INFO ]   [x] Done
+2024-10-21 09:01:43,851 [INFO ]  2024-10-21 09:01:43: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "CPT"}
+2024-10-21 09:01:44,931 [INFO ]   [x] Done
+2024-10-21 09:01:44,932 [INFO ]  2024-10-21 09:01:44: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "LOS"}
+2024-10-21 09:01:45,586 [INFO ]   [x] Done
+2024-10-21 09:01:45,588 [INFO ]  2024-10-21 09:01:45: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "ALG"}
+2024-10-21 09:01:46,898 [INFO ]   [x] Done
+2024-10-21 09:01:46,899 [INFO ]  2024-10-21 09:01:46: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "NBO"}
+2024-10-21 09:01:47,321 [INFO ]   [x] Done
+2024-10-21 09:01:47,323 [INFO ]  2024-10-21 09:01:47: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "SSH"}
+2024-10-21 09:01:48,929 [INFO ]   [x] Done
+2024-10-21 09:01:48,931 [INFO ]  2024-10-21 09:01:48: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MRU"}
+2024-10-21 09:01:48,943 [INFO ]   [x] Done
+2024-10-21 09:01:48,944 [INFO ]  2024-10-21 09:01:48: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "ATL"}
+2024-10-21 09:01:50,563 [INFO ]   [x] Done
+2024-10-21 09:01:50,565 [INFO ]  2024-10-21 09:01:50: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "DFW"}
+2024-10-21 09:01:50,828 [INFO ]   [x] Done
+2024-10-21 09:01:50,829 [INFO ]  2024-10-21 09:01:50: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "DEN"}
+2024-10-21 09:01:52,587 [INFO ]   [x] Done
+2024-10-21 09:01:52,588 [INFO ]  2024-10-21 09:01:52: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "ORD"}
+2024-10-21 09:01:53,306 [INFO ]   [x] Done
+2024-10-21 09:01:53,307 [INFO ]  2024-10-21 09:01:53: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "LAX"}
+2024-10-21 09:01:54,386 [INFO ]   [x] Done
+2024-10-21 09:01:54,388 [INFO ]  2024-10-21 09:01:54: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "JFK"}
+2024-10-21 09:01:55,050 [INFO ]   [x] Done
+2024-10-21 09:01:55,051 [INFO ]  2024-10-21 09:01:55: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "LAS"}
+2024-10-21 09:01:55,996 [INFO ]   [x] Done
+2024-10-21 09:01:55,998 [INFO ]  2024-10-21 09:01:55: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MIA"}
+2024-10-21 09:01:56,838 [INFO ]   [x] Done
+2024-10-21 09:01:56,839 [INFO ]  2024-10-21 09:01:56: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MCO"}
+2024-10-21 09:01:58,515 [INFO ]   [x] Done
+2024-10-21 09:01:58,517 [INFO ]  2024-10-21 09:01:58: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "CLT"}
+2024-10-21 09:02:00,095 [INFO ]   [x] Done
+2024-10-21 09:02:00,097 [INFO ]  2024-10-21 09:02:00: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MEX"}
+2024-10-21 09:02:00,586 [INFO ]   [x] Done
+2024-10-21 09:02:00,587 [INFO ]  2024-10-21 09:02:00: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "SEA"}
+2024-10-21 09:02:01,732 [INFO ]   [x] Done
+2024-10-21 09:02:01,733 [INFO ]  2024-10-21 09:02:01: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "EWR"}
+2024-10-21 09:02:02,979 [INFO ]   [x] Done
+2024-10-21 09:02:02,981 [INFO ]  2024-10-21 09:02:02: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "SFO"}
+2024-10-21 09:02:05,635 [INFO ]   [x] Done
+2024-10-21 09:02:05,636 [INFO ]  2024-10-21 09:02:05: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "BOG"}
+2024-10-21 09:02:06,366 [INFO ]   [x] Done
+2024-10-21 09:02:06,367 [INFO ]  2024-10-21 09:02:06: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "GRU"}
+2024-10-21 09:02:07,141 [INFO ]   [x] Done
+2024-10-21 09:02:07,142 [INFO ]  2024-10-21 09:02:07: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "FRA"}
+2024-10-21 09:02:08,295 [INFO ]   [x] Done
+2024-10-21 09:02:08,296 [INFO ]  2024-10-21 09:02:08: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MUC"}
+2024-10-21 09:02:09,732 [INFO ]   [x] Done
+2024-10-21 09:02:09,734 [INFO ]  2024-10-21 09:02:09: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "BER"}
+2024-10-21 09:02:11,435 [INFO ]   [x] Done
+2024-10-21 09:02:11,437 [INFO ]  2024-10-21 09:02:11: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "AMS"}
+2024-10-21 09:02:11,510 [INFO ]   [x] Done
+2024-10-21 09:02:11,512 [INFO ]  2024-10-21 09:02:11: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "LHR"}
+2024-10-21 09:02:13,530 [INFO ]   [x] Done
+2024-10-21 09:02:13,532 [INFO ]  2024-10-21 09:02:13: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MAN"}
+2024-10-21 09:02:13,593 [INFO ]   [x] Done
+2024-10-21 09:02:13,597 [INFO ]  2024-10-21 09:02:13: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "OSL"}
+2024-10-21 09:02:15,720 [INFO ]   [x] Done
+2024-10-21 09:02:15,721 [INFO ]  2024-10-21 09:02:15: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "ARN"}
+2024-10-21 09:02:17,012 [INFO ]   [x] Done
+2024-10-21 09:02:17,014 [INFO ]  2024-10-21 09:02:17: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "MAD"}
+2024-10-21 09:02:17,317 [INFO ]   [x] Done
+2024-10-21 09:02:17,319 [INFO ]  2024-10-21 09:02:17: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "LIS"}
+2024-10-21 09:02:18,611 [INFO ]   [x] Done
+2024-10-21 09:02:18,613 [INFO ]  2024-10-21 09:02:18: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "FCO"}
+2024-10-21 09:02:20,215 [INFO ]   [x] Done
+2024-10-21 09:02:20,216 [INFO ]  2024-10-21 09:02:20: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "ATH"}
+2024-10-21 09:02:21,166 [INFO ]   [x] Done
+2024-10-21 09:02:21,168 [INFO ]  2024-10-21 09:02:21: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "WAW"}
+2024-10-21 09:02:21,713 [INFO ]   [x] Done
+2024-10-21 09:02:21,715 [INFO ]  2024-10-21 09:02:21: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "VIE"}
+2024-10-21 09:02:22,763 [INFO ]   [x] Done
+2024-10-21 09:02:22,764 [INFO ]  2024-10-21 09:02:22: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "ZRH"}
+2024-10-21 09:02:24,858 [INFO ]   [x] Done
+2024-10-21 09:02:24,860 [INFO ]  2024-10-21 09:02:24: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "DUB"}
+2024-10-21 09:02:25,889 [INFO ]   [x] Done
+2024-10-21 09:02:25,891 [INFO ]  2024-10-21 09:02:25: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "NCE"}
+2024-10-21 09:02:26,711 [INFO ]   [x] Done
+2024-10-21 09:02:26,712 [INFO ]  2024-10-21 09:02:26: [x] Received {"date": "2024-11-25", "origin": "BKK", "destination": "CDG"}
+2024-10-21 09:02:27,436 [INFO ]   [x] Done
+2024-10-21 09:02:27,437 [INFO ]  2024-10-21 09:02:27: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "DMM"}
+2024-10-21 09:02:28,242 [INFO ]   [x] Done
+2024-10-21 09:02:28,243 [INFO ]  2024-10-21 09:02:28: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "DXB"}
+2024-10-21 09:02:29,802 [INFO ]   [x] Done
+2024-10-21 09:02:29,804 [INFO ]  2024-10-21 09:02:29: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "PVG"}
+2024-10-21 09:02:31,446 [INFO ]   [x] Done
+2024-10-21 09:02:31,447 [INFO ]  2024-10-21 09:02:31: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "BKK"}
+2024-10-21 09:02:31,537 [INFO ]   [x] Done
+2024-10-21 09:02:31,538 [INFO ]  2024-10-21 09:02:31: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "HND"}
+2024-10-21 09:02:32,942 [INFO ]   [x] Done
+2024-10-21 09:02:32,943 [INFO ]  2024-10-21 09:02:32: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "PEK"}
+2024-10-21 09:02:33,398 [INFO ]   [x] Done
+2024-10-21 09:02:33,400 [INFO ]  2024-10-21 09:02:33: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "DEL"}
+2024-10-21 09:02:34,500 [INFO ]   [x] Done
+2024-10-21 09:02:34,501 [INFO ]  2024-10-21 09:02:34: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "CAI"}
+2024-10-21 09:02:35,089 [INFO ]   [x] Done
+2024-10-21 09:02:35,091 [INFO ]  2024-10-21 09:02:35: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "CMN"}
+2024-10-21 09:02:38,589 [INFO ]   [x] Done
+2024-10-21 09:02:38,591 [INFO ]  2024-10-21 09:02:38: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "CPT"}
+2024-10-21 09:02:38,706 [INFO ]   [x] Done
+2024-10-21 09:02:38,708 [INFO ]  2024-10-21 09:02:38: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "LOS"}
+2024-10-21 09:02:41,222 [INFO ]   [x] Done
+2024-10-21 09:02:41,223 [INFO ]  2024-10-21 09:02:41: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "ALG"}
+2024-10-21 09:02:41,899 [INFO ]   [x] Done
+2024-10-21 09:02:41,901 [INFO ]  2024-10-21 09:02:41: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "NBO"}
+2024-10-21 09:02:43,161 [INFO ]   [x] Done
+2024-10-21 09:02:43,163 [INFO ]  2024-10-21 09:02:43: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "SSH"}
+2024-10-21 09:02:43,660 [INFO ]   [x] Done
+2024-10-21 09:02:43,662 [INFO ]  2024-10-21 09:02:43: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MRU"}
+2024-10-21 09:02:45,355 [INFO ]   [x] Done
+2024-10-21 09:02:45,357 [INFO ]  2024-10-21 09:02:45: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "ATL"}
+2024-10-21 09:02:46,418 [INFO ]   [x] Done
+2024-10-21 09:02:46,419 [INFO ]  2024-10-21 09:02:46: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "DFW"}
+2024-10-21 09:02:48,354 [INFO ]   [x] Done
+2024-10-21 09:02:48,355 [INFO ]  2024-10-21 09:02:48: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "DEN"}
+2024-10-21 09:02:49,848 [INFO ]   [x] Done
+2024-10-21 09:02:49,849 [INFO ]  2024-10-21 09:02:49: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "ORD"}
+2024-10-21 09:02:51,571 [INFO ]   [x] Done
+2024-10-21 09:02:51,572 [INFO ]  2024-10-21 09:02:51: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "LAX"}
+2024-10-21 09:02:51,926 [INFO ]   [x] Done
+2024-10-21 09:02:51,928 [INFO ]  2024-10-21 09:02:51: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "JFK"}
+2024-10-21 09:02:53,068 [INFO ]   [x] Done
+2024-10-21 09:02:53,069 [INFO ]  2024-10-21 09:02:53: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "LAS"}
+2024-10-21 09:02:53,574 [INFO ]   [x] Done
+2024-10-21 09:02:53,575 [INFO ]  2024-10-21 09:02:53: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MIA"}
+2024-10-21 09:02:55,443 [INFO ]   [x] Done
+2024-10-21 09:02:55,445 [INFO ]  2024-10-21 09:02:55: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MCO"}
+2024-10-21 09:02:57,182 [INFO ]   [x] Done
+2024-10-21 09:02:57,186 [INFO ]  2024-10-21 09:02:57: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "CLT"}
+2024-10-21 09:02:57,413 [INFO ]   [x] Done
+2024-10-21 09:02:57,414 [INFO ]  2024-10-21 09:02:57: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MEX"}
+2024-10-21 09:02:58,918 [INFO ]   [x] Done
+2024-10-21 09:02:58,919 [INFO ]  2024-10-21 09:02:58: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "SEA"}
+2024-10-21 09:02:59,650 [INFO ]   [x] Done
+2024-10-21 09:02:59,651 [INFO ]  2024-10-21 09:02:59: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "EWR"}
+2024-10-21 09:03:00,819 [INFO ]   [x] Done
+2024-10-21 09:03:00,820 [INFO ]  2024-10-21 09:03:00: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "SFO"}
+2024-10-21 09:03:01,822 [INFO ]   [x] Done
+2024-10-21 09:03:01,823 [INFO ]  2024-10-21 09:03:01: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "BOG"}
+2024-10-21 09:03:02,784 [INFO ]   [x] Done
+2024-10-21 09:03:02,789 [INFO ]  2024-10-21 09:03:02: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "GRU"}
+2024-10-21 09:03:04,120 [INFO ]   [x] Done
+2024-10-21 09:03:04,121 [INFO ]  2024-10-21 09:03:04: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "FRA"}
+2024-10-21 09:03:04,546 [INFO ]   [x] Done
+2024-10-21 09:03:04,547 [INFO ]  2024-10-21 09:03:04: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MUC"}
+2024-10-21 09:03:06,296 [INFO ]   [x] Done
+2024-10-21 09:03:06,297 [INFO ]  2024-10-21 09:03:06: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "BER"}
+2024-10-21 09:03:07,919 [INFO ]   [x] Done
+2024-10-21 09:03:07,921 [INFO ]  2024-10-21 09:03:07: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "AMS"}
+2024-10-21 09:03:09,108 [INFO ]   [x] Done
+2024-10-21 09:03:09,110 [INFO ]  2024-10-21 09:03:09: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "LHR"}
+2024-10-21 09:03:10,718 [INFO ]   [x] Done
+2024-10-21 09:03:10,720 [INFO ]  2024-10-21 09:03:10: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MAN"}
+2024-10-21 09:03:12,926 [INFO ]   [x] Done
+2024-10-21 09:03:12,927 [INFO ]  2024-10-21 09:03:12: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "OSL"}
+2024-10-21 09:03:14,601 [INFO ]   [x] Done
+2024-10-21 09:03:14,603 [INFO ]  2024-10-21 09:03:14: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "ARN"}
+2024-10-21 09:03:15,026 [INFO ]   [x] Done
+2024-10-21 09:03:15,028 [INFO ]  2024-10-21 09:03:15: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "MAD"}
+2024-10-21 09:03:16,170 [INFO ]   [x] Done
+2024-10-21 09:03:16,172 [INFO ]  2024-10-21 09:03:16: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "LIS"}
+2024-10-21 09:03:16,825 [INFO ]   [x] Done
+2024-10-21 09:03:16,827 [INFO ]  2024-10-21 09:03:16: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "FCO"}
+2024-10-21 09:03:18,000 [INFO ]   [x] Done
+2024-10-21 09:03:18,001 [INFO ]  2024-10-21 09:03:18: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "ATH"}
+2024-10-21 09:03:18,400 [INFO ]   [x] Done
+2024-10-21 09:03:18,401 [INFO ]  2024-10-21 09:03:18: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "WAW"}
+2024-10-21 09:03:19,497 [INFO ]   [x] Done
+2024-10-21 09:03:19,499 [INFO ]  2024-10-21 09:03:19: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "VIE"}
+2024-10-21 09:03:20,559 [INFO ]   [x] Done
+2024-10-21 09:03:20,560 [INFO ]  2024-10-21 09:03:20: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "ZRH"}
+2024-10-21 09:03:21,172 [INFO ]   [x] Done
+2024-10-21 09:03:21,173 [INFO ]  2024-10-21 09:03:21: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "DUB"}
+2024-10-21 09:03:22,515 [INFO ]   [x] Done
+2024-10-21 09:03:22,517 [INFO ]  2024-10-21 09:03:22: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "NCE"}
+2024-10-21 09:03:22,927 [INFO ]   [x] Done
+2024-10-21 09:03:22,929 [INFO ]  2024-10-21 09:03:22: [x] Received {"date": "2024-11-25", "origin": "IST", "destination": "CDG"}
+2024-10-21 09:03:24,646 [INFO ]   [x] Done
+2024-10-21 09:03:24,648 [INFO ]  2024-10-21 09:03:24: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "DMM"}
+2024-10-21 09:03:25,494 [INFO ]   [x] Done
+2024-10-21 09:03:25,496 [INFO ]  2024-10-21 09:03:25: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "DXB"}
+2024-10-21 09:03:26,348 [INFO ]   [x] Done
+2024-10-21 09:03:26,351 [INFO ]  2024-10-21 09:03:26: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "PVG"}
+2024-10-21 09:03:27,734 [INFO ]   [x] Done
+2024-10-21 09:03:27,735 [INFO ]  2024-10-21 09:03:27: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "BKK"}
+2024-10-21 09:03:28,156 [INFO ]   [x] Done
+2024-10-21 09:03:28,157 [INFO ]  2024-10-21 09:03:28: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "IST"}
+2024-10-21 09:03:29,774 [INFO ]   [x] Done
+2024-10-21 09:03:29,776 [INFO ]  2024-10-21 09:03:29: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "PEK"}
+2024-10-21 09:03:31,144 [INFO ]   [x] Done
+2024-10-21 09:03:31,145 [INFO ]  2024-10-21 09:03:31: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "DEL"}
+2024-10-21 09:03:31,379 [INFO ]   [x] Done
+2024-10-21 09:03:31,381 [INFO ]  2024-10-21 09:03:31: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "CAI"}
+2024-10-21 09:03:32,930 [INFO ]   [x] Done
+2024-10-21 09:03:32,931 [INFO ]  2024-10-21 09:03:32: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "CMN"}
+2024-10-21 09:03:33,368 [INFO ]   [x] Done
+2024-10-21 09:03:33,369 [INFO ]  2024-10-21 09:03:33: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "CPT"}
+2024-10-21 09:03:34,572 [INFO ]   [x] Done
+2024-10-21 09:03:34,573 [INFO ]  2024-10-21 09:03:34: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "LOS"}
+2024-10-21 09:03:36,223 [INFO ]   [x] Done
+2024-10-21 09:03:36,225 [INFO ]  2024-10-21 09:03:36: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "ALG"}
+2024-10-21 09:03:37,670 [INFO ]   [x] Done
+2024-10-21 09:03:37,671 [INFO ]  2024-10-21 09:03:37: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "NBO"}
+2024-10-21 09:03:38,052 [INFO ]   [x] Done
+2024-10-21 09:03:38,053 [INFO ]  2024-10-21 09:03:38: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "SSH"}
+2024-10-21 09:03:39,267 [INFO ]   [x] Done
+2024-10-21 09:03:39,268 [INFO ]  2024-10-21 09:03:39: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MRU"}
+2024-10-21 09:03:39,698 [INFO ]   [x] Done
+2024-10-21 09:03:39,699 [INFO ]  2024-10-21 09:03:39: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "ATL"}
+2024-10-21 09:03:40,801 [INFO ]   [x] Done
+2024-10-21 09:03:40,802 [INFO ]  2024-10-21 09:03:40: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "DFW"}
+2024-10-21 09:03:41,203 [INFO ]   [x] Done
+2024-10-21 09:03:41,204 [INFO ]  2024-10-21 09:03:41: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "DEN"}
+2024-10-21 09:03:42,250 [INFO ]   [x] Done
+2024-10-21 09:03:42,251 [INFO ]  2024-10-21 09:03:42: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "ORD"}
+2024-10-21 09:03:42,849 [INFO ]   [x] Done
+2024-10-21 09:03:42,850 [INFO ]  2024-10-21 09:03:42: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "LAX"}
+2024-10-21 09:03:44,505 [INFO ]   [x] Done
+2024-10-21 09:03:44,507 [INFO ]  2024-10-21 09:03:44: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "JFK"}
+2024-10-21 09:03:46,032 [INFO ]   [x] Done
+2024-10-21 09:03:46,033 [INFO ]  2024-10-21 09:03:46: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "LAS"}
+2024-10-21 09:03:46,372 [INFO ]   [x] Done
+2024-10-21 09:03:46,374 [INFO ]  2024-10-21 09:03:46: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MIA"}
+2024-10-21 09:03:47,573 [INFO ]   [x] Done
+2024-10-21 09:03:47,574 [INFO ]  2024-10-21 09:03:47: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MCO"}
+2024-10-21 09:03:48,240 [INFO ]   [x] Done
+2024-10-21 09:03:48,241 [INFO ]  2024-10-21 09:03:48: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "CLT"}
+2024-10-21 09:03:49,494 [INFO ]   [x] Done
+2024-10-21 09:03:49,495 [INFO ]  2024-10-21 09:03:49: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MEX"}
+2024-10-21 09:03:49,757 [INFO ]   [x] Done
+2024-10-21 09:03:49,758 [INFO ]  2024-10-21 09:03:49: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "SEA"}
+2024-10-21 09:03:51,194 [INFO ]   [x] Done
+2024-10-21 09:03:51,195 [INFO ]  2024-10-21 09:03:51: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "EWR"}
+2024-10-21 09:03:53,143 [INFO ]   [x] Done
+2024-10-21 09:03:53,145 [INFO ]  2024-10-21 09:03:53: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "SFO"}
+2024-10-21 09:03:53,462 [INFO ]   [x] Done
+2024-10-21 09:03:53,463 [INFO ]  2024-10-21 09:03:53: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "BOG"}
+2024-10-21 09:03:55,062 [INFO ]   [x] Done
+2024-10-21 09:03:55,063 [INFO ]  2024-10-21 09:03:55: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "GRU"}
+2024-10-21 09:03:55,233 [INFO ]   [x] Done
+2024-10-21 09:03:55,234 [INFO ]  2024-10-21 09:03:55: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "FRA"}
+2024-10-21 09:03:56,561 [INFO ]   [x] Done
+2024-10-21 09:03:56,562 [INFO ]  2024-10-21 09:03:56: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MUC"}
+2024-10-21 09:03:58,836 [INFO ]   [x] Done
+2024-10-21 09:03:58,837 [INFO ]  2024-10-21 09:03:58: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "BER"}
+2024-10-21 09:03:59,711 [INFO ]   [x] Done
+2024-10-21 09:03:59,714 [INFO ]  2024-10-21 09:03:59: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "AMS"}
+2024-10-21 09:04:00,633 [INFO ]   [x] Done
+2024-10-21 09:04:00,634 [INFO ]  2024-10-21 09:04:00: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "LHR"}
+2024-10-21 09:04:01,632 [INFO ]   [x] Done
+2024-10-21 09:04:01,634 [INFO ]  2024-10-21 09:04:01: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MAN"}
+2024-10-21 09:04:03,208 [INFO ]   [x] Done
+2024-10-21 09:04:03,209 [INFO ]  2024-10-21 09:04:03: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "OSL"}
+2024-10-21 09:04:05,416 [INFO ]   [x] Done
+2024-10-21 09:04:05,417 [INFO ]  2024-10-21 09:04:05: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "ARN"}
+2024-10-21 09:04:06,733 [INFO ]   [x] Done
+2024-10-21 09:04:06,735 [INFO ]  2024-10-21 09:04:06: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "MAD"}
+2024-10-21 09:04:07,271 [INFO ]   [x] Done
+2024-10-21 09:04:07,273 [INFO ]  2024-10-21 09:04:07: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "LIS"}
+2024-10-21 09:04:08,971 [INFO ]   [x] Done
+2024-10-21 09:04:08,972 [INFO ]  2024-10-21 09:04:08: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "FCO"}
+2024-10-21 09:04:09,327 [INFO ]   [x] Done
+2024-10-21 09:04:09,328 [INFO ]  2024-10-21 09:04:09: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "ATH"}
+2024-10-21 09:04:10,564 [INFO ]   [x] Done
+2024-10-21 09:04:10,565 [INFO ]  2024-10-21 09:04:10: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "WAW"}
+2024-10-21 09:04:11,024 [INFO ]   [x] Done
+2024-10-21 09:04:11,025 [INFO ]  2024-10-21 09:04:11: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "VIE"}
+2024-10-21 09:04:12,770 [INFO ]   [x] Done
+2024-10-21 09:04:12,772 [INFO ]  2024-10-21 09:04:12: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "ZRH"}
+2024-10-21 09:04:13,257 [INFO ]   [x] Done
+2024-10-21 09:04:13,259 [INFO ]  2024-10-21 09:04:13: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "DUB"}
+2024-10-21 09:04:14,436 [INFO ]   [x] Done
+2024-10-21 09:04:14,437 [INFO ]  2024-10-21 09:04:14: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "NCE"}
+2024-10-21 09:04:15,010 [INFO ]   [x] Done
+2024-10-21 09:04:15,012 [INFO ]  2024-10-21 09:04:15: [x] Received {"date": "2024-11-25", "origin": "HND", "destination": "CDG"}
+2024-10-21 09:04:15,978 [INFO ]   [x] Done
+2024-10-21 09:04:15,979 [INFO ]  2024-10-21 09:04:15: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "DMM"}
+2024-10-21 09:04:16,600 [INFO ]   [x] Done
+2024-10-21 09:04:16,601 [INFO ]  2024-10-21 09:04:16: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "DXB"}
+2024-10-21 09:04:17,994 [INFO ]   [x] Done
+2024-10-21 09:04:17,995 [INFO ]  2024-10-21 09:04:17: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "PVG"}
+2024-10-21 09:04:18,067 [INFO ]   [x] Done
+2024-10-21 09:04:18,068 [INFO ]  2024-10-21 09:04:18: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "BKK"}
+2024-10-21 09:04:19,959 [INFO ]   [x] Done
+2024-10-21 09:04:19,960 [INFO ]  2024-10-21 09:04:19: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "IST"}
+2024-10-21 09:04:21,166 [INFO ]   [x] Done
+2024-10-21 09:04:21,168 [INFO ]  2024-10-21 09:04:21: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "HND"}
+2024-10-21 09:04:21,828 [INFO ]   [x] Done
+2024-10-21 09:04:21,830 [INFO ]  2024-10-21 09:04:21: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "DEL"}
+2024-10-21 09:04:22,695 [INFO ]   [x] Done
+2024-10-21 09:04:22,696 [INFO ]  2024-10-21 09:04:22: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "CAI"}
+2024-10-21 09:04:23,447 [INFO ]   [x] Done
+2024-10-21 09:04:23,448 [INFO ]  2024-10-21 09:04:23: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "CMN"}
+2024-10-21 09:04:24,945 [INFO ]   [x] Done
+2024-10-21 09:04:24,947 [INFO ]  2024-10-21 09:04:24: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "CPT"}
+2024-10-21 09:04:25,427 [INFO ]   [x] Done
+2024-10-21 09:04:25,428 [INFO ]  2024-10-21 09:04:25: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "LOS"}
+2024-10-21 09:04:26,856 [INFO ]   [x] Done
+2024-10-21 09:04:26,857 [INFO ]  2024-10-21 09:04:26: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "ALG"}
+2024-10-21 09:04:27,223 [INFO ]   [x] Done
+2024-10-21 09:04:27,225 [INFO ]  2024-10-21 09:04:27: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "NBO"}
+2024-10-21 09:04:28,442 [INFO ]   [x] Done
+2024-10-21 09:04:28,444 [INFO ]  2024-10-21 09:04:28: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "SSH"}
+2024-10-21 09:04:29,509 [INFO ]   [x] Done
+2024-10-21 09:04:29,511 [INFO ]  2024-10-21 09:04:29: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MRU"}
+2024-10-21 09:04:30,403 [INFO ]   [x] Done
+2024-10-21 09:04:30,404 [INFO ]  2024-10-21 09:04:30: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "ATL"}
+2024-10-21 09:04:32,085 [INFO ]   [x] Done
+2024-10-21 09:04:32,086 [INFO ]  2024-10-21 09:04:32: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "DFW"}
+2024-10-21 09:04:32,518 [INFO ]   [x] Done
+2024-10-21 09:04:32,519 [INFO ]  2024-10-21 09:04:32: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "DEN"}
+2024-10-21 09:04:34,306 [INFO ]   [x] Done
+2024-10-21 09:04:34,307 [INFO ]  2024-10-21 09:04:34: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "ORD"}
+2024-10-21 09:04:36,091 [INFO ]   [x] Done
+2024-10-21 09:04:36,093 [INFO ]  2024-10-21 09:04:36: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "LAX"}
+2024-10-21 09:04:36,830 [INFO ]   [x] Done
+2024-10-21 09:04:36,831 [INFO ]  2024-10-21 09:04:36: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "JFK"}
+2024-10-21 09:04:38,637 [INFO ]   [x] Done
+2024-10-21 09:04:38,639 [INFO ]  2024-10-21 09:04:38: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "LAS"}
+2024-10-21 09:04:39,296 [INFO ]   [x] Done
+2024-10-21 09:04:39,298 [INFO ]  2024-10-21 09:04:39: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MIA"}
+2024-10-21 09:04:40,402 [INFO ]   [x] Done
+2024-10-21 09:04:40,403 [INFO ]  2024-10-21 09:04:40: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MCO"}
+2024-10-21 09:04:41,934 [INFO ]   [x] Done
+2024-10-21 09:04:41,936 [INFO ]  2024-10-21 09:04:41: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "CLT"}
+2024-10-21 09:04:42,076 [INFO ]   [x] Done
+2024-10-21 09:04:42,077 [INFO ]  2024-10-21 09:04:42: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MEX"}
+2024-10-21 09:04:43,768 [INFO ]   [x] Done
+2024-10-21 09:04:43,770 [INFO ]  2024-10-21 09:04:43: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "SEA"}
+2024-10-21 09:04:43,771 [INFO ]   [x] Done
+2024-10-21 09:04:43,773 [INFO ]  2024-10-21 09:04:43: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "EWR"}
+2024-10-21 09:04:45,611 [INFO ]   [x] Done
+2024-10-21 09:04:45,612 [INFO ]  2024-10-21 09:04:45: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "SFO"}
+2024-10-21 09:04:45,680 [INFO ]   [x] Done
+2024-10-21 09:04:45,681 [INFO ]  2024-10-21 09:04:45: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "BOG"}
+2024-10-21 09:04:47,258 [INFO ]   [x] Done
+2024-10-21 09:04:47,259 [INFO ]  2024-10-21 09:04:47: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "GRU"}
+2024-10-21 09:04:47,393 [INFO ]   [x] Done
+2024-10-21 09:04:47,394 [INFO ]  2024-10-21 09:04:47: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "FRA"}
+2024-10-21 09:04:48,868 [INFO ]   [x] Done
+2024-10-21 09:04:48,870 [INFO ]  2024-10-21 09:04:48: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MUC"}
+2024-10-21 09:04:50,651 [INFO ]   [x] Done
+2024-10-21 09:04:50,653 [INFO ]  2024-10-21 09:04:50: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "BER"}
+2024-10-21 09:04:52,252 [INFO ]   [x] Done
+2024-10-21 09:04:52,253 [INFO ]  2024-10-21 09:04:52: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "AMS"}
+2024-10-21 09:04:52,316 [INFO ]   [x] Done
+2024-10-21 09:04:52,317 [INFO ]  2024-10-21 09:04:52: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "LHR"}
+2024-10-21 09:04:53,959 [INFO ]   [x] Done
+2024-10-21 09:04:53,960 [INFO ]  2024-10-21 09:04:53: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MAN"}
+2024-10-21 09:04:55,481 [INFO ]   [x] Done
+2024-10-21 09:04:55,483 [INFO ]  2024-10-21 09:04:55: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "OSL"}
+2024-10-21 09:04:57,128 [INFO ]   [x] Done
+2024-10-21 09:04:57,130 [INFO ]  2024-10-21 09:04:57: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "ARN"}
+2024-10-21 09:04:57,261 [INFO ]   [x] Done
+2024-10-21 09:04:57,262 [INFO ]  2024-10-21 09:04:57: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "MAD"}
+2024-10-21 09:04:58,771 [INFO ]   [x] Done
+2024-10-21 09:04:58,773 [INFO ]  2024-10-21 09:04:58: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "LIS"}
+2024-10-21 09:04:59,065 [INFO ]   [x] Done
+2024-10-21 09:04:59,067 [INFO ]  2024-10-21 09:04:59: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "FCO"}
+2024-10-21 09:05:00,379 [INFO ]   [x] Done
+2024-10-21 09:05:00,380 [INFO ]  2024-10-21 09:05:00: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "ATH"}
+2024-10-21 09:05:00,880 [INFO ]   [x] Done
+2024-10-21 09:05:00,881 [INFO ]  2024-10-21 09:05:00: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "WAW"}
+2024-10-21 09:05:02,069 [INFO ]   [x] Done
+2024-10-21 09:05:02,071 [INFO ]  2024-10-21 09:05:02: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "VIE"}
+2024-10-21 09:05:03,593 [INFO ]   [x] Done
+2024-10-21 09:05:03,594 [INFO ]  2024-10-21 09:05:03: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "ZRH"}
+2024-10-21 09:05:04,662 [INFO ]   [x] Done
+2024-10-21 09:05:04,663 [INFO ]  2024-10-21 09:05:04: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "DUB"}
+2024-10-21 09:05:06,463 [INFO ]   [x] Done
+2024-10-21 09:05:06,464 [INFO ]  2024-10-21 09:05:06: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "NCE"}
+2024-10-21 09:05:08,117 [INFO ]   [x] Done
+2024-10-21 09:05:08,119 [INFO ]  2024-10-21 09:05:08: [x] Received {"date": "2024-11-25", "origin": "PEK", "destination": "CDG"}
+2024-10-21 09:05:10,042 [INFO ]   [x] Done
+2024-10-21 09:05:10,044 [INFO ]  2024-10-21 09:05:10: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "DMM"}
+2024-10-21 09:05:10,166 [INFO ]   [x] Done
+2024-10-21 09:05:10,168 [INFO ]  2024-10-21 09:05:10: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "DXB"}
+2024-10-21 09:05:11,774 [INFO ]   [x] Done
+2024-10-21 09:05:11,776 [INFO ]  2024-10-21 09:05:11: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "PVG"}
+2024-10-21 09:05:11,806 [INFO ]   [x] Done
+2024-10-21 09:05:11,808 [INFO ]  2024-10-21 09:05:11: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "BKK"}
+2024-10-21 09:05:13,574 [INFO ]   [x] Done
+2024-10-21 09:05:13,575 [INFO ]  2024-10-21 09:05:13: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "IST"}
+2024-10-21 09:05:16,566 [INFO ]   [x] Done
+2024-10-21 09:05:16,567 [INFO ]  2024-10-21 09:05:16: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "HND"}
+2024-10-21 09:05:17,994 [INFO ]   [x] Done
+2024-10-21 09:05:17,995 [INFO ]  2024-10-21 09:05:17: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "PEK"}
+2024-10-21 09:05:18,310 [INFO ]   [x] Done
+2024-10-21 09:05:18,311 [INFO ]  2024-10-21 09:05:18: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "CAI"}
+2024-10-21 09:05:19,892 [INFO ]   [x] Done
+2024-10-21 09:05:19,894 [INFO ]  2024-10-21 09:05:19: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "CMN"}
+2024-10-21 09:05:19,997 [INFO ]   [x] Done
+2024-10-21 09:05:19,998 [INFO ]  2024-10-21 09:05:19: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "CPT"}
+2024-10-21 09:05:22,098 [INFO ]   [x] Done
+2024-10-21 09:05:22,099 [INFO ]  2024-10-21 09:05:22: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "LOS"}
+2024-10-21 09:05:23,696 [INFO ]   [x] Done
+2024-10-21 09:05:23,697 [INFO ]  2024-10-21 09:05:23: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "ALG"}
+2024-10-21 09:05:24,684 [INFO ]   [x] Done
+2024-10-21 09:05:24,685 [INFO ]  2024-10-21 09:05:24: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "NBO"}
+2024-10-21 09:05:25,675 [INFO ]   [x] Done
+2024-10-21 09:05:25,676 [INFO ]  2024-10-21 09:05:25: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "SSH"}
+2024-10-21 09:05:26,197 [INFO ]   [x] Done
+2024-10-21 09:05:26,198 [INFO ]  2024-10-21 09:05:26: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MRU"}
+2024-10-21 09:05:27,280 [INFO ]   [x] Done
+2024-10-21 09:05:27,281 [INFO ]  2024-10-21 09:05:27: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "ATL"}
+2024-10-21 09:05:30,853 [INFO ]   [x] Done
+2024-10-21 09:05:30,854 [INFO ]  2024-10-21 09:05:30: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "DFW"}
+2024-10-21 09:05:31,882 [INFO ]   [x] Done
+2024-10-21 09:05:31,883 [INFO ]  2024-10-21 09:05:31: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "DEN"}
+2024-10-21 09:05:33,582 [INFO ]   [x] Done
+2024-10-21 09:05:33,584 [INFO ]  2024-10-21 09:05:33: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "ORD"}
+2024-10-21 09:05:34,145 [INFO ]   [x] Done
+2024-10-21 09:05:34,146 [INFO ]  2024-10-21 09:05:34: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "LAX"}
+2024-10-21 09:05:35,378 [INFO ]   [x] Done
+2024-10-21 09:05:35,379 [INFO ]  2024-10-21 09:05:35: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "JFK"}
+2024-10-21 09:05:36,068 [INFO ]   [x] Done
+2024-10-21 09:05:36,070 [INFO ]  2024-10-21 09:05:36: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "LAS"}
+2024-10-21 09:05:37,826 [INFO ]   [x] Done
+2024-10-21 09:05:37,828 [INFO ]  2024-10-21 09:05:37: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MIA"}
+2024-10-21 09:05:40,148 [INFO ]   [x] Done
+2024-10-21 09:05:40,150 [INFO ]  2024-10-21 09:05:40: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MCO"}
+2024-10-21 09:05:41,468 [INFO ]   [x] Done
+2024-10-21 09:05:41,469 [INFO ]  2024-10-21 09:05:41: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "CLT"}
+2024-10-21 09:05:41,949 [INFO ]   [x] Done
+2024-10-21 09:05:41,950 [INFO ]  2024-10-21 09:05:41: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MEX"}
+2024-10-21 09:05:43,045 [INFO ]   [x] Done
+2024-10-21 09:05:43,046 [INFO ]  2024-10-21 09:05:43: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "SEA"}
+2024-10-21 09:05:43,589 [INFO ]   [x] Done
+2024-10-21 09:05:43,593 [INFO ]  2024-10-21 09:05:43: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "EWR"}
+2024-10-21 09:05:44,870 [INFO ]   [x] Done
+2024-10-21 09:05:44,872 [INFO ]  2024-10-21 09:05:44: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "SFO"}
+2024-10-21 09:05:45,363 [INFO ]   [x] Done
+2024-10-21 09:05:45,377 [INFO ]  2024-10-21 09:05:45: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "BOG"}
+2024-10-21 09:05:46,760 [INFO ]   [x] Done
+2024-10-21 09:05:46,762 [INFO ]  2024-10-21 09:05:46: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "GRU"}
+2024-10-21 09:05:47,428 [INFO ]   [x] Done
+2024-10-21 09:05:47,430 [INFO ]  2024-10-21 09:05:47: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "FRA"}
+2024-10-21 09:05:48,609 [INFO ]   [x] Done
+2024-10-21 09:05:48,610 [INFO ]  2024-10-21 09:05:48: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MUC"}
+2024-10-21 09:05:50,650 [INFO ]   [x] Done
+2024-10-21 09:05:50,651 [INFO ]  2024-10-21 09:05:50: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "BER"}
+2024-10-21 09:05:51,732 [INFO ]   [x] Done
+2024-10-21 09:05:51,733 [INFO ]  2024-10-21 09:05:51: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "AMS"}
+2024-10-21 09:05:52,222 [INFO ]   [x] Done
+2024-10-21 09:05:52,223 [INFO ]  2024-10-21 09:05:52: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "LHR"}
+2024-10-21 09:05:53,447 [INFO ]   [x] Done
+2024-10-21 09:05:53,449 [INFO ]  2024-10-21 09:05:53: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MAN"}
+2024-10-21 09:05:53,968 [INFO ]   [x] Done
+2024-10-21 09:05:53,969 [INFO ]  2024-10-21 09:05:53: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "OSL"}
+2024-10-21 09:05:55,048 [INFO ]   [x] Done
+2024-10-21 09:05:55,049 [INFO ]  2024-10-21 09:05:55: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "ARN"}
+2024-10-21 09:05:56,636 [INFO ]   [x] Done
+2024-10-21 09:05:56,637 [INFO ]  2024-10-21 09:05:56: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "MAD"}
+2024-10-21 09:05:56,835 [INFO ]   [x] Done
+2024-10-21 09:05:56,836 [INFO ]  2024-10-21 09:05:56: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "LIS"}
+2024-10-21 09:05:58,321 [INFO ]   [x] Done
+2024-10-21 09:05:58,322 [INFO ]  2024-10-21 09:05:58: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "FCO"}
+2024-10-21 09:05:58,464 [INFO ]   [x] Done
+2024-10-21 09:05:58,466 [INFO ]  2024-10-21 09:05:58: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "ATH"}
+2024-10-21 09:06:00,041 [INFO ]   [x] Done
+2024-10-21 09:06:00,043 [INFO ]  2024-10-21 09:06:00: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "WAW"}
+2024-10-21 09:06:00,192 [INFO ]   [x] Done
+2024-10-21 09:06:00,193 [INFO ]  2024-10-21 09:06:00: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "VIE"}
+2024-10-21 09:06:01,780 [INFO ]   [x] Done
+2024-10-21 09:06:01,781 [INFO ]  2024-10-21 09:06:01: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "ZRH"}
+2024-10-21 09:06:02,211 [INFO ]   [x] Done
+2024-10-21 09:06:02,212 [INFO ]  2024-10-21 09:06:02: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "DUB"}
+2024-10-21 09:06:04,554 [INFO ]   [x] Done
+2024-10-21 09:06:04,555 [INFO ]  2024-10-21 09:06:04: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "NCE"}
+2024-10-21 09:06:05,698 [INFO ]   [x] Done
+2024-10-21 09:06:05,699 [INFO ]  2024-10-21 09:06:05: [x] Received {"date": "2024-11-25", "origin": "DEL", "destination": "CDG"}
+2024-10-21 09:06:06,501 [INFO ]   [x] Done
+2024-10-21 09:06:06,502 [INFO ]  2024-10-21 09:06:06: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "DMM"}
+2024-10-21 09:06:07,505 [INFO ]   [x] Done
+2024-10-21 09:06:07,506 [INFO ]  2024-10-21 09:06:07: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "DXB"}
+2024-10-21 09:06:08,003 [INFO ]   [x] Done
+2024-10-21 09:06:08,005 [INFO ]  2024-10-21 09:06:08: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "PVG"}
+2024-10-21 09:06:09,723 [INFO ]   [x] Done
+2024-10-21 09:06:09,724 [INFO ]  2024-10-21 09:06:09: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "BKK"}
+2024-10-21 09:06:10,390 [INFO ]   [x] Done
+2024-10-21 09:06:10,391 [INFO ]  2024-10-21 09:06:10: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "IST"}
+2024-10-21 09:06:12,254 [INFO ]   [x] Done
+2024-10-21 09:06:12,256 [INFO ]  2024-10-21 09:06:12: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "HND"}
+2024-10-21 09:06:14,337 [INFO ]   [x] Done
+2024-10-21 09:06:14,339 [INFO ]  2024-10-21 09:06:14: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "PEK"}
+2024-10-21 09:06:16,165 [INFO ]   [x] Done
+2024-10-21 09:06:16,178 [INFO ]  2024-10-21 09:06:16: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "DEL"}
+2024-10-21 09:06:17,383 [INFO ]   [x] Done
+2024-10-21 09:06:17,384 [INFO ]  2024-10-21 09:06:17: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "CMN"}
+2024-10-21 09:06:17,871 [INFO ]   [x] Done
+2024-10-21 09:06:17,873 [INFO ]  2024-10-21 09:06:17: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "CPT"}
+2024-10-21 09:06:18,949 [INFO ]   [x] Done
+2024-10-21 09:06:18,951 [INFO ]  2024-10-21 09:06:18: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "LOS"}
+2024-10-21 09:06:22,192 [INFO ]   [x] Done
+2024-10-21 09:06:22,193 [INFO ]  2024-10-21 09:06:22: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "ALG"}
+2024-10-21 09:06:22,499 [INFO ]   [x] Done
+2024-10-21 09:06:22,501 [INFO ]  2024-10-21 09:06:22: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "NBO"}
+2024-10-21 09:06:24,996 [INFO ]   [x] Done
+2024-10-21 09:06:24,997 [INFO ]  2024-10-21 09:06:24: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "SSH"}
+2024-10-21 09:06:27,975 [INFO ]   [x] Done
+2024-10-21 09:06:27,977 [INFO ]  2024-10-21 09:06:27: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MRU"}
+2024-10-21 09:06:29,536 [INFO ]   [x] Done
+2024-10-21 09:06:29,537 [INFO ]  2024-10-21 09:06:29: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "ATL"}
+2024-10-21 09:06:31,164 [INFO ]   [x] Done
+2024-10-21 09:06:31,165 [INFO ]  2024-10-21 09:06:31: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "DFW"}
+2024-10-21 09:06:32,082 [INFO ]   [x] Done
+2024-10-21 09:06:32,083 [INFO ]  2024-10-21 09:06:32: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "DEN"}
+2024-10-21 09:06:33,175 [INFO ]   [x] Done
+2024-10-21 09:06:33,176 [INFO ]  2024-10-21 09:06:33: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "ORD"}
+2024-10-21 09:06:34,746 [INFO ]   [x] Done
+2024-10-21 09:06:34,747 [INFO ]  2024-10-21 09:06:34: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "LAX"}
+2024-10-21 09:06:37,800 [INFO ]   [x] Done
+2024-10-21 09:06:37,802 [INFO ]  2024-10-21 09:06:37: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "JFK"}
+2024-10-21 09:06:39,865 [INFO ]   [x] Done
+2024-10-21 09:06:39,866 [INFO ]  2024-10-21 09:06:39: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "LAS"}
+2024-10-21 09:06:41,539 [INFO ]   [x] Done
+2024-10-21 09:06:41,540 [INFO ]  2024-10-21 09:06:41: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MIA"}
+2024-10-21 09:06:42,651 [INFO ]   [x] Done
+2024-10-21 09:06:42,652 [INFO ]  2024-10-21 09:06:42: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MCO"}
+2024-10-21 09:06:43,506 [INFO ]   [x] Done
+2024-10-21 09:06:43,508 [INFO ]  2024-10-21 09:06:43: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "CLT"}
+2024-10-21 09:06:44,336 [INFO ]   [x] Done
+2024-10-21 09:06:44,338 [INFO ]  2024-10-21 09:06:44: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MEX"}
+2024-10-21 09:06:44,992 [INFO ]   [x] Done
+2024-10-21 09:06:44,993 [INFO ]  2024-10-21 09:06:44: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "SEA"}
+2024-10-21 09:06:46,291 [INFO ]   [x] Done
+2024-10-21 09:06:46,293 [INFO ]  2024-10-21 09:06:46: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "EWR"}
+2024-10-21 09:06:46,905 [INFO ]   [x] Done
+2024-10-21 09:06:46,906 [INFO ]  2024-10-21 09:06:46: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "SFO"}
+2024-10-21 09:06:48,216 [INFO ]   [x] Done
+2024-10-21 09:06:48,217 [INFO ]  2024-10-21 09:06:48: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "BOG"}
+2024-10-21 09:06:48,711 [INFO ]   [x] Done
+2024-10-21 09:06:48,712 [INFO ]  2024-10-21 09:06:48: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "GRU"}
+2024-10-21 09:06:50,399 [INFO ]   [x] Done
+2024-10-21 09:06:50,401 [INFO ]  2024-10-21 09:06:50: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "FRA"}
+2024-10-21 09:06:50,476 [INFO ]   [x] Done
+2024-10-21 09:06:50,477 [INFO ]  2024-10-21 09:06:50: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MUC"}
+2024-10-21 09:06:53,570 [INFO ]   [x] Done
+2024-10-21 09:06:53,572 [INFO ]  2024-10-21 09:06:53: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "BER"}
+2024-10-21 09:06:53,606 [INFO ]   [x] Done
+2024-10-21 09:06:53,607 [INFO ]  2024-10-21 09:06:53: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "AMS"}
+2024-10-21 09:06:55,322 [INFO ]   [x] Done
+2024-10-21 09:06:55,324 [INFO ]  2024-10-21 09:06:55: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "LHR"}
+2024-10-21 09:06:55,650 [INFO ]   [x] Done
+2024-10-21 09:06:55,651 [INFO ]  2024-10-21 09:06:55: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MAN"}
+2024-10-21 09:06:57,549 [INFO ]   [x] Done
+2024-10-21 09:06:57,551 [INFO ]  2024-10-21 09:06:57: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "OSL"}
+2024-10-21 09:06:59,401 [INFO ]   [x] Done
+2024-10-21 09:06:59,403 [INFO ]  2024-10-21 09:06:59: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "ARN"}
+2024-10-21 09:07:00,344 [INFO ]   [x] Done
+2024-10-21 09:07:00,345 [INFO ]  2024-10-21 09:07:00: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "MAD"}
+2024-10-21 09:07:01,116 [INFO ]   [x] Done
+2024-10-21 09:07:01,117 [INFO ]  2024-10-21 09:07:01: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "LIS"}
+2024-10-21 09:07:01,941 [INFO ]   [x] Done
+2024-10-21 09:07:01,942 [INFO ]  2024-10-21 09:07:01: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "FCO"}
+2024-10-21 09:07:03,000 [INFO ]   [x] Done
+2024-10-21 09:07:03,001 [INFO ]  2024-10-21 09:07:03: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "ATH"}
+2024-10-21 09:07:03,971 [INFO ]   [x] Done
+2024-10-21 09:07:03,972 [INFO ]  2024-10-21 09:07:03: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "WAW"}
+2024-10-21 09:07:06,120 [INFO ]   [x] Done
+2024-10-21 09:07:06,121 [INFO ]  2024-10-21 09:07:06: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "VIE"}
+2024-10-21 09:07:06,886 [INFO ]   [x] Done
+2024-10-21 09:07:06,887 [INFO ]  2024-10-21 09:07:06: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "ZRH"}
+2024-10-21 09:07:10,023 [INFO ]   [x] Done
+2024-10-21 09:07:10,024 [INFO ]  2024-10-21 09:07:10: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "DUB"}
+2024-10-21 09:07:11,019 [INFO ]   [x] Done
+2024-10-21 09:07:11,021 [INFO ]  2024-10-21 09:07:11: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "NCE"}
+2024-10-21 09:07:11,500 [INFO ]   [x] Done
+2024-10-21 09:07:11,502 [INFO ]  2024-10-21 09:07:11: [x] Received {"date": "2024-11-25", "origin": "CAI", "destination": "CDG"}
+2024-10-21 09:07:13,752 [INFO ]   [x] Done
+2024-10-21 09:07:13,756 [INFO ]  2024-10-21 09:07:13: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "DMM"}
+2024-10-21 09:07:14,016 [INFO ]   [x] Done
+2024-10-21 09:07:14,017 [INFO ]  2024-10-21 09:07:14: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "DXB"}
+2024-10-21 09:07:15,535 [INFO ]   [x] Done
+2024-10-21 09:07:15,537 [INFO ]  2024-10-21 09:07:15: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "PVG"}
+2024-10-21 09:07:15,573 [INFO ]   [x] Done
+2024-10-21 09:07:15,575 [INFO ]  2024-10-21 09:07:15: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "BKK"}
+2024-10-21 09:07:17,333 [INFO ]   [x] Done
+2024-10-21 09:07:17,334 [INFO ]  2024-10-21 09:07:17: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "IST"}
+2024-10-21 09:07:17,423 [INFO ]   [x] Done
+2024-10-21 09:07:17,424 [INFO ]  2024-10-21 09:07:17: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "HND"}
+2024-10-21 09:07:19,170 [INFO ]   [x] Done
+2024-10-21 09:07:19,172 [INFO ]  2024-10-21 09:07:19: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "PEK"}
+2024-10-21 09:07:20,594 [INFO ]   [x] Done
+2024-10-21 09:07:20,595 [INFO ]  2024-10-21 09:07:20: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "DEL"}
+2024-10-21 09:07:20,693 [INFO ]   [x] Done
+2024-10-21 09:07:20,695 [INFO ]  2024-10-21 09:07:20: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "CAI"}
+2024-10-21 09:07:22,341 [INFO ]   [x] Done
+2024-10-21 09:07:22,342 [INFO ]  2024-10-21 09:07:22: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "CPT"}
+2024-10-21 09:07:22,506 [INFO ]   [x] Done
+2024-10-21 09:07:22,507 [INFO ]  2024-10-21 09:07:22: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "LOS"}
+2024-10-21 09:07:24,040 [INFO ]   [x] Done
+2024-10-21 09:07:24,042 [INFO ]  2024-10-21 09:07:24: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "ALG"}
+2024-10-21 09:07:24,239 [INFO ]   [x] Done
+2024-10-21 09:07:24,240 [INFO ]  2024-10-21 09:07:24: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "NBO"}
+2024-10-21 09:07:25,873 [INFO ]   [x] Done
+2024-10-21 09:07:25,874 [INFO ]  2024-10-21 09:07:25: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "SSH"}
+2024-10-21 09:07:25,939 [INFO ]   [x] Done
+2024-10-21 09:07:25,940 [INFO ]  2024-10-21 09:07:25: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MRU"}
+2024-10-21 09:07:27,698 [INFO ]   [x] Done
+2024-10-21 09:07:27,699 [INFO ]  2024-10-21 09:07:27: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "ATL"}
+2024-10-21 09:07:28,225 [INFO ]   [x] Done
+2024-10-21 09:07:28,226 [INFO ]  2024-10-21 09:07:28: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "DFW"}
+2024-10-21 09:07:29,570 [INFO ]   [x] Done
+2024-10-21 09:07:29,571 [INFO ]  2024-10-21 09:07:29: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "DEN"}
+2024-10-21 09:07:31,509 [INFO ]   [x] Done
+2024-10-21 09:07:31,510 [INFO ]  2024-10-21 09:07:31: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "ORD"}
+2024-10-21 09:07:33,066 [INFO ]   [x] Done
+2024-10-21 09:07:33,068 [INFO ]  2024-10-21 09:07:33: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "LAX"}
+2024-10-21 09:07:33,307 [INFO ]   [x] Done
+2024-10-21 09:07:33,309 [INFO ]  2024-10-21 09:07:33: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "JFK"}
+2024-10-21 09:07:34,785 [INFO ]   [x] Done
+2024-10-21 09:07:34,786 [INFO ]  2024-10-21 09:07:34: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "LAS"}
+2024-10-21 09:07:35,125 [INFO ]   [x] Done
+2024-10-21 09:07:35,126 [INFO ]  2024-10-21 09:07:35: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MIA"}
+2024-10-21 09:07:36,536 [INFO ]   [x] Done
+2024-10-21 09:07:36,537 [INFO ]  2024-10-21 09:07:36: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MCO"}
+2024-10-21 09:07:36,807 [INFO ]   [x] Done
+2024-10-21 09:07:36,809 [INFO ]  2024-10-21 09:07:36: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "CLT"}
+2024-10-21 09:07:38,382 [INFO ]   [x] Done
+2024-10-21 09:07:38,384 [INFO ]  2024-10-21 09:07:38: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MEX"}
+2024-10-21 09:07:38,405 [INFO ]   [x] Done
+2024-10-21 09:07:38,407 [INFO ]  2024-10-21 09:07:38: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "SEA"}
+2024-10-21 09:07:39,865 [INFO ]   [x] Done
+2024-10-21 09:07:39,866 [INFO ]  2024-10-21 09:07:39: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "EWR"}
+2024-10-21 09:07:40,017 [INFO ]   [x] Done
+2024-10-21 09:07:40,018 [INFO ]  2024-10-21 09:07:40: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "SFO"}
+2024-10-21 09:07:41,553 [INFO ]   [x] Done
+2024-10-21 09:07:41,554 [INFO ]  2024-10-21 09:07:41: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "BOG"}
+2024-10-21 09:07:42,155 [INFO ]   [x] Done
+2024-10-21 09:07:42,156 [INFO ]  2024-10-21 09:07:42: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "GRU"}
+2024-10-21 09:07:43,410 [INFO ]   [x] Done
+2024-10-21 09:07:43,411 [INFO ]  2024-10-21 09:07:43: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "FRA"}
+2024-10-21 09:07:43,687 [INFO ]   [x] Done
+2024-10-21 09:07:43,688 [INFO ]  2024-10-21 09:07:43: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MUC"}
+2024-10-21 09:07:45,154 [INFO ]   [x] Done
+2024-10-21 09:07:45,155 [INFO ]  2024-10-21 09:07:45: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "BER"}
+2024-10-21 09:07:45,307 [INFO ]   [x] Done
+2024-10-21 09:07:45,308 [INFO ]  2024-10-21 09:07:45: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "AMS"}
+2024-10-21 09:07:46,737 [INFO ]   [x] Done
+2024-10-21 09:07:46,739 [INFO ]  2024-10-21 09:07:46: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "LHR"}
+2024-10-21 09:07:47,122 [INFO ]   [x] Done
+2024-10-21 09:07:47,123 [INFO ]  2024-10-21 09:07:47: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MAN"}
+2024-10-21 09:07:48,510 [INFO ]   [x] Done
+2024-10-21 09:07:48,511 [INFO ]  2024-10-21 09:07:48: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "OSL"}
+2024-10-21 09:07:49,196 [INFO ]   [x] Done
+2024-10-21 09:07:49,197 [INFO ]  2024-10-21 09:07:49: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "ARN"}
+2024-10-21 09:07:50,233 [INFO ]   [x] Done
+2024-10-21 09:07:50,234 [INFO ]  2024-10-21 09:07:50: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "MAD"}
+2024-10-21 09:07:51,249 [INFO ]   [x] Done
+2024-10-21 09:07:51,250 [INFO ]  2024-10-21 09:07:51: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "LIS"}
+2024-10-21 09:07:51,964 [INFO ]   [x] Done
+2024-10-21 09:07:51,966 [INFO ]  2024-10-21 09:07:51: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "FCO"}
+2024-10-21 09:07:52,818 [INFO ]   [x] Done
+2024-10-21 09:07:52,820 [INFO ]  2024-10-21 09:07:52: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "ATH"}
+2024-10-21 09:07:53,953 [INFO ]   [x] Done
+2024-10-21 09:07:53,954 [INFO ]  2024-10-21 09:07:53: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "WAW"}
+2024-10-21 09:07:54,272 [INFO ]   [x] Done
+2024-10-21 09:07:54,273 [INFO ]  2024-10-21 09:07:54: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "VIE"}
+2024-10-21 09:07:55,446 [INFO ]   [x] Done
+2024-10-21 09:07:55,447 [INFO ]  2024-10-21 09:07:55: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "ZRH"}
+2024-10-21 09:07:55,848 [INFO ]   [x] Done
+2024-10-21 09:07:55,850 [INFO ]  2024-10-21 09:07:55: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "DUB"}
+2024-10-21 09:07:57,063 [INFO ]   [x] Done
+2024-10-21 09:07:57,065 [INFO ]  2024-10-21 09:07:57: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "NCE"}
+2024-10-21 09:07:57,518 [INFO ]   [x] Done
+2024-10-21 09:07:57,520 [INFO ]  2024-10-21 09:07:57: [x] Received {"date": "2024-11-25", "origin": "CMN", "destination": "CDG"}
+2024-10-21 09:07:58,918 [INFO ]   [x] Done
+2024-10-21 09:07:58,919 [INFO ]  2024-10-21 09:07:58: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "DMM"}
+2024-10-21 09:07:59,358 [INFO ]   [x] Done
+2024-10-21 09:07:59,359 [INFO ]  2024-10-21 09:07:59: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "DXB"}
+2024-10-21 09:08:00,439 [INFO ]   [x] Done
+2024-10-21 09:08:00,441 [INFO ]  2024-10-21 09:08:00: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "PVG"}
+2024-10-21 09:08:01,099 [INFO ]   [x] Done
+2024-10-21 09:08:01,100 [INFO ]  2024-10-21 09:08:01: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "BKK"}
+2024-10-21 09:08:02,202 [INFO ]   [x] Done
+2024-10-21 09:08:02,203 [INFO ]  2024-10-21 09:08:02: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "IST"}
+2024-10-21 09:08:02,919 [INFO ]   [x] Done
+2024-10-21 09:08:02,920 [INFO ]  2024-10-21 09:08:02: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "HND"}
+2024-10-21 09:08:04,661 [INFO ]   [x] Done
+2024-10-21 09:08:04,662 [INFO ]  2024-10-21 09:08:04: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "PEK"}
+2024-10-21 09:08:05,519 [INFO ]   [x] Done
+2024-10-21 09:08:05,520 [INFO ]  2024-10-21 09:08:05: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "DEL"}
+2024-10-21 09:08:06,522 [INFO ]   [x] Done
+2024-10-21 09:08:06,524 [INFO ]  2024-10-21 09:08:06: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "CAI"}
+2024-10-21 09:08:07,484 [INFO ]   [x] Done
+2024-10-21 09:08:07,485 [INFO ]  2024-10-21 09:08:07: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "CMN"}
+2024-10-21 09:08:08,230 [INFO ]   [x] Done
+2024-10-21 09:08:08,232 [INFO ]  2024-10-21 09:08:08: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "LOS"}
+2024-10-21 09:08:09,982 [INFO ]   [x] Done
+2024-10-21 09:08:09,984 [INFO ]  2024-10-21 09:08:09: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "ALG"}
+2024-10-21 09:08:11,376 [INFO ]   [x] Done
+2024-10-21 09:08:11,378 [INFO ]  2024-10-21 09:08:11: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "NBO"}
+2024-10-21 09:08:11,507 [INFO ]   [x] Done
+2024-10-21 09:08:11,509 [INFO ]  2024-10-21 09:08:11: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "SSH"}
+2024-10-21 09:08:12,893 [INFO ]   [x] Done
+2024-10-21 09:08:12,895 [INFO ]  2024-10-21 09:08:12: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MRU"}
+2024-10-21 09:08:13,320 [INFO ]   [x] Done
+2024-10-21 09:08:13,321 [INFO ]  2024-10-21 09:08:13: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "ATL"}
+2024-10-21 09:08:14,463 [INFO ]   [x] Done
+2024-10-21 09:08:14,464 [INFO ]  2024-10-21 09:08:14: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "DFW"}
+2024-10-21 09:08:15,021 [INFO ]   [x] Done
+2024-10-21 09:08:15,023 [INFO ]  2024-10-21 09:08:15: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "DEN"}
+2024-10-21 09:08:16,230 [INFO ]   [x] Done
+2024-10-21 09:08:16,232 [INFO ]  2024-10-21 09:08:16: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "ORD"}
+2024-10-21 09:08:16,635 [INFO ]   [x] Done
+2024-10-21 09:08:16,637 [INFO ]  2024-10-21 09:08:16: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "LAX"}
+2024-10-21 09:08:17,839 [INFO ]   [x] Done
+2024-10-21 09:08:17,840 [INFO ]  2024-10-21 09:08:17: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "JFK"}
+2024-10-21 09:08:18,335 [INFO ]   [x] Done
+2024-10-21 09:08:18,336 [INFO ]  2024-10-21 09:08:18: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "LAS"}
+2024-10-21 09:08:19,398 [INFO ]   [x] Done
+2024-10-21 09:08:19,399 [INFO ]  2024-10-21 09:08:19: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MIA"}
+2024-10-21 09:08:20,257 [INFO ]   [x] Done
+2024-10-21 09:08:20,258 [INFO ]  2024-10-21 09:08:20: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MCO"}
+2024-10-21 09:08:20,921 [INFO ]   [x] Done
+2024-10-21 09:08:20,923 [INFO ]  2024-10-21 09:08:20: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "CLT"}
+2024-10-21 09:08:21,790 [INFO ]   [x] Done
+2024-10-21 09:08:21,792 [INFO ]  2024-10-21 09:08:21: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MEX"}
+2024-10-21 09:08:22,683 [INFO ]   [x] Done
+2024-10-21 09:08:22,685 [INFO ]  2024-10-21 09:08:22: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "SEA"}
+2024-10-21 09:08:24,607 [INFO ]   [x] Done
+2024-10-21 09:08:24,608 [INFO ]  2024-10-21 09:08:24: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "EWR"}
+2024-10-21 09:08:25,375 [INFO ]   [x] Done
+2024-10-21 09:08:25,376 [INFO ]  2024-10-21 09:08:25: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "SFO"}
+2024-10-21 09:08:26,299 [INFO ]   [x] Done
+2024-10-21 09:08:26,300 [INFO ]  2024-10-21 09:08:26: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "BOG"}
+2024-10-21 09:08:27,128 [INFO ]   [x] Done
+2024-10-21 09:08:27,129 [INFO ]  2024-10-21 09:08:27: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "GRU"}
+2024-10-21 09:08:27,901 [INFO ]   [x] Done
+2024-10-21 09:08:27,902 [INFO ]  2024-10-21 09:08:27: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "FRA"}
+2024-10-21 09:08:29,663 [INFO ]   [x] Done
+2024-10-21 09:08:29,666 [INFO ]  2024-10-21 09:08:29: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MUC"}
+2024-10-21 09:08:30,972 [INFO ]   [x] Done
+2024-10-21 09:08:30,973 [INFO ]  2024-10-21 09:08:30: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "BER"}
+2024-10-21 09:08:32,755 [INFO ]   [x] Done
+2024-10-21 09:08:32,757 [INFO ]  2024-10-21 09:08:32: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "AMS"}
+2024-10-21 09:08:34,404 [INFO ]   [x] Done
+2024-10-21 09:08:34,405 [INFO ]  2024-10-21 09:08:34: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "LHR"}
+2024-10-21 09:08:35,781 [INFO ]   [x] Done
+2024-10-21 09:08:35,783 [INFO ]  2024-10-21 09:08:35: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MAN"}
+2024-10-21 09:08:36,147 [INFO ]   [x] Done
+2024-10-21 09:08:36,152 [INFO ]  2024-10-21 09:08:36: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "OSL"}
+2024-10-21 09:08:37,807 [INFO ]   [x] Done
+2024-10-21 09:08:37,808 [INFO ]  2024-10-21 09:08:37: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "ARN"}
+2024-10-21 09:08:37,834 [INFO ]   [x] Done
+2024-10-21 09:08:37,835 [INFO ]  2024-10-21 09:08:37: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "MAD"}
+2024-10-21 09:08:39,349 [INFO ]   [x] Done
+2024-10-21 09:08:39,350 [INFO ]  2024-10-21 09:08:39: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "LIS"}
+2024-10-21 09:08:39,478 [INFO ]   [x] Done
+2024-10-21 09:08:39,480 [INFO ]  2024-10-21 09:08:39: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "FCO"}
+2024-10-21 09:08:41,375 [INFO ]   [x] Done
+2024-10-21 09:08:41,378 [INFO ]  2024-10-21 09:08:41: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "ATH"}
+2024-10-21 09:08:41,597 [INFO ]   [x] Done
+2024-10-21 09:08:41,599 [INFO ]  2024-10-21 09:08:41: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "WAW"}
+2024-10-21 09:08:43,066 [INFO ]   [x] Done
+2024-10-21 09:08:43,072 [INFO ]  2024-10-21 09:08:43: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "VIE"}
+2024-10-21 09:08:43,448 [INFO ]   [x] Done
+2024-10-21 09:08:43,450 [INFO ]  2024-10-21 09:08:43: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "ZRH"}
+2024-10-21 09:08:45,510 [INFO ]   [x] Done
+2024-10-21 09:08:45,511 [INFO ]  2024-10-21 09:08:45: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "DUB"}
+2024-10-21 09:08:47,020 [INFO ]   [x] Done
+2024-10-21 09:08:47,021 [INFO ]  2024-10-21 09:08:47: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "NCE"}
+2024-10-21 09:08:47,114 [INFO ]   [x] Done
+2024-10-21 09:08:47,116 [INFO ]  2024-10-21 09:08:47: [x] Received {"date": "2024-11-25", "origin": "CPT", "destination": "CDG"}
+2024-10-21 09:08:48,533 [INFO ]   [x] Done
+2024-10-21 09:08:48,534 [INFO ]  2024-10-21 09:08:48: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "DMM"}
+2024-10-21 09:08:48,734 [INFO ]   [x] Done
+2024-10-21 09:08:48,750 [INFO ]  2024-10-21 09:08:48: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "DXB"}
+2024-10-21 09:08:50,418 [INFO ]   [x] Done
+2024-10-21 09:08:50,419 [INFO ]  2024-10-21 09:08:50: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "PVG"}
+2024-10-21 09:08:50,483 [INFO ]   [x] Done
+2024-10-21 09:08:50,484 [INFO ]  2024-10-21 09:08:50: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "BKK"}
+2024-10-21 09:08:52,045 [INFO ]   [x] Done
+2024-10-21 09:08:52,047 [INFO ]  2024-10-21 09:08:52: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "IST"}
+2024-10-21 09:08:53,790 [INFO ]   [x] Done
+2024-10-21 09:08:53,791 [INFO ]  2024-10-21 09:08:53: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "HND"}
+2024-10-21 09:08:55,312 [INFO ]   [x] Done
+2024-10-21 09:08:55,313 [INFO ]  2024-10-21 09:08:55: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "PEK"}
+2024-10-21 09:08:56,801 [INFO ]   [x] Done
+2024-10-21 09:08:56,803 [INFO ]  2024-10-21 09:08:56: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "DEL"}
+2024-10-21 09:08:57,580 [INFO ]   [x] Done
+2024-10-21 09:08:57,581 [INFO ]  2024-10-21 09:08:57: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "CAI"}
+2024-10-21 09:08:58,339 [INFO ]   [x] Done
+2024-10-21 09:08:58,341 [INFO ]  2024-10-21 09:08:58: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "CMN"}
+2024-10-21 09:08:59,388 [INFO ]   [x] Done
+2024-10-21 09:08:59,390 [INFO ]  2024-10-21 09:08:59: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "CPT"}
+2024-10-21 09:09:00,068 [INFO ]   [x] Done
+2024-10-21 09:09:00,069 [INFO ]  2024-10-21 09:09:00: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ALG"}
+2024-10-21 09:09:01,151 [INFO ]   [x] Done
+2024-10-21 09:09:01,153 [INFO ]  2024-10-21 09:09:01: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "NBO"}
+2024-10-21 09:09:01,967 [INFO ]   [x] Done
+2024-10-21 09:09:01,968 [INFO ]  2024-10-21 09:09:01: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "SSH"}
+2024-10-21 09:09:02,736 [INFO ]   [x] Done
+2024-10-21 09:09:02,737 [INFO ]  2024-10-21 09:09:02: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MRU"}
+2024-10-21 09:09:06,015 [INFO ]   [x] Done
+2024-10-21 09:09:06,016 [INFO ]  2024-10-21 09:09:06: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ATL"}
+2024-10-21 09:09:06,906 [INFO ]   [x] Done
+2024-10-21 09:09:06,908 [INFO ]  2024-10-21 09:09:06: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "DFW"}
+2024-10-21 09:09:07,784 [INFO ]   [x] Done
+2024-10-21 09:09:07,786 [INFO ]  2024-10-21 09:09:07: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "DEN"}
+2024-10-21 09:09:08,564 [INFO ]   [x] Done
+2024-10-21 09:09:08,566 [INFO ]  2024-10-21 09:09:08: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ORD"}
+2024-10-21 09:09:09,529 [INFO ]   [x] Done
+2024-10-21 09:09:09,531 [INFO ]  2024-10-21 09:09:09: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "LAX"}
+2024-10-21 09:09:11,063 [INFO ]   [x] Done
+2024-10-21 09:09:11,064 [INFO ]  2024-10-21 09:09:11: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "JFK"}
+2024-10-21 09:09:11,711 [INFO ]   [x] Done
+2024-10-21 09:09:11,712 [INFO ]  2024-10-21 09:09:11: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "LAS"}
+2024-10-21 09:09:12,600 [INFO ]   [x] Done
+2024-10-21 09:09:12,602 [INFO ]  2024-10-21 09:09:12: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MIA"}
+2024-10-21 09:09:14,245 [INFO ]   [x] Done
+2024-10-21 09:09:14,246 [INFO ]  2024-10-21 09:09:14: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MCO"}
+2024-10-21 09:09:14,715 [INFO ]   [x] Done
+2024-10-21 09:09:14,716 [INFO ]  2024-10-21 09:09:14: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "CLT"}
+2024-10-21 09:09:16,148 [INFO ]   [x] Done
+2024-10-21 09:09:16,149 [INFO ]  2024-10-21 09:09:16: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MEX"}
+2024-10-21 09:09:16,251 [INFO ]   [x] Done
+2024-10-21 09:09:16,253 [INFO ]  2024-10-21 09:09:16: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "SEA"}
+2024-10-21 09:09:17,988 [INFO ]   [x] Done
+2024-10-21 09:09:17,990 [INFO ]  2024-10-21 09:09:17: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "EWR"}
+2024-10-21 09:09:18,356 [INFO ]   [x] Done
+2024-10-21 09:09:18,361 [INFO ]  2024-10-21 09:09:18: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "SFO"}
+2024-10-21 09:09:20,208 [INFO ]   [x] Done
+2024-10-21 09:09:20,210 [INFO ]  2024-10-21 09:09:20: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "BOG"}
+2024-10-21 09:09:20,412 [INFO ]   [x] Done
+2024-10-21 09:09:20,420 [INFO ]  2024-10-21 09:09:20: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "GRU"}
+2024-10-21 09:09:21,972 [INFO ]   [x] Done
+2024-10-21 09:09:21,973 [INFO ]  2024-10-21 09:09:21: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "FRA"}
+2024-10-21 09:09:22,420 [INFO ]   [x] Done
+2024-10-21 09:09:22,421 [INFO ]  2024-10-21 09:09:22: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MUC"}
+2024-10-21 09:09:24,176 [INFO ]   [x] Done
+2024-10-21 09:09:24,177 [INFO ]  2024-10-21 09:09:24: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "BER"}
+2024-10-21 09:09:25,347 [INFO ]   [x] Done
+2024-10-21 09:09:25,348 [INFO ]  2024-10-21 09:09:25: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "AMS"}
+2024-10-21 09:09:26,217 [INFO ]   [x] Done
+2024-10-21 09:09:26,218 [INFO ]  2024-10-21 09:09:26: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "LHR"}
+2024-10-21 09:09:27,040 [INFO ]   [x] Done
+2024-10-21 09:09:27,042 [INFO ]  2024-10-21 09:09:27: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MAN"}
+2024-10-21 09:09:27,749 [INFO ]   [x] Done
+2024-10-21 09:09:27,750 [INFO ]  2024-10-21 09:09:27: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "OSL"}
+2024-10-21 09:09:28,899 [INFO ]   [x] Done
+2024-10-21 09:09:28,900 [INFO ]  2024-10-21 09:09:28: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ARN"}
+2024-10-21 09:09:30,062 [INFO ]   [x] Done
+2024-10-21 09:09:30,063 [INFO ]  2024-10-21 09:09:30: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "MAD"}
+2024-10-21 09:09:30,832 [INFO ]   [x] Done
+2024-10-21 09:09:30,833 [INFO ]  2024-10-21 09:09:30: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "LIS"}
+2024-10-21 09:09:31,698 [INFO ]   [x] Done
+2024-10-21 09:09:31,699 [INFO ]  2024-10-21 09:09:31: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "FCO"}
+2024-10-21 09:09:32,317 [INFO ]   [x] Done
+2024-10-21 09:09:32,319 [INFO ]  2024-10-21 09:09:32: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ATH"}
+2024-10-21 09:09:32,550 [WARNI]  ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...
+2024-10-21 09:09:32,551 [WARNI]  ('403 Client Error', 403)
+2024-10-21 09:09:32,551 [WARNI]  2024-10-21 09:09:32: Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-21 09:09:32,856 [WARNI]  ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...
+2024-10-21 09:09:32,856 [WARNI]  ('403 Client Error', 403)
+2024-10-21 09:09:32,857 [WARNI]  2024-10-21 09:09:32: Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-21 09:39:35,313 [INFO ]   [*] Waiting for messages. To exit press CTRL+C
+2024-10-21 09:39:35,315 [INFO ]   [*] Waiting for messages. To exit press CTRL+C
+2024-10-21 09:39:35,316 [INFO ]  2024-10-21 09:39:35: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "FCO"}
+2024-10-21 09:39:35,319 [INFO ]  2024-10-21 09:39:35: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ATH"}
+2024-10-21 09:40:38,369 [INFO ]   [x] Done
+2024-10-21 09:40:38,371 [INFO ]  2024-10-21 09:40:38: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "WAW"}
+2024-10-21 09:40:38,623 [INFO ]   [x] Done
+2024-10-21 09:40:38,625 [INFO ]  2024-10-21 09:40:38: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "VIE"}
+2024-10-21 09:40:40,257 [INFO ]   [x] Done
+2024-10-21 09:40:40,259 [INFO ]  2024-10-21 09:40:40: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "ZRH"}
+2024-10-21 09:40:40,546 [INFO ]   [x] Done
+2024-10-21 09:40:40,547 [INFO ]  2024-10-21 09:40:40: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "DUB"}
+2024-10-21 09:40:41,844 [INFO ]   [x] Done
+2024-10-21 09:40:41,846 [INFO ]  2024-10-21 09:40:41: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "NCE"}
+2024-10-21 09:40:42,527 [INFO ]   [x] Done
+2024-10-21 09:40:42,528 [INFO ]  2024-10-21 09:40:42: [x] Received {"date": "2024-11-25", "origin": "LOS", "destination": "CDG"}
+2024-10-21 09:40:43,357 [INFO ]   [x] Done
+2024-10-21 09:40:43,359 [INFO ]  2024-10-21 09:40:43: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "DMM"}
+2024-10-21 09:40:44,189 [INFO ]   [x] Done
+2024-10-21 09:40:44,191 [INFO ]  2024-10-21 09:40:44: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "DXB"}
+2024-10-21 09:40:45,436 [INFO ]   [x] Done
+2024-10-21 09:40:45,437 [INFO ]  2024-10-21 09:40:45: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "PVG"}
+2024-10-21 09:40:45,876 [INFO ]   [x] Done
+2024-10-21 09:40:45,878 [INFO ]  2024-10-21 09:40:45: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "BKK"}
+2024-10-21 09:40:47,029 [INFO ]   [x] Done
+2024-10-21 09:40:47,030 [INFO ]  2024-10-21 09:40:47: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "IST"}
+2024-10-21 09:40:48,893 [INFO ]   [x] Done
+2024-10-21 09:40:48,894 [INFO ]  2024-10-21 09:40:48: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "HND"}
+2024-10-21 09:40:50,468 [INFO ]   [x] Done
+2024-10-21 09:40:50,470 [INFO ]  2024-10-21 09:40:50: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "PEK"}
+2024-10-21 09:40:52,437 [INFO ]   [x] Done
+2024-10-21 09:40:52,439 [INFO ]  2024-10-21 09:40:52: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "DEL"}
+2024-10-21 09:40:57,380 [INFO ]   [x] Done
+2024-10-21 09:40:57,382 [INFO ]  2024-10-21 09:40:57: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "CAI"}
+2024-10-21 09:41:00,123 [INFO ]   [x] Done
+2024-10-21 09:41:00,125 [INFO ]  2024-10-21 09:41:00: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "CMN"}
+2024-10-21 09:41:02,182 [INFO ]   [x] Done
+2024-10-21 09:41:02,183 [INFO ]  2024-10-21 09:41:02: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "CPT"}
+2024-10-21 09:41:03,015 [INFO ]   [x] Done
+2024-10-21 09:41:03,017 [INFO ]  2024-10-21 09:41:03: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "LOS"}
+2024-10-21 09:41:04,103 [INFO ]   [x] Done
+2024-10-21 09:41:04,104 [INFO ]  2024-10-21 09:41:04: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "NBO"}
+2024-10-21 09:41:05,758 [INFO ]   [x] Done
+2024-10-21 09:41:05,760 [INFO ]  2024-10-21 09:41:05: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "SSH"}
+2024-10-21 09:41:05,992 [INFO ]   [x] Done
+2024-10-21 09:41:05,994 [INFO ]  2024-10-21 09:41:05: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MRU"}
+2024-10-21 09:41:07,351 [INFO ]   [x] Done
+2024-10-21 09:41:07,352 [INFO ]  2024-10-21 09:41:07: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "ATL"}
+2024-10-21 09:41:09,089 [INFO ]   [x] Done
+2024-10-21 09:41:09,090 [INFO ]  2024-10-21 09:41:09: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "DFW"}
+2024-10-21 09:41:11,762 [INFO ]   [x] Done
+2024-10-21 09:41:11,763 [INFO ]  2024-10-21 09:41:11: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "DEN"}
+2024-10-21 09:41:12,412 [INFO ]   [x] Done
+2024-10-21 09:41:12,413 [INFO ]  2024-10-21 09:41:12: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "ORD"}
+2024-10-21 09:41:14,053 [INFO ]   [x] Done
+2024-10-21 09:41:14,055 [INFO ]  2024-10-21 09:41:14: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "LAX"}
+2024-10-21 09:41:14,435 [INFO ]   [x] Done
+2024-10-21 09:41:14,437 [INFO ]  2024-10-21 09:41:14: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "JFK"}
+2024-10-21 09:41:16,013 [INFO ]   [x] Done
+2024-10-21 09:41:16,015 [INFO ]  2024-10-21 09:41:16: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "LAS"}
+2024-10-21 09:41:17,185 [INFO ]   [x] Done
+2024-10-21 09:41:17,187 [INFO ]  2024-10-21 09:41:17: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MIA"}
+2024-10-21 09:41:17,755 [INFO ]   [x] Done
+2024-10-21 09:41:17,756 [INFO ]  2024-10-21 09:41:17: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MCO"}
+2024-10-21 09:41:19,292 [INFO ]   [x] Done
+2024-10-21 09:41:19,294 [INFO ]  2024-10-21 09:41:19: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "CLT"}
+2024-10-21 09:41:19,458 [INFO ]   [x] Done
+2024-10-21 09:41:19,460 [INFO ]  2024-10-21 09:41:19: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MEX"}
+2024-10-21 09:41:21,816 [INFO ]   [x] Done
+2024-10-21 09:41:21,818 [INFO ]  2024-10-21 09:41:21: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "SEA"}
+2024-10-21 09:41:22,135 [INFO ]   [x] Done
+2024-10-21 09:41:22,137 [INFO ]  2024-10-21 09:41:22: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "EWR"}
+2024-10-21 09:41:23,406 [INFO ]   [x] Done
+2024-10-21 09:41:23,408 [INFO ]  2024-10-21 09:41:23: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "SFO"}
+2024-10-21 09:41:24,735 [INFO ]   [x] Done
+2024-10-21 09:41:24,736 [INFO ]  2024-10-21 09:41:24: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "BOG"}
+2024-10-21 09:41:25,225 [INFO ]   [x] Done
+2024-10-21 09:41:25,227 [INFO ]  2024-10-21 09:41:25: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "GRU"}
+2024-10-21 09:41:26,432 [INFO ]   [x] Done
+2024-10-21 09:41:26,434 [INFO ]  2024-10-21 09:41:26: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "FRA"}
+2024-10-21 09:41:27,358 [INFO ]   [x] Done
+2024-10-21 09:41:27,359 [INFO ]  2024-10-21 09:41:27: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MUC"}
+2024-10-21 09:41:29,702 [INFO ]   [x] Done
+2024-10-21 09:41:29,703 [INFO ]  2024-10-21 09:41:29: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "BER"}
+2024-10-21 09:41:29,746 [INFO ]   [x] Done
+2024-10-21 09:41:29,748 [INFO ]  2024-10-21 09:41:29: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "AMS"}
+2024-10-21 09:41:31,729 [INFO ]   [x] Done
+2024-10-21 09:41:31,730 [INFO ]  2024-10-21 09:41:31: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "LHR"}
+2024-10-21 09:41:33,345 [INFO ]   [x] Done
+2024-10-21 09:41:33,346 [INFO ]  2024-10-21 09:41:33: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MAN"}
+2024-10-21 09:41:34,439 [INFO ]   [x] Done
+2024-10-21 09:41:34,440 [INFO ]  2024-10-21 09:41:34: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "OSL"}
+2024-10-21 09:41:34,848 [INFO ]   [x] Done
+2024-10-21 09:41:34,849 [INFO ]  2024-10-21 09:41:34: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "ARN"}
+2024-10-21 09:41:36,049 [INFO ]   [x] Done
+2024-10-21 09:41:36,050 [INFO ]  2024-10-21 09:41:36: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "MAD"}
+2024-10-21 09:41:36,833 [INFO ]   [x] Done
+2024-10-21 09:41:36,834 [INFO ]  2024-10-21 09:41:36: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "LIS"}
+2024-10-21 09:41:38,175 [INFO ]   [x] Done
+2024-10-21 09:41:38,177 [INFO ]  2024-10-21 09:41:38: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "FCO"}
+2024-10-21 09:41:39,629 [INFO ]   [x] Done
+2024-10-21 09:41:39,630 [INFO ]  2024-10-21 09:41:39: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "ATH"}
+2024-10-21 09:41:41,362 [INFO ]   [x] Done
+2024-10-21 09:41:41,363 [INFO ]  2024-10-21 09:41:41: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "WAW"}
+2024-10-21 09:41:42,348 [INFO ]   [x] Done
+2024-10-21 09:41:42,349 [INFO ]  2024-10-21 09:41:42: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "VIE"}
+2024-10-21 09:41:43,798 [INFO ]   [x] Done
+2024-10-21 09:41:43,799 [INFO ]  2024-10-21 09:41:43: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "ZRH"}
+2024-10-21 09:41:44,830 [INFO ]   [x] Done
+2024-10-21 09:41:44,831 [INFO ]  2024-10-21 09:41:44: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "DUB"}
+2024-10-21 09:41:45,381 [INFO ]   [x] Done
+2024-10-21 09:41:45,383 [INFO ]  2024-10-21 09:41:45: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "NCE"}
+2024-10-21 09:41:47,073 [INFO ]   [x] Done
+2024-10-21 09:41:47,075 [INFO ]  2024-10-21 09:41:47: [x] Received {"date": "2024-11-25", "origin": "ALG", "destination": "CDG"}
+2024-10-21 09:41:47,482 [INFO ]   [x] Done
+2024-10-21 09:41:47,483 [INFO ]  2024-10-21 09:41:47: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "DMM"}
+2024-10-21 09:41:48,965 [INFO ]   [x] Done
+2024-10-21 09:41:48,966 [INFO ]  2024-10-21 09:41:48: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "DXB"}
+2024-10-21 09:41:49,225 [INFO ]   [x] Done
+2024-10-21 09:41:49,226 [INFO ]  2024-10-21 09:41:49: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "PVG"}
+2024-10-21 09:41:51,776 [INFO ]   [x] Done
+2024-10-21 09:41:51,777 [INFO ]  2024-10-21 09:41:51: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "BKK"}
+2024-10-21 09:41:53,416 [INFO ]   [x] Done
+2024-10-21 09:41:53,417 [INFO ]  2024-10-21 09:41:53: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "IST"}
+2024-10-21 09:41:54,083 [INFO ]   [x] Done
+2024-10-21 09:41:54,085 [INFO ]  2024-10-21 09:41:54: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "HND"}
+2024-10-21 09:41:54,951 [INFO ]   [x] Done
+2024-10-21 09:41:54,952 [INFO ]  2024-10-21 09:41:54: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "PEK"}
+2024-10-21 09:41:55,769 [INFO ]   [x] Done
+2024-10-21 09:41:55,770 [INFO ]  2024-10-21 09:41:55: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "DEL"}
+2024-10-21 09:41:57,507 [INFO ]   [x] Done
+2024-10-21 09:41:57,509 [INFO ]  2024-10-21 09:41:57: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "CAI"}
+2024-10-21 09:41:59,238 [INFO ]   [x] Done
+2024-10-21 09:41:59,239 [INFO ]  2024-10-21 09:41:59: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "CMN"}
+2024-10-21 09:41:59,783 [INFO ]   [x] Done
+2024-10-21 09:41:59,784 [INFO ]  2024-10-21 09:41:59: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "CPT"}
+2024-10-21 09:42:00,821 [INFO ]   [x] Done
+2024-10-21 09:42:00,822 [INFO ]  2024-10-21 09:42:00: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "LOS"}
+2024-10-21 09:42:01,497 [INFO ]   [x] Done
+2024-10-21 09:42:01,499 [INFO ]  2024-10-21 09:42:01: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "ALG"}
+2024-10-21 09:42:02,389 [INFO ]   [x] Done
+2024-10-21 09:42:02,390 [INFO ]  2024-10-21 09:42:02: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "SSH"}
+2024-10-21 09:42:03,674 [INFO ]   [x] Done
+2024-10-21 09:42:03,675 [INFO ]  2024-10-21 09:42:03: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MRU"}
+2024-10-21 09:42:05,522 [INFO ]   [x] Done
+2024-10-21 09:42:05,523 [INFO ]  2024-10-21 09:42:05: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "ATL"}
+2024-10-21 09:42:05,747 [INFO ]   [x] Done
+2024-10-21 09:42:05,749 [INFO ]  2024-10-21 09:42:05: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "DFW"}
+2024-10-21 09:42:07,379 [INFO ]   [x] Done
+2024-10-21 09:42:07,380 [INFO ]  2024-10-21 09:42:07: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "DEN"}
+2024-10-21 09:42:09,600 [INFO ]   [x] Done
+2024-10-21 09:42:09,602 [INFO ]  2024-10-21 09:42:09: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "ORD"}
+2024-10-21 09:42:11,342 [INFO ]   [x] Done
+2024-10-21 09:42:11,343 [INFO ]  2024-10-21 09:42:11: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "LAX"}
+2024-10-21 09:42:13,757 [INFO ]   [x] Done
+2024-10-21 09:42:13,759 [INFO ]  2024-10-21 09:42:13: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "JFK"}
+2024-10-21 09:42:16,439 [INFO ]   [x] Done
+2024-10-21 09:42:16,440 [INFO ]  2024-10-21 09:42:16: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "LAS"}
+2024-10-21 09:42:18,311 [INFO ]   [x] Done
+2024-10-21 09:42:18,313 [INFO ]  2024-10-21 09:42:18: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MIA"}
+2024-10-21 09:42:19,941 [INFO ]   [x] Done
+2024-10-21 09:42:19,942 [INFO ]  2024-10-21 09:42:19: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MCO"}
+2024-10-21 09:42:21,553 [INFO ]   [x] Done
+2024-10-21 09:42:21,554 [INFO ]  2024-10-21 09:42:21: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "CLT"}
+2024-10-21 09:42:27,735 [INFO ]   [x] Done
+2024-10-21 09:42:27,737 [INFO ]  2024-10-21 09:42:27: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MEX"}
+2024-10-21 09:42:28,197 [INFO ]   [x] Done
+2024-10-21 09:42:28,198 [INFO ]  2024-10-21 09:42:28: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "SEA"}
+2024-10-21 09:42:29,539 [INFO ]   [x] Done
+2024-10-21 09:42:29,540 [INFO ]  2024-10-21 09:42:29: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "EWR"}
+2024-10-21 09:42:29,754 [INFO ]   [x] Done
+2024-10-21 09:42:29,756 [INFO ]  2024-10-21 09:42:29: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "SFO"}
+2024-10-21 09:42:31,150 [INFO ]   [x] Done
+2024-10-21 09:42:31,151 [INFO ]  2024-10-21 09:42:31: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "BOG"}
+2024-10-21 09:42:31,331 [INFO ]   [x] Done
+2024-10-21 09:42:31,332 [INFO ]  2024-10-21 09:42:31: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "GRU"}
+2024-10-21 09:42:33,051 [INFO ]   [x] Done
+2024-10-21 09:42:33,052 [INFO ]  2024-10-21 09:42:33: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "FRA"}
+2024-10-21 09:42:33,782 [INFO ]   [x] Done
+2024-10-21 09:42:33,783 [INFO ]  2024-10-21 09:42:33: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MUC"}
+2024-10-21 09:42:34,743 [INFO ]   [x] Done
+2024-10-21 09:42:34,745 [INFO ]  2024-10-21 09:42:34: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "BER"}
+2024-10-21 09:42:35,349 [INFO ]   [x] Done
+2024-10-21 09:42:35,350 [INFO ]  2024-10-21 09:42:35: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "AMS"}
+2024-10-21 09:42:36,254 [INFO ]   [x] Done
+2024-10-21 09:42:36,255 [INFO ]  2024-10-21 09:42:36: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "LHR"}
+2024-10-21 09:42:36,859 [INFO ]   [x] Done
+2024-10-21 09:42:36,860 [INFO ]  2024-10-21 09:42:36: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MAN"}
+2024-10-21 09:42:37,883 [INFO ]   [x] Done
+2024-10-21 09:42:37,885 [INFO ]  2024-10-21 09:42:37: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "OSL"}
+2024-10-21 09:42:38,500 [INFO ]   [x] Done
+2024-10-21 09:42:38,501 [INFO ]  2024-10-21 09:42:38: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "ARN"}
+2024-10-21 09:42:40,150 [INFO ]   [x] Done
+2024-10-21 09:42:40,151 [INFO ]  2024-10-21 09:42:40: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "MAD"}
+2024-10-21 09:42:49,146 [INFO ]   [x] Done
+2024-10-21 09:42:49,148 [INFO ]  2024-10-21 09:42:49: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "LIS"}
+2024-10-21 09:44:39,634 [WARNI]  ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...
+2024-10-21 09:44:39,634 [WARNI]  ('403 Client Error', 403)
+2024-10-21 09:44:39,635 [WARNI]  2024-10-21 09:44:39: Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-21 09:44:47,571 [INFO ]   [x] Done
+2024-10-21 09:44:47,573 [INFO ]  2024-10-21 09:44:47: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "FCO"}
+2024-10-21 09:44:49,216 [INFO ]   [x] Done
+2024-10-21 09:44:49,217 [INFO ]  2024-10-21 09:44:49: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "ATH"}
+2024-10-21 09:44:51,252 [INFO ]   [x] Done
+2024-10-21 09:44:51,254 [INFO ]  2024-10-21 09:44:51: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "WAW"}
+2024-10-21 09:44:52,827 [INFO ]   [x] Done
+2024-10-21 09:44:52,828 [INFO ]  2024-10-21 09:44:52: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "VIE"}
+2024-10-21 09:44:54,893 [INFO ]   [x] Done
+2024-10-21 09:44:54,894 [INFO ]  2024-10-21 09:44:54: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "ZRH"}
+2024-10-21 09:44:56,995 [INFO ]   [x] Done
+2024-10-21 09:44:56,996 [INFO ]  2024-10-21 09:44:56: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "DUB"}
+2024-10-21 09:44:58,588 [INFO ]   [x] Done
+2024-10-21 09:44:58,590 [INFO ]  2024-10-21 09:44:58: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "NCE"}
+2024-10-21 09:45:00,725 [INFO ]   [x] Done
+2024-10-21 09:45:00,726 [INFO ]  2024-10-21 09:45:00: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "CDG"}
+2024-10-21 09:45:06,861 [INFO ]   [x] Done
+2024-10-21 09:45:06,862 [INFO ]  2024-10-21 09:45:06: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "DMM"}
+2024-10-21 09:45:08,374 [INFO ]   [x] Done
+2024-10-21 09:45:08,375 [INFO ]  2024-10-21 09:45:08: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "DXB"}
+2024-10-21 09:45:10,274 [INFO ]   [x] Done
+2024-10-21 09:45:10,275 [INFO ]  2024-10-21 09:45:10: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "PVG"}
+2024-10-21 09:45:13,798 [INFO ]   [x] Done
+2024-10-21 09:45:13,799 [INFO ]  2024-10-21 09:45:13: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "BKK"}
+2024-10-21 09:45:16,929 [INFO ]   [x] Done
+2024-10-21 09:45:16,931 [INFO ]  2024-10-21 09:45:16: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "IST"}
+2024-10-21 09:45:18,816 [INFO ]   [x] Done
+2024-10-21 09:45:18,818 [INFO ]  2024-10-21 09:45:18: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "HND"}
+2024-10-21 09:45:20,515 [INFO ]   [x] Done
+2024-10-21 09:45:20,517 [INFO ]  2024-10-21 09:45:20: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "PEK"}
+2024-10-21 09:45:22,100 [INFO ]   [x] Done
+2024-10-21 09:45:22,102 [INFO ]  2024-10-21 09:45:22: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "DEL"}
+2024-10-21 09:45:24,859 [INFO ]   [x] Done
+2024-10-21 09:45:24,860 [INFO ]  2024-10-21 09:45:24: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "CAI"}
+2024-10-21 09:45:28,193 [INFO ]   [x] Done
+2024-10-21 09:45:28,195 [INFO ]  2024-10-21 09:45:28: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "CMN"}
+2024-10-21 09:45:29,780 [INFO ]   [x] Done
+2024-10-21 09:45:29,781 [INFO ]  2024-10-21 09:45:29: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "CPT"}
+2024-10-21 09:45:31,535 [INFO ]   [x] Done
+2024-10-21 09:45:31,536 [INFO ]  2024-10-21 09:45:31: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "LOS"}
+2024-10-21 09:45:35,805 [INFO ]   [x] Done
+2024-10-21 09:45:35,806 [INFO ]  2024-10-21 09:45:35: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "ALG"}
+2024-10-21 09:45:37,258 [INFO ]   [x] Done
+2024-10-21 09:45:37,259 [INFO ]  2024-10-21 09:45:37: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "NBO"}
+2024-10-21 09:45:39,737 [INFO ]   [x] Done
+2024-10-21 09:45:39,738 [INFO ]  2024-10-21 09:45:39: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MRU"}
+2024-10-21 09:45:41,411 [INFO ]   [x] Done
+2024-10-21 09:45:41,412 [INFO ]  2024-10-21 09:45:41: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "ATL"}
+2024-10-21 09:45:43,102 [INFO ]   [x] Done
+2024-10-21 09:45:43,103 [INFO ]  2024-10-21 09:45:43: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "DFW"}
+2024-10-21 09:45:44,710 [INFO ]   [x] Done
+2024-10-21 09:45:44,711 [INFO ]  2024-10-21 09:45:44: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "DEN"}
+2024-10-21 09:45:46,463 [INFO ]   [x] Done
+2024-10-21 09:45:46,464 [INFO ]  2024-10-21 09:45:46: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "ORD"}
+2024-10-21 09:45:48,080 [INFO ]   [x] Done
+2024-10-21 09:45:48,081 [INFO ]  2024-10-21 09:45:48: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "LAX"}
+2024-10-21 09:45:49,439 [INFO ]   [x] Done
+2024-10-21 09:45:49,440 [INFO ]  2024-10-21 09:45:49: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "JFK"}
+2024-10-21 09:45:50,972 [INFO ]   [x] Done
+2024-10-21 09:45:50,973 [INFO ]  2024-10-21 09:45:50: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "LAS"}
+2024-10-21 09:45:52,890 [INFO ]   [x] Done
+2024-10-21 09:45:52,891 [INFO ]  2024-10-21 09:45:52: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MIA"}
+2024-10-21 09:45:54,723 [INFO ]   [x] Done
+2024-10-21 09:45:54,724 [INFO ]  2024-10-21 09:45:54: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MCO"}
+2024-10-21 09:45:56,132 [INFO ]   [x] Done
+2024-10-21 09:45:56,134 [INFO ]  2024-10-21 09:45:56: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "CLT"}
+2024-10-21 09:45:57,820 [INFO ]   [x] Done
+2024-10-21 09:45:57,822 [INFO ]  2024-10-21 09:45:57: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MEX"}
+2024-10-21 09:45:59,516 [INFO ]   [x] Done
+2024-10-21 09:45:59,517 [INFO ]  2024-10-21 09:45:59: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "SEA"}
+2024-10-21 09:46:00,853 [INFO ]   [x] Done
+2024-10-21 09:46:00,854 [INFO ]  2024-10-21 09:46:00: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "EWR"}
+2024-10-21 09:46:02,615 [INFO ]   [x] Done
+2024-10-21 09:46:02,616 [INFO ]  2024-10-21 09:46:02: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "SFO"}
+2024-10-21 09:46:04,794 [INFO ]   [x] Done
+2024-10-21 09:46:04,795 [INFO ]  2024-10-21 09:46:04: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "BOG"}
+2024-10-21 09:46:06,476 [INFO ]   [x] Done
+2024-10-21 09:46:06,478 [INFO ]  2024-10-21 09:46:06: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "GRU"}
+2024-10-21 09:46:14,158 [INFO ]   [x] Done
+2024-10-21 09:46:14,159 [INFO ]  2024-10-21 09:46:14: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "FRA"}
+2024-10-21 09:46:16,490 [INFO ]   [x] Done
+2024-10-21 09:46:16,491 [INFO ]  2024-10-21 09:46:16: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MUC"}
+2024-10-21 09:46:19,729 [INFO ]   [x] Done
+2024-10-21 09:46:19,731 [INFO ]  2024-10-21 09:46:19: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "BER"}
+2024-10-21 09:46:21,415 [INFO ]   [x] Done
+2024-10-21 09:46:21,417 [INFO ]  2024-10-21 09:46:21: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "AMS"}
+2024-10-21 09:46:24,704 [INFO ]   [x] Done
+2024-10-21 09:46:24,708 [INFO ]  2024-10-21 09:46:24: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "LHR"}
+2024-10-21 09:46:26,324 [INFO ]   [x] Done
+2024-10-21 09:46:26,325 [INFO ]  2024-10-21 09:46:26: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MAN"}
+2024-10-21 09:46:29,168 [INFO ]   [x] Done
+2024-10-21 09:46:29,169 [INFO ]  2024-10-21 09:46:29: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "OSL"}
+2024-10-21 09:46:33,179 [INFO ]   [x] Done
+2024-10-21 09:46:33,181 [INFO ]  2024-10-21 09:46:33: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "ARN"}
+2024-10-21 09:46:34,627 [INFO ]   [x] Done
+2024-10-21 09:46:34,628 [INFO ]  2024-10-21 09:46:34: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "MAD"}
+2024-10-21 09:46:36,453 [INFO ]   [x] Done
+2024-10-21 09:46:36,454 [INFO ]  2024-10-21 09:46:36: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "LIS"}
+2024-10-21 09:46:38,325 [INFO ]   [x] Done
+2024-10-21 09:46:38,326 [INFO ]  2024-10-21 09:46:38: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "FCO"}
+2024-10-21 09:46:39,925 [INFO ]   [x] Done
+2024-10-21 09:46:39,926 [INFO ]  2024-10-21 09:46:39: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "ATH"}
+2024-10-21 09:46:41,676 [INFO ]   [x] Done
+2024-10-21 09:46:41,678 [INFO ]  2024-10-21 09:46:41: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "WAW"}
+2024-10-21 09:46:44,205 [INFO ]   [x] Done
+2024-10-21 09:46:44,207 [INFO ]  2024-10-21 09:46:44: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "VIE"}
+2024-10-21 09:46:46,781 [INFO ]   [x] Done
+2024-10-21 09:46:46,782 [INFO ]  2024-10-21 09:46:46: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "ZRH"}
+2024-10-21 09:46:49,909 [INFO ]   [x] Done
+2024-10-21 09:46:49,911 [INFO ]  2024-10-21 09:46:49: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "DUB"}
+2024-10-21 09:46:51,824 [INFO ]   [x] Done
+2024-10-21 09:46:51,826 [INFO ]  2024-10-21 09:46:51: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "NCE"}
+2024-10-21 09:46:53,346 [INFO ]   [x] Done
+2024-10-21 09:46:53,347 [INFO ]  2024-10-21 09:46:53: [x] Received {"date": "2024-11-25", "origin": "SSH", "destination": "CDG"}
+2024-10-21 09:46:54,962 [INFO ]   [x] Done
+2024-10-21 09:46:54,964 [INFO ]  2024-10-21 09:46:54: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "DMM"}
+2024-10-21 09:46:56,423 [INFO ]   [x] Done
+2024-10-21 09:46:56,425 [INFO ]  2024-10-21 09:46:56: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "DXB"}
+2024-10-21 09:46:59,210 [INFO ]   [x] Done
+2024-10-21 09:46:59,211 [INFO ]  2024-10-21 09:46:59: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "PVG"}
+2024-10-21 09:47:01,114 [INFO ]   [x] Done
+2024-10-21 09:47:01,115 [INFO ]  2024-10-21 09:47:01: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "BKK"}
+2024-10-21 09:47:03,444 [INFO ]   [x] Done
+2024-10-21 09:47:03,445 [INFO ]  2024-10-21 09:47:03: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "IST"}
+2024-10-21 09:47:07,176 [INFO ]   [x] Done
+2024-10-21 09:47:07,177 [INFO ]  2024-10-21 09:47:07: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "HND"}
+2024-10-21 09:47:08,849 [INFO ]   [x] Done
+2024-10-21 09:47:08,851 [INFO ]  2024-10-21 09:47:08: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "PEK"}
+2024-10-21 09:47:10,683 [INFO ]   [x] Done
+2024-10-21 09:47:10,684 [INFO ]  2024-10-21 09:47:10: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "DEL"}
+2024-10-21 09:47:12,907 [INFO ]   [x] Done
+2024-10-21 09:47:12,908 [INFO ]  2024-10-21 09:47:12: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "CAI"}
+2024-10-21 09:47:14,524 [INFO ]   [x] Done
+2024-10-21 09:47:14,526 [INFO ]  2024-10-21 09:47:14: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "CMN"}
+2024-10-21 09:47:16,841 [INFO ]   [x] Done
+2024-10-21 09:47:16,843 [INFO ]  2024-10-21 09:47:16: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "CPT"}
+2024-10-21 09:47:18,472 [INFO ]   [x] Done
+2024-10-21 09:47:18,473 [INFO ]  2024-10-21 09:47:18: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "LOS"}
+2024-10-21 09:47:21,816 [INFO ]   [x] Done
+2024-10-21 09:47:21,818 [INFO ]  2024-10-21 09:47:21: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "ALG"}
+2024-10-21 09:47:23,493 [INFO ]   [x] Done
+2024-10-21 09:47:23,494 [INFO ]  2024-10-21 09:47:23: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "NBO"}
+2024-10-21 09:47:25,211 [INFO ]   [x] Done
+2024-10-21 09:47:25,212 [INFO ]  2024-10-21 09:47:25: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "SSH"}
+2024-10-21 09:47:27,160 [INFO ]   [x] Done
+2024-10-21 09:47:27,162 [INFO ]  2024-10-21 09:47:27: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "ATL"}
+2024-10-21 09:47:29,705 [INFO ]   [x] Done
+2024-10-21 09:47:29,707 [INFO ]  2024-10-21 09:47:29: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "DFW"}
+2024-10-21 09:47:31,208 [INFO ]   [x] Done
+2024-10-21 09:47:31,210 [INFO ]  2024-10-21 09:47:31: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "DEN"}
+2024-10-21 09:47:33,082 [INFO ]   [x] Done
+2024-10-21 09:47:33,083 [INFO ]  2024-10-21 09:47:33: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "ORD"}
+2024-10-21 09:47:37,108 [INFO ]   [x] Done
+2024-10-21 09:47:37,109 [INFO ]  2024-10-21 09:47:37: [x] Received {"date": "2024-11-25", "origin": "NBO", "destination": "LIS"}
+2024-10-21 09:47:38,788 [INFO ]   [x] Done
+2024-10-21 09:47:38,789 [INFO ]  2024-10-21 09:47:38: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "LAX"}
+2024-10-21 09:47:40,368 [INFO ]   [x] Done
+2024-10-21 09:47:40,369 [INFO ]  2024-10-21 09:47:40: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "JFK"}
+2024-10-21 09:47:42,124 [INFO ]   [x] Done
+2024-10-21 09:47:42,125 [INFO ]  2024-10-21 09:47:42: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "LAS"}
+2024-10-21 09:47:44,337 [INFO ]   [x] Done
+2024-10-21 09:47:44,338 [INFO ]  2024-10-21 09:47:44: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "MIA"}
+2024-10-21 09:47:47,440 [INFO ]   [x] Done
+2024-10-21 09:47:47,441 [INFO ]  2024-10-21 09:47:47: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "MCO"}
+2024-10-21 09:47:49,024 [INFO ]   [x] Done
+2024-10-21 09:47:49,025 [INFO ]  2024-10-21 09:47:49: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "CLT"}
+2024-10-21 09:47:50,705 [INFO ]   [x] Done
+2024-10-21 09:47:50,706 [INFO ]  2024-10-21 09:47:50: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "MEX"}
+2024-10-21 09:47:52,276 [INFO ]   [x] Done
+2024-10-21 09:47:52,277 [INFO ]  2024-10-21 09:47:52: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "SEA"}
+2024-10-21 09:47:54,254 [INFO ]   [x] Done
+2024-10-21 09:47:54,255 [INFO ]  2024-10-21 09:47:54: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "EWR"}
+2024-10-21 09:47:55,629 [INFO ]   [x] Done
+2024-10-21 09:47:55,631 [INFO ]  2024-10-21 09:47:55: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "SFO"}
+2024-10-21 09:47:57,179 [INFO ]   [x] Done
+2024-10-21 09:47:57,180 [INFO ]  2024-10-21 09:47:57: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "BOG"}
+2024-10-21 09:47:59,910 [INFO ]   [x] Done
+2024-10-21 09:47:59,911 [INFO ]  2024-10-21 09:47:59: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "GRU"}
+2024-10-21 09:48:23,612 [INFO ]   [x] Done
+2024-10-21 09:48:23,613 [INFO ]  2024-10-21 09:48:23: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "FRA"}
+2024-10-21 09:48:27,079 [INFO ]   [x] Done
+2024-10-21 09:48:27,081 [INFO ]  2024-10-21 09:48:27: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "MUC"}
+2024-10-21 09:48:29,281 [INFO ]   [x] Done
+2024-10-21 09:48:29,282 [INFO ]  2024-10-21 09:48:29: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "BER"}
+2024-10-21 09:48:30,792 [INFO ]   [x] Done
+2024-10-21 09:48:30,793 [INFO ]  2024-10-21 09:48:30: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "AMS"}
+2024-10-21 09:48:32,453 [INFO ]   [x] Done
+2024-10-21 09:48:32,454 [INFO ]  2024-10-21 09:48:32: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "LHR"}
+2024-10-21 09:48:34,205 [INFO ]   [x] Done
+2024-10-21 09:48:34,206 [INFO ]  2024-10-21 09:48:34: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "MAN"}
+2024-10-21 09:48:37,492 [INFO ]   [x] Done
+2024-10-21 09:48:37,494 [INFO ]  2024-10-21 09:48:37: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "OSL"}
+2024-10-21 09:48:39,411 [INFO ]   [x] Done
+2024-10-21 09:48:39,412 [INFO ]  2024-10-21 09:48:39: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "ARN"}
+2024-10-21 09:48:41,158 [INFO ]   [x] Done
+2024-10-21 09:48:41,159 [INFO ]  2024-10-21 09:48:41: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "MAD"}
+2024-10-21 09:48:42,736 [INFO ]   [x] Done
+2024-10-21 09:48:42,738 [INFO ]  2024-10-21 09:48:42: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "LIS"}
+2024-10-21 09:48:44,770 [INFO ]   [x] Done
+2024-10-21 09:48:44,771 [INFO ]  2024-10-21 09:48:44: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "FCO"}
+2024-10-21 09:48:46,866 [INFO ]   [x] Done
+2024-10-21 09:48:46,868 [INFO ]  2024-10-21 09:48:46: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "ATH"}
+2024-10-21 09:48:48,540 [INFO ]   [x] Done
+2024-10-21 09:48:48,542 [INFO ]  2024-10-21 09:48:48: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "WAW"}
+2024-10-21 09:48:50,544 [INFO ]   [x] Done
+2024-10-21 09:48:50,545 [INFO ]  2024-10-21 09:48:50: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "VIE"}
+2024-10-21 09:48:53,920 [INFO ]   [x] Done
+2024-10-21 09:48:53,921 [INFO ]  2024-10-21 09:48:53: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "ZRH"}
+2024-10-21 09:48:55,725 [INFO ]   [x] Done
+2024-10-21 09:48:55,726 [INFO ]  2024-10-21 09:48:55: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "DUB"}
+2024-10-21 09:48:57,681 [INFO ]   [x] Done
+2024-10-21 09:48:57,682 [INFO ]  2024-10-21 09:48:57: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "NCE"}
+2024-10-21 09:48:59,232 [INFO ]   [x] Done
+2024-10-21 09:48:59,234 [INFO ]  2024-10-21 09:48:59: [x] Received {"date": "2024-11-25", "origin": "MRU", "destination": "CDG"}
+2024-10-21 09:49:00,982 [INFO ]   [x] Done
+2024-10-21 09:49:00,983 [INFO ]  2024-10-21 09:49:00: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "DMM"}
+2024-10-21 09:49:02,563 [INFO ]   [x] Done
+2024-10-21 09:49:02,564 [INFO ]  2024-10-21 09:49:02: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "DXB"}
+2024-10-21 09:49:07,294 [INFO ]   [x] Done
+2024-10-21 09:49:07,295 [INFO ]  2024-10-21 09:49:07: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "PVG"}
+2024-10-21 09:49:10,158 [INFO ]   [x] Done
+2024-10-21 09:49:10,160 [INFO ]  2024-10-21 09:49:10: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "BKK"}
+2024-10-21 09:49:12,147 [INFO ]   [x] Done
+2024-10-21 09:49:12,148 [INFO ]  2024-10-21 09:49:12: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "IST"}
+2024-10-21 09:49:14,314 [INFO ]   [x] Done
+2024-10-21 09:49:14,315 [INFO ]  2024-10-21 09:49:14: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "HND"}
+2024-10-21 09:49:17,223 [INFO ]   [x] Done
+2024-10-21 09:49:17,224 [INFO ]  2024-10-21 09:49:17: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "PEK"}
+2024-10-21 09:49:19,815 [INFO ]   [x] Done
+2024-10-21 09:49:19,816 [INFO ]  2024-10-21 09:49:19: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "DEL"}
+2024-10-21 09:49:22,644 [INFO ]   [x] Done
+2024-10-21 09:49:22,646 [INFO ]  2024-10-21 09:49:22: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "CAI"}
+2024-10-21 09:49:26,507 [INFO ]   [x] Done
+2024-10-21 09:49:26,509 [INFO ]  2024-10-21 09:49:26: [x] Received {"date": "2024-11-25", "origin": "ATL", "destination": "CMN"}
+2024-10-21 09:50:28,533 [WARNI]  ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...
+2024-10-21 09:50:28,533 [WARNI]  ('403 Client Error', 403)
+2024-10-21 09:50:28,534 [WARNI]  2024-10-21 09:50:28: Sleeping for 30 minutes  ZZZZZZZZZZZZZ
