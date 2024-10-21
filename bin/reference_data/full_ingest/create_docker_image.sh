@@ -1,6 +1,6 @@
 #!/bin/bash
-# Command to execute this script:
-#   bash bin/reference_data/full_ingest/run_docker.sh
+# Command to execute this script, from project root:
+# bash bin/reference_data/full_ingest/create_docker_image.sh
 
 # Load environment variables
 set -a
@@ -15,7 +15,7 @@ if [ -d ${tmp_build_context} ]; then
   rm -rf ${tmp_build_context}
 fi
 mkdir ${tmp_build_context}
-cp Dockerfile requirements.txt ${tmp_build_context} &>/dev/null
+cp ${REFERENCE_DATA_DOCKER_INGESTION_PATH}/{Dockerfile,requirements.txt} ${tmp_build_context} &>/dev/null
 cp -r ${PROJECT_ABSOLUT_PATH}/bin/common/ ${tmp_build_context}
 mv ${tmp_build_context}/common/.dockerignore ${tmp_build_context}
 mkdir ${tmp_build_context}/reference_data
@@ -35,11 +35,4 @@ docker build \
 # Remove temporary folder that served as a build context for Docker
 rm -rf ${tmp_build_context}
 
-# Run Docker
-docker run \
-  --volume ${PROJECT_ABSOLUT_PATH}/data/referenceData:${PROJECT_ABSOLUT_PATH}/data/referenceData \
-  -e \
-  --network $PROJECT_NETWORK_1 \
-  --name $REFERENCE_DATA_CONTAINER_NAME \
-  $REFERENCE_DATA_IMAGE_NAME
 

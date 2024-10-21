@@ -74,11 +74,11 @@ def _get_db_cred(
     if user_path is None and pwd_path is None and docker_path is None:
         # Store database credentials in a dictionary
         config = {}
-        config["user"] = open(os.getenv["POSTGRES_DBUSER_FILE"], 'r').read()
-        config["password"] = open(os.getenv["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
-        config["host"] = os.getenv["PGRST_HOST"]
-        config["database"] = os.getenv["POSTGRES_DB"]
-        config["port"] = os.getenv["POSTGRES_DB_PORT"]
+        config["user"] = open(os.environ["POSTGRES_DBUSER_FILE"], 'r').read()
+        config["password"] = open(os.environ["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
+        config["host"] = os.environ["POSTGRES_HOST"]
+        config["database"] = os.environ["POSTGRES_DB"]
+        config["port"] = os.environ["POSTGRES_DB_PORT"]
     else:  # Original behaivour
         import yaml
         with open(user_path, "r") as f:
