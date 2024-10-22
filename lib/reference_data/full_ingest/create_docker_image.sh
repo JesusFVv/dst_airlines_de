@@ -29,7 +29,6 @@ docker container inspect $REFERENCE_DATA_CONTAINER_NAME &>/dev/null && docker co
 docker image inspect $REFERENCE_DATA_IMAGE_NAME &>/dev/null && docker image rm $REFERENCE_DATA_IMAGE_NAME
 # Build Docker image
 docker build \
-  --build-arg REFERENCE_DATA_DOCKER_INGESTION_PATH=$REFERENCE_DATA_DOCKER_INGESTION_PATH \
   -t $REFERENCE_DATA_IMAGE_NAME \
   $tmp_build_context
 # Remove temporary folder that served as a build context for Docker
