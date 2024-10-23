@@ -239,7 +239,7 @@ def build_flat_data(
 
 
 def ingest_data(
-    db_config_filepath: PosixPath,
+    db_config_filepath: PosixPath | None,
     sql_table_name_cooked: str,
     truncate_query: str,
     gen: Generator[dict, None, None],
@@ -247,7 +247,7 @@ def ingest_data(
     """Ingest data into Postgres database
 
     Args:
-        db_config_filepath (PosixPath): absolute path to the db config file
+        db_config_filepath (PosixPath | None): absolute path to the db config file (deprecated)
         sql_table_name_cooked (str): SQL table name where raw cooked are stored
         truncate_query (str): SQL query to truncate cooked table
         gen (Generator[dict, None, None]): a generator returning formatted data as a dictionary
@@ -286,9 +286,7 @@ if __name__ == "__main__":
     ########################
     ### Input parameters ###
     ########################
-    db_config_filepath = Path(
-        "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/cooked_loading/common/database.ini"
-    )
+    db_config_filepath = None  # Set to None to maintain compatibility (deprecated)
     raw_table_name = "l1.operations_customer_flight_info"
     raw_data_query = f"SELECT DISTINCT data FROM {raw_table_name}"  # Use DISTINCT to get rid of duplicates
 
