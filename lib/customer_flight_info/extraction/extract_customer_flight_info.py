@@ -239,7 +239,7 @@ if __name__ == "__main__":
     )
     today = dt.date.today().strftime("%Y-%m-%d")
     # datetime_array = generate_datetime_array(yesterday_two_am, today)
-    datetime_array = generate_datetime_array("2024-09-16 02:00:00", "2024-09-17")
+    datetime_array = generate_datetime_array("2024-10-21 02:00:00", "2024-10-22")
     logger.debug(datetime_array)
 
     # Define retry strategy for https requests
