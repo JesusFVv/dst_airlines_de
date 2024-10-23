@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import psycopg2
 import shutil
 from collections.abc import Generator
@@ -60,7 +61,7 @@ def get_data(data_path: PosixPath) -> Generator[dict, None, None]:
 
 
 def ingest_data(
-    db_config_filepath: PosixPath,
+    db_config_filepath: PosixPath | None,
     sql_table_name_raw: str,
     truncate_query: str,
     gen: Generator[dict, None, None],
@@ -68,7 +69,7 @@ def ingest_data(
     """Ingest data into Postgres database
 
     Args:
-        db_config_filepath (PosixPath): absolute path to the db config file
+        db_config_filepath (PosixPath | None): absolute path to the db config file (deprecated)
         sql_table_name_raw (str): SQL table name where raw data are stored
         truncate_query (str): SQL query to truncate raw table
         gen (Generator[dict, None, None]): a generator returning data as a dictionary
@@ -104,10 +105,8 @@ if __name__ == "__main__":
     ########################
     ### Input parameters ###
     ########################
-    data_path = Path("/home/ubuntu/dst_airlines_de/data/customerFlightInfo")
-    db_config_filepath = Path(
-        "/home/ubuntu/dst_airlines_de/bin/customer_flight_info/raw_loading/common/database.ini"
-    )
+    data_path = Path(os.environ['DATA_FOLDER'])
+    db_config_filepath = None  # Set to None to maintain compatibility (deprecated)
     sql_table_name_raw = "l1.operations_customer_flight_info"
     truncate_query = f"TRUNCATE TABLE {sql_table_name_raw}"
 
@@ -116,4 +115,3 @@ if __name__ == "__main__":
     gen = get_data(data_path)  # Generator object
     ingest_data(db_config_filepath, sql_table_name_raw, truncate_query, gen)
     logger.info("RAW LOADING COMPLETED !")
-
