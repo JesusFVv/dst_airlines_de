@@ -2,6 +2,7 @@ import datetime as dt
 import json
 import logging
 import numpy as np
+import os
 import pandas as pd
 import requests
 import shutil
@@ -220,7 +221,7 @@ if __name__ == "__main__":
     ########################
     ### Input parameter ###
     ########################
-    data_path = Path("/home/ubuntu/dst_airlines_de/data/customerFlightInfo")
+    data_path = Path(os.environ['DATA_FOLDER'])
 
     ########################
     # Get airports array
@@ -294,4 +295,3 @@ if __name__ == "__main__":
 
     zip_files(data_path, datetime_array[0])
     logger.info("COLLECT COMPLETED !")
-
