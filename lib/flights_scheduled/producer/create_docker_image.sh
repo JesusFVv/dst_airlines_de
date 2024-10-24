@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Create an image to fill the queue with flight routes by a given date in the future
 # Execute the script with command:
 #   bash lib/flights_scheduled/producer/create_docker_image.sh
 set -a
