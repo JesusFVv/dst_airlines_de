@@ -1,0 +1,78 @@
+{
+    "FlightInformation": {
+        "Flights": {
+            "Flight": {
+                "Departure": {
+                    "AirportCode": "RUH",
+                    "Scheduled": {
+                        "Date": "2024-10-21",
+                        "Time": "20:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-10-21",
+                        "Time": "20:30"
+                    },
+                    "Terminal": {
+                        "Name": "2",
+                        "Gate": "026"
+                    },
+                    "Status": {
+                        "Code": "DP",
+                        "Description": "Flight Departed"
+                    }
+                },
+                "Arrival": {
+                    "AirportCode": "DMM",
+                    "Scheduled": {
+                        "Date": "2024-10-21",
+                        "Time": "21:45"
+                    },
+                    "Actual": {
+                        "Date": "2024-10-21",
+                        "Time": "21:35"
+                    },
+                    "Terminal": {
+                        "Gate": "026"
+                    },
+                    "Status": {
+                        "Code": "LD",
+                        "Description": "Flight Landed"
+                    }
+                },
+                "OperatingCarrier": {
+                    "AirlineID": "LH",
+                    "FlightNumber": "622"
+                },
+                "Equipment": {
+                    "AircraftCode": "333"
+                },
+                "Status": {
+                    "Code": "LD",
+                    "Description": "Flight Landed"
+                }
+            }
+        },
+        "Meta": {
+            "@Version": "1.0.0",
+            "Link": [
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DMM/2024-10-21T18:00?limit=100",
+                    "@Rel": "self"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DMM/2024-10-21T14:00?limit=50&offset=0",
+                    "@Rel": "previousRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/DMM/2024-10-21T22:00?limit=50&offset=0",
+                    "@Rel": "nextRange"
+                },
+                {
+                    "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+                    "@Rel": "related"
+                }
+            ],
+            "TotalCount": 1
+        }
+    }
+}

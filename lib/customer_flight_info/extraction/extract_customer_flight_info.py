@@ -1,3 +1,7 @@
+# Only for test
+import sys
+sys.path.append("/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de/lib")
+#
 import datetime as dt
 import json
 import logging
@@ -26,20 +30,9 @@ CUSTOMER_FLIGHT_INFO_DEPARTURE_AIRPORT_ENDPOINT = (
 CUSTOMER_FLIGHT_INFO_ARRIVAL_AIRPORT_ENDPOINT = (
     BASE_URL + r"operations/customerflightinformation/arrivals/{}/{}"
 )
-
+AIRPORTS_FILE_PATH = os.environ['AIRPORTS_FILE_PATH']
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.INFO)
-
-# Create handlers
-# c_handler = logging.StreamHandler()
-# c_handler.setLevel(logging.INFO)
-# f_handler = logging.FileHandler("error.log")
-# f_handler.setLevel(logging.ERROR)
-
-# # Add handlers to the logger
-# logger.addHandler(c_handler)
-# logger.addHandler(f_handler)
 
 
 def get_airports(filename: PosixPath) -> np.ndarray:
@@ -218,6 +211,18 @@ def zip_files(data_path: PosixPath, date_time: str) -> None:
 
 
 if __name__ == "__main__":
+    logger.setLevel(logging.INFO)
+
+    # Create handlers
+    c_handler = logging.StreamHandler()
+    c_handler.setLevel(logging.INFO)
+    # f_handler = logging.FileHandler("error.log")
+    # f_handler.setLevel(logging.ERROR)
+
+    # Add handlers to the logger
+    logger.addHandler(c_handler)
+    # logger.addHandler(f_handler)
+    
     ########################
     ### Input parameter ###
     ########################
@@ -226,8 +231,7 @@ if __name__ == "__main__":
     ########################
     # Get airports array
     working_dir = Path.cwd()
-    airport_filepath = Path(working_dir, "input", "airports.csv")
-    airports = get_airports(airport_filepath)  # Numpy array
+    airports = get_airports(AIRPORTS_FILE_PATH)  # Numpy array
     logger.debug(airports)
 
     # Generate list of datetimes

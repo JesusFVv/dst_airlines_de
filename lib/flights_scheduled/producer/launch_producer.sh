@@ -12,7 +12,9 @@ docker container run -d --name $CONTAINER_NAME \
     -e RABBITMQ_HOST=$RABBITMQ_HOST \
     -e RABBITMQ_PORT=$RABBITMQ_PORT \
     -e FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL \
-    -v ${PROJECT_ABSOLUT_PATH}/data/airports/airports.csv:/usr/src/app/data/airports.csv:ro \
+    -e LOG_FILE_PATH=/usr/src/app/log \
+    -v ${AIRPORTS_FILE_PATH}:/usr/src/app/data/airports.csv:ro \
+    -v ${FLIGHT_SCHEDULES_PRODUCER_LOG_PATH}:/usr/src/app/log:rw \
     --network dst_network \
     --restart no \
     dst_flight_schedules_producer
