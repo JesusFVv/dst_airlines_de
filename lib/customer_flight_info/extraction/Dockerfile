@@ -1,11 +1,8 @@
 # Pull base image
 FROM python:3.11-alpine3.20
 
-# Set a variable
-ARG code_folder=/home/ubuntu/dst_airlines_de/bin/customer_flight_info/extraction/
-
 # Set working directory
-WORKDIR $code_folder
+WORKDIR /usr/src/app/
 
 # Add packages that are needed to install py7zr Python library
 RUN apk add gcc python3-dev musl-dev linux-headers
@@ -21,6 +18,12 @@ RUN pip install -r requirements.txt
 COPY common ./common
 COPY input ./input
 COPY extract_customer_flight_info.py .
+
+# Define environment variable
+ENV DATA_FOLDER=/usr/src/app/data/customerFlightInfo
+
+# Define volume storing data
+VOLUME /usr/src/app/data/customerFlightInfo
 
 # Run command
 CMD [ "python3", "extract_customer_flight_info.py" ]
