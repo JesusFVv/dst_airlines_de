@@ -17,10 +17,3 @@ docker run --rm \
   --network $PROJECT_NETWORK_1 \
   --name $REFERENCE_DATA_CONTAINER_NAME \
   $REFERENCE_DATA_IMAGE_NAME
-
-
-# D - INGEST RAW
-# python3 ./ingestRefData_02_ingestReferenceDataRaw.py
-
-# # E - INGEST COOKED
-# python3 ./common/runSqlScript.py ./ingestRefData_03_referenceDataCooked.sql

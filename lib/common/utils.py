@@ -38,7 +38,8 @@ def get_filenames(files_path: PosixPath, suffix: str = "") -> list[PosixPath]:
 
 
 def read_db_config(filepath: PosixPath) -> tuple[PosixPath, PosixPath, PosixPath]:
-    """Read content of a config file
+    """ DEPRECATED
+    Read content of a config file
 
     Args:
         filepath (PosixPath): absolute path to the db config file
@@ -72,13 +73,12 @@ def _get_db_cred(
         config (dict[str, str|int]): a dictionary with database config values (i.e. user, pwd, database name and port)
     """
     if user_path is None and pwd_path is None and docker_path is None:
-        # Store database credentials in a dictionary
-        config = {}
-        config["user"] = open(os.environ["POSTGRES_DBUSER_FILE"], 'r').read()
-        config["password"] = open(os.environ["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
-        config["host"] = os.environ["POSTGRES_HOST"]
-        config["database"] = os.environ["POSTGRES_DB"]
-        config["port"] = os.environ["POSTGRES_DB_PORT"]
+        # Get database credentials from environment variables
+        user = open(os.environ["POSTGRES_DBUSER_FILE"], 'r').read()
+        pwd = open(os.environ["POSTGRES_DBUSER_PASSWORD_FILE"], 'r').read()
+        host = os.environ["POSTGRES_HOST"]
+        db_name = os.environ["POSTGRES_DB"]
+        port = os.environ["POSTGRES_DB_PORT"]
     else:  # Original behaivour
         import yaml
         with open(user_path, "r") as f:
@@ -97,30 +97,30 @@ def _get_db_cred(
         ports = docker_compose["services"]["postgres_db"]["ports"]  # Returns a list
         port = int(ports[0].split(":")[1])
 
-        # Store database credentials in a dictionary
-        config = {}
-        config["user"] = user
-        config["password"] = pwd
-        config["host"] = host
-        config["database"] = db_name
-        config["port"] = port
+    # Store database credentials in a dictionary
+    config = {}
+    config["user"] = user
+    config["password"] = pwd
+    config["host"] = host
+    config["database"] = db_name
+    config["port"] = port
 
     return config
 
 
 def connect_db(
-    db_config_filepath: PosixPath=None,
+    db_config_filepath: PosixPath | None=None,
 ) -> tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]:
     """Connect to a Postgres database
 
     Args:
-        db_config_filepath (PosixPath): absolute path to the db config file
+        db_config_filepath (PosixPath | None): absolute path to the db config file (deprecated)
 
     Returns:
         (conn, cur) (tuple[psycopg2.extensions.connection, psycopg2.extensions.cursor]): a tuple containing a connector to the Postgres database and a cursor object
     """
     import psycopg2
-    if db_config_filepath:  # Original behaivour
+    if db_config_filepath:  # Original behaviour
         user_path, pwd_path, docker_path = read_db_config(db_config_filepath)
         db_config = _get_db_cred(user_path, pwd_path, docker_path)
     else: # Case when DB credentials are extracted from the environment variables
@@ -163,11 +163,11 @@ def insert_data_into_db(cur: psycopg2.extensions.cursor, db_table_name: str, dat
     cur.execute(query, data)
 
 
-def read_data_from_db(db_config_filepath: PosixPath, sql_query: str) -> list[tuple]:
+def read_data_from_db(db_config_filepath: PosixPath | None, sql_query: str) -> list[tuple]:
     """Read data from a database table
 
     Args:
-        db_config_filepath (PosixPath): absolute path to the db config file
+        db_config_filepath (PosixPath | None): absolute path to the db config file (deprecated)
         sql_query (str): SQL query to run on database table
 
     Returns:

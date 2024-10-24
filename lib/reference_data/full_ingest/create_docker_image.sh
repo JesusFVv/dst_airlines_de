@@ -16,8 +16,8 @@ if [ -d ${tmp_build_context} ]; then
 fi
 mkdir ${tmp_build_context}
 cp ${REFERENCE_DATA_DOCKER_INGESTION_PATH}/{Dockerfile,requirements.txt} ${tmp_build_context} &>/dev/null
-cp -r ${PROJECT_ABSOLUT_PATH}/bin/common/ ${tmp_build_context}
-mv ${tmp_build_context}/common/.dockerignore ${tmp_build_context}  # TODO: update common path if moved to lib/
+cp -r ${PROJECT_ABSOLUT_PATH}/lib/common/ ${tmp_build_context}
+mv ${tmp_build_context}/common/.dockerignore ${tmp_build_context}
 mkdir ${tmp_build_context}/reference_data
 cp ${REFERENCE_DATA_INGESTION_PATH}/*.sh ${tmp_build_context}/reference_data
 cp ${REFERENCE_DATA_INGESTION_PATH}/*.py ${tmp_build_context}/reference_data
@@ -29,7 +29,6 @@ docker container inspect $REFERENCE_DATA_CONTAINER_NAME &>/dev/null && docker co
 docker image inspect $REFERENCE_DATA_IMAGE_NAME &>/dev/null && docker image rm $REFERENCE_DATA_IMAGE_NAME
 # Build Docker image
 docker build \
-  --build-arg REFERENCE_DATA_DOCKER_INGESTION_PATH=$REFERENCE_DATA_DOCKER_INGESTION_PATH \
   -t $REFERENCE_DATA_IMAGE_NAME \
   $tmp_build_context
 # Remove temporary folder that served as a build context for Docker

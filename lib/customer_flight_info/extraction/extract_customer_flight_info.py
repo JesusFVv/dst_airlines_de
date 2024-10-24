@@ -2,6 +2,7 @@ import datetime as dt
 import json
 import logging
 import numpy as np
+import os
 import pandas as pd
 import requests
 import shutil
@@ -220,7 +221,7 @@ if __name__ == "__main__":
     ########################
     ### Input parameter ###
     ########################
-    data_path = Path("/home/ubuntu/dst_airlines_de/data/customerFlightInfo")
+    data_path = Path(os.environ['DATA_FOLDER'])
 
     ########################
     # Get airports array
@@ -238,7 +239,7 @@ if __name__ == "__main__":
     )
     today = dt.date.today().strftime("%Y-%m-%d")
     # datetime_array = generate_datetime_array(yesterday_two_am, today)
-    datetime_array = generate_datetime_array("2024-09-16 02:00:00", "2024-09-17")
+    datetime_array = generate_datetime_array("2024-10-21 02:00:00", "2024-10-22")
     logger.debug(datetime_array)
 
     # Define retry strategy for https requests
@@ -294,4 +295,3 @@ if __name__ == "__main__":
 
     zip_files(data_path, datetime_array[0])
     logger.info("COLLECT COMPLETED !")
-
