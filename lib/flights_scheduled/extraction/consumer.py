@@ -29,7 +29,7 @@ def main():
 
     def callback(ch, method, properties, body):
         message = body.decode()
-        logger.info(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: [x] Received {message}")
+        logger.info(f"[x] Received {message}")
         message = json.loads(message)
         try:
             load_flight_schedules(message['origin'], message['destination'], message['date'])
@@ -38,14 +38,14 @@ def main():
                 logger.warning("ERROR: RATE LIMIT REACHED, WE SHOULD SLEEP A BIT ...")
                 logger.warning(e)
                 ch.basic_reject(delivery_tag=method.delivery_tag)
-                logger.warning(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}: Sleeping for 30 minutes  ZZZZZZZZZZZZZ")
+                logger.warning("Sleeping for 30 minutes  ZZZZZZZZZZZZZ")
                 time.sleep(30*60)  # Sleep during 30 minutes before restarting again
         except Exception as e:
             logger.error("ERROR: UNEXPECTED ERROR, producer will not acknowledge and it will hung. Resolve manually.")
             logger.error(e)
             ch.basic_reject(delivery_tag=method.delivery_tag)
         else:
-            logger.info(" [x] Done")
+            logger.info("[x] Done")
             ch.basic_ack(delivery_tag=method.delivery_tag)
             
     channel.basic_qos(prefetch_count=1)
