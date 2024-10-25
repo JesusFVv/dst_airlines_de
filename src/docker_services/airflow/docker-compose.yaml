@@ -74,6 +74,7 @@ x-airflow-common:
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
     AIRFLOW__WEBSERVER__BASE_URL: 'http://0.0.0.0:8080/airflow'
     AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'true'
+    PROJECT_ABSOLUT_PATH: $PROJECT_ABSOLUT_PATH
 
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags

@@ -1,3 +1,4 @@
+import os
 from urllib.request import BaseHandler
 from airflow.decorators import dag, task
 from airflow.operators.bash import BashOperator
@@ -5,6 +6,8 @@ from airflow.providers.docker.operators.docker import DockerOperator
 from airflow.providers.ssh.operators.ssh import SSHOperator
 from docker.types import Mount
 from pendulum import datetime
+
+PROJECT_ABSOLUT_PATH = os.environ['PROJECT_ABSOLUT_PATH']  # Import the env variable from Host: NOT IDEAL!!!!!
 
 # Next is the DAG to launch DockerContainers with the DockerOperator, it only works if permissions of /var/run/docker.sock are 666
 @dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule=None, catchup=False, tags=["dst_project", "flight_schedules"])
@@ -41,9 +44,23 @@ def flight_schedules_ssh_operator():
     flight_schedules_producer = SSHOperator(
         task_id="flight_schedules_producer",
         ssh_conn_id='WSL_Home',
-        command='docker container start flight_schedules_producer'
+        command=f"pushd {PROJECT_ABSOLUT_PATH} && bash lib/flights_scheduled/producer/launch_producer.sh "
     )
     
     flight_schedules_producer
 
 flight_schedules_ssh_operator()
+
+
+
+@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule=None, catchup=False, tags=["dst_project", "flight_schedules"])
+def flight_schedules_backlog_ssh_operator():
+    flight_schedules_producer_backlog = SSHOperator(
+        task_id="flight_schedules_producer_backlog",
+        ssh_conn_id='WSL_Home',
+        command=f"pushd {PROJECT_ABSOLUT_PATH} && bash lib/flights_scheduled/producer/launch_producer_backlog.sh "
+    )
+    
+    flight_schedules_producer_backlog
+
+flight_schedules_backlog_ssh_operator()

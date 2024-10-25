@@ -78,12 +78,13 @@ def get_flight_date() -> Iterator[str]:
     Returns:
         str: _description_
     """
-    yesterday = datetime.date.today() - datetime.timedelta(days=1)
+    today_utc = datetime.datetime.now(datetime.timezone.utc).date()
+    yesterday = today_utc - datetime.timedelta(days=1)
     two_am = datetime.time(hour=2, minute=0, second=0)
     yesterday_two_am = datetime.datetime.combine(yesterday, two_am).strftime(
         "%Y-%m-%d %H:%M:%S"
     )
-    today = datetime.date.today().strftime("%Y-%m-%d")
+    today = today_utc.strftime("%Y-%m-%d")
     datetime_array = generate_datetime_array(yesterday_two_am, today)
     for date_time in datetime_array:
         yield date_time

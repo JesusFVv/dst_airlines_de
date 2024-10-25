@@ -88,25 +88,25 @@ services:
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     restart: unless-stopped
-  flight_schedules_producer:
-    image: dst_flight_schedules_producer:latest
-    container_name: flight_schedules_producer
-    environment:
-      - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
-      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
-      - RABBITMQ_PORT=$RABBITMQ_PORT
-      - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
-      - LOG_FILE_PATH=/usr/src/app/log
-    networks:
-      - ${PROJECT_NETWORK_1}
-    volumes:
-      - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
-      - ${FLIGHT_SCHEDULES_PRODUCER_LOG_PATH}:/usr/src/app/log:rw
-    restart: no
-    depends_on:
-      rabbitmq:
-        condition: service_started
-        restart: false
+  # flight_schedules_producer: # Launched individually outside the docker compose
+  #   image: dst_flight_schedules_producer:latest
+  #   container_name: flight_schedules_producer
+  #   environment:
+  #     - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
+  #     - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+  #     - RABBITMQ_PORT=$RABBITMQ_PORT
+  #     - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
+  #     - LOG_FILE_PATH=/usr/src/app/log
+  #   networks:
+  #     - ${PROJECT_NETWORK_1}
+  #   volumes:
+  #     - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
+  #     - ${FLIGHT_SCHEDULES_PRODUCER_LOG_PATH}:/usr/src/app/log:rw
+  #   restart: no
+  #   depends_on:
+  #     rabbitmq:
+  #       condition: service_started
+  #       restart: false
   flight_schedules_consumer:
     image: dst_flight_schedules_consumer:latest
     environment:
@@ -128,26 +128,26 @@ services:
     deploy:
       mode: replicated
       replicas: 2
-  customer_flight_info_producer:
-    image: dst_customer_flight_info_producer:latest
-    container_name: customer_flight_info_producer
-    environment:
-      - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
-      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
-      - RABBITMQ_PORT=$RABBITMQ_PORT
-      - CUSTOMERS_FLIGHT_INFO_ARRIVALS_CHANNEL=$CUSTOMERS_FLIGHT_INFO_ARRIVALS_CHANNEL
-      - CUSTOMERS_FLIGHT_INFO_DEPARTURES_CHANNEL=$CUSTOMERS_FLIGHT_INFO_DEPARTURES_CHANNEL
-      - LOG_FILE_PATH=/usr/src/app/log
-    networks:
-      - ${PROJECT_NETWORK_1}
-    volumes:
-      - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
-      - ${CUSTOMER_FLIGHT_INFO_PRODUCER_LOG_PATH}:/usr/src/app/log:rw
-    restart: no
-    depends_on:
-      rabbitmq:
-        condition: service_started
-        restart: false
+  # customer_flight_info_producer:  # Launched individually outside the docker compose
+  #   image: dst_customer_flight_info_producer:latest
+  #   container_name: customer_flight_info_producer
+  #   environment:
+  #     - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
+  #     - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+  #     - RABBITMQ_PORT=$RABBITMQ_PORT
+  #     - CUSTOMERS_FLIGHT_INFO_ARRIVALS_CHANNEL=$CUSTOMERS_FLIGHT_INFO_ARRIVALS_CHANNEL
+  #     - CUSTOMERS_FLIGHT_INFO_DEPARTURES_CHANNEL=$CUSTOMERS_FLIGHT_INFO_DEPARTURES_CHANNEL
+  #     - LOG_FILE_PATH=/usr/src/app/log
+  #   networks:
+  #     - ${PROJECT_NETWORK_1}
+  #   volumes:
+  #     - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
+  #     - ${CUSTOMER_FLIGHT_INFO_PRODUCER_LOG_PATH}:/usr/src/app/log:rw
+  #   restart: no
+  #   depends_on:
+  #     rabbitmq:
+  #       condition: service_started
+  #       restart: false
 volumes:
   db-data:
     name: db-data
