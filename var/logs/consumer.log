@@ -1,0 +1,87 @@
+2024-10-26 02:31:04,330 [INFO ] __main__: ARRIVALS  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 02:31:04,343 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "DFW"}
+2024-10-26 02:31:08,360 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:08,363 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "DEN"}
+2024-10-26 02:31:12,377 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:12,379 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "ORD"}
+2024-10-26 02:31:15,596 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:15,598 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "LAX"}
+2024-10-26 02:31:18,973 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:18,975 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "JFK"}
+2024-10-26 02:31:22,325 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:22,327 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "LAS"}
+2024-10-26 02:31:25,443 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:25,444 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MIA"}
+2024-10-26 02:31:28,683 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:31:28,685 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MCO"}
+2024-10-26 02:32:01,989 [INFO ] __main__: ARRIVALS  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 02:32:01,995 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MCO"}
+2024-10-26 02:32:07,133 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MCO/2024-10-24T06:00?limit=100
+2024-10-26 02:32:07,133 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:07,135 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "CLT"}
+2024-10-26 02:32:11,136 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/CLT/2024-10-24T06:00?limit=100
+2024-10-26 02:32:11,137 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:11,139 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MEX"}
+2024-10-26 02:32:13,961 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/MEX/2024-10-24T06:00?limit=100
+2024-10-26 02:32:13,962 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:13,964 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "SEA"}
+2024-10-26 02:32:17,234 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SEA/2024-10-24T06:00?limit=100
+2024-10-26 02:32:17,235 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:17,237 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "EWR"}
+2024-10-26 02:32:20,618 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/EWR/2024-10-24T06:00?limit=100
+2024-10-26 02:32:20,619 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:20,622 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "SFO"}
+2024-10-26 02:32:23,766 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/SFO/2024-10-24T06:00?limit=100
+2024-10-26 02:32:23,767 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:23,769 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "BOG"}
+2024-10-26 02:32:26,989 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/BOG/2024-10-24T06:00?limit=100
+2024-10-26 02:32:26,990 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:26,992 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "GRU"}
+2024-10-26 02:32:30,387 [ERROR] customer_flight_info_pipeline: ARRIVALS HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/arrivals/GRU/2024-10-24T06:00?limit=100
+2024-10-26 02:32:30,388 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:30,390 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "FRA"}
+2024-10-26 02:32:34,521 [INFO ] customer_flight_info_pipeline: ARRIVALS 50 rows were added into the database raw table.
+2024-10-26 02:32:34,521 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:34,522 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:34,523 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:34,526 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MUC"}
+2024-10-26 02:32:38,959 [INFO ] customer_flight_info_pipeline: ARRIVALS 50 rows were added into the database raw table.
+2024-10-26 02:32:38,960 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:38,961 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:38,962 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:38,964 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "BER"}
+2024-10-26 02:32:40,650 [INFO ] customer_flight_info_pipeline: ARRIVALS 13 rows were added into the database raw table.
+2024-10-26 02:32:40,650 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:40,650 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:40,651 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:40,654 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "AMS"}
+2024-10-26 02:32:42,219 [INFO ] customer_flight_info_pipeline: ARRIVALS 4 rows were added into the database raw table.
+2024-10-26 02:32:42,220 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:42,220 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:42,220 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:42,222 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "LHR"}
+2024-10-26 02:32:44,025 [INFO ] customer_flight_info_pipeline: ARRIVALS 12 rows were added into the database raw table.
+2024-10-26 02:32:44,026 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:44,026 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:44,027 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:44,030 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MAN"}
+2024-10-26 02:32:46,242 [INFO ] customer_flight_info_pipeline: ARRIVALS 3 rows were added into the database raw table.
+2024-10-26 02:32:46,242 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:46,242 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:46,243 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:46,245 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "OSL"}
+2024-10-26 02:32:47,566 [INFO ] customer_flight_info_pipeline: ARRIVALS 1 rows were added into the database raw table.
+2024-10-26 02:32:47,566 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:47,567 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:47,568 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:47,570 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "ARN"}
+2024-10-26 02:32:48,839 [INFO ] customer_flight_info_pipeline: ARRIVALS 3 rows were added into the database raw table.
+2024-10-26 02:32:48,840 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:48,840 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:48,841 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:48,844 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "MAD"}
+2024-10-26 02:32:50,113 [INFO ] customer_flight_info_pipeline: ARRIVALS 1 rows were added into the database raw table.
+2024-10-26 02:32:50,114 [WARNI] customer_flight_info_pipeline: ARRIVALS 0 rows couldn't be added because Exceptions.
+2024-10-26 02:32:50,114 [INFO ] customer_flight_info_pipeline: ARRIVALS Connection closed to the database
+2024-10-26 02:32:50,115 [INFO ] __main__: ARRIVALS [x] Done
+2024-10-26 02:32:50,117 [INFO ] __main__: ARRIVALS [x] Received {"date": "2024-10-24T06:00", "airport_iata": "LIS"}
