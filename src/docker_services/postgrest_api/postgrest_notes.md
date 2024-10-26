@@ -14,8 +14,8 @@ Create anonimous role to grant read acces to the specified schema and tables of 
 
 ```sql
 create role web_anonimous nologin;
-grant usage on schema public to web_anonimous;
-grant select on all tables in schema public to web_anonimous;
+grant usage on schema l2 to web_anonimous;
+grant select on all tables in schema l2 to web_anonimous;
 ```
 
 Create an user in order to login to the RESTAPI

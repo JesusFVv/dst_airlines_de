@@ -20,11 +20,21 @@ EOSQL
 # Create anonimous role to grant read acces to the specified schema and tables of the DB, for the web requests.
 # Create an user in order to login to the RESTAPI
 psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
-    create role web_anonimous nologin;
-    grant usage on schema public to web_anonimous;
-    grant select on all tables in schema public to web_anonimous;
-    create role postgrest_authenticator noinherit login password 'pass_api';
-    grant web_anonimous to postgrest_authenticator;
+    create role $PGRST_DB_ANON_ROLE nologin;
+    grant usage on schema $PGRST_DB_SCHEMA to $PGRST_DB_ANON_ROLE;
+    grant select on all tables in schema $PGRST_DB_SCHEMA to $PGRST_DB_ANON_ROLE;
+    create role $PGRST_DB_USER noinherit login password '$PGRST_USER_PASS';
+    grant $PGRST_DB_ANON_ROLE to $PGRST_DB_USER;
+EOSQL
+
+# Create Role and User for Replication
+psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+    CREATE ROLE replication_role WITH LOGIN REPLICATION;
+    GRANT USAGE ON SCHEMA l1 TO replication_role;
+    GRANT SELECT ON ALL TABLES IN SCHEMA l1 TO replication_role;
+    ALTER DEFAULT PRIVILEGES IN SCHEMA l1 GRANT SELECT ON TABLES TO replication_role;
+    CREATE USER replication_user PASSWORD 'replication_pass';
+    GRAN replication_role TO replication_user;
 EOSQL
 
 # Postgres Server should listen to other hosts with IP: 172.0.0.0/8 (mainly other docker containers)

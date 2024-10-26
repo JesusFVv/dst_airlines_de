@@ -26,7 +26,7 @@ FILE_NAME=$(date +%Y%m%d_%H%M%S_)dst_airlines_db_dump.sql.gz
 docker exec $POSTGRES_CONTAINER_NAME sh -c "pg_dump $POSTGRES_DB -U dst_designer | gzip > /var/backups/$FILE_NAME"
 # Restore
 FILE_NAME=$0
-docker exec $POSTGRES_CONTAINER_NAME sh -c "gunzip -c ${FILE_NAME} | psql $POSTGRES_DB -U dst_designer"
+docker exec $POSTGRES_CONTAINER_NAME sh -c "gunzip -c /var/backups/${FILE_NAME} | psql $POSTGRES_DB -U dst_designer"
 ```
 
 ## How to drop a user with privileges

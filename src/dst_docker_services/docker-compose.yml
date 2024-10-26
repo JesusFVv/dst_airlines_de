@@ -11,6 +11,9 @@ services:
       POSTGRES_PASSWORD_FILE: /run/secrets/db_password
       POSTGRES_DB: $POSTGRES_DB
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      PGRST_DB_ANON_ROLE: PGRST_DB_ANON_ROLE
+      PGRST_DB_USER: PGRST_DB_USER
+      PGRST_USER_PASS: PGRST_USER_PASS
     volumes:
       - db-data:/var/lib/postgresql/data
       - ${POSTGRES_INIT_FILE_1}:/docker-entrypoint-initdb.d/1.sh:ro
