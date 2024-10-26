@@ -6,5 +6,9 @@ set -a
 source .env
 set +a
 
-docker exec $POSTGRES_CONTAINER_NAME pg_dump $POSTGRES_DB -U dst_designer > var/db_dumps/$(date +%Y%m%d_%H%M%S_)dst_airlines_db_dump.sql
+FILE_NAME=$(date +%Y%m%d_%H%M%S_)dst_airlines_db_dump.sql.gz
 
+docker exec $POSTGRES_CONTAINER_NAME sh -c "pg_dump $POSTGRES_DB -U dst_designer | gzip > /var/backups/$FILE_NAME"
+
+# To Unzip file
+# gunzip -c ${FILE_NAME} > ${FILE_NAME%.gz}

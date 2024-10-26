@@ -13,8 +13,9 @@ services:
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ${POSTGRES_INIT_FILE_1}:/docker-entrypoint-initdb.d/1.sh
-      - ${POSTGRES_INIT_FILE_2}:/docker-entrypoint-initdb.d/2.sql
+      - ${POSTGRES_INIT_FILE_1}:/docker-entrypoint-initdb.d/1.sh:ro
+      - ${POSTGRES_INIT_FILE_2}:/docker-entrypoint-initdb.d/2.sql:ro
+      - ${POSTGRES_DUMP_DIR}:/var/backups:rw
     secrets:
       - db_password
       - db_user
