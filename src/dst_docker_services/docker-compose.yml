@@ -10,14 +10,21 @@ services:
       POSTGRES_USER_FILE: /run/secrets/db_user
       POSTGRES_PASSWORD_FILE: /run/secrets/db_password
       POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_DB_READER: $POSTGRES_DB_READER
+      POSTRES_READRE_PASS: $POSTRES_READRE_PASS
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
-      PGRST_DB_ANON_ROLE: PGRST_DB_ANON_ROLE
-      PGRST_DB_USER: PGRST_DB_USER
-      PGRST_USER_PASS: PGRST_USER_PASS
+      PGRST_DB_ANON_ROLE: $PGRST_DB_ANON_ROLE
+      PGRST_DB_USER: $PGRST_DB_USER
+      PGRST_USER_PASS: $PGRST_USER_PASS
+      PGRST_DB_SCHEMA: $PGRST_DB_SCHEMA
+      REPLICATION_DB_ROLE: $REPLICATION_DB_ROLE
+      REPLICATION_DB_USER: $REPLICATION_DB_USER
+      REPLICATION_USER_PASS: $REPLICATION_USER_PASS
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ${POSTGRES_INIT_FILE_1}:/docker-entrypoint-initdb.d/1.sh:ro
-      - ${POSTGRES_INIT_FILE_2}:/docker-entrypoint-initdb.d/2.sql:ro
+      - ${POSTGRES_INIT_FILES_PATH}/1_roles_and_users.sh:/docker-entrypoint-initdb.d/1_roles_and_users.sh:ro
+      - ${POSTGRES_INIT_FILES_PATH}/2_schemas_tables_and_data.sql:/docker-entrypoint-initdb.d/2_schemas_tables_and_data.sql:ro
+      - ${POSTGRES_INIT_FILES_PATH}/3_privileges.sh:/docker-entrypoint-initdb.d/3_privileges.sh:ro
       - ${POSTGRES_DUMP_DIR}:/var/backups:rw
     secrets:
       - db_password
