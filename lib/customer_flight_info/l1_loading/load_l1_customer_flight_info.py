@@ -110,7 +110,7 @@ if __name__ == "__main__":
     ########################
     data_path = Path(os.environ['DATA_FOLDER'])
     db_config_filepath = None  # Set to None to maintain compatibility (deprecated)
-    sql_table_name_raw = "l1.operations_customer_flight_info_backlog"
+    sql_table_name_raw = "l1.operations_customer_flight_info"
     truncate_query = f"TRUNCATE TABLE {sql_table_name_raw}"
 
     ########################

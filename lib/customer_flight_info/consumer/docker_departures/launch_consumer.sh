@@ -21,7 +21,7 @@ docker container run -d --name $CONTAINER_NAME \
     -e LOG_FILE_PATH=/usr/src/app/log \
     -e AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv \
     -v ${CUSTOMER_FLIGHT_INFO_CONSUMER_LOG_PATH}:/usr/src/app/log:rw \
-    -v ${CUSTOMER_FLIGHT_INFO_CONSUMER_DOCKER_PATH}/secrets.toml:/usr/src/app/secrets.toml:ro \
+    -v ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/secrets.toml:/usr/src/app/secrets.toml:ro \
     -v ${PROJECT_ABSOLUT_PATH}/etc/postgres:/usr/src/app/etc:ro \
     -v ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro \
     --network $PROJECT_NETWORK_1 \

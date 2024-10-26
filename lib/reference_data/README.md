@@ -5,7 +5,7 @@
  - Remarque cf. partie[Initialisation docker](#initialisation-docker) si nécessaire
 
 ```shell
-cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
+cd /home/ubuntu/dst_airlines_de/src/dst_docker_services/postgres/
 docker-compose up -d
 ```
 
@@ -57,7 +57,7 @@ rm -r out_AircraftRaw out_AirlinesRaw outEN_AirportsRaw outEN_CitiesRaw outEN_Co
 ### Docker
 
 ```shell
-cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
+cd /home/ubuntu/dst_airlines_de/src/dst_docker_services/postgres/
 docker exec -it postgres_dst bash
 ```
 
@@ -586,7 +586,7 @@ SELECT * FROM
 # Initialisation docker
 
 ```shell
-cd /home/ubuntu/dst_airlines_de/src/project_deployment_postgres
+cd /home/ubuntu/dst_airlines_de/src/dst_docker_services/postgres/
 ```
 
 ## Edition docker-compose
