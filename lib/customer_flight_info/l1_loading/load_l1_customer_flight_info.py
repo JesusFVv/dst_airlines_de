@@ -1,3 +1,6 @@
+# Only For debbuging
+import sys
+sys.path.append("/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de/lib")
 import json
 import logging
 import os
@@ -19,7 +22,7 @@ def unzip_7z_files(data_path: PosixPath) -> None:
     Args:
         data_path (PosixPath): absolute path to the root folder having 7z files
     """
-    files_list = utils.get_filenames(data_path, "2024-07-0*.7z")
+    files_list = utils.get_filenames(data_path)
     for f in files_list:
         folder_name = f.with_name(f.stem + "Raw")  # Replace .7z extension by 'Raw'
         # Delete destination folder if it already exists
@@ -78,8 +81,8 @@ def ingest_data(
     conn, cur = utils.connect_db(db_config_filepath)
 
     # Remove all data from raw table before filling it
-    cur.execute(truncate_query)
-    conn.commit()
+    # cur.execute(truncate_query)  # NOOPE
+    # conn.commit()
 
     # Insert data into raw table
     try:        
@@ -107,11 +110,11 @@ if __name__ == "__main__":
     ########################
     data_path = Path(os.environ['DATA_FOLDER'])
     db_config_filepath = None  # Set to None to maintain compatibility (deprecated)
-    sql_table_name_raw = "l1.operations_customer_flight_info"
+    sql_table_name_raw = "l1.operations_customer_flight_info_backlog"
     truncate_query = f"TRUNCATE TABLE {sql_table_name_raw}"
 
     ########################
-    unzip_7z_files(data_path)
+    # unzip_7z_files(data_path)
     gen = get_data(data_path)  # Generator object
     ingest_data(db_config_filepath, sql_table_name_raw, truncate_query, gen)
     logger.info("RAW LOADING COMPLETED !")
