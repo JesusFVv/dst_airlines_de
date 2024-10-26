@@ -11,6 +11,32 @@ nano .env
 ```
 
  - RIEN A FAIRE/ Les services standard sont: Postgres, DBeaver, Nginx, RabbitMQ, PostgREST API, Metabase
+ - Creer le fichiers secrets :
+
+```shell
+nano ./lib/flights_scheduled/extraction/.dlt/secrets.toml
+
+```
+   - Contenu (remplacer le password) :
+
+```text
+[source.lufthansaAPI]
+acces_token_url = "https://api.lufthansa.com/v1/oauth/token"
+flight_schedules_cliend_id = "xpavg4z64mqt5wyystzh6953k"
+flight_schedules_cliend_secret = "U724kV9JW2"
+
+[destination.postgres.credentials]
+database = "dst_airlines_db"
+schema = "l1"
+username = "dst_designer"
+password = "V******************V"
+# host = "172.17.0.1"  # Docker IP Gateway
+host = "postgres_dst"
+# port = 5433
+port = 5432
+connect_timeout = 15
+```
+
  - Creer les images des dockers :
 
 ```shell
