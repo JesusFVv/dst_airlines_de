@@ -3,7 +3,10 @@
 - Modifier la variable PROJECT_ABSOLUT_PATH dans le fichier .env à la racine du projet
 - RIEN A FAIRE/ Les services standard sont: Postgres, DBeaver, Nginx, RabbitMQ, PostgREST API, Metabase
 - Creer les images des services flight_schedules
-- Executer le script lib/flight_schedules/producer/create_docker_image.sh
+    - Executer le script lib/flight_schedules/consumer/create_docker_image.sh
+- Créer les images des services customer_flight_information
+    - Executer le script lib/customer_flight_info/consumer/docker_arrivals/create_docker_image.sh
+    - Executer le script lib/customer_flight_info/consumer/docker_departures/create_docker_image.sh
 - Run le fichier dst_service_compose_up.sh à la racine du projet. Ce script run les services hormis airflow mais ne s'occupe pas du tout de l'ingestion des data
 - Le fichier airflow_compose_up.sh run le service airflow. Il est à la racine du projet.
 - Restart le service NGINX
