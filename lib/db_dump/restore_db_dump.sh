@@ -7,7 +7,4 @@ source .env
 set +a
 FILE_NAME=$0
 
-gunzip -c ${FILE_NAME} > ${FILE_NAME%.gz}
-
-docker exec $POSTGRES_CONTAINER_NAME pg_dump $POSTGRES_DB -U dst_designer > var/db_dumps/$(date +%Y%m%d_%H%M%S_)dst_airlines_db_dump.sql
-
+docker exec $POSTGRES_CONTAINER_NAME sh -c "gunzip -c ${FILE_NAME} | psql $POSTGRES_DB -U dst_designer"

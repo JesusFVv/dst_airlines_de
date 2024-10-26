@@ -8,24 +8,25 @@
 # Creating a Dump
 # Simple usage, dump to a file
 pg_dump dbname > dumpfile
-# with specific options
-pg_dump <dbname> -U <PG_USER> -h <host> -p <port> -n <schema> -t <table>
+# with specific options and gzip compression
+pg_dump <dbname> -U <PG_USER> -h <host> -p <port> -n <schema> -t <table> | gzip > dumpfile
 
 # Restoring the Dump
 # Simple restore
 psql dbname < dumpfile
-
+# Restore if compressed
+gunzip -c dumpfile | psql $POSTGRES_DB -U dst_designer
 ```
 
 ## Example for DST project
 
 ```bash
-# Execute this commands in the VM terminal
-# Create a dump of the database (if postgres client is installes)
-pg_dump dst_airlines_db -U dst_designer -h localhost -p 5433 > tmp/sql_dump.sql
-# Create a dump of the database (using docker) [PREFERRED]
-docker exec -it postgres_dst pg_dump dst_airlines_db -U dst_designer -t l1.refdata_airlines > tmp/sql_dump.sql
-
+# Dump
+FILE_NAME=$(date +%Y%m%d_%H%M%S_)dst_airlines_db_dump.sql.gz
+docker exec $POSTGRES_CONTAINER_NAME sh -c "pg_dump $POSTGRES_DB -U dst_designer | gzip > /var/backups/$FILE_NAME"
+# Restore
+FILE_NAME=$0
+docker exec $POSTGRES_CONTAINER_NAME sh -c "gunzip -c ${FILE_NAME} | psql $POSTGRES_DB -U dst_designer"
 ```
 
 ## How to drop a user with privileges
