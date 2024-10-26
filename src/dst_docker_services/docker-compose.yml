@@ -148,6 +148,56 @@ services:
   #     rabbitmq:
   #       condition: service_started
   #       restart: false
+  customer_flight_information_arrivals_consumer:
+    image: dst_customer_flight_information_arrivals_consumer:latest
+    environment:
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+      - RABBITMQ_PORT=$RABBITMQ_PORT
+      - POSTGRES_HOST=$POSTGRES_HOST
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_DB_PORT=$POSTGRES_DB_PORT
+      - CUSTOMERS_FLIGHT_INFO_ARRIVALS_CHANNEL=$CUSTOMERS_FLIGHT_INFO_ARRIVALS_CHANNEL
+      - CUSTOMER_FLIGHT_INFO_TABLE_NAME=$CUSTOMER_FLIGHT_INFO_TABLE_NAME
+      - LOG_FILE_PATH=/usr/src/app/log
+      - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
+    networks:
+      - ${PROJECT_NETWORK_1}
+    volumes:
+      - ${CUSTOMER_FLIGHT_INFO_CONSUMER_DOCKER_PATH}/secrets.toml:/usr/src/app/secrets.toml:ro
+      - ${CUSTOMER_FLIGHT_INFO_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
+      - ${PROJECT_ABSOLUT_PATH}/etc/postgres:/usr/src/app/etc:ro
+      - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
+    restart: always
+    depends_on:
+      rabbitmq:
+        condition: service_started
+      postgres_db:
+        condition: service_started
+  customer_flight_information_departures_consumer:
+    image: dst_customer_flight_information_departures_consumer:latest
+    environment:
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+      - RABBITMQ_PORT=$RABBITMQ_PORT
+      - POSTGRES_HOST=$POSTGRES_HOST
+      - POSTGRES_DB=$POSTGRES_DB
+      - POSTGRES_DB_PORT=$POSTGRES_DB_PORT
+      - CUSTOMERS_FLIGHT_INFO_DEPARTURES_CHANNEL=$CUSTOMERS_FLIGHT_INFO_DEPARTURES_CHANNEL
+      - CUSTOMER_FLIGHT_INFO_TABLE_NAME=$CUSTOMER_FLIGHT_INFO_TABLE_NAME
+      - LOG_FILE_PATH=/usr/src/app/log
+      - AIRPORTS_FILE_PATH=/usr/src/app/data/airports.csv
+    networks:
+      - ${PROJECT_NETWORK_1}
+    volumes:
+      - ${CUSTOMER_FLIGHT_INFO_CONSUMER_DOCKER_PATH}/secrets.toml:/usr/src/app/secrets.toml:ro
+      - ${CUSTOMER_FLIGHT_INFO_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
+      - ${PROJECT_ABSOLUT_PATH}/etc/postgres:/usr/src/app/etc:ro
+      - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
+    restart: always
+    depends_on:
+      rabbitmq:
+        condition: service_started
+      postgres_db:
+        condition: service_started
 volumes:
   db-data:
     name: db-data
