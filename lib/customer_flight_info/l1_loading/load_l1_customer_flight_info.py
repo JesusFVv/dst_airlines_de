@@ -22,7 +22,7 @@ def unzip_7z_files(data_path: PosixPath) -> None:
     Args:
         data_path (PosixPath): absolute path to the root folder having 7z files
     """
-    files_list = utils.get_filenames(data_path)
+    files_list = utils.get_filenames(data_path, ".7z")
     for f in files_list:
         folder_name = f.with_name(f.stem + "Raw")  # Replace .7z extension by 'Raw'
         # Delete destination folder if it already exists

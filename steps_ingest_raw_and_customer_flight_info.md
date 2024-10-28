@@ -18,6 +18,12 @@ nano ./lib/flights_scheduled/extraction/.dlt/secrets.toml
 
 ```
    - Contenu (remplacer le password) :
+    - Executer le script `bash lib/flight_scheduled/consumer/create_docker_image.sh`
+- Créer les images des services customer_flight_information
+    - Executer le script `bash lib/customer_flight_info/consumer/docker_arrivals/create_docker_image.sh`
+    - Executer le script `bash lib/customer_flight_info/consumer/docker_departures/create_docker_image.sh`
+- Déployer tous les services sauf Airflow `bash dst_services_compose_up.sh`
+- Déployer Airflow `bash airflow_compose_up.sh`
 
 ```text
 [source.lufthansaAPI]

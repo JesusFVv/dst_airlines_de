@@ -83,9 +83,12 @@ In file `/var/lib/postgresql/data/postgresql.conf`, set the parameter:
 ### Setup user
 
 ```sql
-CREATE ROLE replication_user WITH LOGIN REPLICATION;
-GRANT SELECT ON ALL TABLES IN SCHEMA l1 TO  replication_user;
-ALTER DEFAULT PRIVILEGES IN SCHEMA l1 GRANT SELECT ON TABLES TO replication_user;
+CREATE ROLE replication_role WITH LOGIN REPLICATION;
+GRANT USAGE ON SCHEMA l1 TO replication_role;
+GRANT SELECT ON ALL TABLES IN SCHEMA l1 TO replication_role;
+ALTER DEFAULT PRIVILEGES IN SCHEMA l1 GRANT SELECT ON TABLES TO replication_role;
+CREATE USER replication_user PASSWORD 'replication_pass';
+GRAN replication_role TO replication_user;
 ```
 
 ```sql

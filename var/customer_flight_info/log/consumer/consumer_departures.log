@@ -3539,3 +3539,1628 @@
 2024-10-26 07:24:07,583 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-25T22:00", "airport_iata": "CDG"}
 2024-10-26 07:24:11,128 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CDG/2024-10-25T22:00?limit=100
 2024-10-26 07:24:11,130 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-26 11:33:06,274 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 14:42:28,474 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 14:45:59,072 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 15:37:40,571 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 15:38:33,443 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 15:45:39,541 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 15:53:35,050 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 15:54:29,008 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 16:03:15,386 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 16:03:56,259 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-26 19:42:54,050 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-27 02:58:54,140 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-27 02:58:54,142 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DMM"}
+2024-10-27 02:58:54,393 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-27 02:58:54,394 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-27 03:28:55,667 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-27 03:28:55,669 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DMM"}
+2024-10-27 03:29:01,221 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-26T18:00?limit=100
+2024-10-27 03:29:01,223 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:01,224 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DXB"}
+2024-10-27 03:29:04,362 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DXB/2024-10-26T18:00?limit=100
+2024-10-27 03:29:04,364 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:04,365 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "PVG"}
+2024-10-27 03:29:08,190 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-10-26T18:00?limit=100
+2024-10-27 03:29:08,192 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:08,193 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "BKK"}
+2024-10-27 03:29:17,802 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-10-26T18:00?limit=100
+2024-10-27 03:29:17,804 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:17,805 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "IST"}
+2024-10-27 03:29:19,318 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:29:19,319 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:29:19,319 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:29:19,321 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:19,322 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "HND"}
+2024-10-27 03:29:22,975 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-26T18:00?limit=100
+2024-10-27 03:29:22,977 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:22,978 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "PEK"}
+2024-10-27 03:29:26,653 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-26T18:00?limit=100
+2024-10-27 03:29:26,656 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:26,657 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DEL"}
+2024-10-27 03:29:29,523 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-10-26T18:00?limit=100
+2024-10-27 03:29:29,525 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:29,527 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "CAI"}
+2024-10-27 03:29:33,533 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CAI/2024-10-26T18:00?limit=100
+2024-10-27 03:29:33,535 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:33,536 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "CMN"}
+2024-10-27 03:29:37,178 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CMN/2024-10-26T18:00?limit=100
+2024-10-27 03:29:37,180 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:37,181 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "CPT"}
+2024-10-27 03:29:40,211 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CPT/2024-10-26T18:00?limit=100
+2024-10-27 03:29:40,213 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:40,214 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "LOS"}
+2024-10-27 03:29:41,337 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:29:41,338 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:29:41,338 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:29:41,340 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:41,341 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "ALG"}
+2024-10-27 03:29:45,641 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-26T18:00?limit=100
+2024-10-27 03:29:45,643 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:45,644 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "NBO"}
+2024-10-27 03:29:49,080 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-10-26T18:00?limit=100
+2024-10-27 03:29:49,082 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:49,083 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "SSH"}
+2024-10-27 03:29:50,333 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:29:50,333 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:29:50,334 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:29:50,336 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:50,337 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MRU"}
+2024-10-27 03:29:53,569 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-10-26T18:00?limit=100
+2024-10-27 03:29:53,571 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:53,572 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "ATL"}
+2024-10-27 03:29:57,093 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATL/2024-10-26T18:00?limit=100
+2024-10-27 03:29:57,095 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:29:57,096 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DFW"}
+2024-10-27 03:30:00,228 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-26T18:00?limit=100
+2024-10-27 03:30:00,230 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:00,231 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DEN"}
+2024-10-27 03:30:03,361 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-26T18:00?limit=100
+2024-10-27 03:30:03,363 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:03,364 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "ORD"}
+2024-10-27 03:30:04,730 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:30:04,730 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:04,730 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:04,732 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:04,733 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "LAX"}
+2024-10-27 03:30:06,974 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:06,974 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:06,975 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:06,977 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:06,978 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "JFK"}
+2024-10-27 03:30:08,366 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-27 03:30:08,367 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:08,368 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:08,370 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:08,371 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "LAS"}
+2024-10-27 03:30:12,844 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-10-26T18:00?limit=100
+2024-10-27 03:30:12,846 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:12,847 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MIA"}
+2024-10-27 03:30:13,977 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:30:13,977 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:13,977 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:13,979 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:13,980 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MCO"}
+2024-10-27 03:30:14,989 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:30:14,989 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:14,989 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:14,991 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:14,992 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "CLT"}
+2024-10-27 03:30:16,163 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:30:16,164 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:16,164 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:16,166 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:16,167 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MEX"}
+2024-10-27 03:30:18,727 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:18,727 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:18,728 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:18,730 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:18,731 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "SEA"}
+2024-10-27 03:30:22,415 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-26T18:00?limit=100
+2024-10-27 03:30:22,418 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:22,420 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "EWR"}
+2024-10-27 03:30:23,767 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:23,768 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:23,768 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:23,775 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:23,777 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "SFO"}
+2024-10-27 03:30:24,909 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:24,910 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:24,910 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:24,913 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:24,914 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "BOG"}
+2024-10-27 03:30:28,782 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-26T18:00?limit=100
+2024-10-27 03:30:28,784 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:28,785 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "GRU"}
+2024-10-27 03:30:30,298 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:30,299 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:30,299 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:30,302 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:30,303 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "FRA"}
+2024-10-27 03:30:33,846 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-27 03:30:33,846 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:33,846 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:33,849 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:33,850 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MUC"}
+2024-10-27 03:30:36,835 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-27 03:30:36,836 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:36,836 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:36,838 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:36,839 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "BER"}
+2024-10-27 03:30:38,235 [INFO ] customer_flight_info_pipeline: DEPARTURES 8 rows were added into the database raw table.
+2024-10-27 03:30:38,235 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:38,235 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:38,237 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:38,238 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "AMS"}
+2024-10-27 03:30:40,115 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-27 03:30:40,116 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:40,116 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:40,118 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:40,119 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "LHR"}
+2024-10-27 03:30:41,874 [INFO ] customer_flight_info_pipeline: DEPARTURES 8 rows were added into the database raw table.
+2024-10-27 03:30:41,874 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:41,874 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:41,876 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:41,877 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MAN"}
+2024-10-27 03:30:43,301 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:30:43,301 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:43,302 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:43,304 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:43,305 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "OSL"}
+2024-10-27 03:30:45,949 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-27 03:30:45,949 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:45,949 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:45,951 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:45,952 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "ARN"}
+2024-10-27 03:30:48,569 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:48,569 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:48,570 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:48,572 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:48,574 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "MAD"}
+2024-10-27 03:30:49,788 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:49,788 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:49,788 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:49,790 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:49,791 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "LIS"}
+2024-10-27 03:30:50,975 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-27 03:30:50,975 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:50,976 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:50,977 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:50,979 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "FCO"}
+2024-10-27 03:30:52,574 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-27 03:30:52,574 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:52,575 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:52,577 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:52,578 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "ATH"}
+2024-10-27 03:30:54,214 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-27 03:30:54,214 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:54,214 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:54,216 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:54,217 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "WAW"}
+2024-10-27 03:30:55,644 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:30:55,645 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:55,645 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:55,647 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:55,649 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "VIE"}
+2024-10-27 03:30:57,585 [INFO ] customer_flight_info_pipeline: DEPARTURES 33 rows were added into the database raw table.
+2024-10-27 03:30:57,585 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:57,585 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:57,587 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:57,591 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "ZRH"}
+2024-10-27 03:30:59,628 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-27 03:30:59,629 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:30:59,629 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:30:59,631 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:30:59,633 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "DUB"}
+2024-10-27 03:31:00,770 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:31:00,770 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:00,770 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:00,772 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:00,773 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "NCE"}
+2024-10-27 03:31:03,496 [INFO ] customer_flight_info_pipeline: DEPARTURES 7 rows were added into the database raw table.
+2024-10-27 03:31:03,496 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:03,497 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:03,498 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:03,499 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T18:00", "airport_iata": "CDG"}
+2024-10-27 03:31:04,696 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-27 03:31:04,696 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:04,696 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:04,699 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:04,700 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "DMM"}
+2024-10-27 03:31:05,793 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:31:05,793 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:05,793 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:05,795 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:05,797 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "DXB"}
+2024-10-27 03:31:07,299 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:31:07,299 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:07,299 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:07,301 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:07,302 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "PVG"}
+2024-10-27 03:31:09,200 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:31:09,200 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:09,200 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:09,203 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:09,204 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "BKK"}
+2024-10-27 03:31:10,725 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 03:31:10,725 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:10,725 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:10,727 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:10,728 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "IST"}
+2024-10-27 03:31:15,113 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-10-26T22:00?limit=100
+2024-10-27 03:31:15,115 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:15,116 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "HND"}
+2024-10-27 03:31:18,308 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-26T22:00?limit=100
+2024-10-27 03:31:18,309 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:18,311 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "PEK"}
+2024-10-27 03:31:23,934 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-26T22:00?limit=100
+2024-10-27 03:31:23,936 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:23,937 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "DEL"}
+2024-10-27 03:31:25,350 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 03:31:25,350 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 03:31:25,350 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 03:31:25,353 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:25,354 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "CAI"}
+2024-10-27 03:31:28,991 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CAI/2024-10-26T22:00?limit=100
+2024-10-27 03:31:28,993 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 03:31:28,995 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "CMN"}
+2024-10-27 03:31:29,272 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-27 03:31:29,273 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-27 04:01:30,645 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-27 04:01:30,647 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "CMN"}
+2024-10-27 04:01:32,469 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 04:01:32,470 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:01:32,470 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:01:32,472 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:32,473 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "CPT"}
+2024-10-27 04:01:36,365 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CPT/2024-10-26T22:00?limit=100
+2024-10-27 04:01:36,367 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:36,369 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "LOS"}
+2024-10-27 04:01:38,312 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 04:01:38,313 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:01:38,313 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:01:38,315 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:38,316 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "ALG"}
+2024-10-27 04:01:41,460 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-26T22:00?limit=100
+2024-10-27 04:01:41,462 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:41,463 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "NBO"}
+2024-10-27 04:01:42,797 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 04:01:42,798 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:01:42,798 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:01:42,800 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:42,801 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "SSH"}
+2024-10-27 04:01:46,134 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-26T22:00?limit=100
+2024-10-27 04:01:46,137 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:46,138 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MRU"}
+2024-10-27 04:01:49,732 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-10-26T22:00?limit=100
+2024-10-27 04:01:49,734 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:49,735 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "ATL"}
+2024-10-27 04:01:53,726 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATL/2024-10-26T22:00?limit=100
+2024-10-27 04:01:53,728 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:53,729 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "DFW"}
+2024-10-27 04:01:57,005 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-26T22:00?limit=100
+2024-10-27 04:01:57,007 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:01:57,008 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "DEN"}
+2024-10-27 04:02:00,591 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-26T22:00?limit=100
+2024-10-27 04:02:00,593 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:00,595 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "ORD"}
+2024-10-27 04:02:01,979 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 04:02:01,980 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:02:01,980 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:02:01,983 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:01,984 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "LAX"}
+2024-10-27 04:02:06,995 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-10-26T22:00?limit=100
+2024-10-27 04:02:06,998 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:07,002 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "JFK"}
+2024-10-27 04:02:08,188 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-27 04:02:08,188 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:02:08,188 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:02:08,190 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:08,191 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "LAS"}
+2024-10-27 04:02:12,019 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-10-26T22:00?limit=100
+2024-10-27 04:02:12,022 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:12,023 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MIA"}
+2024-10-27 04:02:16,136 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-10-26T22:00?limit=100
+2024-10-27 04:02:16,138 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:16,139 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MCO"}
+2024-10-27 04:02:19,577 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MCO/2024-10-26T22:00?limit=100
+2024-10-27 04:02:19,579 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:19,580 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "CLT"}
+2024-10-27 04:02:22,816 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-10-26T22:00?limit=100
+2024-10-27 04:02:22,818 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:22,820 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MEX"}
+2024-10-27 04:02:23,965 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 04:02:23,966 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:02:23,966 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:02:23,968 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:23,969 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "SEA"}
+2024-10-27 04:02:27,221 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-26T22:00?limit=100
+2024-10-27 04:02:27,223 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:27,224 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "EWR"}
+2024-10-27 04:02:29,760 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 04:02:29,760 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:02:29,760 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:02:29,762 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:29,763 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "SFO"}
+2024-10-27 04:02:32,764 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SFO/2024-10-26T22:00?limit=100
+2024-10-27 04:02:32,766 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:32,768 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "BOG"}
+2024-10-27 04:02:36,069 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-26T22:00?limit=100
+2024-10-27 04:02:36,071 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:36,072 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "GRU"}
+2024-10-27 04:02:40,511 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-10-26T22:00?limit=100
+2024-10-27 04:02:40,513 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:40,514 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "FRA"}
+2024-10-27 04:02:42,854 [INFO ] customer_flight_info_pipeline: DEPARTURES 34 rows were added into the database raw table.
+2024-10-27 04:02:42,855 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:02:42,855 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:02:42,857 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:42,859 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MUC"}
+2024-10-27 04:02:45,081 [INFO ] customer_flight_info_pipeline: DEPARTURES 19 rows were added into the database raw table.
+2024-10-27 04:02:45,081 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:02:45,081 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:02:45,083 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:45,085 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "BER"}
+2024-10-27 04:02:49,112 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BER/2024-10-26T22:00?limit=100
+2024-10-27 04:02:49,114 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:49,115 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "AMS"}
+2024-10-27 04:02:56,279 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/AMS/2024-10-26T22:00?limit=100
+2024-10-27 04:02:56,281 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:56,283 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "LHR"}
+2024-10-27 04:02:59,515 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LHR/2024-10-26T22:00?limit=100
+2024-10-27 04:02:59,517 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:02:59,518 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MAN"}
+2024-10-27 04:03:03,348 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAN/2024-10-26T22:00?limit=100
+2024-10-27 04:03:03,349 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:03,351 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "OSL"}
+2024-10-27 04:03:07,189 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-10-26T22:00?limit=100
+2024-10-27 04:03:07,191 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:07,192 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "ARN"}
+2024-10-27 04:03:10,609 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ARN/2024-10-26T22:00?limit=100
+2024-10-27 04:03:10,610 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:10,612 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "MAD"}
+2024-10-27 04:03:14,662 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-10-26T22:00?limit=100
+2024-10-27 04:03:14,665 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:14,667 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "LIS"}
+2024-10-27 04:03:17,661 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-10-26T22:00?limit=100
+2024-10-27 04:03:17,663 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:17,664 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "FCO"}
+2024-10-27 04:03:21,782 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/FCO/2024-10-26T22:00?limit=100
+2024-10-27 04:03:21,784 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:21,785 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "ATH"}
+2024-10-27 04:03:23,371 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-27 04:03:23,372 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:03:23,372 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:03:23,375 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:23,376 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "WAW"}
+2024-10-27 04:03:26,339 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/WAW/2024-10-26T22:00?limit=100
+2024-10-27 04:03:26,340 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:26,342 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "VIE"}
+2024-10-27 04:03:27,573 [INFO ] customer_flight_info_pipeline: DEPARTURES 10 rows were added into the database raw table.
+2024-10-27 04:03:27,573 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:03:27,573 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:03:27,575 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:27,576 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "ZRH"}
+2024-10-27 04:03:29,115 [INFO ] customer_flight_info_pipeline: DEPARTURES 17 rows were added into the database raw table.
+2024-10-27 04:03:29,116 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-27 04:03:29,116 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-27 04:03:29,118 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:29,119 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "DUB"}
+2024-10-27 04:03:32,184 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-10-26T22:00?limit=100
+2024-10-27 04:03:32,187 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:32,189 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "NCE"}
+2024-10-27 04:03:35,313 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-10-26T22:00?limit=100
+2024-10-27 04:03:35,315 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-27 04:03:35,316 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-26T22:00", "airport_iata": "CDG"}
+2024-10-27 04:03:38,961 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CDG/2024-10-26T22:00?limit=100
+2024-10-27 04:03:38,963 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 02:50:08,609 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 02:50:08,612 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DMM"}
+2024-10-28 02:50:08,805 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 02:50:08,805 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 03:20:10,737 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 03:20:10,739 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DMM"}
+2024-10-28 03:20:10,882 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 03:20:10,883 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 03:50:12,835 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 03:50:12,838 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DMM"}
+2024-10-28 03:50:13,014 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 03:50:13,015 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 04:20:14,723 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 04:20:14,726 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DMM"}
+2024-10-28 04:20:18,797 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-27T02:00?limit=100
+2024-10-28 04:20:18,799 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:18,809 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DXB"}
+2024-10-28 04:20:21,125 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:20:21,125 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:20:21,125 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:20:21,128 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:21,129 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "PVG"}
+2024-10-28 04:20:25,076 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-10-27T02:00?limit=100
+2024-10-28 04:20:25,078 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:25,080 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "BKK"}
+2024-10-28 04:20:28,274 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-10-27T02:00?limit=100
+2024-10-28 04:20:28,276 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:28,277 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "IST"}
+2024-10-28 04:20:31,229 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-10-27T02:00?limit=100
+2024-10-28 04:20:31,231 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:31,233 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "HND"}
+2024-10-28 04:20:34,613 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-27T02:00?limit=100
+2024-10-28 04:20:34,615 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:34,616 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "PEK"}
+2024-10-28 04:20:38,214 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-27T02:00?limit=100
+2024-10-28 04:20:38,216 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:38,217 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DEL"}
+2024-10-28 04:20:39,541 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:20:39,541 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:20:39,541 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:20:39,544 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:39,561 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "CAI"}
+2024-10-28 04:20:40,786 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:20:40,786 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:20:40,787 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:20:40,789 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:40,791 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "CMN"}
+2024-10-28 04:20:41,909 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:20:41,910 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:20:41,910 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:20:41,912 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:41,913 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "CPT"}
+2024-10-28 04:20:45,127 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CPT/2024-10-27T02:00?limit=100
+2024-10-28 04:20:45,129 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:45,130 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "LOS"}
+2024-10-28 04:20:48,921 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LOS/2024-10-27T02:00?limit=100
+2024-10-28 04:20:48,924 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:48,925 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "ALG"}
+2024-10-28 04:20:50,198 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:20:50,199 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:20:50,199 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:20:50,201 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:50,202 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "NBO"}
+2024-10-28 04:20:53,277 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-10-27T02:00?limit=100
+2024-10-28 04:20:53,279 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:53,281 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "SSH"}
+2024-10-28 04:20:56,202 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-27T02:00?limit=100
+2024-10-28 04:20:56,205 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:20:56,211 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MRU"}
+2024-10-28 04:21:01,013 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-10-27T02:00?limit=100
+2024-10-28 04:21:01,015 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:01,017 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "ATL"}
+2024-10-28 04:21:04,726 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATL/2024-10-27T02:00?limit=100
+2024-10-28 04:21:04,728 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:04,729 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DFW"}
+2024-10-28 04:21:08,614 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-27T02:00?limit=100
+2024-10-28 04:21:08,616 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:08,617 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DEN"}
+2024-10-28 04:21:12,097 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-27T02:00?limit=100
+2024-10-28 04:21:12,099 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:12,100 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "ORD"}
+2024-10-28 04:21:16,049 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ORD/2024-10-27T02:00?limit=100
+2024-10-28 04:21:16,051 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:16,053 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "LAX"}
+2024-10-28 04:21:18,968 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-10-27T02:00?limit=100
+2024-10-28 04:21:18,970 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:18,972 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "JFK"}
+2024-10-28 04:21:22,432 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-10-27T02:00?limit=100
+2024-10-28 04:21:22,434 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:22,435 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "LAS"}
+2024-10-28 04:21:25,751 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-10-27T02:00?limit=100
+2024-10-28 04:21:25,753 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:25,755 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MIA"}
+2024-10-28 04:21:29,000 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-10-27T02:00?limit=100
+2024-10-28 04:21:29,002 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:29,004 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MCO"}
+2024-10-28 04:21:32,309 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MCO/2024-10-27T02:00?limit=100
+2024-10-28 04:21:32,311 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:32,313 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "CLT"}
+2024-10-28 04:21:35,773 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-10-27T02:00?limit=100
+2024-10-28 04:21:35,774 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:35,775 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MEX"}
+2024-10-28 04:21:38,844 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MEX/2024-10-27T02:00?limit=100
+2024-10-28 04:21:38,846 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:38,847 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "SEA"}
+2024-10-28 04:21:41,747 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-27T02:00?limit=100
+2024-10-28 04:21:41,750 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:41,752 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "EWR"}
+2024-10-28 04:21:44,639 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-10-27T02:00?limit=100
+2024-10-28 04:21:44,641 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:44,643 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "SFO"}
+2024-10-28 04:21:47,651 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SFO/2024-10-27T02:00?limit=100
+2024-10-28 04:21:47,653 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:47,654 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "BOG"}
+2024-10-28 04:21:52,332 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-27T02:00?limit=100
+2024-10-28 04:21:52,334 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:52,336 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "GRU"}
+2024-10-28 04:21:55,291 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-10-27T02:00?limit=100
+2024-10-28 04:21:55,292 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:55,293 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "FRA"}
+2024-10-28 04:21:57,100 [INFO ] customer_flight_info_pipeline: DEPARTURES 7 rows were added into the database raw table.
+2024-10-28 04:21:57,101 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:21:57,101 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:21:57,103 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:57,104 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MUC"}
+2024-10-28 04:21:58,429 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 04:21:58,430 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:21:58,430 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:21:58,432 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:58,433 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "BER"}
+2024-10-28 04:21:59,808 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:21:59,808 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:21:59,808 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:21:59,810 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:21:59,811 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "AMS"}
+2024-10-28 04:22:03,008 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/AMS/2024-10-27T02:00?limit=100
+2024-10-28 04:22:03,010 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:03,012 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "LHR"}
+2024-10-28 04:22:04,426 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 04:22:04,427 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:04,427 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:04,429 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:04,430 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MAN"}
+2024-10-28 04:22:06,113 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:22:06,114 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:06,114 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:06,116 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:06,117 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "OSL"}
+2024-10-28 04:22:10,878 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-10-27T02:00?limit=100
+2024-10-28 04:22:10,879 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:10,881 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "ARN"}
+2024-10-28 04:22:14,349 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ARN/2024-10-27T02:00?limit=100
+2024-10-28 04:22:14,351 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:14,353 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "MAD"}
+2024-10-28 04:22:17,150 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-10-27T02:00?limit=100
+2024-10-28 04:22:17,152 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:17,153 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "LIS"}
+2024-10-28 04:22:18,436 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:22:18,436 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:18,436 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:18,438 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:18,439 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "FCO"}
+2024-10-28 04:22:21,889 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/FCO/2024-10-27T02:00?limit=100
+2024-10-28 04:22:21,892 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:21,893 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "ATH"}
+2024-10-28 04:22:25,929 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATH/2024-10-27T02:00?limit=100
+2024-10-28 04:22:25,931 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:25,932 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "WAW"}
+2024-10-28 04:22:29,001 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/WAW/2024-10-27T02:00?limit=100
+2024-10-28 04:22:29,003 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:29,004 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "VIE"}
+2024-10-28 04:22:30,187 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:22:30,187 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:30,188 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:30,190 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:30,191 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "ZRH"}
+2024-10-28 04:22:31,335 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:22:31,335 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:31,336 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:31,338 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:31,339 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "DUB"}
+2024-10-28 04:22:32,282 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:22:32,282 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:32,282 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:32,284 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:32,286 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "NCE"}
+2024-10-28 04:22:34,996 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-10-27T02:00?limit=100
+2024-10-28 04:22:34,998 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:34,999 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T02:00", "airport_iata": "CDG"}
+2024-10-28 04:22:37,921 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CDG/2024-10-27T02:00?limit=100
+2024-10-28 04:22:37,923 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:37,925 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "DMM"}
+2024-10-28 04:22:41,000 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-27T06:00?limit=100
+2024-10-28 04:22:41,002 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:41,004 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "DXB"}
+2024-10-28 04:22:44,228 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DXB/2024-10-27T06:00?limit=100
+2024-10-28 04:22:44,229 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:44,231 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "PVG"}
+2024-10-28 04:22:47,426 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-10-27T06:00?limit=100
+2024-10-28 04:22:47,430 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:47,431 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "BKK"}
+2024-10-28 04:22:50,783 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-10-27T06:00?limit=100
+2024-10-28 04:22:50,785 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:50,786 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "IST"}
+2024-10-28 04:22:51,987 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:22:51,987 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:22:51,988 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:22:51,991 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:51,993 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "HND"}
+2024-10-28 04:22:54,991 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-27T06:00?limit=100
+2024-10-28 04:22:54,992 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:54,993 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "PEK"}
+2024-10-28 04:22:58,345 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-27T06:00?limit=100
+2024-10-28 04:22:58,347 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:22:58,348 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "DEL"}
+2024-10-28 04:23:01,587 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-10-27T06:00?limit=100
+2024-10-28 04:23:01,589 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:01,591 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "CAI"}
+2024-10-28 04:23:05,384 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CAI/2024-10-27T06:00?limit=100
+2024-10-28 04:23:05,386 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:05,387 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "CMN"}
+2024-10-28 04:23:08,707 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CMN/2024-10-27T06:00?limit=100
+2024-10-28 04:23:08,709 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:08,710 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "CPT"}
+2024-10-28 04:23:09,845 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 04:23:09,846 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:23:09,846 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:23:09,848 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:09,850 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "LOS"}
+2024-10-28 04:23:13,468 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LOS/2024-10-27T06:00?limit=100
+2024-10-28 04:23:13,470 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:13,472 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "ALG"}
+2024-10-28 04:23:16,910 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-27T06:00?limit=100
+2024-10-28 04:23:16,913 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:16,915 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "NBO"}
+2024-10-28 04:23:20,174 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-10-27T06:00?limit=100
+2024-10-28 04:23:20,175 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:20,176 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "SSH"}
+2024-10-28 04:23:23,339 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-27T06:00?limit=100
+2024-10-28 04:23:23,341 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:23,343 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MRU"}
+2024-10-28 04:23:26,584 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-10-27T06:00?limit=100
+2024-10-28 04:23:26,587 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:26,589 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "ATL"}
+2024-10-28 04:23:29,867 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATL/2024-10-27T06:00?limit=100
+2024-10-28 04:23:29,870 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:29,871 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "DFW"}
+2024-10-28 04:23:33,922 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-27T06:00?limit=100
+2024-10-28 04:23:33,923 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:33,925 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "DEN"}
+2024-10-28 04:23:37,956 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-27T06:00?limit=100
+2024-10-28 04:23:37,958 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:37,959 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "ORD"}
+2024-10-28 04:23:46,046 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ORD/2024-10-27T06:00?limit=100
+2024-10-28 04:23:46,048 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:46,049 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "LAX"}
+2024-10-28 04:23:50,419 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-10-27T06:00?limit=100
+2024-10-28 04:23:50,423 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:50,424 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "JFK"}
+2024-10-28 04:23:53,627 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-10-27T06:00?limit=100
+2024-10-28 04:23:53,630 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:53,631 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "LAS"}
+2024-10-28 04:23:57,390 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-10-27T06:00?limit=100
+2024-10-28 04:23:57,393 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:23:57,395 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MIA"}
+2024-10-28 04:24:04,026 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-10-27T06:00?limit=100
+2024-10-28 04:24:04,028 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:04,029 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MCO"}
+2024-10-28 04:24:07,396 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MCO/2024-10-27T06:00?limit=100
+2024-10-28 04:24:07,398 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:07,399 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "CLT"}
+2024-10-28 04:24:11,665 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-10-27T06:00?limit=100
+2024-10-28 04:24:11,668 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:11,669 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MEX"}
+2024-10-28 04:24:15,291 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MEX/2024-10-27T06:00?limit=100
+2024-10-28 04:24:15,294 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:15,296 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "SEA"}
+2024-10-28 04:24:18,153 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-27T06:00?limit=100
+2024-10-28 04:24:18,155 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:18,156 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "EWR"}
+2024-10-28 04:24:20,915 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-10-27T06:00?limit=100
+2024-10-28 04:24:20,917 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:20,919 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "SFO"}
+2024-10-28 04:24:24,557 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SFO/2024-10-27T06:00?limit=100
+2024-10-28 04:24:24,559 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:24,561 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "BOG"}
+2024-10-28 04:24:27,817 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-27T06:00?limit=100
+2024-10-28 04:24:27,819 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:27,820 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "GRU"}
+2024-10-28 04:24:30,536 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-10-27T06:00?limit=100
+2024-10-28 04:24:30,538 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:30,539 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "FRA"}
+2024-10-28 04:24:33,239 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 04:24:33,239 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:33,239 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:33,241 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:33,243 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MUC"}
+2024-10-28 04:24:35,997 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 04:24:35,997 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:35,998 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:36,000 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:36,001 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "BER"}
+2024-10-28 04:24:37,380 [INFO ] customer_flight_info_pipeline: DEPARTURES 16 rows were added into the database raw table.
+2024-10-28 04:24:37,381 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:37,381 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:37,383 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:37,384 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "AMS"}
+2024-10-28 04:24:38,663 [INFO ] customer_flight_info_pipeline: DEPARTURES 7 rows were added into the database raw table.
+2024-10-28 04:24:38,663 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:38,663 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:38,666 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:38,667 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "LHR"}
+2024-10-28 04:24:40,232 [INFO ] customer_flight_info_pipeline: DEPARTURES 14 rows were added into the database raw table.
+2024-10-28 04:24:40,232 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:40,233 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:40,235 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:40,237 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MAN"}
+2024-10-28 04:24:41,413 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 04:24:41,413 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:41,413 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:41,416 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:41,417 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "OSL"}
+2024-10-28 04:24:42,886 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 04:24:42,886 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:42,886 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:42,889 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:42,890 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "ARN"}
+2024-10-28 04:24:45,348 [INFO ] customer_flight_info_pipeline: DEPARTURES 7 rows were added into the database raw table.
+2024-10-28 04:24:45,348 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:45,348 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:45,350 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:45,351 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "MAD"}
+2024-10-28 04:24:47,927 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 04:24:47,927 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:47,927 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:47,930 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:47,932 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "LIS"}
+2024-10-28 04:24:49,346 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:24:49,346 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:49,347 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:49,350 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:49,353 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "FCO"}
+2024-10-28 04:24:50,986 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-28 04:24:50,986 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:50,986 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:50,989 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:50,990 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "ATH"}
+2024-10-28 04:24:52,651 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 04:24:52,651 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:52,651 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:52,654 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:52,655 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "WAW"}
+2024-10-28 04:24:54,186 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:24:54,186 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:24:54,186 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:24:54,189 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:24:54,190 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "VIE"}
+2024-10-28 04:25:00,336 [INFO ] customer_flight_info_pipeline: DEPARTURES 46 rows were added into the database raw table.
+2024-10-28 04:25:00,339 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:25:00,340 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:25:00,343 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:00,345 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "ZRH"}
+2024-10-28 04:25:05,835 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 04:25:05,836 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:25:05,836 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:25:05,839 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:05,840 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "DUB"}
+2024-10-28 04:25:07,866 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 04:25:07,866 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:25:07,867 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:25:07,869 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:07,870 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "NCE"}
+2024-10-28 04:25:09,362 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 04:25:09,362 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:25:09,362 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:25:09,365 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:09,366 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T06:00", "airport_iata": "CDG"}
+2024-10-28 04:25:11,462 [INFO ] customer_flight_info_pipeline: DEPARTURES 7 rows were added into the database raw table.
+2024-10-28 04:25:11,463 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:25:11,463 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:25:11,465 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:11,466 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "DMM"}
+2024-10-28 04:25:15,008 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-27T10:00?limit=100
+2024-10-28 04:25:15,010 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:15,011 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "DXB"}
+2024-10-28 04:25:18,523 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DXB/2024-10-27T10:00?limit=100
+2024-10-28 04:25:18,526 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:18,527 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "PVG"}
+2024-10-28 04:25:19,830 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 04:25:19,831 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 04:25:19,831 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 04:25:19,833 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 04:25:19,834 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "BKK"}
+2024-10-28 04:25:20,057 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 04:25:20,057 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 04:55:21,798 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 04:55:21,800 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "BKK"}
+2024-10-28 04:55:21,961 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 04:55:21,962 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 05:25:23,276 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 05:25:23,279 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "BKK"}
+2024-10-28 05:25:24,542 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 05:25:24,542 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 05:25:24,543 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 05:25:24,545 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 05:25:24,547 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "IST"}
+2024-10-28 05:25:28,444 [WARNI] __main__: DEPARTURES Max Limit Requests Reached
+2024-10-28 05:25:28,445 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 05:55:31,698 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 05:55:31,701 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "IST"}
+2024-10-28 05:55:31,907 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 05:55:31,908 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 06:25:34,166 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 06:25:34,170 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "IST"}
+2024-10-28 06:25:37,527 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-10-27T10:00?limit=100
+2024-10-28 06:25:37,530 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:37,532 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "HND"}
+2024-10-28 06:25:38,970 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:25:38,970 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:25:38,970 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:25:38,972 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:38,974 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "PEK"}
+2024-10-28 06:25:42,710 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-27T10:00?limit=100
+2024-10-28 06:25:42,713 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:42,714 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "DEL"}
+2024-10-28 06:25:45,712 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-10-27T10:00?limit=100
+2024-10-28 06:25:45,714 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:45,716 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "CAI"}
+2024-10-28 06:25:49,386 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CAI/2024-10-27T10:00?limit=100
+2024-10-28 06:25:49,388 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:49,389 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "CMN"}
+2024-10-28 06:25:52,582 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CMN/2024-10-27T10:00?limit=100
+2024-10-28 06:25:52,585 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:52,587 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "CPT"}
+2024-10-28 06:25:55,795 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CPT/2024-10-27T10:00?limit=100
+2024-10-28 06:25:55,796 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:55,798 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "LOS"}
+2024-10-28 06:25:59,556 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LOS/2024-10-27T10:00?limit=100
+2024-10-28 06:25:59,558 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:25:59,559 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "ALG"}
+2024-10-28 06:26:03,113 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-27T10:00?limit=100
+2024-10-28 06:26:03,115 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:03,116 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "NBO"}
+2024-10-28 06:26:06,049 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-10-27T10:00?limit=100
+2024-10-28 06:26:06,051 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:06,053 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "SSH"}
+2024-10-28 06:26:11,954 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-27T10:00?limit=100
+2024-10-28 06:26:11,957 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:11,959 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MRU"}
+2024-10-28 06:26:13,093 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:26:13,094 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:26:13,094 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:26:13,097 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:13,099 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "ATL"}
+2024-10-28 06:26:20,927 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATL/2024-10-27T10:00?limit=100
+2024-10-28 06:26:20,929 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:20,931 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "DFW"}
+2024-10-28 06:26:24,150 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-27T10:00?limit=100
+2024-10-28 06:26:24,153 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:24,154 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "DEN"}
+2024-10-28 06:26:27,063 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-27T10:00?limit=100
+2024-10-28 06:26:27,065 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:27,067 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "ORD"}
+2024-10-28 06:26:31,440 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ORD/2024-10-27T10:00?limit=100
+2024-10-28 06:26:31,442 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:31,443 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "LAX"}
+2024-10-28 06:26:34,591 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-10-27T10:00?limit=100
+2024-10-28 06:26:34,592 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:34,594 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "JFK"}
+2024-10-28 06:26:38,167 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/JFK/2024-10-27T10:00?limit=100
+2024-10-28 06:26:38,170 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:38,172 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "LAS"}
+2024-10-28 06:26:40,928 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-10-27T10:00?limit=100
+2024-10-28 06:26:40,930 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:40,931 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MIA"}
+2024-10-28 06:26:43,757 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-10-27T10:00?limit=100
+2024-10-28 06:26:43,760 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:43,761 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MCO"}
+2024-10-28 06:26:46,650 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MCO/2024-10-27T10:00?limit=100
+2024-10-28 06:26:46,652 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:46,654 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "CLT"}
+2024-10-28 06:26:51,206 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-10-27T10:00?limit=100
+2024-10-28 06:26:51,209 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:51,211 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MEX"}
+2024-10-28 06:26:55,383 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MEX/2024-10-27T10:00?limit=100
+2024-10-28 06:26:55,385 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:26:55,386 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "SEA"}
+2024-10-28 06:27:10,589 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-27T10:00?limit=100
+2024-10-28 06:27:10,592 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:10,593 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "EWR"}
+2024-10-28 06:27:15,914 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-10-27T10:00?limit=100
+2024-10-28 06:27:15,917 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:15,919 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "SFO"}
+2024-10-28 06:27:19,488 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SFO/2024-10-27T10:00?limit=100
+2024-10-28 06:27:19,491 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:19,492 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "BOG"}
+2024-10-28 06:27:22,389 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-27T10:00?limit=100
+2024-10-28 06:27:22,391 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:22,392 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "GRU"}
+2024-10-28 06:27:25,071 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-10-27T10:00?limit=100
+2024-10-28 06:27:25,074 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:25,075 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "FRA"}
+2024-10-28 06:27:30,719 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:27:30,719 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:30,719 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:30,722 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:30,723 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MUC"}
+2024-10-28 06:27:33,030 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:27:33,031 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:33,031 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:33,034 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:33,035 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "BER"}
+2024-10-28 06:27:34,765 [INFO ] customer_flight_info_pipeline: DEPARTURES 15 rows were added into the database raw table.
+2024-10-28 06:27:34,765 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:34,766 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:34,768 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:34,769 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "AMS"}
+2024-10-28 06:27:36,394 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:27:36,394 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:36,395 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:36,396 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:36,398 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "LHR"}
+2024-10-28 06:27:38,743 [INFO ] customer_flight_info_pipeline: DEPARTURES 11 rows were added into the database raw table.
+2024-10-28 06:27:38,743 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:38,743 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:38,745 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:38,746 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MAN"}
+2024-10-28 06:27:39,734 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:27:39,734 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:39,735 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:39,737 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:39,738 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "OSL"}
+2024-10-28 06:27:40,996 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:27:40,996 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:40,996 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:40,998 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:41,000 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "ARN"}
+2024-10-28 06:27:42,427 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:27:42,427 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:42,427 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:42,429 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:42,431 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "MAD"}
+2024-10-28 06:27:44,167 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:27:44,168 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:44,168 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:44,171 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:44,173 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "LIS"}
+2024-10-28 06:27:45,478 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-28 06:27:45,479 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:45,479 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:45,481 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:45,483 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "FCO"}
+2024-10-28 06:27:46,801 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:27:46,801 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:46,801 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:46,804 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:46,805 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "ATH"}
+2024-10-28 06:27:48,597 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:27:48,598 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:48,598 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:48,600 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:48,601 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "WAW"}
+2024-10-28 06:27:49,965 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:27:49,966 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:49,966 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:49,968 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:49,970 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "VIE"}
+2024-10-28 06:27:56,192 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:27:56,193 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:27:56,193 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:27:56,195 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:27:56,196 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "ZRH"}
+2024-10-28 06:28:01,426 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:28:01,427 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:01,427 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:01,429 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:01,430 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "DUB"}
+2024-10-28 06:28:02,514 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:28:02,515 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:02,515 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:02,517 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:02,518 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "NCE"}
+2024-10-28 06:28:03,772 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 06:28:03,772 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:03,773 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:03,775 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:03,776 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T10:00", "airport_iata": "CDG"}
+2024-10-28 06:28:05,145 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:28:05,145 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:05,146 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:05,148 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:05,151 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "DMM"}
+2024-10-28 06:28:08,432 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-27T14:00?limit=100
+2024-10-28 06:28:08,434 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:08,435 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "DXB"}
+2024-10-28 06:28:09,589 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:28:09,590 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:09,590 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:09,592 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:09,593 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "PVG"}
+2024-10-28 06:28:12,562 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-10-27T14:00?limit=100
+2024-10-28 06:28:12,564 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:12,565 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "BKK"}
+2024-10-28 06:28:15,663 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-10-27T14:00?limit=100
+2024-10-28 06:28:15,665 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:15,667 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "IST"}
+2024-10-28 06:28:18,980 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-10-27T14:00?limit=100
+2024-10-28 06:28:18,982 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:18,984 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "HND"}
+2024-10-28 06:28:21,700 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-27T14:00?limit=100
+2024-10-28 06:28:21,703 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:21,705 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "PEK"}
+2024-10-28 06:28:23,202 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:28:23,202 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:23,203 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:23,206 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:23,207 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "DEL"}
+2024-10-28 06:28:26,276 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-10-27T14:00?limit=100
+2024-10-28 06:28:26,278 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:26,279 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "CAI"}
+2024-10-28 06:28:27,575 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:28:27,576 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:27,576 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:27,579 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:27,580 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "CMN"}
+2024-10-28 06:28:30,619 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CMN/2024-10-27T14:00?limit=100
+2024-10-28 06:28:30,621 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:30,622 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "CPT"}
+2024-10-28 06:28:33,965 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CPT/2024-10-27T14:00?limit=100
+2024-10-28 06:28:33,967 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:33,969 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "LOS"}
+2024-10-28 06:28:37,160 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LOS/2024-10-27T14:00?limit=100
+2024-10-28 06:28:37,162 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:37,164 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "ALG"}
+2024-10-28 06:28:40,390 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-27T14:00?limit=100
+2024-10-28 06:28:40,393 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:40,395 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "NBO"}
+2024-10-28 06:28:43,622 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-10-27T14:00?limit=100
+2024-10-28 06:28:43,624 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:43,626 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "SSH"}
+2024-10-28 06:28:47,263 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-27T14:00?limit=100
+2024-10-28 06:28:47,265 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:47,266 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MRU"}
+2024-10-28 06:28:50,330 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-10-27T14:00?limit=100
+2024-10-28 06:28:50,332 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:50,333 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "ATL"}
+2024-10-28 06:28:51,658 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:28:51,659 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:51,659 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:51,662 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:51,664 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "DFW"}
+2024-10-28 06:28:52,923 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:28:52,923 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:52,923 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:52,926 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:52,928 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "DEN"}
+2024-10-28 06:28:57,391 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-27T14:00?limit=100
+2024-10-28 06:28:57,394 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:57,396 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "ORD"}
+2024-10-28 06:28:58,758 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:28:58,758 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:28:58,758 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:28:58,760 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:28:58,762 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "LAX"}
+2024-10-28 06:29:00,093 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:29:00,094 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:00,094 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:00,096 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:00,098 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "JFK"}
+2024-10-28 06:29:01,228 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:29:01,228 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:01,228 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:01,230 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:01,231 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "LAS"}
+2024-10-28 06:29:02,636 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:29:02,636 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:02,637 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:02,639 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:02,640 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MIA"}
+2024-10-28 06:29:03,773 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:29:03,773 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:03,773 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:03,775 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:03,776 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MCO"}
+2024-10-28 06:29:06,794 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MCO/2024-10-27T14:00?limit=100
+2024-10-28 06:29:06,796 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:06,797 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "CLT"}
+2024-10-28 06:29:10,010 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-10-27T14:00?limit=100
+2024-10-28 06:29:10,012 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:10,013 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MEX"}
+2024-10-28 06:29:13,428 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MEX/2024-10-27T14:00?limit=100
+2024-10-28 06:29:13,431 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:13,432 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "SEA"}
+2024-10-28 06:29:14,856 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:29:14,856 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:14,856 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:14,859 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:14,861 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "EWR"}
+2024-10-28 06:29:18,461 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/EWR/2024-10-27T14:00?limit=100
+2024-10-28 06:29:18,463 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:18,464 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "SFO"}
+2024-10-28 06:29:19,635 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:29:19,635 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:19,635 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:19,638 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:19,639 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "BOG"}
+2024-10-28 06:29:22,905 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-27T14:00?limit=100
+2024-10-28 06:29:22,908 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:22,910 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "GRU"}
+2024-10-28 06:29:27,273 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-10-27T14:00?limit=100
+2024-10-28 06:29:27,275 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:27,277 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "FRA"}
+2024-10-28 06:29:29,923 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:29:29,923 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:29,924 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:29,927 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:29,928 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MUC"}
+2024-10-28 06:29:32,342 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:29:32,342 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:32,342 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:32,344 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:32,345 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "BER"}
+2024-10-28 06:29:34,896 [INFO ] customer_flight_info_pipeline: DEPARTURES 15 rows were added into the database raw table.
+2024-10-28 06:29:34,896 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:34,897 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:34,899 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:34,900 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "AMS"}
+2024-10-28 06:29:36,105 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 06:29:36,106 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:36,106 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:36,108 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:36,109 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "LHR"}
+2024-10-28 06:29:37,490 [INFO ] customer_flight_info_pipeline: DEPARTURES 15 rows were added into the database raw table.
+2024-10-28 06:29:37,490 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:37,491 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:37,492 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:37,494 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MAN"}
+2024-10-28 06:29:39,178 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-28 06:29:39,178 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:39,179 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:39,181 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:39,183 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "OSL"}
+2024-10-28 06:29:40,245 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:29:40,246 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:40,246 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:40,248 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:40,249 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "ARN"}
+2024-10-28 06:29:41,637 [INFO ] customer_flight_info_pipeline: DEPARTURES 8 rows were added into the database raw table.
+2024-10-28 06:29:41,637 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:41,638 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:41,639 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:41,640 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "MAD"}
+2024-10-28 06:29:43,013 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:29:43,014 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:43,014 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:43,016 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:43,017 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "LIS"}
+2024-10-28 06:29:44,633 [INFO ] customer_flight_info_pipeline: DEPARTURES 8 rows were added into the database raw table.
+2024-10-28 06:29:44,633 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:44,634 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:44,636 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:44,637 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "FCO"}
+2024-10-28 06:29:46,074 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:29:46,074 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:46,075 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:46,076 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:46,077 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "ATH"}
+2024-10-28 06:29:47,155 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 06:29:47,155 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:47,155 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:47,157 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:47,159 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "WAW"}
+2024-10-28 06:29:48,475 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 06:29:48,475 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:48,476 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:48,478 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:48,480 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "VIE"}
+2024-10-28 06:29:54,075 [INFO ] customer_flight_info_pipeline: DEPARTURES 44 rows were added into the database raw table.
+2024-10-28 06:29:54,075 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:54,075 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:54,077 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:54,079 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "ZRH"}
+2024-10-28 06:29:58,547 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:29:58,548 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:58,548 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:58,551 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:58,552 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "DUB"}
+2024-10-28 06:29:59,823 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:29:59,824 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:29:59,824 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:29:59,827 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:29:59,828 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "NCE"}
+2024-10-28 06:30:01,281 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-28 06:30:01,281 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:01,282 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:01,284 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:01,286 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T14:00", "airport_iata": "CDG"}
+2024-10-28 06:30:02,772 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:30:02,772 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:02,773 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:02,775 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:02,776 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "DMM"}
+2024-10-28 06:30:08,152 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-27T18:00?limit=100
+2024-10-28 06:30:08,155 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:08,156 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "DXB"}
+2024-10-28 06:30:09,685 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:09,685 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:09,685 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:09,688 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:09,689 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "PVG"}
+2024-10-28 06:30:12,892 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PVG/2024-10-27T18:00?limit=100
+2024-10-28 06:30:12,897 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:12,898 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "BKK"}
+2024-10-28 06:30:17,692 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BKK/2024-10-27T18:00?limit=100
+2024-10-28 06:30:17,694 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:17,695 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "IST"}
+2024-10-28 06:30:22,237 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:22,237 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:22,238 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:22,242 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:22,244 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "HND"}
+2024-10-28 06:30:25,628 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-27T18:00?limit=100
+2024-10-28 06:30:25,630 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:25,631 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "PEK"}
+2024-10-28 06:30:30,028 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-27T18:00?limit=100
+2024-10-28 06:30:30,030 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:30,031 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "DEL"}
+2024-10-28 06:30:34,194 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEL/2024-10-27T18:00?limit=100
+2024-10-28 06:30:34,198 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:34,200 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "CAI"}
+2024-10-28 06:30:35,276 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:35,276 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:35,276 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:35,279 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:35,280 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "CMN"}
+2024-10-28 06:30:39,538 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CMN/2024-10-27T18:00?limit=100
+2024-10-28 06:30:39,541 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:39,542 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "CPT"}
+2024-10-28 06:30:40,846 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:40,846 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:40,847 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:40,849 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:40,851 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "LOS"}
+2024-10-28 06:30:42,041 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:42,042 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:42,042 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:42,044 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:42,045 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "ALG"}
+2024-10-28 06:30:46,268 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-27T18:00?limit=100
+2024-10-28 06:30:46,270 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:46,271 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "NBO"}
+2024-10-28 06:30:49,825 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NBO/2024-10-27T18:00?limit=100
+2024-10-28 06:30:49,827 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:49,828 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "SSH"}
+2024-10-28 06:30:52,903 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-27T18:00?limit=100
+2024-10-28 06:30:52,905 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:52,907 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MRU"}
+2024-10-28 06:30:54,140 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:54,140 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:54,141 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:54,143 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:54,145 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "ATL"}
+2024-10-28 06:30:55,264 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:55,264 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:55,264 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:55,267 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:55,269 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "DFW"}
+2024-10-28 06:30:58,665 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-27T18:00?limit=100
+2024-10-28 06:30:58,667 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:58,668 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "DEN"}
+2024-10-28 06:30:59,782 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:30:59,783 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:30:59,783 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:30:59,786 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:30:59,787 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "ORD"}
+2024-10-28 06:31:00,781 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:31:00,781 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:00,781 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:00,783 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:00,784 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "LAX"}
+2024-10-28 06:31:01,973 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:31:01,973 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:01,973 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:01,975 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:01,976 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "JFK"}
+2024-10-28 06:31:03,272 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-28 06:31:03,273 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:03,273 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:03,276 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:03,278 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "LAS"}
+2024-10-28 06:31:04,909 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:31:04,909 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:04,909 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:04,911 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:04,912 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MIA"}
+2024-10-28 06:31:06,095 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:31:06,095 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:06,096 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:06,099 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:06,100 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MCO"}
+2024-10-28 06:31:07,563 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:31:07,563 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:07,564 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:07,566 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:07,568 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "CLT"}
+2024-10-28 06:31:08,742 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:31:08,743 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:08,743 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:08,745 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:08,746 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MEX"}
+2024-10-28 06:31:10,364 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:31:10,364 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:10,365 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:10,367 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:10,369 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "SEA"}
+2024-10-28 06:31:16,918 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-27T18:00?limit=100
+2024-10-28 06:31:16,920 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:16,922 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "EWR"}
+2024-10-28 06:31:18,380 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:31:18,381 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:18,381 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:18,383 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:18,384 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "SFO"}
+2024-10-28 06:31:19,992 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:31:19,993 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:19,993 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:19,995 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:19,996 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "BOG"}
+2024-10-28 06:31:23,691 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-27T18:00?limit=100
+2024-10-28 06:31:23,693 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:23,694 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "GRU"}
+2024-10-28 06:31:24,741 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:31:24,741 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:24,742 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:24,744 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:24,746 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "FRA"}
+2024-10-28 06:31:27,228 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:31:27,229 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:27,229 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:27,231 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:27,232 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MUC"}
+2024-10-28 06:31:30,662 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:31:30,662 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:30,662 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:30,665 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:30,666 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "BER"}
+2024-10-28 06:31:32,376 [INFO ] customer_flight_info_pipeline: DEPARTURES 22 rows were added into the database raw table.
+2024-10-28 06:31:32,376 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:32,376 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:32,379 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:32,380 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "AMS"}
+2024-10-28 06:31:33,752 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:31:33,753 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:33,753 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:33,756 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:33,757 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "LHR"}
+2024-10-28 06:31:35,365 [INFO ] customer_flight_info_pipeline: DEPARTURES 14 rows were added into the database raw table.
+2024-10-28 06:31:35,366 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:35,366 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:35,368 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:35,369 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MAN"}
+2024-10-28 06:31:36,830 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:31:36,830 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:36,830 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:36,832 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:36,834 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "OSL"}
+2024-10-28 06:31:38,426 [INFO ] customer_flight_info_pipeline: DEPARTURES 5 rows were added into the database raw table.
+2024-10-28 06:31:38,427 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:38,427 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:38,429 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:38,431 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "ARN"}
+2024-10-28 06:31:39,504 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 06:31:39,504 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:39,504 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:39,506 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:39,507 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "MAD"}
+2024-10-28 06:31:40,804 [INFO ] customer_flight_info_pipeline: DEPARTURES 3 rows were added into the database raw table.
+2024-10-28 06:31:40,804 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:40,804 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:40,806 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:40,807 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "LIS"}
+2024-10-28 06:31:42,081 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:31:42,081 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:42,082 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:42,084 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:42,085 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "FCO"}
+2024-10-28 06:31:44,619 [INFO ] customer_flight_info_pipeline: DEPARTURES 7 rows were added into the database raw table.
+2024-10-28 06:31:44,619 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:44,619 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:44,621 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:44,622 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "ATH"}
+2024-10-28 06:31:46,027 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 06:31:46,027 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:46,027 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:46,029 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:46,030 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "WAW"}
+2024-10-28 06:31:48,290 [INFO ] customer_flight_info_pipeline: DEPARTURES 4 rows were added into the database raw table.
+2024-10-28 06:31:48,290 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:48,291 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:48,293 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:48,294 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "VIE"}
+2024-10-28 06:31:53,653 [INFO ] customer_flight_info_pipeline: DEPARTURES 39 rows were added into the database raw table.
+2024-10-28 06:31:53,653 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:53,654 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:53,656 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:53,657 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "ZRH"}
+2024-10-28 06:31:56,366 [INFO ] customer_flight_info_pipeline: DEPARTURES 50 rows were added into the database raw table.
+2024-10-28 06:31:56,366 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:56,366 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:56,368 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:56,369 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "DUB"}
+2024-10-28 06:31:57,746 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 06:31:57,747 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:57,747 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:57,750 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:57,752 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "NCE"}
+2024-10-28 06:31:59,659 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 06:31:59,659 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 06:31:59,659 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 06:31:59,661 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 06:31:59,662 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "CDG"}
+2024-10-28 06:31:59,788 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-28 06:31:59,789 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-28 07:02:01,569 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-28 07:02:01,572 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T18:00", "airport_iata": "CDG"}
+2024-10-28 07:02:03,776 [INFO ] customer_flight_info_pipeline: DEPARTURES 6 rows were added into the database raw table.
+2024-10-28 07:02:03,776 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:03,777 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:03,779 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:03,780 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "DMM"}
+2024-10-28 07:02:05,108 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 07:02:05,108 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:05,108 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:05,111 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:05,112 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "DXB"}
+2024-10-28 07:02:09,522 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:02:09,522 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:09,523 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:09,525 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:09,526 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "PVG"}
+2024-10-28 07:02:11,107 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 07:02:11,107 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:11,107 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:11,110 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:11,111 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "BKK"}
+2024-10-28 07:02:12,316 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:02:12,316 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:12,316 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:12,319 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:12,321 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "IST"}
+2024-10-28 07:02:17,426 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/IST/2024-10-27T22:00?limit=100
+2024-10-28 07:02:17,428 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:17,430 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "HND"}
+2024-10-28 07:02:25,601 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/HND/2024-10-27T22:00?limit=100
+2024-10-28 07:02:25,604 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:25,606 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "PEK"}
+2024-10-28 07:02:28,773 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/PEK/2024-10-27T22:00?limit=100
+2024-10-28 07:02:28,775 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:28,777 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "DEL"}
+2024-10-28 07:02:30,372 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:02:30,373 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:30,373 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:30,375 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:30,376 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "CAI"}
+2024-10-28 07:02:37,279 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CAI/2024-10-27T22:00?limit=100
+2024-10-28 07:02:37,282 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:37,283 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "CMN"}
+2024-10-28 07:02:49,316 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CMN/2024-10-27T22:00?limit=100
+2024-10-28 07:02:49,319 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:49,321 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "CPT"}
+2024-10-28 07:02:53,419 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CPT/2024-10-27T22:00?limit=100
+2024-10-28 07:02:53,421 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:53,422 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "LOS"}
+2024-10-28 07:02:54,493 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 07:02:54,494 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:54,495 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:54,497 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:54,500 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "ALG"}
+2024-10-28 07:02:57,988 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ALG/2024-10-27T22:00?limit=100
+2024-10-28 07:02:57,990 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:57,992 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "NBO"}
+2024-10-28 07:02:59,166 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:02:59,166 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:02:59,166 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:02:59,168 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:02:59,169 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "SSH"}
+2024-10-28 07:03:07,241 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SSH/2024-10-27T22:00?limit=100
+2024-10-28 07:03:07,243 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:07,244 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MRU"}
+2024-10-28 07:03:15,427 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MRU/2024-10-27T22:00?limit=100
+2024-10-28 07:03:15,429 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:15,430 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "ATL"}
+2024-10-28 07:03:21,501 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATL/2024-10-27T22:00?limit=100
+2024-10-28 07:03:21,503 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:21,505 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "DFW"}
+2024-10-28 07:03:27,259 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DFW/2024-10-27T22:00?limit=100
+2024-10-28 07:03:27,261 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:27,262 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "DEN"}
+2024-10-28 07:03:30,723 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DEN/2024-10-27T22:00?limit=100
+2024-10-28 07:03:30,725 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:30,726 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "ORD"}
+2024-10-28 07:03:32,084 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:03:32,085 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:03:32,085 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:03:32,087 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:32,088 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "LAX"}
+2024-10-28 07:03:40,995 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAX/2024-10-27T22:00?limit=100
+2024-10-28 07:03:40,998 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:40,999 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "JFK"}
+2024-10-28 07:03:42,176 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:03:42,177 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:03:42,177 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:03:42,180 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:42,182 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "LAS"}
+2024-10-28 07:03:45,743 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LAS/2024-10-27T22:00?limit=100
+2024-10-28 07:03:45,745 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:45,747 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MIA"}
+2024-10-28 07:03:54,143 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MIA/2024-10-27T22:00?limit=100
+2024-10-28 07:03:54,145 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:54,146 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MCO"}
+2024-10-28 07:03:57,932 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MCO/2024-10-27T22:00?limit=100
+2024-10-28 07:03:57,934 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:03:57,935 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "CLT"}
+2024-10-28 07:04:04,022 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CLT/2024-10-27T22:00?limit=100
+2024-10-28 07:04:04,024 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:04,025 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MEX"}
+2024-10-28 07:04:07,287 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MEX/2024-10-27T22:00?limit=100
+2024-10-28 07:04:07,289 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:07,291 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "SEA"}
+2024-10-28 07:04:13,864 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SEA/2024-10-27T22:00?limit=100
+2024-10-28 07:04:13,866 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:13,867 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "EWR"}
+2024-10-28 07:04:15,105 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-28 07:04:15,105 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:04:15,105 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:04:15,107 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:15,109 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "SFO"}
+2024-10-28 07:04:17,863 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/SFO/2024-10-27T22:00?limit=100
+2024-10-28 07:04:17,866 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:17,867 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "BOG"}
+2024-10-28 07:04:21,229 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BOG/2024-10-27T22:00?limit=100
+2024-10-28 07:04:21,232 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:21,233 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "GRU"}
+2024-10-28 07:04:24,494 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/GRU/2024-10-27T22:00?limit=100
+2024-10-28 07:04:24,496 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:24,497 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "FRA"}
+2024-10-28 07:04:26,198 [INFO ] customer_flight_info_pipeline: DEPARTURES 25 rows were added into the database raw table.
+2024-10-28 07:04:26,198 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:04:26,198 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:04:26,200 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:26,202 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MUC"}
+2024-10-28 07:04:28,135 [INFO ] customer_flight_info_pipeline: DEPARTURES 23 rows were added into the database raw table.
+2024-10-28 07:04:28,136 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:04:28,136 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:04:28,138 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:28,139 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "BER"}
+2024-10-28 07:04:31,479 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/BER/2024-10-27T22:00?limit=100
+2024-10-28 07:04:31,482 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:31,483 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "AMS"}
+2024-10-28 07:04:34,033 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/AMS/2024-10-27T22:00?limit=100
+2024-10-28 07:04:34,035 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:34,036 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "LHR"}
+2024-10-28 07:04:37,962 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LHR/2024-10-27T22:00?limit=100
+2024-10-28 07:04:37,964 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:37,965 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MAN"}
+2024-10-28 07:04:48,034 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAN/2024-10-27T22:00?limit=100
+2024-10-28 07:04:48,036 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:48,037 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "OSL"}
+2024-10-28 07:04:52,061 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/OSL/2024-10-27T22:00?limit=100
+2024-10-28 07:04:52,063 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:52,065 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "ARN"}
+2024-10-28 07:04:56,253 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ARN/2024-10-27T22:00?limit=100
+2024-10-28 07:04:56,255 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:56,256 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "MAD"}
+2024-10-28 07:04:59,575 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/MAD/2024-10-27T22:00?limit=100
+2024-10-28 07:04:59,577 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:04:59,578 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "LIS"}
+2024-10-28 07:05:04,382 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/LIS/2024-10-27T22:00?limit=100
+2024-10-28 07:05:04,384 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:05:04,386 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "FCO"}
+2024-10-28 07:05:05,728 [INFO ] customer_flight_info_pipeline: DEPARTURES 1 rows were added into the database raw table.
+2024-10-28 07:05:05,728 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:05:05,729 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:05:05,730 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:05:05,731 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "ATH"}
+2024-10-28 07:05:30,215 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/ATH/2024-10-27T22:00?limit=100
+2024-10-28 07:05:30,217 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:05:30,218 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "WAW"}
+2024-10-28 07:05:40,955 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/WAW/2024-10-27T22:00?limit=100
+2024-10-28 07:05:40,957 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:05:40,958 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "VIE"}
+2024-10-28 07:05:43,033 [INFO ] customer_flight_info_pipeline: DEPARTURES 9 rows were added into the database raw table.
+2024-10-28 07:05:43,033 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:05:43,034 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:05:43,036 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:05:43,037 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "ZRH"}
+2024-10-28 07:05:45,599 [INFO ] customer_flight_info_pipeline: DEPARTURES 11 rows were added into the database raw table.
+2024-10-28 07:05:45,599 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-28 07:05:45,600 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-28 07:05:45,602 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:05:45,604 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "DUB"}
+2024-10-28 07:06:09,568 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DUB/2024-10-27T22:00?limit=100
+2024-10-28 07:06:09,571 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:06:09,572 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "NCE"}
+2024-10-28 07:06:19,268 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/NCE/2024-10-27T22:00?limit=100
+2024-10-28 07:06:19,270 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-28 07:06:19,271 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-27T22:00", "airport_iata": "CDG"}
+2024-10-28 07:06:22,780 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CDG/2024-10-27T22:00?limit=100
+2024-10-28 07:06:22,782 [INFO ] __main__: DEPARTURES [x] Done

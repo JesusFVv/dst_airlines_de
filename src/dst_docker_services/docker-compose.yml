@@ -10,11 +10,22 @@ services:
       POSTGRES_USER_FILE: /run/secrets/db_user
       POSTGRES_PASSWORD_FILE: /run/secrets/db_password
       POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_DB_READER: $POSTGRES_DB_READER
+      POSTRES_READRE_PASS: $POSTRES_READRE_PASS
       POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      PGRST_DB_ANON_ROLE: $PGRST_DB_ANON_ROLE
+      PGRST_DB_USER: $PGRST_DB_USER
+      PGRST_USER_PASS: $PGRST_USER_PASS
+      PGRST_DB_SCHEMA: $PGRST_DB_SCHEMA
+      REPLICATION_DB_ROLE: $REPLICATION_DB_ROLE
+      REPLICATION_DB_USER: $REPLICATION_DB_USER
+      REPLICATION_USER_PASS: $REPLICATION_USER_PASS
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ${POSTGRES_INIT_FILE_1}:/docker-entrypoint-initdb.d/1.sh
-      - ${POSTGRES_INIT_FILE_2}:/docker-entrypoint-initdb.d/2.sql
+      - ${POSTGRES_INIT_FILES_PATH}/1_roles_and_users.sh:/docker-entrypoint-initdb.d/1_roles_and_users.sh:ro
+      - ${POSTGRES_INIT_FILES_PATH}/2_schemas_tables_and_data.sql:/docker-entrypoint-initdb.d/2_schemas_tables_and_data.sql:ro
+      - ${POSTGRES_INIT_FILES_PATH}/3_privileges.sh:/docker-entrypoint-initdb.d/3_privileges.sh:ro
+      - ${POSTGRES_DUMP_DIR}:/var/backups:rw
     secrets:
       - db_password
       - db_user
@@ -128,6 +139,48 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+  flight_schedules_consumer_b:
+    image: dst_flight_schedules_consumer:latest
+    environment:
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+      - RABBITMQ_PORT=$RABBITMQ_PORT
+      - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
+      - LOG_FILE_PATH=/usr/src/app/log
+    networks:
+      - ${PROJECT_NETWORK_1}
+    volumes:
+      - ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/alex_secrets.toml:/usr/src/app/.dlt/secrets.toml:ro
+      - ${FLIGHT_SCHEDULES_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
+    restart: always
+    depends_on:
+      rabbitmq:
+        condition: service_started
+      postgres_db:
+        condition: service_started
+    deploy:
+      mode: replicated
+      replicas: 2
+  flight_schedules_consumer_c:
+    image: dst_flight_schedules_consumer:latest
+    environment:
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+      - RABBITMQ_PORT=$RABBITMQ_PORT
+      - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
+      - LOG_FILE_PATH=/usr/src/app/log
+    networks:
+      - ${PROJECT_NETWORK_1}
+    volumes:
+      - ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/chris_secrets.toml:/usr/src/app/.dlt/secrets.toml:ro
+      - ${FLIGHT_SCHEDULES_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
+    restart: always
+    depends_on:
+      rabbitmq:
+        condition: service_started
+      postgres_db:
+        condition: service_started
+    deploy:
+      mode: replicated
+      replicas: 2
   # customer_flight_info_producer:  # Launched individually outside the docker compose
   #   image: dst_customer_flight_info_producer:latest
   #   container_name: customer_flight_info_producer
@@ -163,7 +216,7 @@ services:
     networks:
       - ${PROJECT_NETWORK_1}
     volumes:
-      - ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/secrets.toml:/usr/src/app/secrets.toml:ro
+      - ${CUSTOMER_FLIGHT_INFO_CONSUMER_DOCKER_PATH}/secrets.toml:/usr/src/app/secrets.toml:ro
       - ${CUSTOMER_FLIGHT_INFO_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
       - ${PROJECT_ABSOLUT_PATH}/etc/postgres:/usr/src/app/etc:ro
       - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro
@@ -188,7 +241,7 @@ services:
     networks:
       - ${PROJECT_NETWORK_1}
     volumes:
-      - ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/secrets.toml:/usr/src/app/secrets.toml:ro
+      - ${CUSTOMER_FLIGHT_INFO_CONSUMER_DOCKER_PATH}/secrets.toml:/usr/src/app/secrets.toml:ro
       - ${CUSTOMER_FLIGHT_INFO_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
       - ${PROJECT_ABSOLUT_PATH}/etc/postgres:/usr/src/app/etc:ro
       - ${AIRPORTS_FILE_DIR}:/usr/src/app/data:ro

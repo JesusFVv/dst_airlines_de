@@ -3,6 +3,11 @@
 HTTP_API = http://{VM_IP}:8000/postgrest_api/
 HTTPS_API = https://{VM_IP}:8085/postgrest_api/
 
+URL depending on:
+- If inside the PostgREST API container: http://localhost:3000/
+- If from the host: http://localhost:8000/postgrest_api/
+- If from the internet: http://{VM_IP}:8000/postgrest_api/
+
 ```bash
 # List all the cities & countries in the DB
 curl "http://localhost:3000/refdata_cities_coo"

@@ -1,3 +1,7 @@
+# Only for test
+import sys
+sys.path.append("/home/ubuntu-user1/prj/dst_airlines_project/dst_airlines_de/lib")
+#
 import logging
 import pandas as pd
 import psycopg2
