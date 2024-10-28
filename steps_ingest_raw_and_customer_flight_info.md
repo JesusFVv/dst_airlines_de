@@ -38,8 +38,8 @@ nano .env
  - Restart le service NGINX
 
 ```shell
-docker exec -it nginx nginx -s reload
-
+# docker exec -it nginx nginx -s reload
+docker container restart nginx
 ```
 
  - Si install nouvelle Peupler la DB (je vais essayer de faire 3 SQL Dump de L1 et L2 et L3)
