@@ -5,7 +5,7 @@ from pendulum import datetime
 
 PROJECT_ABSOLUT_PATH = os.environ['PROJECT_ABSOLUT_PATH']  # Import the env variable from Host: NOT IDEAL!!!!!
 
-@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule="0 3-6 * * *", catchup=False, tags=["dst_project", "customer_flight_info"])
+@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule="0 4-7 * * *", catchup=False, tags=["dst_project", "customer_flight_info"])
 def customer_flight_info_l2_incremental_loading_ssh_operator():
     customer_flight_info_l2_incremental_loading = SSHOperator(
         task_id="customer_flight_info_l2_incremental_loading",
