@@ -160,6 +160,27 @@ services:
     deploy:
       mode: replicated
       replicas: 2
+  flight_schedules_consumer_c:
+    image: dst_flight_schedules_consumer:latest
+    environment:
+      - RABBITMQ_HOST=$RABBITMQ_CONTAINER_NAME
+      - RABBITMQ_PORT=$RABBITMQ_PORT
+      - FLIGHT_SCHEDULES_CHANNEL=$FLIGHT_SCHEDULES_CHANNEL
+      - LOG_FILE_PATH=/usr/src/app/log
+    networks:
+      - ${PROJECT_NETWORK_1}
+    volumes:
+      - ${FLIGHT_SCHEDULES_CONSUMER_DOCKER_PATH}/.dlt/chris_secrets.toml:/usr/src/app/.dlt/secrets.toml:ro
+      - ${FLIGHT_SCHEDULES_CONSUMER_LOG_PATH}:/usr/src/app/log:rw
+    restart: always
+    depends_on:
+      rabbitmq:
+        condition: service_started
+      postgres_db:
+        condition: service_started
+    deploy:
+      mode: replicated
+      replicas: 2
   # customer_flight_info_producer:  # Launched individually outside the docker compose
   #   image: dst_customer_flight_info_producer:latest
   #   container_name: customer_flight_info_producer
