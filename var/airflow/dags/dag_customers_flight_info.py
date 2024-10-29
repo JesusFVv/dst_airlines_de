@@ -34,7 +34,7 @@ customer_flight_info_launch_producer_ssh_operator()
 
 
 
-@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule="20 4 * * *", catchup=False, tags=["dst_project", "customer_flight_info"])
+@dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule="0 5 * * *", catchup=False, tags=["dst_project", "customer_flight_info"])
 def flight_schedules_launch_consumer_ssh_operator():
     flight_schedules_consumer_partial_start_1 = SSHOperator(
         task_id="flight_schedules_consumer_partial_start_1",
