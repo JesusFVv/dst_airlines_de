@@ -6368,3 +6368,7 @@
 2024-10-29 08:30:51,246 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-28T22:00", "airport_iata": "CDG"}
 2024-10-29 08:30:54,189 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CDG/2024-10-28T22:00?limit=100
 2024-10-29 08:30:54,191 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-29 20:53:00,987 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-28T02:00", "airport_iata": "DMM"}
+2024-10-29 20:53:01,132 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-29 20:53:01,133 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-29 20:54:59,968 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
