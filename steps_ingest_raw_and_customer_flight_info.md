@@ -23,8 +23,7 @@ nano .env
 ./lib/customer_flight_info/consumer/docker_departures/create_docker_image.sh
 ```
 
-⚠️ A faire une seule fois sur la VM
-- Créer le certificat SSL pour nginx en suivant la [documentation](src/docker_services/nginx/nginx_notes.md).
+- ⚠️ A faire une seule fois sur la VM : créer le certificat SSL pour nginx en suivant la [documentation](src/docker_services/nginx/nginx_notes.md).
 
 - Déployer tous les services sauf Airflow `bash dst_services_compose_up.sh` :
 
