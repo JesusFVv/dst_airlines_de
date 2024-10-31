@@ -11,7 +11,7 @@ PROJECT_ABSOLUT_PATH = os.environ['PROJECT_ABSOLUT_PATH']  # Import the env vari
 
 # Next is the DAG to launch DockerContainers with the DockerOperator, it only works if permissions of /var/run/docker.sock are 666
 @dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule=None, catchup=False, tags=["dst_project", "flight_schedules"])
-def flight_schedules_docker_operator():
+def flight_schedules_launch_producer_docker_operator():
 
     flight_schedules_producer = DockerOperator(
         task_id='flight_schedules_producer',
@@ -36,11 +36,11 @@ def flight_schedules_docker_operator():
       
     flight_schedules_producer
 
-flight_schedules_docker_operator()
+flight_schedules_launch_producer_docker_operator()
 
 
 @dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule="10 2 * * *", catchup=False, tags=["dst_project", "flight_schedules"])
-def flight_schedules_ssh_operator():
+def flight_schedules_launch_producer_ssh_operator():
     flight_schedules_producer = SSHOperator(
         task_id="flight_schedules_producer",
         ssh_conn_id='WSL_Home',
@@ -49,12 +49,12 @@ def flight_schedules_ssh_operator():
     
     flight_schedules_producer
 
-flight_schedules_ssh_operator()
+flight_schedules_launch_producer_ssh_operator()
 
 
 
 @dag(start_date=datetime(2024, 10, 20, tz="UTC"), schedule=None, catchup=False, tags=["dst_project", "flight_schedules"])
-def flight_schedules_backlog_ssh_operator():
+def flight_schedules_backlog_producer_ssh_operator():
     flight_schedules_producer_backlog = SSHOperator(
         task_id="flight_schedules_producer_backlog",
         ssh_conn_id='WSL_Home',
@@ -63,4 +63,4 @@ def flight_schedules_backlog_ssh_operator():
     
     flight_schedules_producer_backlog
 
-flight_schedules_backlog_ssh_operator()
+flight_schedules_backlog_producer_ssh_operator()

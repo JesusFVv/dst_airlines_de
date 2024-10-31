@@ -7557,3 +7557,24 @@
 2024-10-30 05:03:50,621 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/CDG/2024-10-29T22:00?limit=100
 2024-10-30 05:03:50,623 [INFO ] __main__: DEPARTURES [x] Done
 2024-10-30 05:40:59,155 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-31 00:41:15,694 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-31 00:56:07,570 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-31 02:20:33,513 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-30T02:00", "airport_iata": "DMM"}
+2024-10-31 02:20:33,673 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-31 02:20:33,674 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-31 02:50:35,739 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-31 02:50:35,742 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-30T02:00", "airport_iata": "DMM"}
+2024-10-31 02:50:35,905 [WARNI] __main__: DEPARTURES Coudln't get the Token
+2024-10-31 02:50:35,906 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
+2024-10-31 10:00:00,118 [INFO ] __main__: DEPARTURES  [*] Waiting for messages. To exit press CTRL+C
+2024-10-31 10:00:00,129 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-30T02:00", "airport_iata": "DMM"}
+2024-10-31 10:00:05,093 [ERROR] customer_flight_info_pipeline: DEPARTURES HTTP error 404 for endpoint https://api.lufthansa.com/v1/operations/customerflightinformation/departures/DMM/2024-10-30T02:00?limit=100
+2024-10-31 10:00:05,101 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-31 10:00:05,105 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-30T02:00", "airport_iata": "DXB"}
+2024-10-31 10:00:07,062 [INFO ] customer_flight_info_pipeline: DEPARTURES 2 rows were added into the database raw table.
+2024-10-31 10:00:07,062 [WARNI] customer_flight_info_pipeline: DEPARTURES 0 rows couldn't be added because Exceptions.
+2024-10-31 10:00:07,062 [INFO ] customer_flight_info_pipeline: DEPARTURES Connection closed to the database
+2024-10-31 10:00:07,065 [INFO ] __main__: DEPARTURES [x] Done
+2024-10-31 10:00:07,067 [INFO ] __main__: DEPARTURES [x] Received {"date": "2024-10-30T02:00", "airport_iata": "PVG"}
+2024-10-31 10:00:07,530 [WARNI] __main__: DEPARTURES Max Limit Requests Reached
+2024-10-31 10:00:07,531 [WARNI] __main__: DEPARTURES Sleeping for 30 minutes  ZZZZZZZZZZZZZ
