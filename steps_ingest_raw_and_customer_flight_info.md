@@ -1,6 +1,6 @@
 ## Steps pour lancer tous les sevices
 
- - Si besoin, modifier la variable PROJECT_ABSOLUT_PATH dans le fichier .env à la racine du projet :
+- Si besoin, modifier la variable PROJECT_ABSOLUT_PATH dans le fichier .env à la racine du projet :
 
 ```shell
 cd ~/dst_airlines_de
@@ -10,8 +10,15 @@ pwd
 nano .env
 ```
 
- - RIEN A FAIRE/ Les services standard sont: Postgres, DBeaver, Nginx, RabbitMQ, PostgREST API, Metabase
- - Creer les images des services flight_schedules :
+- RIEN A FAIRE/ Les services standard sont: Postgres, DBeaver, Nginx, RabbitMQ, PostgREST API, Metabase
+
+- Decompresser le dump de la DB
+
+```shell
+gunzip -c src/dst_docker_services/postgres/2_schemas_tables_and_data.sql.gz > src/dst_docker_services/postgres/2_schemas_tables_and_data.sql
+```
+
+- Creer les images des services flight_schedules :
 
 ```shell
 ./lib/flights_scheduled/consumer/create_docker_image.sh
@@ -37,16 +44,16 @@ nano .env
 ./airflow_compose_up.sh
 ```
 
- - Restart le service NGINX
+- Restart le service NGINX
 
 ```shell
 # docker exec -it nginx nginx -s reload
 docker container restart nginx
 ```
 
- - Si install nouvelle Peupler la DB (je vais essayer de faire 3 SQL Dump de L1 et L2 et L3)
-   - Pour le dump: pg_dump -U dst_designer -t l2.refdata_languages dst_airlines_db > /tmp/l2.refdata_languages.sql
-   - Pour l'ingestion:
+- Si install nouvelle Peupler la DB (je vais essayer de faire 3 SQL Dump de L1 et L2 et L3)
+  - Pour le dump: pg_dump -U dst_designer -t l2.refdata_languages dst_airlines_db > /tmp/l2.refdata_languages.sql
+  - Pour l'ingestion:
  
 ## Steps pour populer les tables
  
