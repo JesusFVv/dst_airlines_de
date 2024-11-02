@@ -14,21 +14,22 @@ def customer_flight_info_launch_producer_ssh_operator():
         command=f"pushd {PROJECT_ABSOLUT_PATH} && bash lib/customer_flight_info/producer/launch_producer.sh "
     )
     
-    flight_schedules_consumer_partial_stop_1 = SSHOperator(
-        task_id="flight_schedules_consumer_partial_stop_1",
-        cmd_timeout=60,
-        ssh_conn_id='WSL_Home',
-        command=f"docker container stop dst_docker_services-flight_schedules_consumer_b-1 "
-    )
+    # flight_schedules_consumer_partial_stop_1 = SSHOperator(
+    #     task_id="flight_schedules_consumer_partial_stop_1",
+    #     cmd_timeout=60,
+    #     ssh_conn_id='WSL_Home',
+    #     command=f"docker container stop dst_docker_services-flight_schedules_consumer_b-1 "
+    # )
     
-    flight_schedules_consumer_partial_stop_2 = SSHOperator(
-        task_id="flight_schedules_consumer_partial_stop_2",
-        cmd_timeout=60,
-        ssh_conn_id='WSL_Home',
-        command=f"docker container stop dst_docker_services-flight_schedules_consumer_b-2 "
-    )
+    # flight_schedules_consumer_partial_stop_2 = SSHOperator(
+    #     task_id="flight_schedules_consumer_partial_stop_2",
+    #     cmd_timeout=60,
+    #     ssh_conn_id='WSL_Home',
+    #     command=f"docker container stop dst_docker_services-flight_schedules_consumer_b-2 "
+    # )
         
-    flight_schedules_consumer_partial_stop_1 >> flight_schedules_consumer_partial_stop_2 >> customer_flight_info_producer
+    # flight_schedules_consumer_partial_stop_1 >> flight_schedules_consumer_partial_stop_2 >> customer_flight_info_producer
+    customer_flight_info_producer
     
 customer_flight_info_launch_producer_ssh_operator()
 
@@ -52,6 +53,6 @@ def flight_schedules_launch_consumer_ssh_operator():
         
     flight_schedules_consumer_partial_start_1 >> flight_schedules_consumer_partial_start_2
     
-flight_schedules_launch_consumer_ssh_operator()
+# flight_schedules_launch_consumer_ssh_operator()
 
 
