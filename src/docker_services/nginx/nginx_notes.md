@@ -47,7 +47,7 @@ The configuration files needed for our case are:
 To reload the NGINX configuration, send the HUP signal to Docker:
 
 ```bash
-docker kill -s HUP container-name
+docker kill -s HUP $CONTAINER_NAME
 ```
 
 ## Logs
@@ -71,7 +71,9 @@ sudo openssl req -newkey rsa:4096 \
 -keyout dst_vm.key \
 -subj "/C=FR/ST=Paris/L=Paris/O=SAE/OU=IT Department/CN=server dst project"
 # Move the ssl certificates to folder
+mkdir -p etc/ssl/certs
 sudo mv dst_vm.* etc/ssl/certs
+
 ```
 
 ## Check connection to the apps
