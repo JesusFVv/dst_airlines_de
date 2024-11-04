@@ -100,12 +100,13 @@ docker stop dst_docker_services-flight_schedules_consumer-1 \
 
 ```shell
 ./src/docker_services/jupyter/create_docker_image.sh
+./src/docker_services/jupyter/launch_docker_container.sh
 ```
 
 ### Démarrage du docker
 
 ```shell
-./src/docker_services/jupyter/launch_docker_container.sh
+docker start jupyter_data_container
 ```
 
 ### Exploitation
