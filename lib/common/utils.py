@@ -4,6 +4,7 @@ from functools import total_ordering
 import logging
 from pathlib import Path, PosixPath
 from typing import TYPE_CHECKING
+import pandas as pd
 import os
 
 if TYPE_CHECKING:
@@ -195,3 +196,37 @@ def read_data_from_db(db_config_filepath: PosixPath | None, sql_query: str) -> l
         logger.info("Connection closed to the database")
 
     return res
+
+def read_dataframe_from_db(db_config_filepath: PosixPath | None, sql_query: str) -> pd.DataFrame:
+    """Read data from a database table and return it as a DataFrame.
+
+    Args:
+        db_config_filepath (PosixPath | None): absolute path to the db config file (deprecated)
+        sql_query (str): SQL query to run on database table
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the results of the SQL query.
+    """
+    import psycopg2
+    conn, cur = None, None
+    try:
+        # Database connection
+        conn, cur = connect_db(db_config_filepath)
+        # Get table name
+        db_table_name = sql_query.upper().split("FROM")[-1].strip().split(" ")[0]
+        # Execute query
+        cur.execute(sql_query)
+        # Fetch results
+        df = pd.DataFrame(cur.fetchall(), columns=[desc[0] for desc in cur.description])
+        logger.info(f"Read data from {db_table_name.lower()} table")
+        return df
+    except (Exception, psycopg2.Error) as e:
+        logger.exception(e)
+        raise
+    finally:
+        # Close database connection
+        if conn:
+            cur.close()
+        conn.close()
+        logger.info("Connection closed to the database")
+
