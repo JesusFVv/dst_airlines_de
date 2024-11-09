@@ -99,6 +99,16 @@ services:
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     restart: unless-stopped
+  jupyterhub:
+    image: jupyterhub
+    container_name: $JUPYTERHUB_CONTAINER_NAME
+    networks:
+      - ${PROJECT_NETWORK_1}
+    volumes:
+      - ${JUPYTERHUB_CONFIG_FILE}:/etc/jupyterhub/jupyterhub_config.py:ro
+      - ${JUPYTERHUB_HOME}:/home:rw
+      - ${JUPYTERHUB_DB}:/srv/jupyterhub:rw
+    restart: unless-stopped
   flight_schedules_consumer:
     image: dst_flight_schedules_consumer:latest
     environment:
