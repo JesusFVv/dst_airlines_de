@@ -31,6 +31,27 @@ services:
       - db_user
     # ports:
     #   - "6432:5432"  # To use with DBeaver desktop in host only
+  age:
+    image: apache/age
+    container_name: $POSTGRES_AGE_CONTAINER_NAME
+    restart: unless-stopped
+    networks:
+      - ${PROJECT_NETWORK_1}
+    environment:
+      POSTGRES_USER_FILE: /run/secrets/graph_db_user
+      POSTGRES_PASSWORD_FILE: /run/secrets/graph_db_password
+      POSTGRES_DB: $POSTGRES_AGE_DB
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+    volumes:
+      - graph_db-data:/var/lib/postgresql/data
+      - ${POSTGRES_AGE_INIT_FILES_PATH}/1_config_acces.sh:/docker-entrypoint-initdb.d/1_config_acces.sh:ro
+      - ${POSTGRES_AGE_INIT_FILES_PATH}/2_schemas_tables_and_data.sql:/docker-entrypoint-initdb.d/2_schemas_tables_and_data.sql:ro
+      - ${POSTGRES_AGE_DUMP_DIR}:/var/backups:rw
+    secrets:
+      - graph_db_password
+      - graph_db_user
+    # ports:
+    #   - "6432:5432"  # To use with DBeaver desktop in host only
   dbeaver:
     image: dbeaver/cloudbeaver:latest
     container_name: $DBEAVER_CONTAINER_NAME
@@ -205,6 +226,8 @@ services:
 volumes:
   db-data:
     name: db-data
+  graph_db-data:
+    name: graph_db-data
   cloudbeaver_workspace:
     name: cloudbeaver_workspace
   metabase-data:
@@ -216,6 +239,10 @@ secrets:
     file: $POSTGRES_DBUSER_PASSWORD_FILE
   db_user:
     file: $POSTGRES_DBUSER_FILE
+  graph_db_password:
+    file: $POSTGRES_AGE_DBUSER_PASSWORD_FILE
+  graph_db_user:
+    file: $POSTGRES_AGE_DBUSER_FILE
 networks:
   dst_network:
     name: ${PROJECT_NETWORK_1}
