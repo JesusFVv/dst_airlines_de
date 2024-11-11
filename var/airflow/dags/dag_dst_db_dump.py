@@ -17,7 +17,7 @@ def dst_airlines_db_dump_ssh_operator():
 
 dst_airlines_db_dump_ssh_operator()
 
-@dag(start_date=datetime(2024, 11, 10, tz="UTC"), schedule="0 9 * * *", catchup=False, tags=["dst_project", "dump_db"])
+@dag(start_date=datetime(2024, 11, 10, tz="UTC"), schedule="30 9 * * *", catchup=False, tags=["dst_project", "dump_db"])
 def dst_graph_db_dump_ssh_operator():
     dst_graph_db_dump = SSHOperator(
         task_id="dst_graph_db_dump",
