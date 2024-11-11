@@ -10,11 +10,20 @@ URL depending on:
 
 ```bash
 # List all the cities & countries in the DB
-curl "http://localhost:3000/refdata_cities_coo"
+curl "http://localhost:8000/postgrest_api/refdata_cities"
 # List the cities for the country France (country=FR)
-curl "http://localhost:3000/refdata_cities_coo?country=eq.FR"
+curl "http://localhost:8000/postgrest_api/refdata_cities?country=eq.FR"
 # Count the number of cities for the country France
-curl "http://localhost:3000/refdata_cities_coo?country=eq.FR&select=count()"
+curl "http://localhost:8000/postgrest_api/refdata_cities?country=eq.FR&select=count()"
 # Count the number of cities by country in the DB
-curl "http://localhost:3000/refdata_cities_coo?select=count(),country"
+curl "http://localhost:8000/postgrest_api/refdata_cities?select=count(),country"
+
+curl "http://localhost:8000/postgrest_api/operations_customer_flight_info?departure_actual_datetime=not.is.null" \
+  -H "Accept-Profile: l2" | wc -l
+
+curl "http://localhost:8000/postgrest_api/operations_customer_flight_info" \
+  -H "Accept-Profile: l2" | wc -l
+
+headers = {'Accept-Profile': 'l2'}  # Define the schema of the table (l2 or l3)
+r = requests.get('http://nginx:80/postgrest_api/refdata_cities', headers=headers)
 ```

@@ -85,6 +85,7 @@ curl --fail -I http://{VM-IP}:8000/cloudbeaver/
 curl --fail -I http://{VM-IP}:8000/airflow/
 curl --fail -I http://{VM_IP}:8000/  # Superset
 curl --fail -I http://{VM_IP}:8000/postgrest_api/
+curl --fail -I http://{VM_IP}:8000/jupyterlab/
 
 # The HTTPS version work in CLI but not in the browser of the SAE PC
 curl --insecure --fail -I https://{VM-IP}:8085/metabase/

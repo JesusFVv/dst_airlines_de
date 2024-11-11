@@ -87,5 +87,9 @@ server {
 - Whith admin go to url: http://localhost:8000/jupyterlab/hub/authorize and authorize new user
 - New user can login
 
-User created: dst_ml / 123
+
+## Users declared in my pc
+admin / admin
+dst_ml / 123
+dst_analyst / 456
 

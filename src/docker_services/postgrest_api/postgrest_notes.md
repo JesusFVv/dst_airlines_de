@@ -16,6 +16,8 @@ Create anonimous role to grant read acces to the specified schema and tables of 
 create role web_anonimous nologin;
 grant usage on schema l2 to web_anonimous;
 grant select on all tables in schema l2 to web_anonimous;
+grant usage on schema l3 to web_anonimous;
+grant select on all tables in schema l3 to web_anonimous;
 ```
 
 Create an user in order to login to the RESTAPI
@@ -90,6 +92,27 @@ docker kill -s SIGUSR1 <container>
 docker-compose kill -s SIGUSR1 <service>
 ```
 
+## TODO
+
+- Apply authentication [tutorial](https://docs.postgrest.org/en/v12/tutorials/tut1.html)
+- Do other type of queries: POST, PACH, DELETE (DML)
+- Implement a Swagger UI
+
+
+## Apply multiple schemas
+
+In the config file we can declare a list of schemas as:
+```log
+db-schemas = "tenant1, tenant2"
+```
+
+In order to query in different schemas we need to use the headers "Accept-Profile" for GET/HEAD and "Content-Profile" for POST, PUT, DELETE.
+
+```bash
+curl "http://localhost:3000/items" \
+  -H "Accept-Profile: tenant2"
+```
+
 
 ## Start querying the DB
 
@@ -103,9 +126,3 @@ curl "http://localhost:3000/refdata_cities_coo?country=eq.FR&select=count()"
 # Count the number of cities by country in the DB
 curl "http://localhost:3000/refdata_cities_coo?select=count(),country"
 ```
-
-## TODO
-
-- Apply authentication [tutorial](https://docs.postgrest.org/en/v12/tutorials/tut1.html)
-- Do other type of queries: POST, PACH, DELETE (DML)
-- Implement a Swagger UI
