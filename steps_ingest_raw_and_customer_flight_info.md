@@ -159,3 +159,9 @@ grep '^POSTRES_READRE_PASS=' .env
    - Connection name : dst_airlines_db@postgres_dst
    - User Name : dst_reader
    - User password : p*********r
+
+## postgrest_API
+
+ - Exemple :
+
+[http://79.125.25.202:8000/postgrest_api/operations_customer_flight_info?select=count()](http://79.125.25.202:8000/postgrest_api/operations_customer_flight_info?select=count())
