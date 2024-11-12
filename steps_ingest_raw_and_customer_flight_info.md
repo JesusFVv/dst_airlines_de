@@ -32,6 +32,12 @@ gunzip -c src/dst_docker_services/postgres/2_schemas_tables_and_data.sql.gz > sr
 
 - ⚠️ A faire une seule fois sur la VM : créer le certificat SSL pour nginx en suivant la [documentation Create SSL Certificate](src/docker_services/nginx/nginx_notes.md#create-ssl-certificate).
 
+- Construire l'image jupyterhub :
+
+```shell
+./src/docker_services/jupyterhub/create_docker_image.sh
+```
+
 - Déployer tous les services sauf Airflow `bash dst_services_compose_up.sh` :
 
 ```shell
@@ -42,6 +48,33 @@ gunzip -c src/dst_docker_services/postgres/2_schemas_tables_and_data.sql.gz > sr
 
 ```shell
 ./airflow_compose_up.sh
+```
+
+- Vérifier que Airflow a bien terminé de se lancer :
+
+```shell
+docker logs -f airflow-airflow-webserver-1
+```
+
+```log
+[2024-11-12 22:06:55 +0000] [19] [INFO] Listening at: http://0.0.0.0:8080 (19)
+[2024-11-12 22:06:55 +0000] [19] [INFO] Using worker: sync
+[2024-11-12 22:06:55 +0000] [47] [INFO] Booting worker with pid: 47
+[2024-11-12 22:06:55 +0000] [48] [INFO] Booting worker with pid: 48
+[2024-11-12 22:06:55 +0000] [49] [INFO] Booting worker with pid: 49
+[2024-11-12 22:06:55 +0000] [50] [INFO] Booting worker with pid: 50
+127.0.0.1 - - [12/Nov/2024:22:07:07 +0000] "GET /airflow/health HTTP/1.1" 200 318 "-" "curl/7.88.1"
+```
+
+- Déployer la db metabase (peut se faire pendant qu'Airflow démarre)
+
+```shell
+docker stop metabase
+docker rm metabase
+sudo cp ./var/metabase/data/metabase.db/* /var/lib/docker/volumes/metabase-data/_data/metabase.db/
+# Verification :
+sudo ls -lah /var/lib/docker/volumes/metabase-data/_data/metabase.db
+./dst_services_compose_up.sh
 ```
 
 - Restart le service NGINX
@@ -165,3 +198,13 @@ grep '^POSTRES_READRE_PASS=' .env
  - Exemple :
 
 [http://79.125.25.202:8000/postgrest_api/operations_customer_flight_info?select=count()](http://79.125.25.202:8000/postgrest_api/operations_customer_flight_info?select=count())
+
+## Jupyterhub
+
+ - URL :
+
+[http://79.125.25.202:8000/jupyterlab/](http://79.125.25.202:8000/jupyterlab/)
+
+```shell
+cat src/docker_services/jupyterhub/jupyterhub.md
+```
