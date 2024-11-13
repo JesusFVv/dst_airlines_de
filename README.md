@@ -1,26 +1,54 @@
-# dst_airlines_de
+# DST Airlines
 Project Datascientest Danta Engineer
 
+## Data sources
 
-## Steps pour populer les tables
- 
-```bash
-pushd src/project_deployment_postgres
-docker-compose up -d && popd
- 
-pushd bin/reference_data/raw_loading
-./run_docker.sh && popd
- 
-pushd bin/customer_flight_info/raw_loading
-./run_docker.sh && popd
- 
-pushd bin/customer_flight_info/cooked_loading
-./run_docker.sh && popd
-```
-Dbeaver
-user: cbadmin
-pass: cbAdmin1234
-Postgres
-db: dst_airlines_db
-dst_designer
-Vtd1lDNZlwY3DM4h2j7V
+![image](https://github.com/user-attachments/assets/4a599821-517e-4e4a-b169-1c5206b9823c)
+
+1. **Reference Data**: airports, airlines, aircrafts, cities, countries. Slowly changing dimensions, but modeled as constant. Extracted only once.
+2. **Departures**: actual departures from a given airport and a time range. Constant dimension as describes past data. Every day we extract the J-1 departures (300 queries/day).
+3. **Arrivals**: actual arrivals to a given airport and a time range. Constant dimension as describes past data. Every day we extract the J-1 arrivals (300 queries/day).
+4. **Future flights**: flights scheduled for a given route and day. Slowly changing dimension, modeled as constant. Every day we extract the J+90 scheduled flights (2500 queries/day).
+5. **Bird strikes**: airplane events originated by a bird strike. Constant dimension as describes past data. Extracted only once.
+
+
+## Data Life Cycle
+
+![image](https://github.com/user-attachments/assets/d763432a-72f2-407e-ab2c-6e3edf5734f0)
+
+Sources:
+Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations.
+Source 1 is another Luthansa API endpoint, with response in JSON format, and this is requestes at the beginning to build the base for the reference data.
+Source 5 is a site web (avherald.com), the information is in HTML format and is scrapped only once at the beginning of the project to build a base for the accidentologie of the previous years and up to mid 2024.
+
+Ingestions:
+Different pipelines styles have been developped.
+
+In general all the data collected from the different sources is ingested in batch. The only different is the frequency of the ingestions.
+For example, for the sources 2, 3 and 4, there is an automated workflow to ingest the new data in a daily basis.
+For the 2 and 3, we ingest the previous day flights 
+and for the 4, we ingest a new day in the future defined as J+90 days
+This way we keep getting updated information about the flights.
+For the ingestion architecture we use a Work Queue. A Producer sends the new endpoints informations of the day to a queue, which sources them to a consumer, responible for querying the endpoint and inserting the data to the data base. This architecture allow us to decouple the generation of the enpoints URL (producer) and the extraction step (consumer), this way a fail in the extraction of the endpoints data does not interrumps the overall process for the daily update. This increases the resilience of the pipeline and decreases the code overhead needed for the scripts, because they don’t need the logic to deal with extraction errors, they just can fail safe, and the incomplete extracted enpoint will return to the queue, and will be retried in the next turn.
+
+On the other hand, for the source 1 and 5 we did a one time extraction and ingestion worflow.
+For 1, the reference data is extracted usind a bash script, loaded to a stagging area in the local filesystem and ingested in the data base L1, in JSON format
+For the 5, selenium is used to scrap all the information relative to aircraft events in the web, the data is rearranged in a tabular format in the script and ingested in L1.
+
+Storage:
+
+The storage component is a data wharehouse composed by three Postgresql Schemas. L1, L2 and L3.
+In L1 the data lands in the original format, raw. For example, JSON for the most part and tabular for the source 5 only. It is a pseudo stagging zone, used primarily for keeping the maximum amount of the original data without tranformations and filters.
+Then, there are two types of automated pipelines that tranform and load the data to the second layer L2, where the data is higly normalized:
+One based on python and orchestrated with airflow, to combine and normalize the data comming from sources 2 and 3.
+Second, one based on SQL triggers deploied directly in the server to also normalize the data comming from the source 4. (no need of external orchestration)
+Advantages of normalization the data in this step are:
+Eliminates data duplication (eliminates redundancy)
+Improves data quality, because foreing key relationship must be respected
+
+Finally the L3, contains wide tables, aggregated and ready for the consumtion. This layer can be called the semantinc layer, because it contains the bussines logic developped with the field experts and applied to responde to the use cases.
+
+
+## Deployment
+
+![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
