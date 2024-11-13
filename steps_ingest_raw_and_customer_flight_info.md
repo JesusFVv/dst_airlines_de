@@ -125,47 +125,12 @@ docker stop dst_docker_services-flight_schedules_consumer-1 \
 
 ``` 
 
-## Lancer le docker jupyter
-
-- Il est possible de lancer un jupyter lab ponctuellement pour répondre a un besoin de développement :
-
-### Création du docker
-
-```shell
-./src/docker_services/jupyter/create_docker_image.sh
-./src/docker_services/jupyter/launch_docker_container.sh
-```
-
-### Démarrage du docker
-
-```shell
-docker start jupyter_data_container
-```
-
-### Exploitation
-
-L'image est exposée sur le port **8346** :
-
-```shell
-cat .env | grep JUPYTER_PORT
-```
-
-Création du tunnel pour accéder à **Nginx** et **Jupyter** depuis Windows ou WSL :
-
-```shell
-ssh -i "~/cle/data_enginering_machine.pem" -L 8000:localhost:8000 -L 8346:localhost:8346 ubuntu@79.125.25.202
-```
-
-Il est ensuite possible de créer des notebooks ici : [http://79.125.25.202:8346/lab/](http://79.125.25.202:8346/lab/)
-
-Les notebooks créés sont stockés en local ici : `./src/docker_services/jupyter/notebooks/`
-
 ## Metabase
 
 [http://79.125.25.202:8000/metabase/](http://79.125.25.202:8000/metabase/)
 
 ```shell
-cat ./src/docker_services/metabase/metabase_notes.md
+cat ./etc/metabase.md
 grep '^POSTRES_READRE_PASS=' .env
 
 
