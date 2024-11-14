@@ -14,12 +14,13 @@ Project Data Engineer.
 
 ## Data Life Cycle
 
-![image](https://github.com/user-attachments/assets/d763432a-72f2-407e-ab2c-6e3edf5734f0)
+![image](https://github.com/user-attachments/assets/84bcadcc-60c0-405c-94d4-05e8f8b9f097)
+
 
 ### Sources
 - Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations.
 - Source 1 is another Luthansa API endpoint, with response in JSON format, and this is requestes at the beginning to build the base for the reference data.
-- Source 5 is web site (avherald.com), the information is in HTML format and is recovered only once. With event going up to mid 2024.
+- Source 5 is a web site (avherald.com), the information is in HTML format and is recovered only once. With event going up to mid 2024.
 
 ### Ingestions
 
@@ -37,7 +38,10 @@ For the ingestion architecture we chose to implement a [Work Queue](https://www.
 - A consumer is continuously listening on the other side of the queue, and will grab a new endpoint's URL, query de information on the Internet and store it into the database in raw format, in the l1 layer
 
 This micro-services architecture has the following advantages from a monolitic one:
-- Geneartion of endpoint urls and the consumtion of their data is asyncrhonous.
+- Geneartion of endpoint urls and the consumtion of their data is asyncrhonous. Failures of endpoint querying are isolated of the endpoint generation.
+- Increases tracability of which endpoints were already queryied, and failures goes back to the queue.
+- Allows to simplify the overall code logic of the ingestion, in particular in how to deal with exceptions.
+- 
 
 Where a producer will generate the new enpoints URL each day and send them to a queue. On the other side of the queue, there is a consumer, lisAnd the consumer will be listening to the queue for new endpoints to query
 
