@@ -65,6 +65,20 @@ Improves data quality, because foreing key relationship must be respected
 Finally the L3, contains wide tables, aggregated and ready for the consumtion. This layer can be called the semantinc layer, because it contains the bussines logic developped with the field experts and applied to responde to the use cases.
 
 
+
+## Deploy the project
+
+- Create the custom images needed for the project
+  - Producers
+  - Consumers
+  - Loaders
+  - JupyterHub
+- Run the script that executes the docker compose up file for all the services but airflow
+- Run the script to execute the docker compose for airflow
+
+
+
+
 ## Deployment
 
 ![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
