@@ -68,17 +68,54 @@ Finally the L3, contains wide tables, aggregated and ready for the consumtion. T
 
 ## Deploy the project
 
+The steps and settings needed to deploy the project in a new environment are detailed below:
+
+- Clone the project from GitHub at https://github.com/JesusFVv/dst_airlines_de.git
+- Checkout to last tag (ex. v2.2-lw)
+- Set the value of the variable **PROJECT_ABSOLUT_PATH** in the **.env** file, to the absolute path of the folder.
 - Create the custom images needed for the project
-  - Producers
-  - Consumers
-  - Loaders
-  - JupyterHub
-- Run the script that executes the docker compose up file for all the services but airflow
-- Run the script to execute the docker compose for airflow
+```shell
+# Flight Schedules Producer
+./lib/flights_scheduled/consumer/create_docker_image.sh
+# Customer Flight Information Producer
+./lib/customer_flight_info/consumer/docker_arrivals/create_docker_image.sh
+./lib/customer_flight_info/consumer/docker_departures/create_docker_image.sh
+# Customer Flight Information autoloader L1 to L2
+./lib/customer_flight_info/l2_loading_incremental/create_docker_image.sh
+# JupyterHub
+./src/docker_services/jupyterhub/create_docker_image.sh
+```
+- Unzip the backup files for both databases. They will be used by docker at initialisation.
+```shell
+# Unzip the DB backup
+gunzip -c var/db_dumps/20241113_212742_dst_airlines_db_dump.sql.gz > src/dst_docker_services/postgres/2_schemas_tables_and_data.sql
+# Unzip the Graph DB backup
+gunzip -c var/db_dumps/graph_db/20241113_190854_dst_graph_db_dump.sql.gz > src/docker_services/postgres_age/docker_entrypoint_scripts/2_schemas_tables_and_data.sql
+# And comment the line 23: -- CREATE SCHEMA ag_catalog;
+```
+- Run the script that executes the docker compose up files
+```shell
+# Launch all services but airflow
+./dst_services_compose_up.sh
+# Launch Airflow only
+./airflow_compose_up.sh
+```
+- Update the DB for Metabase with the one in the repo
+```shell
+# Stop Metabase container
+# Overwrite its DB file
+sudo cp -r var/metabase/data/metabase.db/. /var/lib/docker/volumes/metabase-data/_data/metabase.db/
+# Start Metabase container
+```
+- Restart Nginx
+- In Airflow Create a ssh connection to the VM
+```log
+Connection id: WSL_Home
+Host: 34.248.4.187
+Username: ubuntu
+Extra: {"private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowI......mCf23\n-----END RSA PRIVATE KEY-----"}
+```
 
-
-
-
-## Deployment
+## Services
 
 ![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
