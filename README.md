@@ -1,5 +1,5 @@
 # DST Airlines
-Project Datascientest Danta Engineer
+Project Data Engineer.
 
 ## Data sources
 
@@ -16,26 +16,38 @@ Project Datascientest Danta Engineer
 
 ![image](https://github.com/user-attachments/assets/d763432a-72f2-407e-ab2c-6e3edf5734f0)
 
-Sources:
-Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations.
-Source 1 is another Luthansa API endpoint, with response in JSON format, and this is requestes at the beginning to build the base for the reference data.
-Source 5 is a site web (avherald.com), the information is in HTML format and is scrapped only once at the beginning of the project to build a base for the accidentologie of the previous years and up to mid 2024.
+### Sources
+- Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations.
+- Source 1 is another Luthansa API endpoint, with response in JSON format, and this is requestes at the beginning to build the base for the reference data.
+- Source 5 is web site (avherald.com), the information is in HTML format and is recovered only once. With event going up to mid 2024.
 
-Ingestions:
-Different pipelines styles have been developped.
+### Ingestions
 
-In general all the data collected from the different sources is ingested in batch. The only different is the frequency of the ingestions.
-For example, for the sources 2, 3 and 4, there is an automated workflow to ingest the new data in a daily basis.
-For the 2 and 3, we ingest the previous day flights 
-and for the 4, we ingest a new day in the future defined as J+90 days
-This way we keep getting updated information about the flights.
-For the ingestion architecture we use a Work Queue. A Producer sends the new endpoints informations of the day to a queue, which sources them to a consumer, responible for querying the endpoint and inserting the data to the data base. This architecture allow us to decouple the generation of the enpoints URL (producer) and the extraction step (consumer), this way a fail in the extraction of the endpoints data does not interrumps the overall process for the daily update. This increases the resilience of the pipeline and decreases the code overhead needed for the scripts, because they don’t need the logic to deal with extraction errors, they just can fail safe, and the incomplete extracted enpoint will return to the queue, and will be retried in the next turn.
+Different pipelines styles have been developped. In general all the data collected from the different sources is ingested in batch.
+
+### Pipeline for sources 2, 3 and 4
+
+For the sources 2, 3 and 4, there is an automated workflow to ingest the newly generated data in a daily basis.
+
+Each day for the 2 and 3, we ingest the previous day flights (J-1) and for the 4, we ingest a new day in the future defined as J+90 days.
+
+For the ingestion architecture we chose to implement a [Work Queue](https://www.rabbitmq.com/tutorials/tutorial-two-python) using Python and RabbitMQ.
+- A producer will generate daily and for each endpoint the new URLs to query and send them to a particular queue.
+- There is a queue for each one of the endpoints and the information is persisted on disk.
+- A consumer is continuously listening on the other side of the queue, and will grab a new endpoint's URL, query de information on the Internet and store it into the database in raw format, in the l1 layer
+
+This micro-services architecture has the following advantages from a monolitic one:
+- Geneartion of endpoint urls and the consumtion of their data is asyncrhonous.
+
+Where a producer will generate the new enpoints URL each day and send them to a queue. On the other side of the queue, there is a consumer, lisAnd the consumer will be listening to the queue for new endpoints to query
+
+A Producer sends the new endpoints informations of the day to a queue, which sources them to a consumer, responible for querying the endpoint and inserting the data to the data base. This architecture allow us to decouple the generation of the enpoints URL (producer) and the extraction step (consumer), this way a fail in the extraction of the endpoints data does not interrumps the overall process for the daily update. This increases the resilience of the pipeline and decreases the code overhead needed for the scripts, because they don’t need the logic to deal with extraction errors, they just can fail safe, and the incomplete extracted enpoint will return to the queue, and will be retried in the next turn.
 
 On the other hand, for the source 1 and 5 we did a one time extraction and ingestion worflow.
 For 1, the reference data is extracted usind a bash script, loaded to a stagging area in the local filesystem and ingested in the data base L1, in JSON format
 For the 5, selenium is used to scrap all the information relative to aircraft events in the web, the data is rearranged in a tabular format in the script and ingested in L1.
 
-Storage:
+### Storage
 
 The storage component is a data wharehouse composed by three Postgresql Schemas. L1, L2 and L3.
 In L1 the data lands in the original format, raw. For example, JSON for the most part and tabular for the source 5 only. It is a pseudo stagging zone, used primarily for keeping the maximum amount of the original data without tranformations and filters.
