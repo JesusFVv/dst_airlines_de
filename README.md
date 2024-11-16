@@ -1,5 +1,7 @@
 # DST Airlines
-Project Data Engineer.
+Project for the Data Engineer Program of [DataScientest](https://datascientest.com/#).
+
+The objective is to create and deploy a system able to source flight data, transform it and put it at disposition of the end users (ex. field, data analyst or data scientists).
 
 ## Data sources
 
@@ -14,7 +16,6 @@ Project Data Engineer.
 ## Data Life Cycle
 
 ![image](https://github.com/user-attachments/assets/172bd673-e703-48ab-a2a0-e3d7b2807802)
-
 
 ### Sources
 - Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations.
@@ -65,13 +66,23 @@ The L3, used as our [Semantic Layer](https://en.wikipedia.org/wiki/Semantic_laye
 
 Finally the GraphDB, transforms the tabular data about the flight routes stored in L3 into a graph. This allow us to be able to calculate routes between an airport A and B, with a maximum number of flights in between. In a traditional DB (as L3) this task put a lot of pressure due to its recursive nature, and in our cause was taking down the DB. But with the graph DB its fast and efficient.
 
-Next picture makes a zoom in the storage composant of our architecture, to show the automatisation between the databases (or schemas in postgresql).
+Next picture makes a zoom in the storage part of our architecture, to show the automatisation between the databases (or schemas in postgresql).
 
 
 ### Consumption
 
+The image below shows the services that have been deploied to allow the stakeholders to access the data in various ways.
+Nginx is used as reverse-proxy to centralize and secure all the connections.
 
+- Dashboarding with *Metabase*
+- API with *PostgREST*
+- Data base tool with *CloudBeaver*
+- Notebooks with *JupyterHub*
+- Orchestration with *Airflow*
 
+Note: The HTTPS services have been disabled in the Nginx configuration for ease of deployment (no need of SSL certificates). But the nginx config files are prepared to take it into account. (var/nginx/conf.d/dst_apps.conf)
+
+![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
 
 ## Deploy the project
 
@@ -123,8 +134,3 @@ Username: ubuntu
 Extra: {"private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowI......mCf23\n-----END RSA PRIVATE KEY-----"}
 ```
 
-## Services
-
-HTTPS services have been disabled in the nginx.conf for ease of deployment without SSL certificates. But the nginx config files are prepared to take it into account. (var/nginx/conf.d/dst_apps.conf)
-
-![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
