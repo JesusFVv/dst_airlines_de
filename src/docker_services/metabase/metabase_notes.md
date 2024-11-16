@@ -41,6 +41,6 @@ In the browser, go to http://{VM-IP}:3000 or to http://localhost:3000 if the por
 host: `postgres_dst`
 port: `5432`
 db name: `dst_airlines_db`
-user: `dst_reader`
-password: 
+user: USER
+password: PASS
 
