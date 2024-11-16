@@ -93,15 +93,7 @@ The steps and settings needed to deploy the project in a new environment are det
 - Set the value of the variable **PROJECT_ABSOLUT_PATH** in the **.env** file, to the absolute path of the folder.
 - Create the custom images needed for the project
 ```shell
-# Flight Schedules Producer
-./lib/flights_scheduled/consumer/create_docker_image.sh
-# Customer Flight Information Producer
-./lib/customer_flight_info/consumer/docker_arrivals/create_docker_image.sh
-./lib/customer_flight_info/consumer/docker_departures/create_docker_image.sh
-# Customer Flight Information autoloader L1 to L2
-./lib/customer_flight_info/l2_loading_incremental/create_docker_image.sh
-# JupyterHub
-./src/docker_services/jupyterhub/create_docker_image.sh
+./bin/build_culstom_images_dst.sh
 ```
 - Unzip the backup files for both databases. They will be used by docker at initialisation.
 ```shell
