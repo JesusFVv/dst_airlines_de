@@ -43,7 +43,7 @@ rm -rf airflow
 
 ## Connect to the app
 
-In the browser go to: http://63.35.176.208:8080/
+In the browser go to: http://IP:8080/
 
 user: airflow
 pass: airflow
