@@ -84,6 +84,8 @@ Note: The HTTPS services have been disabled in the Nginx configuration for ease 
 
 ![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
 
+The users and pass needed to connect to the applications are described in the file *~/etc/services_credentials.md*.
+
 ## Deploy the project
 
 The steps and settings needed to deploy the project in a new environment are detailed below:
