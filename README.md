@@ -11,58 +11,65 @@ Project Data Engineer.
 4. **Future flights**: flights scheduled for a given route and day. Slowly changing dimension, modeled as constant. Every day we extract the J+90 scheduled flights (2500 queries/day).
 5. **Bird strikes**: airplane events originated by a bird strike. Constant dimension as describes past data. Extracted only once.
 
-
 ## Data Life Cycle
 
-![image](https://github.com/user-attachments/assets/84bcadcc-60c0-405c-94d4-05e8f8b9f097)
+![image](https://github.com/user-attachments/assets/172bd673-e703-48ab-a2a0-e3d7b2807802)
 
 
 ### Sources
 - Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations.
 - Source 1 is another Luthansa API endpoint, with response in JSON format, and this is requestes at the beginning to build the base for the reference data.
-- Source 5 is a web site (avherald.com), the information is in HTML format and is recovered only once. With event going up to mid 2024.
+- Source 5 is a web site (avherald.com), the information is in HTML format and is recovered only once. With the events going up to mid 2024.
 
 ### Ingestions
 
 Different pipelines styles have been developped. In general all the data collected from the different sources is ingested in batch.
 
-### Pipeline for sources 2, 3 and 4
+#### Pipeline for dynamic sources
 
-For the sources 2, 3 and 4, there is an automated workflow to ingest the newly generated data in a daily basis.
-
-Each day for the 2 and 3, we ingest the previous day flights (J-1) and for the 4, we ingest a new day in the future defined as J+90 days.
+For the sources 2, 3 and 4, there is an automated workflow to ingest the newly generated data in a daily basis. Each day for the 2 and 3, we ingest the previous day flights (J-1) and for the 4, we ingest a new day in the future defined as J+90 days.
 
 For the ingestion architecture we chose to implement a [Work Queue](https://www.rabbitmq.com/tutorials/tutorial-two-python) using Python and RabbitMQ.
-- A producer will generate daily and for each endpoint the new URLs to query and send them to a particular queue.
+- A producer will generate daily, for each endpoint, the new URLs to query and send them to the endpoint's queue.
 - There is a queue for each one of the endpoints and the information is persisted on disk.
 - A consumer is continuously listening on the other side of the queue, and will grab a new endpoint's URL, query de information on the Internet and store it into the database in raw format, in the l1 layer
 
-This micro-services architecture has the following advantages from a monolitic one:
-- Geneartion of endpoint urls and the consumtion of their data is asyncrhonous. Failures of endpoint querying are isolated of the endpoint generation.
-- Increases tracability of which endpoints were already queryied, and failures goes back to the queue.
-- Allows to simplify the overall code logic of the ingestion, in particular in how to deal with exceptions.
-- 
+This micro-services architecture has the following advantages from a monolitic pipeline:
+- Simplifies the bookkeping of endpoint's URLs for the day, using the queue. Geneartion of endpoint urls and the consumtion of their data is asyncrhonous (Fast vs Slow process), and they are persisted to disk. 
+- Avoids data loss. If a consumer fails for an uncaught exception, the endpoint is not lost, it goes back to the queue and it will be retried.
+- Allows to simplify the overall custom code for the ingestion pipeline, in particular in how to deal with exceptions if the query failed.
+- Allows for an easy parallelization of consumers. We could spawn as many consumer as we wish depending on the amount of endpoints to query, simply by using the "replica" option in the docker compose file.
 
-Where a producer will generate the new enpoints URL each day and send them to a queue. On the other side of the queue, there is a consumer, lisAnd the consumer will be listening to the queue for new endpoints to query
-
-A Producer sends the new endpoints informations of the day to a queue, which sources them to a consumer, responible for querying the endpoint and inserting the data to the data base. This architecture allow us to decouple the generation of the enpoints URL (producer) and the extraction step (consumer), this way a fail in the extraction of the endpoints data does not interrumps the overall process for the daily update. This increases the resilience of the pipeline and decreases the code overhead needed for the scripts, because they don’t need the logic to deal with extraction errors, they just can fail safe, and the incomplete extracted enpoint will return to the queue, and will be retried in the next turn.
+#### Pipeline for static sources
 
 On the other hand, for the source 1 and 5 we did a one time extraction and ingestion worflow.
-For 1, the reference data is extracted usind a bash script, loaded to a stagging area in the local filesystem and ingested in the data base L1, in JSON format
-For the 5, selenium is used to scrap all the information relative to aircraft events in the web, the data is rearranged in a tabular format in the script and ingested in L1.
+For 1, the reference data is extracted using a bash script, loaded to a stagging area in the local filesystem and ingested in the data base L1, in JSON format.
+For the 5, a csv file was ingeted to L1 with more than 2k events.
 
 ### Storage
 
-The storage component is a data wharehouse composed by three Postgresql Schemas. L1, L2 and L3.
-In L1 the data lands in the original format, raw. For example, JSON for the most part and tabular for the source 5 only. It is a pseudo stagging zone, used primarily for keeping the maximum amount of the original data without tranformations and filters.
-Then, there are two types of automated pipelines that tranform and load the data to the second layer L2, where the data is higly normalized:
-One based on python and orchestrated with airflow, to combine and normalize the data comming from sources 2 and 3.
-Second, one based on SQL triggers deploied directly in the server to also normalize the data comming from the source 4. (no need of external orchestration)
-Advantages of normalization the data in this step are:
-Eliminates data duplication (eliminates redundancy)
-Improves data quality, because foreing key relationship must be respected
+The storage component is a data wharehouse composed by two Postgresql servers. The first is composed of 3 schemas, L1, L2 and L3, it is used to store, normalize and create business value. And the second server has a graph DB with the scheduled flights information, to be able to calculate flight routes efficiently.
 
-Finally the L3, contains wide tables, aggregated and ready for the consumtion. This layer can be called the semantinc layer, because it contains the bussines logic developped with the field experts and applied to responde to the use cases.
+In L1 the data lands in the original format, raw. For example, JSON for the most part and tabular for the sources 4 and 5. It is a pseudo stagging zone, used primarily for keeping the maximum amount of the original data without tranformations and filters.
+
+Then, there are two types of automated pipelines that tranform and load the data to the second layer L2, where the data is higly normalized:
+- One based on python and orchestrated with airflow, to combine and normalize the data comming from sources 2 and 3.
+- and another one based on SQL triggers deploied directly in the server to also normalize the data comming from the source 4. (no need of external orchestration).
+
+In the L2 the structure is highly normalized (almost to the [3NF](https://en.wikipedia.org/wiki/Third_normal_form)), which allow us to:
+- Eliminate data redundancy by creating a logic Entity Relationship Schema.
+- Improves overall data quality (using constraints and foreign keys relationship between tables for example)
+- Improves the trust we have in the data.
+
+The L3, used as our [Semantic Layer](https://en.wikipedia.org/wiki/Semantic_layer), it contains the bussines logic developped with the field experts and is used to solve the use cases. Thus it contains wide, aggregated tables, which are ready for the consumtion by the business or the data scientist.
+
+Finally the GraphDB, transforms the tabular data about the flight routes stored in L3 into a graph. This allow us to be able to calculate routes between an airport A and B, with a maximum number of flights in between. In a traditional DB (as L3) this task put a lot of pressure due to its recursive nature, and in our cause was taking down the DB. But with the graph DB its fast and efficient.
+
+Next picture makes a zoom in the storage composant of our architecture, to show the automatisation between the databases (or schemas in postgresql).
+
+
+### Consumption
+
 
 
 
@@ -100,10 +107,10 @@ gunzip -c var/db_dumps/graph_db/20241113_190854_dst_graph_db_dump.sql.gz > src/d
 # Launch Airflow only
 ./airflow_compose_up.sh
 ```
-- Update the DB for Metabase with the one in the repo
+- Update DB of the Metabase container
 ```shell
 # Stop Metabase container
-# Overwrite its DB file
+# Overwrite the containers DB file (which is a managed docker volume)
 sudo cp -r var/metabase/data/metabase.db/. /var/lib/docker/volumes/metabase-data/_data/metabase.db/
 # Start Metabase container
 ```
@@ -117,5 +124,7 @@ Extra: {"private_key": "-----BEGIN RSA PRIVATE KEY-----\nMIIEowI......mCf23\n---
 ```
 
 ## Services
+
+HTTPS services have been disabled in the nginx.conf for ease of deployment without SSL certificates. But the nginx config files are prepared to take it into account. (var/nginx/conf.d/dst_apps.conf)
 
 ![image](https://github.com/user-attachments/assets/bef7c63c-ce09-418f-be11-dfa081d6a92e)
