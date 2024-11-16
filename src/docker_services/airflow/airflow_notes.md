@@ -48,19 +48,13 @@ In the browser go to: http://IP:8080/
 user: airflow
 pass: airflow
 
-## Reverse proxy
-https://airflow.apache.org/docs/apache-airflow/stable/howto/run-behind-proxy.html
-
-    environment:
-      AIRFLOW__WEBSERVER__BASE_URL: http://localhost:8080/airflow/
-
-Change the base_url in the file: /opt/airflow/airflow.cfg
-base_url = http://localhost:8080/airflow/
-
-maybe this [source](https://www.restack.io/docs/airflow-faq-howto-run-behind-proxy-01)
+## Reverse proxy with NGINX
+Sources:
+- [Source](https://airflow.apache.org/docs/apache-airflow/stable/howto/run-behind-proxy.html)
+- And this [Source 2](https://www.restack.io/docs/airflow-faq-howto-run-behind-proxy-01)
 
 In order to be able to reverse proxy from nginx to airflow we need to add the following environmental variables in the docker compose file:
-  - AIRFLOW__WEBSERVER__BASE_URL: 'http://0.0.0.0:8080/airflow'  # Needed only for http connections
+  - AIRFLOW__WEBSERVER__BASE_URL: 'http://0.0.0.0:8080/airflow'  # Needed only for http connections. Updates the value in */opt/airflow/airflow.cfg*
   - AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'true'  # Needed only to ensure generating the correct URL schema behind TLS-terminating proxy (e.g., https://)
   - Additionally, in the nginx configuration file, we need to add the line `proxy_set_header   X-Forwarded-Proto    "https";` in the services block
 
