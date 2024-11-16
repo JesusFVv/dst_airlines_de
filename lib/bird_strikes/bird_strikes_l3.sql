@@ -1,6 +1,6 @@
 -- Normalize the table bird strikes
--- insert into l2.bird_strikes as
-create table l2.bird_strikes as
+-- insert into l3.bird_strikes as
+create table l3.bird_strikes as
 	with bird_strikes_selected as (
 		select 
 			cast(event_date as date) as event_day,
