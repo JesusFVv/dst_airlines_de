@@ -88,8 +88,8 @@ server {
 - New user can login
 
 
-## Users declared in my pc
-admin / admin
-dst_ml / 123
-dst_analyst / 456
+## Users declared
+- admin / admin
+- dst_ml / 123
+- dst_analyst / 456
 
