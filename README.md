@@ -74,11 +74,11 @@ Next picture makes a zoom in the storage part of our architecture, to show the a
 The image below shows the services that have been deploied to allow the stakeholders to access the data in various ways.
 Nginx is used as reverse-proxy to centralize and secure all the connections.
 
-- Dashboarding with *Metabase*
-- API with *PostgREST*
-- Data base tool with *CloudBeaver*
-- Notebooks with *JupyterHub*
-- Orchestration with *Airflow*
+- Dashboarding with **Metabase**
+- API with **PostgREST**
+- Data base tool with **CloudBeaver**
+- Notebooks with **JupyterHub**
+- Orchestration with **Airflow**
 
 Note: The HTTPS services have been disabled in the Nginx configuration for ease of deployment (no need of SSL certificates). But the nginx config files are prepared to take it into account. (var/nginx/conf.d/dst_apps.conf)
 
