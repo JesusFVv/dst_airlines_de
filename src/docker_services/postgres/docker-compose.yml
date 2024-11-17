@@ -1,0 +1,48 @@
+version: '3.3'
+services:
+  postgres_db:
+    image: postgres:16.3-bullseye
+    container_name: postgres_dst
+    restart: always
+    shm_size: 128mb
+    networks:
+      - dst_network
+    environment:
+      POSTGRES_USER_FILE: /run/secrets/db_user
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
+      POSTGRES_DB: dst_airlines_db
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+    volumes:
+      - db-data:/var/lib/postgresql/data
+      - "./init-user-db.sh:/docker-entrypoint-initdb.d/1.sh"
+      - "./init_db.sql:/docker-entrypoint-initdb.d/2.sql"
+    secrets:
+      - db_password
+      - db_user
+    ports:
+      - "6432:5432"  # To use with DBeaver desktop in host only
+  dbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: dbeaver
+    networks:
+      - dst_network
+    environment:
+      CLOUDBEAVER_ROOT_URI: /cloudbeaver
+    restart: always
+    # ports:
+    #   - 8978:8978
+    volumes:
+      - cloudbeaver_workspace:/opt/cloudbeaver/workspace
+volumes:
+  db-data:
+    name: db-data
+  cloudbeaver_workspace:
+    name: cloudbeaver_workspace
+secrets:
+  db_password:
+    file: ./postgres_password.txt
+  db_user:
+    file: ./postgres_user.txt
+networks:
+  dst_network:
+    name: dst_network

@@ -68,6 +68,7 @@ Finally the GraphDB, transforms the tabular data about the flight routes stored 
 
 Next picture makes a zoom in the storage part of our architecture, to show the automatisation between the databases (or schemas in postgresql).
 
+![alt text](doc/db_automatisation.drawio.svg)
 
 ### Consumption
 
@@ -95,7 +96,7 @@ The steps and settings needed to deploy the project in a new environment are det
 - Set the value of the variable **PROJECT_ABSOLUT_PATH** in the **.env** file, to the absolute path of the folder.
 - Create the custom images needed for the project
 ```shell
-./bin/build_culstom_images_dst.sh
+./bin/build_custom_images_dst.sh
 ```
 - Unzip the backup files for both databases. They will be used by docker at initialisation.
 ```shell

@@ -126,3 +126,20 @@ curl "http://localhost:3000/refdata_cities_coo?country=eq.FR&select=count()"
 # Count the number of cities by country in the DB
 curl "http://localhost:3000/refdata_cities_coo?select=count(),country"
 ```
+
+## Nginx reverse proxy
+
+```conf
+server {
+  ...
+  location /postgrest_api/ {
+            default_type  application/json;
+            proxy_hide_header Content-Location;
+            add_header Content-Location  /api/$upstream_http_content_location;
+            proxy_set_header  Connection "";
+            proxy_http_version 1.1;
+            proxy_pass http://postgrest_api:3000/;
+    }
+  ...
+}
+```

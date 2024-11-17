@@ -12,17 +12,15 @@ Steps
 git clone --depth=1  https://github.com/apache/superset.git
 docker compose up -d
 ```
+## Reverse proxy with Nginx
 
-I can not reverse proxy with NGINX in a modified rootURI, so I left it as root ("/") in the NGINX config.
+I can not reverse proxy with NGINX in a modified rootURI (the base root for superset can not be upated).
+The only solution I found was to left superset as root ("/") in the NGINX config.
 
 ## Connection
 To launch in the browser superset go to URL: `http://{VM_IP}:8000/`, Nginx is redirecting the request to superset.
 
 First time connecting, *user / pass = admin / amdin*
-
-User and new password (temporary):
-user: admin
-pass: 1NQ?0oQB~r1juS&@/9
 
 ## Create in Superset a DB connection to our Postgres DB
 

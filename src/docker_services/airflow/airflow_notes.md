@@ -65,8 +65,8 @@ In order to be able to reverse proxy from nginx to airflow we need to add the fo
     proxy_redirect off;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection "upgrade";   
-    proxy_set_header   X-Forwarded-Proto    "https";
+    proxy_set_header Connection "upgrade";
+    proxy_set_header   X-Forwarded-Proto    "https";  # Only for https
   }
   ```
   

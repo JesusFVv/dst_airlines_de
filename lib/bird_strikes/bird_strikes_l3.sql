@@ -13,11 +13,11 @@ create table l3.bird_strikes as
 			from l1.avherald_only_bird_strikes
 	),
 	bird_strikes_and_airport as (
-		select a.*, b.city as city_code, c.airport as airport_code
+		select a.*, b.city as city_code, c.airport as airport_code, c.latitude, c.longitude
 			from bird_strikes_selected as a
 			left outer join (select city, name from l2.refdata_city_names where lang = 'EN') as b
 				on a.event_location = b.name
-			left outer join (select city, airport from l2.refdata_airports where locationtype = 'Airport') as c
+			left outer join (select city, airport, latitude, longitude from l2.refdata_airports where locationtype = 'Airport') as c
 				on b.city = c.city
 	),
 	bird_strikes_airport_and_airline as (
@@ -41,6 +41,9 @@ create table l3.bird_strikes as
 		city_code,
 		airport_code,
 		event_description,
-		ac_model_extracted
+		ac_model_extracted,
+		latitude,
+		longitude
 		from duplicates_are_tagged
 		where tag = 1;
+		
