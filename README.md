@@ -7,11 +7,11 @@ The objective is to create and deploy a system able to source flight data, trans
 
 ![image](https://github.com/user-attachments/assets/4a599821-517e-4e4a-b169-1c5206b9823c)
 
-1. **Reference Data**: airports, airlines, aircrafts, cities, countries. Slowly changing dimensions, but modeled as constant. Extracted only once.
-2. **Departures**: actual departures from a given airport and a time range. Constant dimension as describes past data. Every day we extract the J-1 departures (300 queries/day).
-3. **Arrivals**: actual arrivals to a given airport and a time range. Constant dimension as describes past data. Every day we extract the J-1 arrivals (300 queries/day).
-4. **Future flights**: flights scheduled for a given route and day. Slowly changing dimension, modeled as constant. Every day we extract the J+90 scheduled flights (2500 queries/day).
-5. **Bird strikes**: airplane events originated by a bird strike. Constant dimension as describes past data. Extracted only once.
+1. **Reference Data**: airports, airlines, aircrafts, cities, countries. Slowly changing dimensions, but modeled as constant. Extracted only once. [Link api](https://developer.lufthansa.com/docs/read/api_details/Reference_Data)
+2. **Departures**: actual departures from a given airport and a time range. Constant dimension as describes past data. Every day we extract the J-1 departures (300 queries/day). [Link api](https://developer.lufthansa.com/docs/read/api_details/operations/Customer_Flight_Information_at_Departure_Airport)
+3. **Arrivals**: actual arrivals to a given airport and a time range. Constant dimension as describes past data. Every day we extract the J-1 arrivals (300 queries/day). [Link api](https://developer.lufthansa.com/docs/read/api_details/operations/Customer_Flight_Information_at_Arrival_Airport)
+4. **Future flights**: flights scheduled for a given route and day. Slowly changing dimension, modeled as constant. Every day we extract the J+90 scheduled flights (2500 queries/day). [Link api](https://developer.lufthansa.com/docs/read/api_details/operations/Flight_Schedules)
+5. **Bird strikes**: airplane events originated by a bird strike. Constant dimension as describes past data. Extracted only once. [Link source.](https://avherald.com/)
 
 ## Data Life Cycle
 
