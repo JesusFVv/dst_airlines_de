@@ -19,8 +19,8 @@ The objective is to create and deploy a system able to source flight data, trans
 
 ### Sources
 - Sources 2, 3 and 4 are Lufthansa API endpoitns,  with responses in JSON format that need to be requested daily to get the udpated flight informations. We limit the flights queried by their departure and destination airports declared in `data/airports/airports.csv`. Wich give us the following amount of endpoints to query daily:
-    - 2 & 3: 300 queries/day each.
-    - 4: 2500 queries/day.
+    - Sources 2 & 3: 300 queries/day each.
+    - Source 4: 2500 queries/day.
 - Source 1 is another Luthansa API endpoint, with response in JSON format, and this is requestes at the beginning to build the base for the reference data.
 - Source 5 is a web site (avherald.com), the information is in HTML format and is recovered only once. With the events going up to mid 2024.
 
