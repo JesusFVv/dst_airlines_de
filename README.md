@@ -89,6 +89,10 @@ Note: The HTTPS services have been disabled in the Nginx configuration for ease 
 
 The users and pass needed to connect to the applications are described in the file *~/etc/services_credentials.md*.
 
+#### Dashboards in Metabase
+
+The dashboards are in `doc/metabase_dashboards`.
+
 ## Deploy the project
 
 The steps and settings needed to deploy the project in a new environment are detailed below:
