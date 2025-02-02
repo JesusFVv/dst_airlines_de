@@ -78,7 +78,7 @@ server {
     ...    
 }
 ```
-## Connect the first time with admin: Sing-Up with a new password
+## Connect the first time with admin:
 
 - Sing-up and create an account for the "admin" user declared in the config file.
 - Set the password
